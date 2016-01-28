@@ -2,6 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Panton-Heavy.otf</string>
+		<string>Panton-SemiBold.otf</string>
+		<string>Panton-Black.otf</string>
+		<string>Panton-Bold.otf</string>
+		<string>Panton-ExtraBold.otf</string>
+		<string>Panton-ExtraLight.otf</string>
+		<string>Panton-Light.otf</string>
+		<string>Panton-Regular.otf</string>
+		<string>Panton-Thin.otf</string>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -33,8 +45,6 @@
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
-		<string>UIInterfaceOrientationLandscapeLeft</string>
-		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
 </dict>
 </plist>

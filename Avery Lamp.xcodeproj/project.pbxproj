@@ -14,6 +14,18 @@
 		BB10DD3C1C59DF940079C480 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB10DD3A1C59DF940079C480 /* LaunchScreen.storyboard */; };
 		BB10DD471C59DF940079C480 /* Avery_LampTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB10DD461C59DF940079C480 /* Avery_LampTests.swift */; };
 		BB10DD521C59DF940079C480 /* Avery_LampUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB10DD511C59DF940079C480 /* Avery_LampUITests.swift */; };
+		BB10DD621C59DFDC0079C480 /* CALayer+DrawAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = BB10DD611C59DFDC0079C480 /* CALayer+DrawAnimation.m */; };
+		BB10DD651C59DFFC0079C480 /* UILabel+DrawAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = BB10DD641C59DFFC0079C480 /* UILabel+DrawAnimation.m */; };
+		BB10DD8C1C59E55D0079C480 /* Panton-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB10DD831C59E55D0079C480 /* Panton-Black.otf */; };
+		BB10DD8D1C59E55D0079C480 /* Panton-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB10DD841C59E55D0079C480 /* Panton-Bold.otf */; };
+		BB10DD8E1C59E55D0079C480 /* Panton-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB10DD851C59E55D0079C480 /* Panton-ExtraBold.otf */; };
+		BB10DD8F1C59E55D0079C480 /* Panton-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB10DD861C59E55D0079C480 /* Panton-ExtraLight.otf */; };
+		BB10DD901C59E55D0079C480 /* Panton-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB10DD871C59E55D0079C480 /* Panton-Heavy.otf */; };
+		BB10DD911C59E55D0079C480 /* Panton-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB10DD881C59E55D0079C480 /* Panton-Light.otf */; };
+		BB10DD921C59E55D0079C480 /* Panton-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB10DD891C59E55D0079C480 /* Panton-Regular.otf */; };
+		BB10DD931C59E55D0079C480 /* Panton-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB10DD8A1C59E55D0079C480 /* Panton-SemiBold.otf */; };
+		BB10DD941C59E55D0079C480 /* Panton-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB10DD8B1C59E55D0079C480 /* Panton-Thin.otf */; };
+		BB10DD961C59E5FD0079C480 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB10DD951C59E5FD0079C480 /* SplashViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +59,21 @@
 		BB10DD4D1C59DF940079C480 /* Avery LampUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Avery LampUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB10DD511C59DF940079C480 /* Avery_LampUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avery_LampUITests.swift; sourceTree = "<group>"; };
 		BB10DD531C59DF940079C480 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB10DD5F1C59DFDB0079C480 /* Avery Lamp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Avery Lamp-Bridging-Header.h"; sourceTree = "<group>"; };
+		BB10DD601C59DFDC0079C480 /* CALayer+DrawAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+DrawAnimation.h"; sourceTree = "<group>"; };
+		BB10DD611C59DFDC0079C480 /* CALayer+DrawAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+DrawAnimation.m"; sourceTree = "<group>"; };
+		BB10DD631C59DFFC0079C480 /* UILabel+DrawAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+DrawAnimation.h"; sourceTree = "<group>"; };
+		BB10DD641C59DFFC0079C480 /* UILabel+DrawAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+DrawAnimation.m"; sourceTree = "<group>"; };
+		BB10DD831C59E55D0079C480 /* Panton-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Panton-Black.otf"; sourceTree = "<group>"; };
+		BB10DD841C59E55D0079C480 /* Panton-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Panton-Bold.otf"; sourceTree = "<group>"; };
+		BB10DD851C59E55D0079C480 /* Panton-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Panton-ExtraBold.otf"; sourceTree = "<group>"; };
+		BB10DD861C59E55D0079C480 /* Panton-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Panton-ExtraLight.otf"; sourceTree = "<group>"; };
+		BB10DD871C59E55D0079C480 /* Panton-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Panton-Heavy.otf"; sourceTree = "<group>"; };
+		BB10DD881C59E55D0079C480 /* Panton-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Panton-Light.otf"; sourceTree = "<group>"; };
+		BB10DD891C59E55D0079C480 /* Panton-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Panton-Regular.otf"; sourceTree = "<group>"; };
+		BB10DD8A1C59E55D0079C480 /* Panton-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Panton-SemiBold.otf"; sourceTree = "<group>"; };
+		BB10DD8B1C59E55D0079C480 /* Panton-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Panton-Thin.otf"; sourceTree = "<group>"; };
+		BB10DD951C59E5FD0079C480 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +126,13 @@
 			children = (
 				BB10DD311C59DF940079C480 /* AppDelegate.swift */,
 				BB10DD331C59DF940079C480 /* ViewController.swift */,
+				BB10DD951C59E5FD0079C480 /* SplashViewController.swift */,
 				BB10DD351C59DF940079C480 /* Main.storyboard */,
+				BB10DD661C59E0000079C480 /* Fancy Text Drawing */,
 				BB10DD381C59DF940079C480 /* Assets.xcassets */,
 				BB10DD3A1C59DF940079C480 /* LaunchScreen.storyboard */,
 				BB10DD3D1C59DF940079C480 /* Info.plist */,
+				BB10DD5F1C59DFDB0079C480 /* Avery Lamp-Bridging-Header.h */,
 			);
 			path = "Avery Lamp";
 			sourceTree = "<group>";
@@ -123,6 +153,34 @@
 				BB10DD531C59DF940079C480 /* Info.plist */,
 			);
 			path = "Avery LampUITests";
+			sourceTree = "<group>";
+		};
+		BB10DD661C59E0000079C480 /* Fancy Text Drawing */ = {
+			isa = PBXGroup;
+			children = (
+				BB10DD701C59E3450079C480 /* Panton Font */,
+				BB10DD601C59DFDC0079C480 /* CALayer+DrawAnimation.h */,
+				BB10DD611C59DFDC0079C480 /* CALayer+DrawAnimation.m */,
+				BB10DD631C59DFFC0079C480 /* UILabel+DrawAnimation.h */,
+				BB10DD641C59DFFC0079C480 /* UILabel+DrawAnimation.m */,
+			);
+			name = "Fancy Text Drawing";
+			sourceTree = "<group>";
+		};
+		BB10DD701C59E3450079C480 /* Panton Font */ = {
+			isa = PBXGroup;
+			children = (
+				BB10DD831C59E55D0079C480 /* Panton-Black.otf */,
+				BB10DD841C59E55D0079C480 /* Panton-Bold.otf */,
+				BB10DD851C59E55D0079C480 /* Panton-ExtraBold.otf */,
+				BB10DD861C59E55D0079C480 /* Panton-ExtraLight.otf */,
+				BB10DD871C59E55D0079C480 /* Panton-Heavy.otf */,
+				BB10DD881C59E55D0079C480 /* Panton-Light.otf */,
+				BB10DD891C59E55D0079C480 /* Panton-Regular.otf */,
+				BB10DD8A1C59E55D0079C480 /* Panton-SemiBold.otf */,
+				BB10DD8B1C59E55D0079C480 /* Panton-Thin.otf */,
+			);
+			name = "Panton Font";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,9 +287,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB10DD8F1C59E55D0079C480 /* Panton-ExtraLight.otf in Resources */,
+				BB10DD901C59E55D0079C480 /* Panton-Heavy.otf in Resources */,
+				BB10DD911C59E55D0079C480 /* Panton-Light.otf in Resources */,
 				BB10DD3C1C59DF940079C480 /* LaunchScreen.storyboard in Resources */,
+				BB10DD8C1C59E55D0079C480 /* Panton-Black.otf in Resources */,
+				BB10DD8D1C59E55D0079C480 /* Panton-Bold.otf in Resources */,
+				BB10DD941C59E55D0079C480 /* Panton-Thin.otf in Resources */,
+				BB10DD931C59E55D0079C480 /* Panton-SemiBold.otf in Resources */,
+				BB10DD921C59E55D0079C480 /* Panton-Regular.otf in Resources */,
 				BB10DD391C59DF940079C480 /* Assets.xcassets in Resources */,
 				BB10DD371C59DF940079C480 /* Main.storyboard in Resources */,
+				BB10DD8E1C59E55D0079C480 /* Panton-ExtraBold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +323,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB10DD621C59DFDC0079C480 /* CALayer+DrawAnimation.m in Sources */,
+				BB10DD651C59DFFC0079C480 /* UILabel+DrawAnimation.m in Sources */,
 				BB10DD341C59DF940079C480 /* ViewController.swift in Sources */,
 				BB10DD321C59DF940079C480 /* AppDelegate.swift in Sources */,
+				BB10DD961C59E5FD0079C480 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,10 +467,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Avery Lamp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Isometric.Avery-Lamp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Avery Lamp/Avery Lamp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -408,10 +481,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "Avery Lamp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Isometric.Avery-Lamp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Avery Lamp/Avery Lamp-Bridging-Header.h";
 			};
 			name = Release;
 		};
