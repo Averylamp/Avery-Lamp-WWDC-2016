@@ -1,0 +1,10 @@
+PODS:
+  - DynamicBlurView (1.1.0)
+
+DEPENDENCIES:
+  - DynamicBlurView
+
+SPEC CHECKSUMS:
+  DynamicBlurView: 315b8e824d2264ec43d546273fe177dee840033e
+
+COCOAPODS: 0.39.0

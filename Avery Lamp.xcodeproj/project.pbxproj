@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		972BA49F5C7FD89AFC9260E0 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5E68C2CAD259E4EA17158F9 /* Pods.framework */; };
 		BB10DD321C59DF940079C480 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB10DD311C59DF940079C480 /* AppDelegate.swift */; };
 		BB10DD341C59DF940079C480 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB10DD331C59DF940079C480 /* ViewController.swift */; };
 		BB10DD371C59DF940079C480 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB10DD351C59DF940079C480 /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5AF141CD9D659FD64A7BC9D9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		BB10DD2E1C59DF940079C480 /* Avery Lamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Avery Lamp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB10DD311C59DF940079C480 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB10DD331C59DF940079C480 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +76,8 @@
 		BB10DD8A1C59E55D0079C480 /* Panton-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Panton-SemiBold.otf"; sourceTree = "<group>"; };
 		BB10DD8B1C59E55D0079C480 /* Panton-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Panton-Thin.otf"; sourceTree = "<group>"; };
 		BB10DD951C59E5FD0079C480 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		BDD472C5AB65D9D3A8B2AD0D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		F5E68C2CAD259E4EA17158F9 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				972BA49F5C7FD89AFC9260E0 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +106,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		189F8D80997FDECC53280483 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F5E68C2CAD259E4EA17158F9 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B5E0BD0B412707B32C9E1144 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5AF141CD9D659FD64A7BC9D9 /* Pods.debug.xcconfig */,
+				BDD472C5AB65D9D3A8B2AD0D /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BB10DD251C59DF940079C480 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +130,8 @@
 				BB10DD451C59DF940079C480 /* Avery LampTests */,
 				BB10DD501C59DF940079C480 /* Avery LampUITests */,
 				BB10DD2F1C59DF940079C480 /* Products */,
+				B5E0BD0B412707B32C9E1144 /* Pods */,
+				189F8D80997FDECC53280483 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +152,7 @@
 				BB10DD331C59DF940079C480 /* ViewController.swift */,
 				BB10DD951C59E5FD0079C480 /* SplashViewController.swift */,
 				BB10DD351C59DF940079C480 /* Main.storyboard */,
+				BB10DD991C59EB760079C480 /* Fancy Graphic Helpers */,
 				BB10DD661C59E0000079C480 /* Fancy Text Drawing */,
 				BB10DD381C59DF940079C480 /* Assets.xcassets */,
 				BB10DD3A1C59DF940079C480 /* LaunchScreen.storyboard */,
@@ -183,6 +208,13 @@
 			name = "Panton Font";
 			sourceTree = "<group>";
 		};
+		BB10DD991C59EB760079C480 /* Fancy Graphic Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Fancy Graphic Helpers";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -190,9 +222,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BB10DD561C59DF940079C480 /* Build configuration list for PBXNativeTarget "Avery Lamp" */;
 			buildPhases = (
+				A3CDA42725D77DE7450855FB /* Check Pods Manifest.lock */,
 				BB10DD2A1C59DF940079C480 /* Sources */,
 				BB10DD2B1C59DF940079C480 /* Frameworks */,
 				BB10DD2C1C59DF940079C480 /* Resources */,
+				D10BAC99769EC4AE8AE3EBA1 /* Embed Pods Frameworks */,
+				F020150E59D5307269793F9C /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -317,6 +352,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A3CDA42725D77DE7450855FB /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D10BAC99769EC4AE8AE3EBA1 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F020150E59D5307269793F9C /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BB10DD2A1C59DF940079C480 /* Sources */ = {
@@ -465,6 +548,7 @@
 		};
 		BB10DD571C59DF940079C480 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5AF141CD9D659FD64A7BC9D9 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -479,6 +563,7 @@
 		};
 		BB10DD581C59DF940079C480 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BDD472C5AB65D9D3A8B2AD0D /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -557,6 +642,7 @@
 				BB10DD581C59DF940079C480 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BB10DD591C59DF940079C480 /* Build configuration list for PBXNativeTarget "Avery LampTests" */ = {
 			isa = XCConfigurationList;
@@ -565,6 +651,7 @@
 				BB10DD5B1C59DF940079C480 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BB10DD5C1C59DF940079C480 /* Build configuration list for PBXNativeTarget "Avery LampUITests" */ = {
 			isa = XCConfigurationList;
@@ -573,6 +660,7 @@
 				BB10DD5E1C59DF940079C480 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

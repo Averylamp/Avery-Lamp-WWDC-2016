@@ -11,6 +11,14 @@
 
 @implementation UILabel (DrawAnimation)
 
+- (void)drawOutlineAnimatedWithLineWidth:(float)lineWidth withDuration:(float)aniDuration withDelay:(float)delay fadeToLabel:(BOOL)fade {
+    self.alpha = 0;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, delay * NSEC_PER_SEC), dispatch_get_main_queue(), ^(void){
+        self.alpha = 1.0;
+        [self drawOutlineAnimatedWithLineWidth:lineWidth withDuration:aniDuration fadeToLabel:fade];
+    });
+
+}
 
 - (void)drawOutlineAnimatedWithLineWidth:(float)lineWidth withDuration:(float)aniDuration fadeToLabel:(BOOL)fade {
 	
