@@ -1,0 +1,505 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BB10DD321C59DF940079C480 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB10DD311C59DF940079C480 /* AppDelegate.swift */; };
+		BB10DD341C59DF940079C480 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB10DD331C59DF940079C480 /* ViewController.swift */; };
+		BB10DD371C59DF940079C480 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB10DD351C59DF940079C480 /* Main.storyboard */; };
+		BB10DD391C59DF940079C480 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB10DD381C59DF940079C480 /* Assets.xcassets */; };
+		BB10DD3C1C59DF940079C480 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB10DD3A1C59DF940079C480 /* LaunchScreen.storyboard */; };
+		BB10DD471C59DF940079C480 /* Avery_LampTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB10DD461C59DF940079C480 /* Avery_LampTests.swift */; };
+		BB10DD521C59DF940079C480 /* Avery_LampUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB10DD511C59DF940079C480 /* Avery_LampUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BB10DD431C59DF940079C480 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB10DD261C59DF940079C480 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB10DD2D1C59DF940079C480;
+			remoteInfo = "Avery Lamp";
+		};
+		BB10DD4E1C59DF940079C480 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BB10DD261C59DF940079C480 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BB10DD2D1C59DF940079C480;
+			remoteInfo = "Avery Lamp";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BB10DD2E1C59DF940079C480 /* Avery Lamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Avery Lamp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB10DD311C59DF940079C480 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BB10DD331C59DF940079C480 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BB10DD361C59DF940079C480 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BB10DD381C59DF940079C480 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BB10DD3B1C59DF940079C480 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BB10DD3D1C59DF940079C480 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB10DD421C59DF940079C480 /* Avery LampTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Avery LampTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB10DD461C59DF940079C480 /* Avery_LampTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avery_LampTests.swift; sourceTree = "<group>"; };
+		BB10DD481C59DF940079C480 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB10DD4D1C59DF940079C480 /* Avery LampUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Avery LampUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB10DD511C59DF940079C480 /* Avery_LampUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avery_LampUITests.swift; sourceTree = "<group>"; };
+		BB10DD531C59DF940079C480 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BB10DD2B1C59DF940079C480 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB10DD3F1C59DF940079C480 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB10DD4A1C59DF940079C480 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BB10DD251C59DF940079C480 = {
+			isa = PBXGroup;
+			children = (
+				BB10DD301C59DF940079C480 /* Avery Lamp */,
+				BB10DD451C59DF940079C480 /* Avery LampTests */,
+				BB10DD501C59DF940079C480 /* Avery LampUITests */,
+				BB10DD2F1C59DF940079C480 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BB10DD2F1C59DF940079C480 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BB10DD2E1C59DF940079C480 /* Avery Lamp.app */,
+				BB10DD421C59DF940079C480 /* Avery LampTests.xctest */,
+				BB10DD4D1C59DF940079C480 /* Avery LampUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BB10DD301C59DF940079C480 /* Avery Lamp */ = {
+			isa = PBXGroup;
+			children = (
+				BB10DD311C59DF940079C480 /* AppDelegate.swift */,
+				BB10DD331C59DF940079C480 /* ViewController.swift */,
+				BB10DD351C59DF940079C480 /* Main.storyboard */,
+				BB10DD381C59DF940079C480 /* Assets.xcassets */,
+				BB10DD3A1C59DF940079C480 /* LaunchScreen.storyboard */,
+				BB10DD3D1C59DF940079C480 /* Info.plist */,
+			);
+			path = "Avery Lamp";
+			sourceTree = "<group>";
+		};
+		BB10DD451C59DF940079C480 /* Avery LampTests */ = {
+			isa = PBXGroup;
+			children = (
+				BB10DD461C59DF940079C480 /* Avery_LampTests.swift */,
+				BB10DD481C59DF940079C480 /* Info.plist */,
+			);
+			path = "Avery LampTests";
+			sourceTree = "<group>";
+		};
+		BB10DD501C59DF940079C480 /* Avery LampUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BB10DD511C59DF940079C480 /* Avery_LampUITests.swift */,
+				BB10DD531C59DF940079C480 /* Info.plist */,
+			);
+			path = "Avery LampUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BB10DD2D1C59DF940079C480 /* Avery Lamp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB10DD561C59DF940079C480 /* Build configuration list for PBXNativeTarget "Avery Lamp" */;
+			buildPhases = (
+				BB10DD2A1C59DF940079C480 /* Sources */,
+				BB10DD2B1C59DF940079C480 /* Frameworks */,
+				BB10DD2C1C59DF940079C480 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Avery Lamp";
+			productName = "Avery Lamp";
+			productReference = BB10DD2E1C59DF940079C480 /* Avery Lamp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BB10DD411C59DF940079C480 /* Avery LampTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB10DD591C59DF940079C480 /* Build configuration list for PBXNativeTarget "Avery LampTests" */;
+			buildPhases = (
+				BB10DD3E1C59DF940079C480 /* Sources */,
+				BB10DD3F1C59DF940079C480 /* Frameworks */,
+				BB10DD401C59DF940079C480 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BB10DD441C59DF940079C480 /* PBXTargetDependency */,
+			);
+			name = "Avery LampTests";
+			productName = "Avery LampTests";
+			productReference = BB10DD421C59DF940079C480 /* Avery LampTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BB10DD4C1C59DF940079C480 /* Avery LampUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB10DD5C1C59DF940079C480 /* Build configuration list for PBXNativeTarget "Avery LampUITests" */;
+			buildPhases = (
+				BB10DD491C59DF940079C480 /* Sources */,
+				BB10DD4A1C59DF940079C480 /* Frameworks */,
+				BB10DD4B1C59DF940079C480 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BB10DD4F1C59DF940079C480 /* PBXTargetDependency */,
+			);
+			name = "Avery LampUITests";
+			productName = "Avery LampUITests";
+			productReference = BB10DD4D1C59DF940079C480 /* Avery LampUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BB10DD261C59DF940079C480 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Avery Lamp";
+				TargetAttributes = {
+					BB10DD2D1C59DF940079C480 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					BB10DD411C59DF940079C480 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = BB10DD2D1C59DF940079C480;
+					};
+					BB10DD4C1C59DF940079C480 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = BB10DD2D1C59DF940079C480;
+					};
+				};
+			};
+			buildConfigurationList = BB10DD291C59DF940079C480 /* Build configuration list for PBXProject "Avery Lamp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BB10DD251C59DF940079C480;
+			productRefGroup = BB10DD2F1C59DF940079C480 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BB10DD2D1C59DF940079C480 /* Avery Lamp */,
+				BB10DD411C59DF940079C480 /* Avery LampTests */,
+				BB10DD4C1C59DF940079C480 /* Avery LampUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BB10DD2C1C59DF940079C480 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB10DD3C1C59DF940079C480 /* LaunchScreen.storyboard in Resources */,
+				BB10DD391C59DF940079C480 /* Assets.xcassets in Resources */,
+				BB10DD371C59DF940079C480 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB10DD401C59DF940079C480 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB10DD4B1C59DF940079C480 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BB10DD2A1C59DF940079C480 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB10DD341C59DF940079C480 /* ViewController.swift in Sources */,
+				BB10DD321C59DF940079C480 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB10DD3E1C59DF940079C480 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB10DD471C59DF940079C480 /* Avery_LampTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BB10DD491C59DF940079C480 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB10DD521C59DF940079C480 /* Avery_LampUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BB10DD441C59DF940079C480 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB10DD2D1C59DF940079C480 /* Avery Lamp */;
+			targetProxy = BB10DD431C59DF940079C480 /* PBXContainerItemProxy */;
+		};
+		BB10DD4F1C59DF940079C480 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BB10DD2D1C59DF940079C480 /* Avery Lamp */;
+			targetProxy = BB10DD4E1C59DF940079C480 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BB10DD351C59DF940079C480 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB10DD361C59DF940079C480 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BB10DD3A1C59DF940079C480 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB10DD3B1C59DF940079C480 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BB10DD541C59DF940079C480 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BB10DD551C59DF940079C480 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BB10DD571C59DF940079C480 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Avery Lamp/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Isometric.Avery-Lamp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BB10DD581C59DF940079C480 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Avery Lamp/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Isometric.Avery-Lamp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BB10DD5A1C59DF940079C480 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Avery LampTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Isometric.Avery-LampTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Avery Lamp.app/Avery Lamp";
+			};
+			name = Debug;
+		};
+		BB10DD5B1C59DF940079C480 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Avery LampTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Isometric.Avery-LampTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Avery Lamp.app/Avery Lamp";
+			};
+			name = Release;
+		};
+		BB10DD5D1C59DF940079C480 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Avery LampUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Isometric.Avery-LampUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Avery Lamp";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		BB10DD5E1C59DF940079C480 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Avery LampUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Isometric.Avery-LampUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Avery Lamp";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BB10DD291C59DF940079C480 /* Build configuration list for PBXProject "Avery Lamp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB10DD541C59DF940079C480 /* Debug */,
+				BB10DD551C59DF940079C480 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB10DD561C59DF940079C480 /* Build configuration list for PBXNativeTarget "Avery Lamp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB10DD571C59DF940079C480 /* Debug */,
+				BB10DD581C59DF940079C480 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BB10DD591C59DF940079C480 /* Build configuration list for PBXNativeTarget "Avery LampTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB10DD5A1C59DF940079C480 /* Debug */,
+				BB10DD5B1C59DF940079C480 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BB10DD5C1C59DF940079C480 /* Build configuration list for PBXNativeTarget "Avery LampUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB10DD5D1C59DF940079C480 /* Debug */,
+				BB10DD5E1C59DF940079C480 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BB10DD261C59DF940079C480 /* Project object */;
+}
