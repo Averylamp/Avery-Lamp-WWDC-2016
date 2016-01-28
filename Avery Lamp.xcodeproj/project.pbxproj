@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		972BA49F5C7FD89AFC9260E0 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5E68C2CAD259E4EA17158F9 /* Pods.framework */; };
+		35AC4D3FE9556CBB4960466C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D15022D67DFD9924925F87AC /* libPods.a */; };
 		BB10DD321C59DF940079C480 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB10DD311C59DF940079C480 /* AppDelegate.swift */; };
 		BB10DD341C59DF940079C480 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB10DD331C59DF940079C480 /* ViewController.swift */; };
 		BB10DD371C59DF940079C480 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB10DD351C59DF940079C480 /* Main.storyboard */; };
@@ -77,7 +77,7 @@
 		BB10DD8B1C59E55D0079C480 /* Panton-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Panton-Thin.otf"; sourceTree = "<group>"; };
 		BB10DD951C59E5FD0079C480 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		BDD472C5AB65D9D3A8B2AD0D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		F5E68C2CAD259E4EA17158F9 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D15022D67DFD9924925F87AC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				972BA49F5C7FD89AFC9260E0 /* Pods.framework in Frameworks */,
+				35AC4D3FE9556CBB4960466C /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +109,7 @@
 		189F8D80997FDECC53280483 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F5E68C2CAD259E4EA17158F9 /* Pods.framework */,
+				D15022D67DFD9924925F87AC /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

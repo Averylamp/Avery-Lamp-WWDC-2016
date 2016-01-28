@@ -1,2 +1,1 @@
-pod "DynamicBlurView"
-use_frameworks!
+pod 'Shimmer'

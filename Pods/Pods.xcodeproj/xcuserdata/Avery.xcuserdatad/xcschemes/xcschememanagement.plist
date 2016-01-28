@@ -4,12 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>DynamicBlurView.xcscheme</key>
+		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods.xcscheme</key>
+		<key>Shimmer.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>03986035B05D1C564D91AA910E316353</key>
+		<key>6E3245AD9280FCD8A6CAD7BC5E58876D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>954666F92D0268CCDDF92125A5341011</key>
+		<key>C5FAD678F8DB14760EB5AFB455FC7CAA</key>
 		<dict>
 			<key>primary</key>
 			<true/>

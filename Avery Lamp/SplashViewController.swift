@@ -7,7 +7,8 @@
 //
 
 import UIKit
-import DynamicBlurView
+
+
 
 class SplashViewController: UIViewController {
 
@@ -59,16 +60,82 @@ class SplashViewController: UIViewController {
         welcomeLabel.drawOutlineAnimatedWithLineWidth(0.5, withDuration: 1, fadeToLabel: false)
         
         
-        let myNameLabel  = UILabel(frame: CGRectMake(0,self.view.frame.height * 1 / 3  ,self.view.frame.width, 40))
+        let myNameLabel  = UILabel(frame: CGRectMake(0,self.view.frame.height * 1 / 2  - 50 ,self.view.frame.width, 40))
         myNameLabel.text = "My name is Avery"
         myNameLabel.font = UIFont(name: "Panton-Thin", size: 20)
         self.view.addSubview(myNameLabel)
         myNameLabel.drawOutlineAnimatedWithLineWidth(0.7, withDuration: 2, withDelay: 2, fadeToLabel: false);
         
         
+        let picSize = myNameLabel.frame.origin.y - welcomeLabel.frame.origin.y - 100
+        let proPic = UIImageView(frame: CGRectMake(0, 0, picSize, picSize))
+        proPic.image = UIImage(named: "Headshot")
+        proPic.center = CGPointMake(self.view.center.x, welcomeLabel.frame.origin.y + welcomeLabel.frame.height + picSize / 2 + 50)
+        proPic.layer.cornerRadius = picSize / 2
+//        proPic.layer.borderWidth = 1
+        proPic.layer.masksToBounds = true
+        proPic.alpha = 0.0
+        self.view.addSubview(proPic)
+        
+        
+        let circle = CAShapeLayer()
+        circle.path = UIBezierPath(roundedRect: CGRectMake(0,0, picSize, picSize), cornerRadius: picSize).CGPath
+        circle.position = CGPointMake(0, 0)
+        circle.lineWidth = 0
+        circle.fillColor = UIColor.clearColor().CGColor
+        circle.strokeColor = UIColor.blackColor().CGColor
+        proPic.layer.addSublayer(circle)
+        
+        let drawAnimation = CABasicAnimation(keyPath: "strokeEnd")
+        drawAnimation.duration = 3
+        drawAnimation.repeatCount = 1
+        drawAnimation.fromValue = NSNumber(float: 0.0)
+        drawAnimation.toValue = NSNumber(float: 1.0)
+        drawAnimation.timingFunction =  CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
+        
+        delay(2.5) { () -> () in
+            circle.lineWidth = 2
+            circle.addAnimation(drawAnimation, forKey: "drawCircleAnimation")
+        }
+        
+        UIView.animateWithDuration(1.5, delay: 2, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+            proPic.alpha = 1.0
+            }) { (finished) -> Void in}
+       
+        let shimmerView = FBShimmeringView(frame: CGRectMake(0,self.view.frame.height * 5 / 6,self.view.frame.width, 60))
+        shimmerView.alpha = 1.0
+        self.view.addSubview(shimmerView)
+        let continueLabel = UILabel(frame: shimmerView.frame)
+        continueLabel.text = "Continue"
+        continueLabel.font = UIFont(name: "Panton-Light", size: 24)
+        continueLabel.textColor = UIColor.whiteColor()
+        continueLabel.textAlignment = NSTextAlignment.Center
+        shimmerView.contentView = continueLabel
+        shimmerView.shimmering = true
+        continueLabel.drawOutlineAnimatedWithLineWidth(0.5, withDuration: 1, withDelay: 5, fadeToLabel: true)
+        
+        
+        
         // Do any additional setup after loading the view.
     }
+    
+    func delay(delay:Double, closure:()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), closure)
+    }
 
+    
+    func addProPic(){
+        
+        
+        
+    }
+
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

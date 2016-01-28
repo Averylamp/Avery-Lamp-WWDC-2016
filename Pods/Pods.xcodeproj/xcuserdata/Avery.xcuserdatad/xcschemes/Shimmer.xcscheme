@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '9045B8EFF41E0FDF5F7BD102'
-               BlueprintName = 'DynamicBlurView'
+               BlueprintIdentifier = 'CB70492C06EDD504072E1D5E'
+               BlueprintName = 'Shimmer'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'DynamicBlurView.framework'>
+               BuildableName = 'libShimmer.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

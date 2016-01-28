@@ -1,10 +1,10 @@
 PODS:
-  - DynamicBlurView (1.1.0)
+  - Shimmer (1.0.2)
 
 DEPENDENCIES:
-  - DynamicBlurView
+  - Shimmer
 
 SPEC CHECKSUMS:
-  DynamicBlurView: 315b8e824d2264ec43d546273fe177dee840033e
+  Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
 
 COCOAPODS: 0.39.0
