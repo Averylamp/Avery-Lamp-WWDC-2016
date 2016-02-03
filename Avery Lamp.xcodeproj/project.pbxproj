@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		35AC4D3FE9556CBB4960466C /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D15022D67DFD9924925F87AC /* libPods.a */; };
 		BB10DD321C59DF940079C480 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB10DD311C59DF940079C480 /* AppDelegate.swift */; };
 		BB10DD341C59DF940079C480 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB10DD331C59DF940079C480 /* ViewController.swift */; };
 		BB10DD371C59DF940079C480 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB10DD351C59DF940079C480 /* Main.storyboard */; };
@@ -27,6 +26,8 @@
 		BB10DD931C59E55D0079C480 /* Panton-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB10DD8A1C59E55D0079C480 /* Panton-SemiBold.otf */; };
 		BB10DD941C59E55D0079C480 /* Panton-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB10DD8B1C59E55D0079C480 /* Panton-Thin.otf */; };
 		BB10DD961C59E5FD0079C480 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB10DD951C59E5FD0079C480 /* SplashViewController.swift */; };
+		BB34038B1C61E9D0004F53DF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34038A1C61E9D0004F53DF /* HomeViewController.swift */; };
+		FD28E1FA33D009710E4BE6F8 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85EB57D2745956D1EC5A9497 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 
 /* Begin PBXFileReference section */
 		5AF141CD9D659FD64A7BC9D9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		85EB57D2745956D1EC5A9497 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB10DD2E1C59DF940079C480 /* Avery Lamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Avery Lamp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB10DD311C59DF940079C480 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB10DD331C59DF940079C480 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,8 +78,58 @@
 		BB10DD8A1C59E55D0079C480 /* Panton-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Panton-SemiBold.otf"; sourceTree = "<group>"; };
 		BB10DD8B1C59E55D0079C480 /* Panton-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Panton-Thin.otf"; sourceTree = "<group>"; };
 		BB10DD951C59E5FD0079C480 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		BB3403571C61E950004F53DF /* SummitBold-Display.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitBold-Display.otf"; sourceTree = "<group>"; };
+		BB3403581C61E950004F53DF /* SummitBold-Inline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitBold-Inline.otf"; sourceTree = "<group>"; };
+		BB3403591C61E950004F53DF /* SummitBold-InlineOne.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitBold-InlineOne.otf"; sourceTree = "<group>"; };
+		BB34035A1C61E950004F53DF /* SummitBold-InlineThree.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitBold-InlineThree.otf"; sourceTree = "<group>"; };
+		BB34035B1C61E950004F53DF /* SummitBold-InlineTwo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitBold-InlineTwo.otf"; sourceTree = "<group>"; };
+		BB34035C1C61E950004F53DF /* SummitBold-Shadow.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitBold-Shadow.otf"; sourceTree = "<group>"; };
+		BB34035D1C61E950004F53DF /* SummitBold-Solid.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitBold-Solid.otf"; sourceTree = "<group>"; };
+		BB34035E1C61E950004F53DF /* SummitBold-SolidOne.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitBold-SolidOne.otf"; sourceTree = "<group>"; };
+		BB34035F1C61E950004F53DF /* SummitBold-SolidThree.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitBold-SolidThree.otf"; sourceTree = "<group>"; };
+		BB3403601C61E950004F53DF /* SummitBold-SolidTwo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitBold-SolidTwo.otf"; sourceTree = "<group>"; };
+		BB3403611C61E950004F53DF /* SummitLight-Display.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitLight-Display.otf"; sourceTree = "<group>"; };
+		BB3403621C61E950004F53DF /* SummitLight-Inline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitLight-Inline.otf"; sourceTree = "<group>"; };
+		BB3403631C61E950004F53DF /* SummitLight-InlineOne.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitLight-InlineOne.otf"; sourceTree = "<group>"; };
+		BB3403641C61E950004F53DF /* SummitLight-InlineThree.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitLight-InlineThree.otf"; sourceTree = "<group>"; };
+		BB3403651C61E950004F53DF /* SummitLight-InlineTwo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitLight-InlineTwo.otf"; sourceTree = "<group>"; };
+		BB3403661C61E950004F53DF /* SummitLight-Shadow.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitLight-Shadow.otf"; sourceTree = "<group>"; };
+		BB3403671C61E950004F53DF /* SummitLight-Solid.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitLight-Solid.otf"; sourceTree = "<group>"; };
+		BB3403681C61E950004F53DF /* SummitLight-SolidOne.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitLight-SolidOne.otf"; sourceTree = "<group>"; };
+		BB3403691C61E950004F53DF /* SummitLight-SolidThree.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitLight-SolidThree.otf"; sourceTree = "<group>"; };
+		BB34036A1C61E950004F53DF /* SummitLight-SolidTwo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitLight-SolidTwo.otf"; sourceTree = "<group>"; };
+		BB34036B1C61E950004F53DF /* SummitMedium_InlineThree.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SummitMedium_InlineThree.otf; sourceTree = "<group>"; };
+		BB34036C1C61E950004F53DF /* SummitMedium-Display.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitMedium-Display.otf"; sourceTree = "<group>"; };
+		BB34036D1C61E950004F53DF /* SummitMedium-Inline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitMedium-Inline.otf"; sourceTree = "<group>"; };
+		BB34036E1C61E950004F53DF /* SummitMedium-InlineOne.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitMedium-InlineOne.otf"; sourceTree = "<group>"; };
+		BB34036F1C61E950004F53DF /* SummitMedium-InlineTwo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitMedium-InlineTwo.otf"; sourceTree = "<group>"; };
+		BB3403701C61E950004F53DF /* SummitMedium-Shadow.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitMedium-Shadow.otf"; sourceTree = "<group>"; };
+		BB3403711C61E950004F53DF /* SummitMedium-Solid.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitMedium-Solid.otf"; sourceTree = "<group>"; };
+		BB3403721C61E950004F53DF /* SummitMedium-SolidOne.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitMedium-SolidOne.otf"; sourceTree = "<group>"; };
+		BB3403731C61E950004F53DF /* SummitMedium-SolidThree.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitMedium-SolidThree.otf"; sourceTree = "<group>"; };
+		BB3403741C61E950004F53DF /* SummitMedium-SolidTwo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitMedium-SolidTwo.otf"; sourceTree = "<group>"; };
+		BB3403751C61E950004F53DF /* SummitRegular-Display.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitRegular-Display.otf"; sourceTree = "<group>"; };
+		BB3403761C61E950004F53DF /* SummitRegular-Inline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitRegular-Inline.otf"; sourceTree = "<group>"; };
+		BB3403771C61E950004F53DF /* SummitRegular-InlineOne.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitRegular-InlineOne.otf"; sourceTree = "<group>"; };
+		BB3403781C61E950004F53DF /* SummitRegular-InlineThree.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitRegular-InlineThree.otf"; sourceTree = "<group>"; };
+		BB3403791C61E950004F53DF /* SummitRegular-InlineTwo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitRegular-InlineTwo.otf"; sourceTree = "<group>"; };
+		BB34037A1C61E950004F53DF /* SummitRegular-Shadow.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitRegular-Shadow.otf"; sourceTree = "<group>"; };
+		BB34037B1C61E950004F53DF /* SummitRegular-Solid.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitRegular-Solid.otf"; sourceTree = "<group>"; };
+		BB34037C1C61E950004F53DF /* SummitRegular-SolidOne.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitRegular-SolidOne.otf"; sourceTree = "<group>"; };
+		BB34037D1C61E950004F53DF /* SummitRegular-SolidThree.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitRegular-SolidThree.otf"; sourceTree = "<group>"; };
+		BB34037E1C61E950004F53DF /* SummitRegular-SolidTwo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitRegular-SolidTwo.otf"; sourceTree = "<group>"; };
+		BB34037F1C61E950004F53DF /* SummitThin-Display.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitThin-Display.otf"; sourceTree = "<group>"; };
+		BB3403801C61E950004F53DF /* SummitThin-Inline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitThin-Inline.otf"; sourceTree = "<group>"; };
+		BB3403811C61E950004F53DF /* SummitThin-InlineOne.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitThin-InlineOne.otf"; sourceTree = "<group>"; };
+		BB3403821C61E950004F53DF /* SummitThin-InlineThree.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitThin-InlineThree.otf"; sourceTree = "<group>"; };
+		BB3403831C61E950004F53DF /* SummitThin-InlineTwo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitThin-InlineTwo.otf"; sourceTree = "<group>"; };
+		BB3403841C61E950004F53DF /* SummitThin-Shadow.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitThin-Shadow.otf"; sourceTree = "<group>"; };
+		BB3403851C61E950004F53DF /* SummitThin-Solid.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitThin-Solid.otf"; sourceTree = "<group>"; };
+		BB3403861C61E950004F53DF /* SummitThin-SolidOne.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitThin-SolidOne.otf"; sourceTree = "<group>"; };
+		BB3403871C61E950004F53DF /* SummitThin-SolidThree.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitThin-SolidThree.otf"; sourceTree = "<group>"; };
+		BB3403881C61E950004F53DF /* SummitThin-SolidTwo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitThin-SolidTwo.otf"; sourceTree = "<group>"; };
+		BB34038A1C61E9D0004F53DF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BDD472C5AB65D9D3A8B2AD0D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		D15022D67DFD9924925F87AC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,7 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				35AC4D3FE9556CBB4960466C /* libPods.a in Frameworks */,
+				FD28E1FA33D009710E4BE6F8 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,7 +161,7 @@
 		189F8D80997FDECC53280483 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D15022D67DFD9924925F87AC /* libPods.a */,
+				85EB57D2745956D1EC5A9497 /* Pods.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -152,6 +204,7 @@
 				BB10DD331C59DF940079C480 /* ViewController.swift */,
 				BB10DD951C59E5FD0079C480 /* SplashViewController.swift */,
 				BB10DD351C59DF940079C480 /* Main.storyboard */,
+				BB34038A1C61E9D0004F53DF /* HomeViewController.swift */,
 				BB10DD991C59EB760079C480 /* Fancy Graphic Helpers */,
 				BB10DD661C59E0000079C480 /* Fancy Text Drawing */,
 				BB10DD381C59DF940079C480 /* Assets.xcassets */,
@@ -184,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				BB10DD701C59E3450079C480 /* Panton Font */,
+				BB3403891C61E957004F53DF /* Summit Font */,
 				BB10DD601C59DFDC0079C480 /* CALayer+DrawAnimation.h */,
 				BB10DD611C59DFDC0079C480 /* CALayer+DrawAnimation.m */,
 				BB10DD631C59DFFC0079C480 /* UILabel+DrawAnimation.h */,
@@ -215,6 +269,63 @@
 			name = "Fancy Graphic Helpers";
 			sourceTree = "<group>";
 		};
+		BB3403891C61E957004F53DF /* Summit Font */ = {
+			isa = PBXGroup;
+			children = (
+				BB3403571C61E950004F53DF /* SummitBold-Display.otf */,
+				BB3403581C61E950004F53DF /* SummitBold-Inline.otf */,
+				BB3403591C61E950004F53DF /* SummitBold-InlineOne.otf */,
+				BB34035A1C61E950004F53DF /* SummitBold-InlineThree.otf */,
+				BB34035B1C61E950004F53DF /* SummitBold-InlineTwo.otf */,
+				BB34035C1C61E950004F53DF /* SummitBold-Shadow.otf */,
+				BB34035D1C61E950004F53DF /* SummitBold-Solid.otf */,
+				BB34035E1C61E950004F53DF /* SummitBold-SolidOne.otf */,
+				BB34035F1C61E950004F53DF /* SummitBold-SolidThree.otf */,
+				BB3403601C61E950004F53DF /* SummitBold-SolidTwo.otf */,
+				BB3403611C61E950004F53DF /* SummitLight-Display.otf */,
+				BB3403621C61E950004F53DF /* SummitLight-Inline.otf */,
+				BB3403631C61E950004F53DF /* SummitLight-InlineOne.otf */,
+				BB3403641C61E950004F53DF /* SummitLight-InlineThree.otf */,
+				BB3403651C61E950004F53DF /* SummitLight-InlineTwo.otf */,
+				BB3403661C61E950004F53DF /* SummitLight-Shadow.otf */,
+				BB3403671C61E950004F53DF /* SummitLight-Solid.otf */,
+				BB3403681C61E950004F53DF /* SummitLight-SolidOne.otf */,
+				BB3403691C61E950004F53DF /* SummitLight-SolidThree.otf */,
+				BB34036A1C61E950004F53DF /* SummitLight-SolidTwo.otf */,
+				BB34036B1C61E950004F53DF /* SummitMedium_InlineThree.otf */,
+				BB34036C1C61E950004F53DF /* SummitMedium-Display.otf */,
+				BB34036D1C61E950004F53DF /* SummitMedium-Inline.otf */,
+				BB34036E1C61E950004F53DF /* SummitMedium-InlineOne.otf */,
+				BB34036F1C61E950004F53DF /* SummitMedium-InlineTwo.otf */,
+				BB3403701C61E950004F53DF /* SummitMedium-Shadow.otf */,
+				BB3403711C61E950004F53DF /* SummitMedium-Solid.otf */,
+				BB3403721C61E950004F53DF /* SummitMedium-SolidOne.otf */,
+				BB3403731C61E950004F53DF /* SummitMedium-SolidThree.otf */,
+				BB3403741C61E950004F53DF /* SummitMedium-SolidTwo.otf */,
+				BB3403751C61E950004F53DF /* SummitRegular-Display.otf */,
+				BB3403761C61E950004F53DF /* SummitRegular-Inline.otf */,
+				BB3403771C61E950004F53DF /* SummitRegular-InlineOne.otf */,
+				BB3403781C61E950004F53DF /* SummitRegular-InlineThree.otf */,
+				BB3403791C61E950004F53DF /* SummitRegular-InlineTwo.otf */,
+				BB34037A1C61E950004F53DF /* SummitRegular-Shadow.otf */,
+				BB34037B1C61E950004F53DF /* SummitRegular-Solid.otf */,
+				BB34037C1C61E950004F53DF /* SummitRegular-SolidOne.otf */,
+				BB34037D1C61E950004F53DF /* SummitRegular-SolidThree.otf */,
+				BB34037E1C61E950004F53DF /* SummitRegular-SolidTwo.otf */,
+				BB34037F1C61E950004F53DF /* SummitThin-Display.otf */,
+				BB3403801C61E950004F53DF /* SummitThin-Inline.otf */,
+				BB3403811C61E950004F53DF /* SummitThin-InlineOne.otf */,
+				BB3403821C61E950004F53DF /* SummitThin-InlineThree.otf */,
+				BB3403831C61E950004F53DF /* SummitThin-InlineTwo.otf */,
+				BB3403841C61E950004F53DF /* SummitThin-Shadow.otf */,
+				BB3403851C61E950004F53DF /* SummitThin-Solid.otf */,
+				BB3403861C61E950004F53DF /* SummitThin-SolidOne.otf */,
+				BB3403871C61E950004F53DF /* SummitThin-SolidThree.otf */,
+				BB3403881C61E950004F53DF /* SummitThin-SolidTwo.otf */,
+			);
+			name = "Summit Font";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -228,6 +339,7 @@
 				BB10DD2C1C59DF940079C480 /* Resources */,
 				D10BAC99769EC4AE8AE3EBA1 /* Embed Pods Frameworks */,
 				F020150E59D5307269793F9C /* Copy Pods Resources */,
+				BBEE427B1C5C90660000AABF /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -370,6 +482,19 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		BBEE427B1C5C90660000AABF /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 2fdafbc6422df088bfe0d579573202dd3d2ba850 f2e4a890d3df54cc4223b537d93e2409e5d10558f167b8376eba9ab17948dab5";
+		};
 		D10BAC99769EC4AE8AE3EBA1 /* Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -412,6 +537,7 @@
 				BB10DD341C59DF940079C480 /* ViewController.swift in Sources */,
 				BB10DD321C59DF940079C480 /* AppDelegate.swift in Sources */,
 				BB10DD961C59E5FD0079C480 /* SplashViewController.swift in Sources */,
+				BB34038B1C61E9D0004F53DF /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

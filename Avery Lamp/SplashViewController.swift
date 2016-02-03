@@ -115,8 +115,6 @@ class SplashViewController: UIViewController {
         continueLabel.drawOutlineAnimatedWithLineWidth(0.5, withDuration: 1, withDelay: 8, fadeToLabel: true)
         
         
-        
-        // Do any additional setup after loading the view.
     }
     
     func delay(delay:Double, closure:()->()) {
@@ -138,15 +136,20 @@ class SplashViewController: UIViewController {
             print("h - \(h)  v - \(v)")
 
             rippleTransitionSetup(imgViews, h: h, v: v, iteration: 0)
-            
+            var max = 0
             for v in 0...vertPics - 1 {
                 for h in 0...horzPics - 1 {
                     
 //                    print("h - \(h)  v - \(v) tag - \(imgViews[v][h].tag - 1000)")
                     rippleFade2(imgViews[v][h], delays: Double(imgViews[v][h].tag - 1000) * 0.1)
-                    
+                    if imgViews[v][h].tag - 1000 > max{
+                        max = imgViews[v][h].tag - 1000
+                    }
                 }
             }
+            delay(Double(max) * 0.1 + 2, closure: { () -> () in
+                self.performSegueWithIdentifier("HomeSegue", sender: nil)
+            })
         }
         
     }
@@ -159,7 +162,6 @@ class SplashViewController: UIViewController {
     let imageSize = CGFloat(20.0)
     
     func populateImages(){
-        
         
         let size = self.view.frame.size
         UIGraphicsBeginImageContextWithOptions(size, false, UIScreen.mainScreen().scale)
@@ -204,6 +206,7 @@ class SplashViewController: UIViewController {
     }
     
     func rippleTransitionSetup(images: [[UIImageView]], h: Int, v: Int, iteration:Int){
+        //FLOOD
         if (h < 0 || h >= images.first?.count || v < 0 || v >= images.count){
             return
         }
@@ -216,8 +219,7 @@ class SplashViewController: UIViewController {
         }else{
             images[v][h].tag = 1000 + iteration
         }
-//        print("h - \(h)  v - \(v) delay - \(Double(iteration) * 0.1)")
-//        rippleFade(images[v][h], delays: Double(iteration) * 0.1)
+
         
         rippleTransitionSetup(images, h: h - 1, v: v, iteration: iteration + 1)
         rippleTransitionSetup(images, h: h + 1, v: v, iteration: iteration + 1)
@@ -227,13 +229,6 @@ class SplashViewController: UIViewController {
     
     func rippleFade(image : UIImageView, delays : Double) {
 
-//        UIView.animateWithDuration(delays, animations: { () -> Void in
-//            
-//            }) { (finished) -> Void in
-//                UIView.animateWithDuration(1.0, animations: { () -> Void in
-//                    image.alpha = 0.0
-//                })
-//        }
         delay(delays) { () -> () in
             UIView.animateWithDuration(1.0, animations: { () -> Void in
                 image.alpha = 0.0
