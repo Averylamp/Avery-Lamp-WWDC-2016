@@ -44,9 +44,7 @@ class HomeViewController: UIViewController {
         bgScroll2?.contentMode = UIViewContentMode.ScaleAspectFill
         self.view.addSubview(bgScroll2!)
         
-        
-        
-        UIView.animateWithDuration(2, delay: 5, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+        UIView.animateWithDuration(3, delay: 5, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
             self.bgScroll?.alpha = 1.0
         }, completion: nil)
         delay(5.0) { () -> () in
@@ -192,13 +190,17 @@ class HomeViewController: UIViewController {
             })
     }
     
-    var bgColors = Array<UIColor>(arrayLiteral: UIColor(hex6: 0xfc515a),UIColor(hex6: 0xe6a14b),UIColor(hex6: 0xfc5e6f),UIColor(hex6: 0xf3b93e),UIColor(hex6: 0x62cbfa),UIColor(hex6: 0xd08ab4),UIColor(hex6: 0xb8fbb4),UIColor(hex6: 0x2ffbfc))
+    let bgColors = [UIColor(hex6: 0xfdb86b),UIColor(hex6: 0xe6a14b),UIColor(hex6: 0xfc5e6f),UIColor(hex6: 0xf3b93e),UIColor(hex6: 0x62cbfa),UIColor(hex6: 0xd08ab4),UIColor(hex6: 0xb8fbb4),UIColor(hex6: 0x2ffbfc)]
     
     func randomizedColorSet() -> Array<CGColor>{
         var arr = Array<CGColor>()
-        let firstColor = bgColors[Int(arc4random()) % bgColors.count]
+        var rand = arc4random() >> 1
+        var randNum = Int(rand) % bgColors.count
+        let firstColor = bgColors[randNum]
         arr.append(firstColor.CGColor)
-        let secondColor = bgColors[Int(arc4random()) % bgColors.count]
+        rand = arc4random() >> 1
+        randNum = Int(rand) % bgColors.count
+        let secondColor = bgColors[randNum]
         arr.append(secondColor.CGColor)
         return arr
     }

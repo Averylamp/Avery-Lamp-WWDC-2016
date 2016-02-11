@@ -128,6 +128,7 @@ class SplashViewController: UIViewController {
 
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if continuable {
+            continuable = false
             print("Populating images")
             populateImages()
             let location = touches.first?.locationInView(self.view)
@@ -148,10 +149,7 @@ class SplashViewController: UIViewController {
                 }
             }
             delay(Double(max) * 0.1 + 2, closure: { () -> () in
-                
                 self.navigationController?.pushViewController(HomeViewController(), animated: false)
-                self.navigationController?.viewControllers.removeFirst()
-//                self.performSegueWithIdentifier("HomeSegue", sender: nil)
             })
         }
         
