@@ -7,36 +7,51 @@
 //
 
 import UIKit
+import UIColor_Hex_Swift
 
 enum BackgroundDirection {
     case Up
     case Down
     case Stop
 }
+enum BackgroundNum{
+    case First
+    case Second
+}
 
 class HomeViewController: UIViewController {
     
     var animationFlag: BackgroundDirection = .Up
-    var bgScroll:UIImageView?
+    var bgNumFlag: BackgroundNum = .First
     
+    var bgScroll:UIImageView?
+    var bgScroll2:UIImageView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.whiteColor()
         let height = self.view.frame.height
         let width = self.view.frame.width
-
+        
         bgScroll = UIImageView(frame: CGRectMake(0, 0, width, height * 2))
         bgScroll?.alpha = 0
         bgScroll?.contentMode = UIViewContentMode.ScaleAspectFill
         bgScroll?.image = UIImage(named: "bg")
-        bgScroll?.layer.borderWidth = 1.0
-        bgScroll?.layer.borderColor = UIColor.blackColor().CGColor
         self.view.addSubview(bgScroll!)
-        startAnimation()
+        
+        bgScroll2 = UIImageView(frame: CGRectMake(0, 0, width, height * 2))
+        bgScroll2?.alpha = 0
+        bgScroll2?.contentMode = UIViewContentMode.ScaleAspectFill
+        self.view.addSubview(bgScroll2!)
+        
+        
+        
         UIView.animateWithDuration(2, delay: 5, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
             self.bgScroll?.alpha = 1.0
-            }, completion: nil)
+        }, completion: nil)
+        delay(5.0) { () -> () in
+            self.startAnimation()
+        }
         
         createLineCircle(0, duration: 2.0, fadeDelay: 2.0, location: CGPointMake(width / 2 , height / 3) , size:120, left: true)
         createLineCircle(0, duration: 2.0, fadeDelay: 2.0, location: CGPointMake(width / 4 , height * 2 / 3) , size:120, left: true)
@@ -72,7 +87,7 @@ class HomeViewController: UIViewController {
         CGPathAddLines(path, nil, points, 2)
         let circlePath = UIBezierPath(roundedRect: CGRectMake(location.x - size / 2,location.y - size / 2, size, size), cornerRadius: size).CGPath
         CGPathAddPath(path, nil, circlePath)
-
+        
         line.path  = path
         
         let circle = CAShapeLayer()
@@ -115,27 +130,78 @@ class HomeViewController: UIViewController {
     
     func startAnimation () {
         UIView.animateWithDuration(5.0, delay: 0, options: UIViewAnimationOptions.CurveLinear, animations: {
-            
             [weak self] in
-            
-            
             if let strongSelf = self {
                 if strongSelf.animationFlag == .Down {
                     strongSelf.bgScroll!.frame.origin.y = -strongSelf.bgScroll!.frame.height + UIScreen.mainScreen().bounds.height
+                    strongSelf.bgScroll2!.frame.origin.y = -strongSelf.bgScroll2!.frame.height + UIScreen.mainScreen().bounds.height
                     strongSelf.animationFlag = .Up
                 } else if strongSelf.animationFlag == .Up {
                     strongSelf.bgScroll!.frame.origin.y = 0
+                    strongSelf.bgScroll2!.frame.origin.y = 0
                     strongSelf.animationFlag = .Down
                 }
             }
-            
             }, completion: { [weak self] finished in
-                if self?.animationFlag != .Stop {
-                    self?.startAnimation()
+                if self?.animationFlag != .Stop{
+                    UIView.animateWithDuration(3, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {[weak self] in
+                        if let strongSelf = self {
+                            if self?.animationFlag == .Up{
+                                if strongSelf.bgNumFlag == .First{
+                                    strongSelf.bgScroll!.alpha = 0.0
+                                    strongSelf.bgScroll2!.image = strongSelf.randomizedBGColor()
+                                    strongSelf.bgScroll2!.alpha = 1.0
+                                    strongSelf.bgNumFlag = .Second
+                                }else{
+                                    strongSelf.bgScroll!.image = strongSelf.randomizedBGColor()
+                                    strongSelf.bgScroll!.alpha = 1.0
+                                    strongSelf.bgScroll2!.alpha = 0.0
+                                    strongSelf.bgNumFlag = .First
+                                }
+                            }
+                        }
+                        }, completion: { [weak self] finished in
+                            self?.startAnimation()
+                    })
                 }
             })
     }
-
+    
+    var bgColors = Array<UIColor>(arrayLiteral: UIColor(hex6: 0xfc515a),UIColor(hex6: 0xe6a14b),UIColor(hex6: 0xfc5e6f),UIColor(hex6: 0xf3b93e),UIColor(hex6: 0x62cbfa),UIColor(hex6: 0xd08ab4),UIColor(hex6: 0xb8fbb4),UIColor(hex6: 0x2ffbfc))
+    
+    func randomizedColorSet() -> Array<CGColor>{
+        var arr = Array<CGColor>()
+        let firstColor = bgColors[Int(arc4random()) % bgColors.count]
+        arr.append(firstColor.CGColor)
+        let secondColor = bgColors[Int(arc4random()) % bgColors.count]
+        arr.append(secondColor.CGColor)
+        return arr
+    }
+    
+    func randomizedBGColor()->UIImage{
+        let gradient = CAGradientLayer()
+        gradient.backgroundColor = UIColor.greenColor().CGColor
+        gradient.frame = CGRectMake(0, 0, self.view.frame.width, self.view.frame.height * 2)
+        gradient.colors = randomizedColorSet()
+        let image = imageFromLayer(gradient)
+        return image
+        
+    }
+    
+    func imageFromLayer(layer:CALayer) -> UIImage{
+        UIGraphicsBeginImageContext(layer.frame.size)
+        layer.renderInContext(UIGraphicsGetCurrentContext()!)
+        let outputImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return outputImage
+    }
+    
+    //    CAGradientLayer *btnGradient = [CAGradientLayer layer];
+    //    btnGradient.frame = CGRectMake(0,0, gameScore.frame.size.width, gameScore.frame.size.height);
+    //    btnGradient.colors = [NSArray arrayWithObjects:
+    //    (id)[[UIColor colorWithRed:10.0f / 255.0f green:19.0f / 255.0f blue:190.0f / 255.0f alpha:1.0f] CGColor],(id)[[UIColor colorWithRed:38.0f / 255.0f green:29.0f / 232.0f blue:102.0f / 255.0f alpha:1.0f] CGColor],(id)[[UIColor colorWithRed:38.0f / 255.0f green:29.0f / 232.0f blue:102.0f / 255.0f alpha:1.0f] CGColor],(id)[[UIColor colorWithRed:38.0f / 255.0f green:29.0f / 232.0f blue:102.0f / 255.0f alpha:1.0f] CGColor],(id)[[UIColor colorWithRed:10.0f / 255.0f green:19.0f / 255.0f blue:190.0f / 255.0f alpha:1.0f] CGColor],                                          nil];
+    
+    
     func delay(delay:Double, closure:()->()) {
         dispatch_after(
             dispatch_time(
@@ -144,22 +210,22 @@ class HomeViewController: UIViewController {
             ),
             dispatch_get_main_queue(), closure)
     }
-
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // Get the new view controller using segue.destinationViewController.
+    // Pass the selected object to the new view controller.
     }
     */
-
+    
 }
