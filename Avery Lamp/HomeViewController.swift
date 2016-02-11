@@ -8,14 +8,36 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+enum BackgroundDirection {
+    case Up
+    case Down
+    case Stop
+}
 
+class HomeViewController: UIViewController {
+    
+    var animationFlag: BackgroundDirection = .Up
+    var bgScroll:UIImageView?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.whiteColor()
         let height = self.view.frame.height
         let width = self.view.frame.width
 
+        bgScroll = UIImageView(frame: CGRectMake(0, 0, width, height * 2))
+        bgScroll?.alpha = 0
+        bgScroll?.contentMode = UIViewContentMode.ScaleAspectFill
+        bgScroll?.image = UIImage(named: "bg")
+        bgScroll?.layer.borderWidth = 1.0
+        bgScroll?.layer.borderColor = UIColor.blackColor().CGColor
+        self.view.addSubview(bgScroll!)
+        startAnimation()
+        UIView.animateWithDuration(2, delay: 5, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+            self.bgScroll?.alpha = 1.0
+            }, completion: nil)
+        
         createLineCircle(0, duration: 2.0, fadeDelay: 2.0, location: CGPointMake(width / 2 , height / 3) , size:120, left: true)
         createLineCircle(0, duration: 2.0, fadeDelay: 2.0, location: CGPointMake(width / 4 , height * 2 / 3) , size:120, left: true)
         createLineCircle(0, duration: 2.0, fadeDelay: 2.0, location: CGPointMake(width * 3 / 4 , height * 2 / 3) , size:120, left: false)
@@ -26,7 +48,9 @@ class HomeViewController: UIViewController {
         label.textAlignment = NSTextAlignment.Center
         self.view.addSubview(label)
         label.drawOutlineAnimatedWithLineWidth(1.0, withDuration: 2, fadeToLabel: true)
-
+        
+        
+        
         // Do any additional setup after loading the view.
     }
     
@@ -87,6 +111,29 @@ class HomeViewController: UIViewController {
                 })
             })
         }
+    }
+    
+    func startAnimation () {
+        UIView.animateWithDuration(5.0, delay: 0, options: UIViewAnimationOptions.CurveLinear, animations: {
+            
+            [weak self] in
+            
+            
+            if let strongSelf = self {
+                if strongSelf.animationFlag == .Down {
+                    strongSelf.bgScroll!.frame.origin.y = -strongSelf.bgScroll!.frame.height + UIScreen.mainScreen().bounds.height
+                    strongSelf.animationFlag = .Up
+                } else if strongSelf.animationFlag == .Up {
+                    strongSelf.bgScroll!.frame.origin.y = 0
+                    strongSelf.animationFlag = .Down
+                }
+            }
+            
+            }, completion: { [weak self] finished in
+                if self?.animationFlag != .Stop {
+                    self?.startAnimation()
+                }
+            })
     }
 
     func delay(delay:Double, closure:()->()) {
