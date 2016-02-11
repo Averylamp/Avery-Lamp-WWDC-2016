@@ -148,7 +148,10 @@ class SplashViewController: UIViewController {
                 }
             }
             delay(Double(max) * 0.1 + 2, closure: { () -> () in
-                self.performSegueWithIdentifier("HomeSegue", sender: nil)
+                
+                self.navigationController?.pushViewController(HomeViewController(), animated: false)
+                self.navigationController?.viewControllers.removeFirst()
+//                self.performSegueWithIdentifier("HomeSegue", sender: nil)
             })
         }
         
@@ -159,7 +162,7 @@ class SplashViewController: UIViewController {
     var fullImage: UIImage?
     var horzPics = 0
     var vertPics = 0
-    let imageSize = CGFloat(20.0)
+    let imageSize = CGFloat(30.0)
     
     func populateImages(){
         
