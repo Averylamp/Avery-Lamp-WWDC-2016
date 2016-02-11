@@ -47,6 +47,7 @@
 		<string>Panton-Light.otf</string>
 		<string>Panton-Regular.otf</string>
 		<string>Panton-Thin.otf</string>
+		<string>SummitThin-Display.otf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
