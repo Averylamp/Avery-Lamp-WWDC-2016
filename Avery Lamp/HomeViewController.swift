@@ -53,9 +53,34 @@ class HomeViewController: UIViewController {
             self.startAnimation()
         }
         
+        
+        let detailFontSize = CGFloat(25)
         createLineCircle(0, duration: 2.0, fadeDelay: 2.0, location: CGPointMake(width / 2 , height / 3) , size:120, left: true)
+        let storyLabel = UILabel(frame: CGRectMake(0,0, width / 2, 30))
+        storyLabel.center = CGPointMake(width / 2 , height / 3 + 60 + 20)
+        storyLabel.text = "My Story"
+        storyLabel.font = UIFont(name: "Panton-Light", size: detailFontSize)
+        storyLabel.textAlignment = NSTextAlignment.Center
+        storyLabel.drawOutlineAnimatedWithLineWidth(0.4, withDuration: 1.0, withDelay: 4, fadeToLabel: true)
+        self.view.addSubview(storyLabel)
+        
         createLineCircle(0, duration: 2.0, fadeDelay: 2.0, location: CGPointMake(width / 4 , height * 2 / 3) , size:120, left: true)
+        let infoLabel = UILabel(frame: CGRectMake(0,0, width / 2, 30))
+        infoLabel.center = CGPointMake(width / 4 , height * 2 / 3 + 60 + 20)
+        infoLabel.text = "My Info"
+        infoLabel.font = UIFont(name: "Panton-Light", size: detailFontSize)
+        infoLabel.textAlignment = NSTextAlignment.Center
+        infoLabel.drawOutlineAnimatedWithLineWidth(0.4, withDuration: 1.0, withDelay: 4, fadeToLabel: true)
+        self.view.addSubview(infoLabel)
+        
         createLineCircle(0, duration: 2.0, fadeDelay: 2.0, location: CGPointMake(width * 3 / 4 , height * 2 / 3) , size:120, left: false)
+        let appsLabel = UILabel(frame: CGRectMake(0,0, width / 2, 30))
+        appsLabel.center = CGPointMake(width * 3 / 4 , height * 2 / 3 + 60 + 20)
+        appsLabel.text = "My Apps"
+        appsLabel.font = UIFont(name: "Panton-Light", size: detailFontSize)
+        appsLabel.textAlignment = NSTextAlignment.Center
+        appsLabel.drawOutlineAnimatedWithLineWidth(0.4, withDuration: 1.0, withDelay: 4, fadeToLabel: true)
+        self.view.addSubview(appsLabel)
         
         let label = UILabel(frame: CGRectMake(0,0,width, 100))
         label.text = "Welcome"
