@@ -108,9 +108,13 @@ class HomeViewController: UIViewController {
             points = Array(arrayLiteral: CGPointMake(self.view.frame.width,location.y - size / 2),CGPointMake(location.x,location.y - size / 2))
         }
         CGPathAddLines(path, nil, points, 2)
-        let circlePath = UIBezierPath(roundedRect: CGRectMake(location.x - size / 2,location.y - size / 2, size, size), cornerRadius: size).CGPath
+        var circlePath: CGPath?
+        if left {
+            circlePath = UIBezierPath(roundedRect: CGRectMake(location.x - size / 2,location.y - size / 2, size, size), cornerRadius: size).CGPath
+        }else {
+            circlePath = UIBezierPath(roundedRect: CGRectMake(location.x - size / 2,location.y - size / 2, size, size), cornerRadius: size).bezierPathByReversingPath().CGPath
+        }
         CGPathAddPath(path, nil, circlePath)
-        
         line.path  = path
         
         let circle = CAShapeLayer()
