@@ -1,5 +1,5 @@
 PODS:
-  - Crashlytics (3.6.0):
+  - Crashlytics (3.7.0):
     - Fabric (~> 1.6.3)
   - Fabric (1.6.4)
   - Shimmer (1.0.2)
@@ -12,7 +12,7 @@ DEPENDENCIES:
   - UIColor_Hex_Swift (~> 1.8)
 
 SPEC CHECKSUMS:
-  Crashlytics: e4e8d02914f2608fbc7bf42b1a7af838b0db67a2
+  Crashlytics: c3a2333dea9e2733d2777f730910321fc9e25c0d
   Fabric: ed41fd62173c6bdea24ab02c9d7707161eabb750
   Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
   UIColor_Hex_Swift: a66b9d5f6e8fddbd9fe32996504f0b7e9d20d680

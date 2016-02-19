@@ -4,4 +4,3 @@
 
 #import "UILabel+DrawAnimation.h"
 #import "CALayer+DrawAnimation.h"
-#import "FBShimmeringView.h"

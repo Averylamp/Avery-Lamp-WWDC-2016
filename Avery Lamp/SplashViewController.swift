@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import Shimmer
 
 
 class SplashViewController: UIViewController {
