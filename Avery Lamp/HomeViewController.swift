@@ -44,16 +44,18 @@ class HomeViewController: UIViewController {
         bgScroll2?.contentMode = UIViewContentMode.ScaleAspectFill
         self.view.addSubview(bgScroll2!)
         
-        UIView.animateWithDuration(3, delay: 5, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+        UIView.animateWithDuration(3, delay: 4, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
             self.bgScroll?.alpha = 1.0
         }, completion: nil)
         delay(5.0) { () -> () in
             self.startAnimation()
         }
         
+        let circleDrawDelay = 1.0
+        let circleDrawDuration = 1.0
         
         let detailFontSize = CGFloat(25)
-        createLineCircle(0, duration: 2.0, fadeDelay: 2.0, location: CGPointMake(width / 2 , height / 3) , size:120, left: true)
+        createLineCircle(0, duration: circleDrawDuration, fadeDelay: circleDrawDelay, location: CGPointMake(width / 2 , height / 3) , size:120, left: true)
         let storyLabel = UILabel(frame: CGRectMake(0,0, width / 2, 30))
         storyLabel.center = CGPointMake(width / 2 , height / 3 + 60 + 20)
         storyLabel.text = "My Story"
@@ -62,7 +64,7 @@ class HomeViewController: UIViewController {
         storyLabel.drawOutlineAnimatedWithLineWidth(0.4, withDuration: 1.0, withDelay: 4, fadeToLabel: true)
         self.view.addSubview(storyLabel)
         
-        createLineCircle(0, duration: 2.0, fadeDelay: 2.0, location: CGPointMake(width / 4 , height * 2 / 3) , size:120, left: true)
+        createLineCircle(0, duration: circleDrawDuration, fadeDelay: circleDrawDelay, location: CGPointMake(width / 4 , height * 2 / 3) , size:120, left: true)
         let infoLabel = UILabel(frame: CGRectMake(0,0, width / 2, 30))
         infoLabel.center = CGPointMake(width / 4 , height * 2 / 3 + 60 + 20)
         infoLabel.text = "My Info"
@@ -71,7 +73,7 @@ class HomeViewController: UIViewController {
         infoLabel.drawOutlineAnimatedWithLineWidth(0.4, withDuration: 1.0, withDelay: 4, fadeToLabel: true)
         self.view.addSubview(infoLabel)
         
-        createLineCircle(0, duration: 2.0, fadeDelay: 2.0, location: CGPointMake(width * 3 / 4 , height * 2 / 3) , size:120, left: false)
+        createLineCircle(0, duration: circleDrawDuration, fadeDelay: circleDrawDelay, location: CGPointMake(width * 3 / 4 , height * 2 / 3) , size:120, left: false)
         let appsLabel = UILabel(frame: CGRectMake(0,0, width / 2, 30))
         appsLabel.center = CGPointMake(width * 3 / 4 , height * 2 / 3 + 60 + 20)
         appsLabel.text = "My Apps"
@@ -198,13 +200,17 @@ class HomeViewController: UIViewController {
     
     func randomizedColorSet() -> Array<CGColor>{
         var arr = Array<CGColor>()
-        var rand = arc4random() >> 1
-        var randNum = Int(rand) % bgColors.count
+        let rand = arc4random() >> 1
+        let randNum = Int(rand) % bgColors.count
         let firstColor = bgColors[randNum]
         arr.append(firstColor.CGColor)
-        rand = arc4random() >> 1
-        randNum = Int(rand) % bgColors.count
-        let secondColor = bgColors[randNum]
+        var rand2 = arc4random() >> 1
+        var randNum2 = Int(rand2) % bgColors.count
+        while randNum2 == randNum {
+            rand2 = arc4random() >> 1
+            randNum2 = Int(rand2) % bgColors.count
+        }
+        let secondColor = bgColors[randNum2]
         arr.append(secondColor.CGColor)
         return arr
     }
@@ -226,11 +232,6 @@ class HomeViewController: UIViewController {
         UIGraphicsEndImageContext()
         return outputImage
     }
-    
-    //    CAGradientLayer *btnGradient = [CAGradientLayer layer];
-    //    btnGradient.frame = CGRectMake(0,0, gameScore.frame.size.width, gameScore.frame.size.height);
-    //    btnGradient.colors = [NSArray arrayWithObjects:
-    //    (id)[[UIColor colorWithRed:10.0f / 255.0f green:19.0f / 255.0f blue:190.0f / 255.0f alpha:1.0f] CGColor],(id)[[UIColor colorWithRed:38.0f / 255.0f green:29.0f / 232.0f blue:102.0f / 255.0f alpha:1.0f] CGColor],(id)[[UIColor colorWithRed:38.0f / 255.0f green:29.0f / 232.0f blue:102.0f / 255.0f alpha:1.0f] CGColor],(id)[[UIColor colorWithRed:38.0f / 255.0f green:29.0f / 232.0f blue:102.0f / 255.0f alpha:1.0f] CGColor],(id)[[UIColor colorWithRed:10.0f / 255.0f green:19.0f / 255.0f blue:190.0f / 255.0f alpha:1.0f] CGColor],                                          nil];
     
     
     func delay(delay:Double, closure:()->()) {

@@ -50,14 +50,14 @@ class SplashViewController: UIViewController {
         welcomeLabel.text = "Hello"
         welcomeLabel.font = UIFont(name: "Panton-Light", size: 30)
         self.view.addSubview(welcomeLabel)
-        welcomeLabel.drawOutlineAnimatedWithLineWidth(0.5, withDuration: 3, fadeToLabel: true)
+        welcomeLabel.drawOutlineAnimatedWithLineWidth(0.5, withDuration: 2, fadeToLabel: true)
         
         
         let myNameLabel  = UILabel(frame: CGRectMake(0,self.view.frame.height * 1 / 2 ,self.view.frame.width, 40))
         myNameLabel.text = "My name is Avery"
         myNameLabel.font = UIFont(name: "Panton-Light", size: 20)
         self.view.addSubview(myNameLabel)
-        myNameLabel.drawOutlineAnimatedWithLineWidth(0.7, withDuration: 2, withDelay: 4, fadeToLabel: true);
+        myNameLabel.drawOutlineAnimatedWithLineWidth(0.7, withDuration: 1.5, withDelay: 2.0, fadeToLabel: true);
         
         
         let picSize = myNameLabel.frame.origin.y - welcomeLabel.frame.origin.y - welcomeLabel.frame.height - 50
@@ -86,15 +86,15 @@ class SplashViewController: UIViewController {
         drawAnimation.toValue = NSNumber(float: 1.0)
         drawAnimation.timingFunction =  CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
         
-        delay(4.5) { () -> () in
+        delay(3.5) { () -> () in
             circle.lineWidth = 3
             circle.addAnimation(drawAnimation, forKey: "drawCircleAnimation")
-            self.delay(3.5, closure: { () -> () in
+            self.delay(2.0, closure: { () -> () in
                 self.continuable = true
             })
         }
         
-        UIView.animateWithDuration(2.5, delay: 4.5, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+        UIView.animateWithDuration(2.5, delay: 2.5, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
             proPic.alpha = 1.0
             }) { (finished) -> Void in}
        
@@ -112,7 +112,7 @@ class SplashViewController: UIViewController {
         continueLabel.textAlignment = NSTextAlignment.Center
         shimmerView.contentView = continueLabel
         shimmerView.shimmering = true
-        continueLabel.drawOutlineAnimatedWithLineWidth(0.5, withDuration: 1, withDelay: 8, fadeToLabel: true)
+        continueLabel.drawOutlineAnimatedWithLineWidth(0.5, withDuration: 1, withDelay: 5, fadeToLabel: true)
         
         
     }
