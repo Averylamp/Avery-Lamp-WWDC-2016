@@ -135,21 +135,43 @@ class SplashViewController: UIViewController {
             let h = Int((location?.x)! / imageSize)
             let v = Int((location?.y)! / imageSize)
             print("h - \(h)  v - \(v)")
-
-            rippleTransitionSetup(imgViews, h: h, v: v, iteration: 0)
+            
+            let touchFeedback = UIView(frame: CGRectMake(0,0,50,50))
+            touchFeedback.backgroundColor = UIColor.whiteColor()
+            touchFeedback.layer.cornerRadius = 25
+            touchFeedback.center = location!
+            touchFeedback.alpha = 0.4
+            self.view.addSubview(touchFeedback)
+            UIView.animateWithDuration(0.5 , animations: {
+                touchFeedback.transform = CGAffineTransformMakeScale(2, 2)
+                }, completion: { (finished) in
+                    UIView.animateWithDuration(0.1, animations: { 
+                        touchFeedback.alpha = 0.0
+                        }, completion: nil)
+            })
+            
+            let queue = dispatch_queue_create("flood", nil)
+            dispatch_async(queue, {
+                self.rippleTransitionSetup(self.imgViews, h: h, v: v, iteration: 0)
+            
+            
+            
             var max = 0
-            for v in 0...vertPics - 1 {
-                for h in 0...horzPics - 1 {
+            for v in 0...self.vertPics - 1 {
+                for h in 0...self.horzPics - 1 {
                     
 //                    print("h - \(h)  v - \(v) tag - \(imgViews[v][h].tag - 1000)")
-                    rippleFade2(imgViews[v][h], delays: Double(imgViews[v][h].tag - 1000) * 0.1)
-                    if imgViews[v][h].tag - 1000 > max{
-                        max = imgViews[v][h].tag - 1000
+                    self.rippleFade2(self.imgViews[v][h], delays: Double(self.imgViews[v][h].tag - 1000) * 0.1)
+                    if self.imgViews[v][h].tag - 1000 > max{
+                        max = self.imgViews[v][h].tag - 1000
                     }
                 }
             }
-            delay(Double(max) * 0.1 + 2, closure: { () -> () in
+                
+             
+            self.delay(Double(max) * 0.1 + 2, closure: { () -> () in
                 self.navigationController?.pushViewController(HomeViewController(), animated: false)
+            })
             })
         }
         

@@ -5,5 +5,5 @@ pod 'Crashlytics'
 
 use_frameworks! 
 
-pod 'UIColor_Hex_Swift', '~> 1.8'
+pod 'UIColor_Hex_Swift', '~> 1.9'
 
