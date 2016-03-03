@@ -54,33 +54,62 @@ class HomeViewController: UIViewController {
         let circleDrawDelay = 1.0
         let circleDrawDuration = 1.0
         
+        let topIconsHeightOffset = height / 3 + 60 + 20
         let detailFontSize = CGFloat(25)
         createLineCircle(0, duration: circleDrawDuration, fadeDelay: circleDrawDelay, location: CGPointMake(width / 2 , height / 3) , size:120, left: true)
         let storyLabel = UILabel(frame: CGRectMake(0,0, width / 2, 30))
-        storyLabel.center = CGPointMake(width / 2 , height / 3 + 60 + 20)
+        storyLabel.center = CGPointMake(width / 2 , topIconsHeightOffset)
         storyLabel.text = "My Story"
         storyLabel.font = UIFont(name: "Panton-Light", size: detailFontSize)
         storyLabel.textAlignment = NSTextAlignment.Center
         storyLabel.drawOutlineAnimatedWithLineWidth(0.4, withDuration: 1.0, withDelay: 4, fadeToLabel: true)
         self.view.addSubview(storyLabel)
         
+        let myStoryButton = UIButton(frame: CGRectMake(0,0,120,120))
+        myStoryButton.center = CGPointMake(width / 2, height / 3)
+        myStoryButton.layer.cornerRadius = 60
+        myStoryButton.addTarget(self, action: #selector(HomeViewController.goToMyStory), forControlEvents: UIControlEvents.TouchUpInside)
+        myStoryButton.layer.masksToBounds = true
+        myStoryButton.clipsToBounds = true
+        self.view.addSubview(myStoryButton)
+
+        
+        let bottomIconsHeightOffset = height * 2 / 3 + 60 + 20
+
+        
         createLineCircle(0, duration: circleDrawDuration, fadeDelay: circleDrawDelay, location: CGPointMake(width / 4 , height * 2 / 3) , size:120, left: true)
         let infoLabel = UILabel(frame: CGRectMake(0,0, width / 2, 30))
-        infoLabel.center = CGPointMake(width / 4 , height * 2 / 3 + 60 + 20)
+        infoLabel.center = CGPointMake(width / 4 , bottomIconsHeightOffset)
         infoLabel.text = "My Info"
         infoLabel.font = UIFont(name: "Panton-Light", size: detailFontSize)
         infoLabel.textAlignment = NSTextAlignment.Center
         infoLabel.drawOutlineAnimatedWithLineWidth(0.4, withDuration: 1.0, withDelay: 4, fadeToLabel: true)
         self.view.addSubview(infoLabel)
         
+        let myInfoButton = UIButton(frame: CGRectMake(0,0,120,120))
+        myInfoButton.center = CGPointMake(width / 4, height * 2 / 3)
+        myInfoButton.layer.cornerRadius = 60
+        myInfoButton.addTarget(self, action: #selector(HomeViewController.goToMyInfo), forControlEvents: UIControlEvents.TouchUpInside)
+        myInfoButton.layer.masksToBounds = true
+        myInfoButton.clipsToBounds = true
+        self.view.addSubview(myInfoButton)
+        
         createLineCircle(0, duration: circleDrawDuration, fadeDelay: circleDrawDelay, location: CGPointMake(width * 3 / 4 , height * 2 / 3) , size:120, left: false)
         let appsLabel = UILabel(frame: CGRectMake(0,0, width / 2, 30))
-        appsLabel.center = CGPointMake(width * 3 / 4 , height * 2 / 3 + 60 + 20)
+        appsLabel.center = CGPointMake(width * 3 / 4 , bottomIconsHeightOffset)
         appsLabel.text = "My Apps"
         appsLabel.font = UIFont(name: "Panton-Light", size: detailFontSize)
         appsLabel.textAlignment = NSTextAlignment.Center
         appsLabel.drawOutlineAnimatedWithLineWidth(0.4, withDuration: 1.0, withDelay: 4, fadeToLabel: true)
         self.view.addSubview(appsLabel)
+        
+        let myAppsButton = UIButton(frame: CGRectMake(0,0,120,120))
+        myAppsButton.center = CGPointMake(width / 4, height * 2 / 3)
+        myAppsButton.layer.cornerRadius = 60
+        myAppsButton.addTarget(self, action: #selector(HomeViewController.goToMyApps), forControlEvents: UIControlEvents.TouchUpInside)
+        myAppsButton.layer.masksToBounds = true
+        myAppsButton.clipsToBounds = true
+        self.view.addSubview(myAppsButton)
         
         let label = UILabel(frame: CGRectMake(0,0,width, 100))
         label.text = "Welcome"
@@ -243,6 +272,21 @@ class HomeViewController: UIViewController {
             dispatch_get_main_queue(), closure)
     }
     
+    
+    func goToMyStory(){
+        self.navigationController?.pushViewController(MyStoryViewController(), animated: true)
+        
+    }
+    
+    func goToMyInfo(){
+        self.navigationController?.pushViewController(MyInfoViewController(), animated: true)
+        
+    }
+    
+    func goToMyApps(){
+        self.navigationController?.pushViewController(MyAppsViewController(), animated: true)
+        
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

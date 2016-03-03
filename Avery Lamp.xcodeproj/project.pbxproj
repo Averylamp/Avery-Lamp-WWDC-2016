@@ -27,6 +27,9 @@
 		BB10DD941C59E55D0079C480 /* Panton-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB10DD8B1C59E55D0079C480 /* Panton-Thin.otf */; };
 		BB10DD961C59E5FD0079C480 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB10DD951C59E5FD0079C480 /* SplashViewController.swift */; };
 		BB34038B1C61E9D0004F53DF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34038A1C61E9D0004F53DF /* HomeViewController.swift */; };
+		BBFFC4511C88AF2800A8B5C5 /* MyStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFFC4501C88AF2800A8B5C5 /* MyStoryViewController.swift */; };
+		BBFFC4531C88AF3100A8B5C5 /* MyAppsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFFC4521C88AF3100A8B5C5 /* MyAppsViewController.swift */; };
+		BBFFC4551C88AF7E00A8B5C5 /* MyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFFC4541C88AF7E00A8B5C5 /* MyInfoViewController.swift */; };
 		FD28E1FA33D009710E4BE6F8 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85EB57D2745956D1EC5A9497 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
@@ -129,6 +132,9 @@
 		BB3403871C61E950004F53DF /* SummitThin-SolidThree.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitThin-SolidThree.otf"; sourceTree = "<group>"; };
 		BB3403881C61E950004F53DF /* SummitThin-SolidTwo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitThin-SolidTwo.otf"; sourceTree = "<group>"; };
 		BB34038A1C61E9D0004F53DF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BBFFC4501C88AF2800A8B5C5 /* MyStoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyStoryViewController.swift; sourceTree = "<group>"; };
+		BBFFC4521C88AF3100A8B5C5 /* MyAppsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAppsViewController.swift; sourceTree = "<group>"; };
+		BBFFC4541C88AF7E00A8B5C5 /* MyInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyInfoViewController.swift; sourceTree = "<group>"; };
 		BDD472C5AB65D9D3A8B2AD0D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -205,6 +211,9 @@
 				BB10DD951C59E5FD0079C480 /* SplashViewController.swift */,
 				BB10DD351C59DF940079C480 /* Main.storyboard */,
 				BB34038A1C61E9D0004F53DF /* HomeViewController.swift */,
+				BBFFC4501C88AF2800A8B5C5 /* MyStoryViewController.swift */,
+				BBFFC4521C88AF3100A8B5C5 /* MyAppsViewController.swift */,
+				BBFFC4541C88AF7E00A8B5C5 /* MyInfoViewController.swift */,
 				BB10DD991C59EB760079C480 /* Fancy Graphic Helpers */,
 				BB10DD661C59E0000079C480 /* Fancy Text Drawing */,
 				BB10DD381C59DF940079C480 /* Assets.xcassets */,
@@ -535,8 +544,11 @@
 				BB10DD621C59DFDC0079C480 /* CALayer+DrawAnimation.m in Sources */,
 				BB10DD651C59DFFC0079C480 /* UILabel+DrawAnimation.m in Sources */,
 				BB10DD341C59DF940079C480 /* ViewController.swift in Sources */,
+				BBFFC4511C88AF2800A8B5C5 /* MyStoryViewController.swift in Sources */,
 				BB10DD321C59DF940079C480 /* AppDelegate.swift in Sources */,
+				BBFFC4531C88AF3100A8B5C5 /* MyAppsViewController.swift in Sources */,
 				BB10DD961C59E5FD0079C480 /* SplashViewController.swift in Sources */,
+				BBFFC4551C88AF7E00A8B5C5 /* MyInfoViewController.swift in Sources */,
 				BB34038B1C61E9D0004F53DF /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

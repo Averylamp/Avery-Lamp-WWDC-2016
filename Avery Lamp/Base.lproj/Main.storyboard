@@ -37,6 +37,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="XQO-az-fQV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OWN-hJ-gSw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -53,7 +54,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="1U4-Ze-wKN"/>
+                        <segue destination="dmY-kj-iYw" kind="relationship" relationship="rootViewController" id="EDh-Dn-v4C"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D3p-Qt-VlN" userLabel="First Responder" sceneMemberID="firstResponder"/>
