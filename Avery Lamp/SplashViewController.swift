@@ -16,6 +16,8 @@ class SplashViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Background Blur effects
         let bg = UIImageView(frame: CGRectMake(0, 0, self.view.frame.width, self.view.frame.height))
         bg.image = UIImage(named: "NewYorkBackground")
         bg.contentMode = UIViewContentMode.ScaleAspectFill
@@ -35,7 +37,6 @@ class SplashViewController: UIViewController {
         blurEffectView.alpha = 0.0
         self.view.addSubview(blurEffectView)
         
-        
         UIView.animateWithDuration(0.7, animations: { () -> Void in
             bg.alpha = 1.0
             }) { (finished) -> Void in
@@ -46,6 +47,7 @@ class SplashViewController: UIViewController {
                 })
         }
         
+        //Label Drawing
         let welcomeLabel  = UILabel(frame: CGRectMake(0,self.view.frame.height / 12 ,self.view.frame.width, 100))
         welcomeLabel.text = "Hello"
         welcomeLabel.font = UIFont(name: "Panton-Light", size: 30)
@@ -59,17 +61,15 @@ class SplashViewController: UIViewController {
         self.view.addSubview(myNameLabel)
         myNameLabel.drawOutlineAnimatedWithLineWidth(0.7, withDuration: 1.5, withDelay: 2.0, fadeToLabel: true);
         
-        
+        //Picture
         let picSize = myNameLabel.frame.origin.y - welcomeLabel.frame.origin.y - welcomeLabel.frame.height - 50
         let proPic = UIImageView(frame: CGRectMake(0, 0, picSize, picSize))
         proPic.image = UIImage(named: "Headshot2")
         proPic.center = CGPointMake(self.view.center.x, welcomeLabel.frame.origin.y + welcomeLabel.frame.height + picSize / 2 + 25)
         proPic.layer.cornerRadius = picSize / 2
-//        proPic.layer.borderWidth = 1
         proPic.layer.masksToBounds = true
         proPic.alpha = 0.0
         self.view.addSubview(proPic)
-        
         
         let circle = CAShapeLayer()
         circle.path = UIBezierPath(roundedRect: CGRectMake(0,0, picSize, picSize), cornerRadius: picSize).CGPath
@@ -98,6 +98,7 @@ class SplashViewController: UIViewController {
             proPic.alpha = 1.0
             }) { (finished) -> Void in}
        
+        //Shimmering Continue
         let shimmerView = FBShimmeringView(frame: CGRectMake(0,self.view.frame.height * 5 / 6,self.view.frame.width, 60))
         shimmerView.center = CGPointMake(self.view.center.x, self.view.frame.height * 5 / 6)
         shimmerView.alpha = 1.0
@@ -129,13 +130,15 @@ class SplashViewController: UIViewController {
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if continuable {
             continuable = false
-            print("Populating images")
+            //calculate
+            
             populateImages()
             let location = touches.first?.locationInView(self.view)
             let h = Int((location?.x)! / imageSize)
             let v = Int((location?.y)! / imageSize)
-            print("h - \(h)  v - \(v)")
             
+        
+            //Touch Circle
             let touchFeedback = UIView(frame: CGRectMake(0,0,50,50))
             touchFeedback.backgroundColor = UIColor.whiteColor()
             touchFeedback.layer.cornerRadius = 25
@@ -196,6 +199,7 @@ class SplashViewController: UIViewController {
         horzPics = Int(ceil(size.width / imageSize))
         vertPics = Int(ceil(size.height / imageSize))
         
+        //Create 2d arrays
         images = Array<Array<UIImage>>()
         imgViews = Array<Array<UIImageView>>()
         for _ in 0...vertPics - 1 {
@@ -203,17 +207,20 @@ class SplashViewController: UIViewController {
             imgViews.append(Array(count: horzPics, repeatedValue: UIImageView()))
         }
         
+        //Add cropped images to 2d arrays
         for v in 0...vertPics - 1 {
             for h in 0...horzPics - 1 {
                 images[v][h] = croppedImage(fullImage!, cropRect: CGRectMake(CGFloat(h) * imageSize * UIScreen.mainScreen().scale,CGFloat(v) * imageSize * UIScreen.mainScreen().scale,imageSize * UIScreen.mainScreen().scale,imageSize * UIScreen.mainScreen().scale))
                 
             }
         }
+        
+        //Remove all views
         view.subviews.forEach({ $0.removeFromSuperview() })
         for v in 0...vertPics - 1 {
             for h in 0...horzPics - 1 {
                 let imgView = UIImageView(frame: CGRectMake(CGFloat(h) * imageSize, CGFloat(v) * imageSize , images[v][h].size.width / UIScreen.mainScreen().scale, images[v][h].size.height / UIScreen.mainScreen().scale))
-
+                //Add all subviews
                 self.view.addSubview(imgView)
                 imgView.image = images[v][h]
                 imgViews[v][h] = imgView
@@ -229,7 +236,7 @@ class SplashViewController: UIViewController {
     }
     
     func rippleTransitionSetup(images: [[UIImageView]], h: Int, v: Int, iteration:Int){
-        //FLOOD
+        //Recursive flood and add numbers to tag
         if (h < 0 || h >= images.first?.count || v < 0 || v >= images.count){
             return
         }
@@ -242,7 +249,6 @@ class SplashViewController: UIViewController {
         }else{
             images[v][h].tag = 1000 + iteration
         }
-
         
         rippleTransitionSetup(images, h: h - 1, v: v, iteration: iteration + 1)
         rippleTransitionSetup(images, h: h + 1, v: v, iteration: iteration + 1)
@@ -250,6 +256,7 @@ class SplashViewController: UIViewController {
         rippleTransitionSetup(images, h: h, v: v + 1, iteration: iteration + 1)
     }
     
+    //Flood animations
     func rippleFade(image : UIImageView, delays : Double) {
 
         delay(delays) { () -> () in
@@ -258,7 +265,7 @@ class SplashViewController: UIViewController {
             })
         }
     }
-    
+    //Square flood animation
     func rippleFade2(image : UIImageView, delays : Double) {
         delay(delays) { () -> () in
             

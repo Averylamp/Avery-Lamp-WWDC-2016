@@ -9,6 +9,7 @@
 import UIKit
 import UIColor_Hex_Swift
 
+//background color fading
 enum BackgroundDirection {
     case Up
     case Down
@@ -33,6 +34,7 @@ class HomeViewController: UIViewController {
         let height = self.view.frame.height
         let width = self.view.frame.width
         
+        //Two backgrounds
         bgScroll = UIImageView(frame: CGRectMake(0, 0, width, height * 2))
         bgScroll?.alpha = 0
         bgScroll?.contentMode = UIViewContentMode.ScaleAspectFill
@@ -44,6 +46,7 @@ class HomeViewController: UIViewController {
         bgScroll2?.contentMode = UIViewContentMode.ScaleAspectFill
         self.view.addSubview(bgScroll2!)
         
+        //Initial fade in
         UIView.animateWithDuration(3, delay: 4, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
             self.bgScroll?.alpha = 1.0
         }, completion: nil)
@@ -54,6 +57,7 @@ class HomeViewController: UIViewController {
         let circleDrawDelay = 1.0
         let circleDrawDuration = 1.0
         
+        //My Story
         let topIconsHeightOffset = height / 3 + 60 + 20
         let detailFontSize = CGFloat(25)
         createLineCircle(0, duration: circleDrawDuration, fadeDelay: circleDrawDelay, location: CGPointMake(width / 2 , height / 3) , size:120, left: true)
@@ -75,8 +79,8 @@ class HomeViewController: UIViewController {
 
         
         let bottomIconsHeightOffset = height * 2 / 3 + 60 + 20
-
         
+        //My Info
         createLineCircle(0, duration: circleDrawDuration, fadeDelay: circleDrawDelay, location: CGPointMake(width / 4 , height * 2 / 3) , size:120, left: true)
         let infoLabel = UILabel(frame: CGRectMake(0,0, width / 2, 30))
         infoLabel.center = CGPointMake(width / 4 , bottomIconsHeightOffset)
@@ -94,6 +98,7 @@ class HomeViewController: UIViewController {
         myInfoButton.clipsToBounds = true
         self.view.addSubview(myInfoButton)
         
+        // My Apps
         createLineCircle(0, duration: circleDrawDuration, fadeDelay: circleDrawDelay, location: CGPointMake(width * 3 / 4 , height * 2 / 3) , size:120, left: false)
         let appsLabel = UILabel(frame: CGRectMake(0,0, width / 2, 30))
         appsLabel.center = CGPointMake(width * 3 / 4 , bottomIconsHeightOffset)
@@ -111,6 +116,7 @@ class HomeViewController: UIViewController {
         myAppsButton.clipsToBounds = true
         self.view.addSubview(myAppsButton)
         
+        //Welcome
         let label = UILabel(frame: CGRectMake(0,0,width, 100))
         label.text = "Welcome"
         label.font = UIFont(name: "Panton-Regular", size: 40)
@@ -123,6 +129,7 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    //Drawing the circle from the side
     func createLineCircle(delayt: Double, duration: Double, fadeDelay:Double, location: CGPoint, size: CGFloat, left: Bool){
         let line = CAShapeLayer()
         line.position = CGPointMake(0, 0)
@@ -186,6 +193,7 @@ class HomeViewController: UIViewController {
         }
     }
     
+    //Animation for background color flow
     func startAnimation () {
         UIView.animateWithDuration(5.0, delay: 0, options: UIViewAnimationOptions.CurveLinear, animations: {
             [weak self] in
@@ -225,8 +233,10 @@ class HomeViewController: UIViewController {
             })
     }
     
+    //Background colors to pick from
     let bgColors = [UIColor(hex6: 0xfdb86b),UIColor(hex6: 0xe6a14b),UIColor(hex6: 0xfc5e6f),UIColor(hex6: 0xf3b93e),UIColor(hex6: 0x62cbfa),UIColor(hex6: 0xd08ab4),UIColor(hex6: 0xb8fbb4),UIColor(hex6: 0x2ffbfc)]
     
+    //Random Color Set Picker
     func randomizedColorSet() -> Array<CGColor>{
         var arr = Array<CGColor>()
         let rand = arc4random() >> 1
@@ -243,7 +253,7 @@ class HomeViewController: UIViewController {
         arr.append(secondColor.CGColor)
         return arr
     }
-    
+    //Single gradient from random colors
     func randomizedBGColor()->UIImage{
         let gradient = CAGradientLayer()
         gradient.backgroundColor = UIColor.greenColor().CGColor
@@ -251,9 +261,9 @@ class HomeViewController: UIViewController {
         gradient.colors = randomizedColorSet()
         let image = imageFromLayer(gradient)
         return image
-        
     }
     
+    //Gradient layer to image
     func imageFromLayer(layer:CALayer) -> UIImage{
         UIGraphicsBeginImageContext(layer.frame.size)
         layer.renderInContext(UIGraphicsGetCurrentContext()!)
@@ -261,7 +271,6 @@ class HomeViewController: UIViewController {
         UIGraphicsEndImageContext()
         return outputImage
     }
-    
     
     func delay(delay:Double, closure:()->()) {
         dispatch_after(
@@ -273,6 +282,8 @@ class HomeViewController: UIViewController {
     }
     
     
+    
+    // MARK: - Navigation
     func goToMyStory(){
         self.navigationController?.pushViewController(MyStoryViewController(), animated: true)
         
@@ -287,21 +298,5 @@ class HomeViewController: UIViewController {
         self.navigationController?.pushViewController(MyAppsViewController(), animated: true)
         
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
-    }
-    */
-    
+        
 }
