@@ -8,7 +8,7 @@
 
 import UIKit
 import Shimmer
-
+import LTMorphingLabel
 
 class SplashViewController: UIViewController {
 
@@ -106,14 +106,23 @@ class SplashViewController: UIViewController {
         shimmerView.shimmeringPauseDuration = 0.1
         shimmerView.shimmeringHighlightLength = 0.5
         self.view.addSubview(shimmerView)
-        let continueLabel = UILabel(frame: shimmerView.frame)
-        continueLabel.text = "Tap Anywhere to Continue"
+        let continueLabel = LTMorphingLabel(frame: shimmerView.frame)
+        continueLabel.text = "Tap"
+        continueLabel.morphingEffect = .Fall
+        continueLabel.morphingDuration = 1.8
         continueLabel.font = UIFont(name: "Panton-Regular", size: 24)
         continueLabel.textColor = UIColor.whiteColor()
         continueLabel.textAlignment = NSTextAlignment.Center
         shimmerView.contentView = continueLabel
         shimmerView.shimmering = true
-        continueLabel.drawOutlineAnimatedWithLineWidth(0.5, withDuration: 1, withDelay: 5, fadeToLabel: true)
+        continueLabel.alpha = 0.0
+        delay(5.0) {
+            shimmerView.addSubview(continueLabel)
+            continueLabel.alpha = 1.0
+            continueLabel.text = "Tap to Continue"
+        }
+        
+//        continueLabel.drawOutlineAnimatedWithLineWidth(0.5, withDuration: 1, withDelay: 5, fadeToLabel: true)
         
         
     }

@@ -35,19 +35,19 @@ class HomeViewController: UIViewController {
         let width = self.view.frame.width
         
         //Two backgrounds
-        bgScroll = UIImageView(frame: CGRectMake(0, 0, width, height * 2))
+        bgScroll = UIImageView(frame: CGRectMake(0, 0, width, height * 3))
         bgScroll?.alpha = 0
         bgScroll?.contentMode = UIViewContentMode.ScaleAspectFill
         bgScroll?.image = UIImage(named: "bg")
         self.view.addSubview(bgScroll!)
         
-        bgScroll2 = UIImageView(frame: CGRectMake(0, 0, width, height * 2))
+        bgScroll2 = UIImageView(frame: CGRectMake(0, 0, width, height * 3))
         bgScroll2?.alpha = 0
         bgScroll2?.contentMode = UIViewContentMode.ScaleAspectFill
         self.view.addSubview(bgScroll2!)
         
         //Initial fade in
-        UIView.animateWithDuration(3, delay: 4, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+        UIView.animateWithDuration(3, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
             self.bgScroll?.alpha = 1.0
         }, completion: nil)
         delay(5.0) { () -> () in
@@ -56,7 +56,8 @@ class HomeViewController: UIViewController {
         
         let circleDrawDelay = 1.0
         let circleDrawDuration = 1.0
-        
+        let labelDrawDelay = Float(1.0)
+        let labelDrawDuration = Float(1.0)
         //My Story
         let topIconsHeightOffset = height / 3 + 60 + 20
         let detailFontSize = CGFloat(25)
@@ -66,7 +67,7 @@ class HomeViewController: UIViewController {
         storyLabel.text = "My Story"
         storyLabel.font = UIFont(name: "Panton-Light", size: detailFontSize)
         storyLabel.textAlignment = NSTextAlignment.Center
-        storyLabel.drawOutlineAnimatedWithLineWidth(0.4, withDuration: 1.0, withDelay: 4, fadeToLabel: true)
+        storyLabel.drawOutlineAnimatedWithLineWidth(0.4, withDuration: labelDrawDuration, withDelay: labelDrawDelay, fadeToLabel: true)
         self.view.addSubview(storyLabel)
         
         let myStoryButton = UIButton(frame: CGRectMake(0,0,120,120))
@@ -87,7 +88,7 @@ class HomeViewController: UIViewController {
         infoLabel.text = "My Info"
         infoLabel.font = UIFont(name: "Panton-Light", size: detailFontSize)
         infoLabel.textAlignment = NSTextAlignment.Center
-        infoLabel.drawOutlineAnimatedWithLineWidth(0.4, withDuration: 1.0, withDelay: 4, fadeToLabel: true)
+        infoLabel.drawOutlineAnimatedWithLineWidth(0.4, withDuration: labelDrawDuration, withDelay: labelDrawDelay, fadeToLabel: true)
         self.view.addSubview(infoLabel)
         
         let myInfoButton = UIButton(frame: CGRectMake(0,0,120,120))
@@ -105,11 +106,11 @@ class HomeViewController: UIViewController {
         appsLabel.text = "My Apps"
         appsLabel.font = UIFont(name: "Panton-Light", size: detailFontSize)
         appsLabel.textAlignment = NSTextAlignment.Center
-        appsLabel.drawOutlineAnimatedWithLineWidth(0.4, withDuration: 1.0, withDelay: 4, fadeToLabel: true)
+        appsLabel.drawOutlineAnimatedWithLineWidth(0.4, withDuration: labelDrawDuration, withDelay: labelDrawDelay, fadeToLabel: true)
         self.view.addSubview(appsLabel)
         
         let myAppsButton = UIButton(frame: CGRectMake(0,0,120,120))
-        myAppsButton.center = CGPointMake(width / 4, height * 2 / 3)
+        myAppsButton.center = CGPointMake(width * 3 / 4, height * 2 / 3)
         myAppsButton.layer.cornerRadius = 60
         myAppsButton.addTarget(self, action: #selector(HomeViewController.goToMyApps), forControlEvents: UIControlEvents.TouchUpInside)
         myAppsButton.layer.masksToBounds = true
@@ -124,9 +125,6 @@ class HomeViewController: UIViewController {
         self.view.addSubview(label)
         label.drawOutlineAnimatedWithLineWidth(1.0, withDuration: 2, fadeToLabel: true)
         
-        
-        
-        // Do any additional setup after loading the view.
     }
     
     //Drawing the circle from the side
@@ -298,5 +296,5 @@ class HomeViewController: UIViewController {
         self.navigationController?.pushViewController(MyAppsViewController(), animated: true)
         
     }
-        
+    
 }

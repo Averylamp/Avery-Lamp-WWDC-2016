@@ -22,7 +22,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1171" y="332"/>
+            <point key="canvasLocation" x="988" y="332"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="6hR-ik-43M">
@@ -41,7 +41,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OWN-hJ-gSw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1812" y="332"/>
+            <point key="canvasLocation" x="1638" y="332"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="YOR-RT-Ec6">
@@ -54,7 +54,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="BHL-2h-ZiT"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="NLH-f4-hdi"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D3p-Qt-VlN" userLabel="First Responder" sceneMemberID="firstResponder"/>

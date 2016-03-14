@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'ADA71DC17AFAA86BD8064335'
-               BlueprintName = 'UIColor_Hex_Swift'
+               BlueprintIdentifier = '377BD3AF03CE06307A057A41'
+               BlueprintName = 'LTMorphingLabel'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'UIColor_Hex_Swift.framework'>
+               BuildableName = 'LTMorphingLabel.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
