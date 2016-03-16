@@ -2,6 +2,7 @@ PODS:
   - Crashlytics (3.7.0):
     - Fabric (~> 1.6.3)
   - Fabric (1.6.6)
+  - FoldingCell (0.7.3)
   - LTMorphingLabel (0.1.1)
   - Shimmer (1.0.2)
   - UIColor_Hex_Swift (1.9)
@@ -9,6 +10,7 @@ PODS:
 DEPENDENCIES:
   - Crashlytics
   - Fabric
+  - FoldingCell (~> 0.7.3)
   - LTMorphingLabel
   - Shimmer
   - UIColor_Hex_Swift (~> 1.9)
@@ -16,6 +18,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Crashlytics: c3a2333dea9e2733d2777f730910321fc9e25c0d
   Fabric: 1abc1e59f11fa39ede6f690ef7309d8563e3ec59
+  FoldingCell: 8d7674d9ff51ae40408b99a17798bc0ec20a3654
   LTMorphingLabel: dfc40f43a0dcf81867b1f29431f34e861a5f1b35
   Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
   UIColor_Hex_Swift: 2ee747c0fed8b72b2135ef474b80a6921e489daa

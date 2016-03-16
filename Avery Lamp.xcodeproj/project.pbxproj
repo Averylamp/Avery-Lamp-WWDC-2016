@@ -27,6 +27,8 @@
 		BB10DD941C59E55D0079C480 /* Panton-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB10DD8B1C59E55D0079C480 /* Panton-Thin.otf */; };
 		BB10DD961C59E5FD0079C480 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB10DD951C59E5FD0079C480 /* SplashViewController.swift */; };
 		BB34038B1C61E9D0004F53DF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34038A1C61E9D0004F53DF /* HomeViewController.swift */; };
+		BBBBFAB71C97208400770E00 /* ExpandingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBBFAB61C97208400770E00 /* ExpandingTableViewController.swift */; };
+		BBBBFAB91C97209300770E00 /* ExpandingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBBFAB81C97209300770E00 /* ExpandingTableViewCell.swift */; };
 		BBFFC4511C88AF2800A8B5C5 /* MyStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFFC4501C88AF2800A8B5C5 /* MyStoryViewController.swift */; };
 		BBFFC4531C88AF3100A8B5C5 /* MyAppsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFFC4521C88AF3100A8B5C5 /* MyAppsViewController.swift */; };
 		BBFFC4551C88AF7E00A8B5C5 /* MyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFFC4541C88AF7E00A8B5C5 /* MyInfoViewController.swift */; };
@@ -132,6 +134,8 @@
 		BB3403871C61E950004F53DF /* SummitThin-SolidThree.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitThin-SolidThree.otf"; sourceTree = "<group>"; };
 		BB3403881C61E950004F53DF /* SummitThin-SolidTwo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitThin-SolidTwo.otf"; sourceTree = "<group>"; };
 		BB34038A1C61E9D0004F53DF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BBBBFAB61C97208400770E00 /* ExpandingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandingTableViewController.swift; sourceTree = "<group>"; };
+		BBBBFAB81C97209300770E00 /* ExpandingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandingTableViewCell.swift; sourceTree = "<group>"; };
 		BBFFC4501C88AF2800A8B5C5 /* MyStoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyStoryViewController.swift; sourceTree = "<group>"; };
 		BBFFC4521C88AF3100A8B5C5 /* MyAppsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAppsViewController.swift; sourceTree = "<group>"; };
 		BBFFC4541C88AF7E00A8B5C5 /* MyInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyInfoViewController.swift; sourceTree = "<group>"; };
@@ -212,7 +216,7 @@
 				BB10DD351C59DF940079C480 /* Main.storyboard */,
 				BB34038A1C61E9D0004F53DF /* HomeViewController.swift */,
 				BBFFC4501C88AF2800A8B5C5 /* MyStoryViewController.swift */,
-				BBFFC4521C88AF3100A8B5C5 /* MyAppsViewController.swift */,
+				BBBBFAB51C97206900770E00 /* My Apps */,
 				BBFFC4541C88AF7E00A8B5C5 /* MyInfoViewController.swift */,
 				BB10DD991C59EB760079C480 /* Fancy Graphic Helpers */,
 				BB10DD661C59E0000079C480 /* Fancy Text Drawing */,
@@ -333,6 +337,16 @@
 				BB3403881C61E950004F53DF /* SummitThin-SolidTwo.otf */,
 			);
 			name = "Summit Font";
+			sourceTree = "<group>";
+		};
+		BBBBFAB51C97206900770E00 /* My Apps */ = {
+			isa = PBXGroup;
+			children = (
+				BBFFC4521C88AF3100A8B5C5 /* MyAppsViewController.swift */,
+				BBBBFAB61C97208400770E00 /* ExpandingTableViewController.swift */,
+				BBBBFAB81C97209300770E00 /* ExpandingTableViewCell.swift */,
+			);
+			name = "My Apps";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -547,7 +561,9 @@
 				BBFFC4511C88AF2800A8B5C5 /* MyStoryViewController.swift in Sources */,
 				BB10DD321C59DF940079C480 /* AppDelegate.swift in Sources */,
 				BBFFC4531C88AF3100A8B5C5 /* MyAppsViewController.swift in Sources */,
+				BBBBFAB71C97208400770E00 /* ExpandingTableViewController.swift in Sources */,
 				BB10DD961C59E5FD0079C480 /* SplashViewController.swift in Sources */,
+				BBBBFAB91C97209300770E00 /* ExpandingTableViewCell.swift in Sources */,
 				BBFFC4551C88AF7E00A8B5C5 /* MyInfoViewController.swift in Sources */,
 				BB34038B1C61E9D0004F53DF /* HomeViewController.swift in Sources */,
 			);
