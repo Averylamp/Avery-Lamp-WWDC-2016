@@ -16,19 +16,22 @@
 		BB10DD521C59DF940079C480 /* Avery_LampUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB10DD511C59DF940079C480 /* Avery_LampUITests.swift */; };
 		BB10DD621C59DFDC0079C480 /* CALayer+DrawAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = BB10DD611C59DFDC0079C480 /* CALayer+DrawAnimation.m */; };
 		BB10DD651C59DFFC0079C480 /* UILabel+DrawAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = BB10DD641C59DFFC0079C480 /* UILabel+DrawAnimation.m */; };
-		BB10DD8C1C59E55D0079C480 /* Panton-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB10DD831C59E55D0079C480 /* Panton-Black.otf */; };
-		BB10DD8D1C59E55D0079C480 /* Panton-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB10DD841C59E55D0079C480 /* Panton-Bold.otf */; };
-		BB10DD8E1C59E55D0079C480 /* Panton-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB10DD851C59E55D0079C480 /* Panton-ExtraBold.otf */; };
-		BB10DD8F1C59E55D0079C480 /* Panton-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB10DD861C59E55D0079C480 /* Panton-ExtraLight.otf */; };
-		BB10DD901C59E55D0079C480 /* Panton-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB10DD871C59E55D0079C480 /* Panton-Heavy.otf */; };
-		BB10DD911C59E55D0079C480 /* Panton-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB10DD881C59E55D0079C480 /* Panton-Light.otf */; };
-		BB10DD921C59E55D0079C480 /* Panton-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB10DD891C59E55D0079C480 /* Panton-Regular.otf */; };
-		BB10DD931C59E55D0079C480 /* Panton-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB10DD8A1C59E55D0079C480 /* Panton-SemiBold.otf */; };
-		BB10DD941C59E55D0079C480 /* Panton-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = BB10DD8B1C59E55D0079C480 /* Panton-Thin.otf */; };
 		BB10DD961C59E5FD0079C480 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB10DD951C59E5FD0079C480 /* SplashViewController.swift */; };
 		BB34038B1C61E9D0004F53DF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34038A1C61E9D0004F53DF /* HomeViewController.swift */; };
 		BBBBFAB71C97208400770E00 /* ExpandingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBBFAB61C97208400770E00 /* ExpandingTableViewController.swift */; };
 		BBBBFAB91C97209300770E00 /* ExpandingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBBFAB81C97209300770E00 /* ExpandingTableViewCell.swift */; };
+		BBE54C3A1C9D321400EA9E7A /* ExpandingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE54C391C9D321400EA9E7A /* ExpandingCell.swift */; };
+		BBE54C3C1C9D38C000EA9E7A /* MyAppsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE54C3B1C9D38C000EA9E7A /* MyAppsTableViewController.swift */; };
+		BBE54C791C9D5AF600EA9E7A /* ADAM.CG PRO.otf in Resources */ = {isa = PBXBuildFile; fileRef = BBE54C781C9D5A6600EA9E7A /* ADAM.CG PRO.otf */; };
+		BBE54C7A1C9D5B0D00EA9E7A /* Panton-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = BBE54C3D1C9D5A1F00EA9E7A /* Panton-Black.otf */; };
+		BBE54C7B1C9D5B0D00EA9E7A /* Panton-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BBE54C3E1C9D5A1F00EA9E7A /* Panton-Bold.otf */; };
+		BBE54C7C1C9D5B0D00EA9E7A /* Panton-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BBE54C3F1C9D5A1F00EA9E7A /* Panton-ExtraBold.otf */; };
+		BBE54C7D1C9D5B0D00EA9E7A /* Panton-ExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = BBE54C401C9D5A1F00EA9E7A /* Panton-ExtraLight.otf */; };
+		BBE54C7E1C9D5B0D00EA9E7A /* Panton-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = BBE54C411C9D5A1F00EA9E7A /* Panton-Heavy.otf */; };
+		BBE54C7F1C9D5B0D00EA9E7A /* Panton-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = BBE54C421C9D5A1F00EA9E7A /* Panton-Light.otf */; };
+		BBE54C801C9D5B0D00EA9E7A /* Panton-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BBE54C431C9D5A1F00EA9E7A /* Panton-Regular.otf */; };
+		BBE54C811C9D5B0D00EA9E7A /* Panton-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BBE54C441C9D5A1F00EA9E7A /* Panton-SemiBold.otf */; };
+		BBE54C821C9D5B0D00EA9E7A /* Panton-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = BBE54C451C9D5A1F00EA9E7A /* Panton-Thin.otf */; };
 		BBFFC4511C88AF2800A8B5C5 /* MyStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFFC4501C88AF2800A8B5C5 /* MyStoryViewController.swift */; };
 		BBFFC4531C88AF3100A8B5C5 /* MyAppsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFFC4521C88AF3100A8B5C5 /* MyAppsViewController.swift */; };
 		BBFFC4551C88AF7E00A8B5C5 /* MyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFFC4541C88AF7E00A8B5C5 /* MyInfoViewController.swift */; };
@@ -73,69 +76,72 @@
 		BB10DD611C59DFDC0079C480 /* CALayer+DrawAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+DrawAnimation.m"; sourceTree = "<group>"; };
 		BB10DD631C59DFFC0079C480 /* UILabel+DrawAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+DrawAnimation.h"; sourceTree = "<group>"; };
 		BB10DD641C59DFFC0079C480 /* UILabel+DrawAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+DrawAnimation.m"; sourceTree = "<group>"; };
-		BB10DD831C59E55D0079C480 /* Panton-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Panton-Black.otf"; sourceTree = "<group>"; };
-		BB10DD841C59E55D0079C480 /* Panton-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Panton-Bold.otf"; sourceTree = "<group>"; };
-		BB10DD851C59E55D0079C480 /* Panton-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Panton-ExtraBold.otf"; sourceTree = "<group>"; };
-		BB10DD861C59E55D0079C480 /* Panton-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Panton-ExtraLight.otf"; sourceTree = "<group>"; };
-		BB10DD871C59E55D0079C480 /* Panton-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Panton-Heavy.otf"; sourceTree = "<group>"; };
-		BB10DD881C59E55D0079C480 /* Panton-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Panton-Light.otf"; sourceTree = "<group>"; };
-		BB10DD891C59E55D0079C480 /* Panton-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Panton-Regular.otf"; sourceTree = "<group>"; };
-		BB10DD8A1C59E55D0079C480 /* Panton-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Panton-SemiBold.otf"; sourceTree = "<group>"; };
-		BB10DD8B1C59E55D0079C480 /* Panton-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Panton-Thin.otf"; sourceTree = "<group>"; };
 		BB10DD951C59E5FD0079C480 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
-		BB3403571C61E950004F53DF /* SummitBold-Display.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitBold-Display.otf"; sourceTree = "<group>"; };
-		BB3403581C61E950004F53DF /* SummitBold-Inline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitBold-Inline.otf"; sourceTree = "<group>"; };
-		BB3403591C61E950004F53DF /* SummitBold-InlineOne.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitBold-InlineOne.otf"; sourceTree = "<group>"; };
-		BB34035A1C61E950004F53DF /* SummitBold-InlineThree.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitBold-InlineThree.otf"; sourceTree = "<group>"; };
-		BB34035B1C61E950004F53DF /* SummitBold-InlineTwo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitBold-InlineTwo.otf"; sourceTree = "<group>"; };
-		BB34035C1C61E950004F53DF /* SummitBold-Shadow.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitBold-Shadow.otf"; sourceTree = "<group>"; };
-		BB34035D1C61E950004F53DF /* SummitBold-Solid.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitBold-Solid.otf"; sourceTree = "<group>"; };
-		BB34035E1C61E950004F53DF /* SummitBold-SolidOne.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitBold-SolidOne.otf"; sourceTree = "<group>"; };
-		BB34035F1C61E950004F53DF /* SummitBold-SolidThree.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitBold-SolidThree.otf"; sourceTree = "<group>"; };
-		BB3403601C61E950004F53DF /* SummitBold-SolidTwo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitBold-SolidTwo.otf"; sourceTree = "<group>"; };
-		BB3403611C61E950004F53DF /* SummitLight-Display.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitLight-Display.otf"; sourceTree = "<group>"; };
-		BB3403621C61E950004F53DF /* SummitLight-Inline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitLight-Inline.otf"; sourceTree = "<group>"; };
-		BB3403631C61E950004F53DF /* SummitLight-InlineOne.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitLight-InlineOne.otf"; sourceTree = "<group>"; };
-		BB3403641C61E950004F53DF /* SummitLight-InlineThree.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitLight-InlineThree.otf"; sourceTree = "<group>"; };
-		BB3403651C61E950004F53DF /* SummitLight-InlineTwo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitLight-InlineTwo.otf"; sourceTree = "<group>"; };
-		BB3403661C61E950004F53DF /* SummitLight-Shadow.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitLight-Shadow.otf"; sourceTree = "<group>"; };
-		BB3403671C61E950004F53DF /* SummitLight-Solid.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitLight-Solid.otf"; sourceTree = "<group>"; };
-		BB3403681C61E950004F53DF /* SummitLight-SolidOne.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitLight-SolidOne.otf"; sourceTree = "<group>"; };
-		BB3403691C61E950004F53DF /* SummitLight-SolidThree.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitLight-SolidThree.otf"; sourceTree = "<group>"; };
-		BB34036A1C61E950004F53DF /* SummitLight-SolidTwo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitLight-SolidTwo.otf"; sourceTree = "<group>"; };
-		BB34036B1C61E950004F53DF /* SummitMedium_InlineThree.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SummitMedium_InlineThree.otf; sourceTree = "<group>"; };
-		BB34036C1C61E950004F53DF /* SummitMedium-Display.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitMedium-Display.otf"; sourceTree = "<group>"; };
-		BB34036D1C61E950004F53DF /* SummitMedium-Inline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitMedium-Inline.otf"; sourceTree = "<group>"; };
-		BB34036E1C61E950004F53DF /* SummitMedium-InlineOne.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitMedium-InlineOne.otf"; sourceTree = "<group>"; };
-		BB34036F1C61E950004F53DF /* SummitMedium-InlineTwo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitMedium-InlineTwo.otf"; sourceTree = "<group>"; };
-		BB3403701C61E950004F53DF /* SummitMedium-Shadow.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitMedium-Shadow.otf"; sourceTree = "<group>"; };
-		BB3403711C61E950004F53DF /* SummitMedium-Solid.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitMedium-Solid.otf"; sourceTree = "<group>"; };
-		BB3403721C61E950004F53DF /* SummitMedium-SolidOne.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitMedium-SolidOne.otf"; sourceTree = "<group>"; };
-		BB3403731C61E950004F53DF /* SummitMedium-SolidThree.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitMedium-SolidThree.otf"; sourceTree = "<group>"; };
-		BB3403741C61E950004F53DF /* SummitMedium-SolidTwo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitMedium-SolidTwo.otf"; sourceTree = "<group>"; };
-		BB3403751C61E950004F53DF /* SummitRegular-Display.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitRegular-Display.otf"; sourceTree = "<group>"; };
-		BB3403761C61E950004F53DF /* SummitRegular-Inline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitRegular-Inline.otf"; sourceTree = "<group>"; };
-		BB3403771C61E950004F53DF /* SummitRegular-InlineOne.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitRegular-InlineOne.otf"; sourceTree = "<group>"; };
-		BB3403781C61E950004F53DF /* SummitRegular-InlineThree.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitRegular-InlineThree.otf"; sourceTree = "<group>"; };
-		BB3403791C61E950004F53DF /* SummitRegular-InlineTwo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitRegular-InlineTwo.otf"; sourceTree = "<group>"; };
-		BB34037A1C61E950004F53DF /* SummitRegular-Shadow.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitRegular-Shadow.otf"; sourceTree = "<group>"; };
-		BB34037B1C61E950004F53DF /* SummitRegular-Solid.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitRegular-Solid.otf"; sourceTree = "<group>"; };
-		BB34037C1C61E950004F53DF /* SummitRegular-SolidOne.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitRegular-SolidOne.otf"; sourceTree = "<group>"; };
-		BB34037D1C61E950004F53DF /* SummitRegular-SolidThree.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitRegular-SolidThree.otf"; sourceTree = "<group>"; };
-		BB34037E1C61E950004F53DF /* SummitRegular-SolidTwo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitRegular-SolidTwo.otf"; sourceTree = "<group>"; };
-		BB34037F1C61E950004F53DF /* SummitThin-Display.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitThin-Display.otf"; sourceTree = "<group>"; };
-		BB3403801C61E950004F53DF /* SummitThin-Inline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitThin-Inline.otf"; sourceTree = "<group>"; };
-		BB3403811C61E950004F53DF /* SummitThin-InlineOne.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitThin-InlineOne.otf"; sourceTree = "<group>"; };
-		BB3403821C61E950004F53DF /* SummitThin-InlineThree.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitThin-InlineThree.otf"; sourceTree = "<group>"; };
-		BB3403831C61E950004F53DF /* SummitThin-InlineTwo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitThin-InlineTwo.otf"; sourceTree = "<group>"; };
-		BB3403841C61E950004F53DF /* SummitThin-Shadow.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitThin-Shadow.otf"; sourceTree = "<group>"; };
-		BB3403851C61E950004F53DF /* SummitThin-Solid.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitThin-Solid.otf"; sourceTree = "<group>"; };
-		BB3403861C61E950004F53DF /* SummitThin-SolidOne.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitThin-SolidOne.otf"; sourceTree = "<group>"; };
-		BB3403871C61E950004F53DF /* SummitThin-SolidThree.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitThin-SolidThree.otf"; sourceTree = "<group>"; };
-		BB3403881C61E950004F53DF /* SummitThin-SolidTwo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SummitThin-SolidTwo.otf"; sourceTree = "<group>"; };
 		BB34038A1C61E9D0004F53DF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BBBBFAB61C97208400770E00 /* ExpandingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandingTableViewController.swift; sourceTree = "<group>"; };
 		BBBBFAB81C97209300770E00 /* ExpandingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandingTableViewCell.swift; sourceTree = "<group>"; };
+		BBE54C391C9D321400EA9E7A /* ExpandingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandingCell.swift; sourceTree = "<group>"; };
+		BBE54C3B1C9D38C000EA9E7A /* MyAppsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAppsTableViewController.swift; sourceTree = "<group>"; };
+		BBE54C3D1C9D5A1F00EA9E7A /* Panton-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Panton-Black.otf"; path = "Panton Font/Panton-Black.otf"; sourceTree = "<group>"; };
+		BBE54C3E1C9D5A1F00EA9E7A /* Panton-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Panton-Bold.otf"; path = "Panton Font/Panton-Bold.otf"; sourceTree = "<group>"; };
+		BBE54C3F1C9D5A1F00EA9E7A /* Panton-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Panton-ExtraBold.otf"; path = "Panton Font/Panton-ExtraBold.otf"; sourceTree = "<group>"; };
+		BBE54C401C9D5A1F00EA9E7A /* Panton-ExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Panton-ExtraLight.otf"; path = "Panton Font/Panton-ExtraLight.otf"; sourceTree = "<group>"; };
+		BBE54C411C9D5A1F00EA9E7A /* Panton-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Panton-Heavy.otf"; path = "Panton Font/Panton-Heavy.otf"; sourceTree = "<group>"; };
+		BBE54C421C9D5A1F00EA9E7A /* Panton-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Panton-Light.otf"; path = "Panton Font/Panton-Light.otf"; sourceTree = "<group>"; };
+		BBE54C431C9D5A1F00EA9E7A /* Panton-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Panton-Regular.otf"; path = "Panton Font/Panton-Regular.otf"; sourceTree = "<group>"; };
+		BBE54C441C9D5A1F00EA9E7A /* Panton-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Panton-SemiBold.otf"; path = "Panton Font/Panton-SemiBold.otf"; sourceTree = "<group>"; };
+		BBE54C451C9D5A1F00EA9E7A /* Panton-Thin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Panton-Thin.otf"; path = "Panton Font/Panton-Thin.otf"; sourceTree = "<group>"; };
+		BBE54C461C9D5A4400EA9E7A /* SummitBold-Display.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitBold-Display.otf"; path = "Summit Font/SummitBold-Display.otf"; sourceTree = "<group>"; };
+		BBE54C471C9D5A4400EA9E7A /* SummitBold-Inline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitBold-Inline.otf"; path = "Summit Font/SummitBold-Inline.otf"; sourceTree = "<group>"; };
+		BBE54C481C9D5A4400EA9E7A /* SummitBold-InlineOne.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitBold-InlineOne.otf"; path = "Summit Font/SummitBold-InlineOne.otf"; sourceTree = "<group>"; };
+		BBE54C491C9D5A4400EA9E7A /* SummitBold-InlineThree.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitBold-InlineThree.otf"; path = "Summit Font/SummitBold-InlineThree.otf"; sourceTree = "<group>"; };
+		BBE54C4A1C9D5A4400EA9E7A /* SummitBold-InlineTwo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitBold-InlineTwo.otf"; path = "Summit Font/SummitBold-InlineTwo.otf"; sourceTree = "<group>"; };
+		BBE54C4B1C9D5A4400EA9E7A /* SummitBold-Shadow.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitBold-Shadow.otf"; path = "Summit Font/SummitBold-Shadow.otf"; sourceTree = "<group>"; };
+		BBE54C4C1C9D5A4400EA9E7A /* SummitBold-Solid.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitBold-Solid.otf"; path = "Summit Font/SummitBold-Solid.otf"; sourceTree = "<group>"; };
+		BBE54C4D1C9D5A4400EA9E7A /* SummitBold-SolidOne.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitBold-SolidOne.otf"; path = "Summit Font/SummitBold-SolidOne.otf"; sourceTree = "<group>"; };
+		BBE54C4E1C9D5A4400EA9E7A /* SummitBold-SolidThree.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitBold-SolidThree.otf"; path = "Summit Font/SummitBold-SolidThree.otf"; sourceTree = "<group>"; };
+		BBE54C4F1C9D5A4400EA9E7A /* SummitBold-SolidTwo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitBold-SolidTwo.otf"; path = "Summit Font/SummitBold-SolidTwo.otf"; sourceTree = "<group>"; };
+		BBE54C501C9D5A4400EA9E7A /* SummitLight-Display.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitLight-Display.otf"; path = "Summit Font/SummitLight-Display.otf"; sourceTree = "<group>"; };
+		BBE54C511C9D5A4400EA9E7A /* SummitLight-Inline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitLight-Inline.otf"; path = "Summit Font/SummitLight-Inline.otf"; sourceTree = "<group>"; };
+		BBE54C521C9D5A4400EA9E7A /* SummitLight-InlineOne.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitLight-InlineOne.otf"; path = "Summit Font/SummitLight-InlineOne.otf"; sourceTree = "<group>"; };
+		BBE54C531C9D5A4400EA9E7A /* SummitLight-InlineThree.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitLight-InlineThree.otf"; path = "Summit Font/SummitLight-InlineThree.otf"; sourceTree = "<group>"; };
+		BBE54C541C9D5A4400EA9E7A /* SummitLight-InlineTwo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitLight-InlineTwo.otf"; path = "Summit Font/SummitLight-InlineTwo.otf"; sourceTree = "<group>"; };
+		BBE54C551C9D5A4400EA9E7A /* SummitLight-Shadow.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitLight-Shadow.otf"; path = "Summit Font/SummitLight-Shadow.otf"; sourceTree = "<group>"; };
+		BBE54C561C9D5A4400EA9E7A /* SummitLight-Solid.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitLight-Solid.otf"; path = "Summit Font/SummitLight-Solid.otf"; sourceTree = "<group>"; };
+		BBE54C571C9D5A4400EA9E7A /* SummitLight-SolidOne.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitLight-SolidOne.otf"; path = "Summit Font/SummitLight-SolidOne.otf"; sourceTree = "<group>"; };
+		BBE54C581C9D5A4400EA9E7A /* SummitLight-SolidThree.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitLight-SolidThree.otf"; path = "Summit Font/SummitLight-SolidThree.otf"; sourceTree = "<group>"; };
+		BBE54C591C9D5A4400EA9E7A /* SummitLight-SolidTwo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitLight-SolidTwo.otf"; path = "Summit Font/SummitLight-SolidTwo.otf"; sourceTree = "<group>"; };
+		BBE54C5A1C9D5A4400EA9E7A /* SummitMedium_InlineThree.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = SummitMedium_InlineThree.otf; path = "Summit Font/SummitMedium_InlineThree.otf"; sourceTree = "<group>"; };
+		BBE54C5B1C9D5A4400EA9E7A /* SummitMedium-Display.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitMedium-Display.otf"; path = "Summit Font/SummitMedium-Display.otf"; sourceTree = "<group>"; };
+		BBE54C5C1C9D5A4400EA9E7A /* SummitMedium-Inline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitMedium-Inline.otf"; path = "Summit Font/SummitMedium-Inline.otf"; sourceTree = "<group>"; };
+		BBE54C5D1C9D5A4400EA9E7A /* SummitMedium-InlineOne.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitMedium-InlineOne.otf"; path = "Summit Font/SummitMedium-InlineOne.otf"; sourceTree = "<group>"; };
+		BBE54C5E1C9D5A4400EA9E7A /* SummitMedium-InlineTwo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitMedium-InlineTwo.otf"; path = "Summit Font/SummitMedium-InlineTwo.otf"; sourceTree = "<group>"; };
+		BBE54C5F1C9D5A4400EA9E7A /* SummitMedium-Shadow.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitMedium-Shadow.otf"; path = "Summit Font/SummitMedium-Shadow.otf"; sourceTree = "<group>"; };
+		BBE54C601C9D5A4400EA9E7A /* SummitMedium-Solid.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitMedium-Solid.otf"; path = "Summit Font/SummitMedium-Solid.otf"; sourceTree = "<group>"; };
+		BBE54C611C9D5A4400EA9E7A /* SummitMedium-SolidOne.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitMedium-SolidOne.otf"; path = "Summit Font/SummitMedium-SolidOne.otf"; sourceTree = "<group>"; };
+		BBE54C621C9D5A4400EA9E7A /* SummitMedium-SolidThree.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitMedium-SolidThree.otf"; path = "Summit Font/SummitMedium-SolidThree.otf"; sourceTree = "<group>"; };
+		BBE54C631C9D5A4400EA9E7A /* SummitMedium-SolidTwo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitMedium-SolidTwo.otf"; path = "Summit Font/SummitMedium-SolidTwo.otf"; sourceTree = "<group>"; };
+		BBE54C641C9D5A4400EA9E7A /* SummitRegular-Display.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitRegular-Display.otf"; path = "Summit Font/SummitRegular-Display.otf"; sourceTree = "<group>"; };
+		BBE54C651C9D5A4400EA9E7A /* SummitRegular-Inline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitRegular-Inline.otf"; path = "Summit Font/SummitRegular-Inline.otf"; sourceTree = "<group>"; };
+		BBE54C661C9D5A4400EA9E7A /* SummitRegular-InlineOne.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitRegular-InlineOne.otf"; path = "Summit Font/SummitRegular-InlineOne.otf"; sourceTree = "<group>"; };
+		BBE54C671C9D5A4400EA9E7A /* SummitRegular-InlineThree.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitRegular-InlineThree.otf"; path = "Summit Font/SummitRegular-InlineThree.otf"; sourceTree = "<group>"; };
+		BBE54C681C9D5A4400EA9E7A /* SummitRegular-InlineTwo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitRegular-InlineTwo.otf"; path = "Summit Font/SummitRegular-InlineTwo.otf"; sourceTree = "<group>"; };
+		BBE54C691C9D5A4400EA9E7A /* SummitRegular-Shadow.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitRegular-Shadow.otf"; path = "Summit Font/SummitRegular-Shadow.otf"; sourceTree = "<group>"; };
+		BBE54C6A1C9D5A4400EA9E7A /* SummitRegular-Solid.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitRegular-Solid.otf"; path = "Summit Font/SummitRegular-Solid.otf"; sourceTree = "<group>"; };
+		BBE54C6B1C9D5A4400EA9E7A /* SummitRegular-SolidOne.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitRegular-SolidOne.otf"; path = "Summit Font/SummitRegular-SolidOne.otf"; sourceTree = "<group>"; };
+		BBE54C6C1C9D5A4400EA9E7A /* SummitRegular-SolidThree.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitRegular-SolidThree.otf"; path = "Summit Font/SummitRegular-SolidThree.otf"; sourceTree = "<group>"; };
+		BBE54C6D1C9D5A4400EA9E7A /* SummitRegular-SolidTwo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitRegular-SolidTwo.otf"; path = "Summit Font/SummitRegular-SolidTwo.otf"; sourceTree = "<group>"; };
+		BBE54C6E1C9D5A4400EA9E7A /* SummitThin-Display.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitThin-Display.otf"; path = "Summit Font/SummitThin-Display.otf"; sourceTree = "<group>"; };
+		BBE54C6F1C9D5A4400EA9E7A /* SummitThin-Inline.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitThin-Inline.otf"; path = "Summit Font/SummitThin-Inline.otf"; sourceTree = "<group>"; };
+		BBE54C701C9D5A4400EA9E7A /* SummitThin-InlineOne.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitThin-InlineOne.otf"; path = "Summit Font/SummitThin-InlineOne.otf"; sourceTree = "<group>"; };
+		BBE54C711C9D5A4400EA9E7A /* SummitThin-InlineThree.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitThin-InlineThree.otf"; path = "Summit Font/SummitThin-InlineThree.otf"; sourceTree = "<group>"; };
+		BBE54C721C9D5A4400EA9E7A /* SummitThin-InlineTwo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitThin-InlineTwo.otf"; path = "Summit Font/SummitThin-InlineTwo.otf"; sourceTree = "<group>"; };
+		BBE54C731C9D5A4400EA9E7A /* SummitThin-Shadow.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitThin-Shadow.otf"; path = "Summit Font/SummitThin-Shadow.otf"; sourceTree = "<group>"; };
+		BBE54C741C9D5A4400EA9E7A /* SummitThin-Solid.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitThin-Solid.otf"; path = "Summit Font/SummitThin-Solid.otf"; sourceTree = "<group>"; };
+		BBE54C751C9D5A4400EA9E7A /* SummitThin-SolidOne.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitThin-SolidOne.otf"; path = "Summit Font/SummitThin-SolidOne.otf"; sourceTree = "<group>"; };
+		BBE54C761C9D5A4400EA9E7A /* SummitThin-SolidThree.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitThin-SolidThree.otf"; path = "Summit Font/SummitThin-SolidThree.otf"; sourceTree = "<group>"; };
+		BBE54C771C9D5A4400EA9E7A /* SummitThin-SolidTwo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitThin-SolidTwo.otf"; path = "Summit Font/SummitThin-SolidTwo.otf"; sourceTree = "<group>"; };
+		BBE54C781C9D5A6600EA9E7A /* ADAM.CG PRO.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ADAM.CG PRO.otf"; sourceTree = "<group>"; };
 		BBFFC4501C88AF2800A8B5C5 /* MyStoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyStoryViewController.swift; sourceTree = "<group>"; };
 		BBFFC4521C88AF3100A8B5C5 /* MyAppsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAppsViewController.swift; sourceTree = "<group>"; };
 		BBFFC4541C88AF7E00A8B5C5 /* MyInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyInfoViewController.swift; sourceTree = "<group>"; };
@@ -249,6 +255,7 @@
 		BB10DD661C59E0000079C480 /* Fancy Text Drawing */ = {
 			isa = PBXGroup;
 			children = (
+				BBE54C781C9D5A6600EA9E7A /* ADAM.CG PRO.otf */,
 				BB10DD701C59E3450079C480 /* Panton Font */,
 				BB3403891C61E957004F53DF /* Summit Font */,
 				BB10DD601C59DFDC0079C480 /* CALayer+DrawAnimation.h */,
@@ -262,15 +269,15 @@
 		BB10DD701C59E3450079C480 /* Panton Font */ = {
 			isa = PBXGroup;
 			children = (
-				BB10DD831C59E55D0079C480 /* Panton-Black.otf */,
-				BB10DD841C59E55D0079C480 /* Panton-Bold.otf */,
-				BB10DD851C59E55D0079C480 /* Panton-ExtraBold.otf */,
-				BB10DD861C59E55D0079C480 /* Panton-ExtraLight.otf */,
-				BB10DD871C59E55D0079C480 /* Panton-Heavy.otf */,
-				BB10DD881C59E55D0079C480 /* Panton-Light.otf */,
-				BB10DD891C59E55D0079C480 /* Panton-Regular.otf */,
-				BB10DD8A1C59E55D0079C480 /* Panton-SemiBold.otf */,
-				BB10DD8B1C59E55D0079C480 /* Panton-Thin.otf */,
+				BBE54C3D1C9D5A1F00EA9E7A /* Panton-Black.otf */,
+				BBE54C3E1C9D5A1F00EA9E7A /* Panton-Bold.otf */,
+				BBE54C3F1C9D5A1F00EA9E7A /* Panton-ExtraBold.otf */,
+				BBE54C401C9D5A1F00EA9E7A /* Panton-ExtraLight.otf */,
+				BBE54C411C9D5A1F00EA9E7A /* Panton-Heavy.otf */,
+				BBE54C421C9D5A1F00EA9E7A /* Panton-Light.otf */,
+				BBE54C431C9D5A1F00EA9E7A /* Panton-Regular.otf */,
+				BBE54C441C9D5A1F00EA9E7A /* Panton-SemiBold.otf */,
+				BBE54C451C9D5A1F00EA9E7A /* Panton-Thin.otf */,
 			);
 			name = "Panton Font";
 			sourceTree = "<group>";
@@ -285,56 +292,56 @@
 		BB3403891C61E957004F53DF /* Summit Font */ = {
 			isa = PBXGroup;
 			children = (
-				BB3403571C61E950004F53DF /* SummitBold-Display.otf */,
-				BB3403581C61E950004F53DF /* SummitBold-Inline.otf */,
-				BB3403591C61E950004F53DF /* SummitBold-InlineOne.otf */,
-				BB34035A1C61E950004F53DF /* SummitBold-InlineThree.otf */,
-				BB34035B1C61E950004F53DF /* SummitBold-InlineTwo.otf */,
-				BB34035C1C61E950004F53DF /* SummitBold-Shadow.otf */,
-				BB34035D1C61E950004F53DF /* SummitBold-Solid.otf */,
-				BB34035E1C61E950004F53DF /* SummitBold-SolidOne.otf */,
-				BB34035F1C61E950004F53DF /* SummitBold-SolidThree.otf */,
-				BB3403601C61E950004F53DF /* SummitBold-SolidTwo.otf */,
-				BB3403611C61E950004F53DF /* SummitLight-Display.otf */,
-				BB3403621C61E950004F53DF /* SummitLight-Inline.otf */,
-				BB3403631C61E950004F53DF /* SummitLight-InlineOne.otf */,
-				BB3403641C61E950004F53DF /* SummitLight-InlineThree.otf */,
-				BB3403651C61E950004F53DF /* SummitLight-InlineTwo.otf */,
-				BB3403661C61E950004F53DF /* SummitLight-Shadow.otf */,
-				BB3403671C61E950004F53DF /* SummitLight-Solid.otf */,
-				BB3403681C61E950004F53DF /* SummitLight-SolidOne.otf */,
-				BB3403691C61E950004F53DF /* SummitLight-SolidThree.otf */,
-				BB34036A1C61E950004F53DF /* SummitLight-SolidTwo.otf */,
-				BB34036B1C61E950004F53DF /* SummitMedium_InlineThree.otf */,
-				BB34036C1C61E950004F53DF /* SummitMedium-Display.otf */,
-				BB34036D1C61E950004F53DF /* SummitMedium-Inline.otf */,
-				BB34036E1C61E950004F53DF /* SummitMedium-InlineOne.otf */,
-				BB34036F1C61E950004F53DF /* SummitMedium-InlineTwo.otf */,
-				BB3403701C61E950004F53DF /* SummitMedium-Shadow.otf */,
-				BB3403711C61E950004F53DF /* SummitMedium-Solid.otf */,
-				BB3403721C61E950004F53DF /* SummitMedium-SolidOne.otf */,
-				BB3403731C61E950004F53DF /* SummitMedium-SolidThree.otf */,
-				BB3403741C61E950004F53DF /* SummitMedium-SolidTwo.otf */,
-				BB3403751C61E950004F53DF /* SummitRegular-Display.otf */,
-				BB3403761C61E950004F53DF /* SummitRegular-Inline.otf */,
-				BB3403771C61E950004F53DF /* SummitRegular-InlineOne.otf */,
-				BB3403781C61E950004F53DF /* SummitRegular-InlineThree.otf */,
-				BB3403791C61E950004F53DF /* SummitRegular-InlineTwo.otf */,
-				BB34037A1C61E950004F53DF /* SummitRegular-Shadow.otf */,
-				BB34037B1C61E950004F53DF /* SummitRegular-Solid.otf */,
-				BB34037C1C61E950004F53DF /* SummitRegular-SolidOne.otf */,
-				BB34037D1C61E950004F53DF /* SummitRegular-SolidThree.otf */,
-				BB34037E1C61E950004F53DF /* SummitRegular-SolidTwo.otf */,
-				BB34037F1C61E950004F53DF /* SummitThin-Display.otf */,
-				BB3403801C61E950004F53DF /* SummitThin-Inline.otf */,
-				BB3403811C61E950004F53DF /* SummitThin-InlineOne.otf */,
-				BB3403821C61E950004F53DF /* SummitThin-InlineThree.otf */,
-				BB3403831C61E950004F53DF /* SummitThin-InlineTwo.otf */,
-				BB3403841C61E950004F53DF /* SummitThin-Shadow.otf */,
-				BB3403851C61E950004F53DF /* SummitThin-Solid.otf */,
-				BB3403861C61E950004F53DF /* SummitThin-SolidOne.otf */,
-				BB3403871C61E950004F53DF /* SummitThin-SolidThree.otf */,
-				BB3403881C61E950004F53DF /* SummitThin-SolidTwo.otf */,
+				BBE54C461C9D5A4400EA9E7A /* SummitBold-Display.otf */,
+				BBE54C471C9D5A4400EA9E7A /* SummitBold-Inline.otf */,
+				BBE54C481C9D5A4400EA9E7A /* SummitBold-InlineOne.otf */,
+				BBE54C491C9D5A4400EA9E7A /* SummitBold-InlineThree.otf */,
+				BBE54C4A1C9D5A4400EA9E7A /* SummitBold-InlineTwo.otf */,
+				BBE54C4B1C9D5A4400EA9E7A /* SummitBold-Shadow.otf */,
+				BBE54C4C1C9D5A4400EA9E7A /* SummitBold-Solid.otf */,
+				BBE54C4D1C9D5A4400EA9E7A /* SummitBold-SolidOne.otf */,
+				BBE54C4E1C9D5A4400EA9E7A /* SummitBold-SolidThree.otf */,
+				BBE54C4F1C9D5A4400EA9E7A /* SummitBold-SolidTwo.otf */,
+				BBE54C501C9D5A4400EA9E7A /* SummitLight-Display.otf */,
+				BBE54C511C9D5A4400EA9E7A /* SummitLight-Inline.otf */,
+				BBE54C521C9D5A4400EA9E7A /* SummitLight-InlineOne.otf */,
+				BBE54C531C9D5A4400EA9E7A /* SummitLight-InlineThree.otf */,
+				BBE54C541C9D5A4400EA9E7A /* SummitLight-InlineTwo.otf */,
+				BBE54C551C9D5A4400EA9E7A /* SummitLight-Shadow.otf */,
+				BBE54C561C9D5A4400EA9E7A /* SummitLight-Solid.otf */,
+				BBE54C571C9D5A4400EA9E7A /* SummitLight-SolidOne.otf */,
+				BBE54C581C9D5A4400EA9E7A /* SummitLight-SolidThree.otf */,
+				BBE54C591C9D5A4400EA9E7A /* SummitLight-SolidTwo.otf */,
+				BBE54C5A1C9D5A4400EA9E7A /* SummitMedium_InlineThree.otf */,
+				BBE54C5B1C9D5A4400EA9E7A /* SummitMedium-Display.otf */,
+				BBE54C5C1C9D5A4400EA9E7A /* SummitMedium-Inline.otf */,
+				BBE54C5D1C9D5A4400EA9E7A /* SummitMedium-InlineOne.otf */,
+				BBE54C5E1C9D5A4400EA9E7A /* SummitMedium-InlineTwo.otf */,
+				BBE54C5F1C9D5A4400EA9E7A /* SummitMedium-Shadow.otf */,
+				BBE54C601C9D5A4400EA9E7A /* SummitMedium-Solid.otf */,
+				BBE54C611C9D5A4400EA9E7A /* SummitMedium-SolidOne.otf */,
+				BBE54C621C9D5A4400EA9E7A /* SummitMedium-SolidThree.otf */,
+				BBE54C631C9D5A4400EA9E7A /* SummitMedium-SolidTwo.otf */,
+				BBE54C641C9D5A4400EA9E7A /* SummitRegular-Display.otf */,
+				BBE54C651C9D5A4400EA9E7A /* SummitRegular-Inline.otf */,
+				BBE54C661C9D5A4400EA9E7A /* SummitRegular-InlineOne.otf */,
+				BBE54C671C9D5A4400EA9E7A /* SummitRegular-InlineThree.otf */,
+				BBE54C681C9D5A4400EA9E7A /* SummitRegular-InlineTwo.otf */,
+				BBE54C691C9D5A4400EA9E7A /* SummitRegular-Shadow.otf */,
+				BBE54C6A1C9D5A4400EA9E7A /* SummitRegular-Solid.otf */,
+				BBE54C6B1C9D5A4400EA9E7A /* SummitRegular-SolidOne.otf */,
+				BBE54C6C1C9D5A4400EA9E7A /* SummitRegular-SolidThree.otf */,
+				BBE54C6D1C9D5A4400EA9E7A /* SummitRegular-SolidTwo.otf */,
+				BBE54C6E1C9D5A4400EA9E7A /* SummitThin-Display.otf */,
+				BBE54C6F1C9D5A4400EA9E7A /* SummitThin-Inline.otf */,
+				BBE54C701C9D5A4400EA9E7A /* SummitThin-InlineOne.otf */,
+				BBE54C711C9D5A4400EA9E7A /* SummitThin-InlineThree.otf */,
+				BBE54C721C9D5A4400EA9E7A /* SummitThin-InlineTwo.otf */,
+				BBE54C731C9D5A4400EA9E7A /* SummitThin-Shadow.otf */,
+				BBE54C741C9D5A4400EA9E7A /* SummitThin-Solid.otf */,
+				BBE54C751C9D5A4400EA9E7A /* SummitThin-SolidOne.otf */,
+				BBE54C761C9D5A4400EA9E7A /* SummitThin-SolidThree.otf */,
+				BBE54C771C9D5A4400EA9E7A /* SummitThin-SolidTwo.otf */,
 			);
 			name = "Summit Font";
 			sourceTree = "<group>";
@@ -342,6 +349,8 @@
 		BBBBFAB51C97206900770E00 /* My Apps */ = {
 			isa = PBXGroup;
 			children = (
+				BBE54C3B1C9D38C000EA9E7A /* MyAppsTableViewController.swift */,
+				BBE54C391C9D321400EA9E7A /* ExpandingCell.swift */,
 				BBFFC4521C88AF3100A8B5C5 /* MyAppsViewController.swift */,
 				BBBBFAB61C97208400770E00 /* ExpandingTableViewController.swift */,
 				BBBBFAB81C97209300770E00 /* ExpandingTableViewCell.swift */,
@@ -458,18 +467,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB10DD8F1C59E55D0079C480 /* Panton-ExtraLight.otf in Resources */,
-				BB10DD901C59E55D0079C480 /* Panton-Heavy.otf in Resources */,
-				BB10DD911C59E55D0079C480 /* Panton-Light.otf in Resources */,
+				BBE54C7B1C9D5B0D00EA9E7A /* Panton-Bold.otf in Resources */,
 				BB10DD3C1C59DF940079C480 /* LaunchScreen.storyboard in Resources */,
-				BB10DD8C1C59E55D0079C480 /* Panton-Black.otf in Resources */,
-				BB10DD8D1C59E55D0079C480 /* Panton-Bold.otf in Resources */,
-				BB10DD941C59E55D0079C480 /* Panton-Thin.otf in Resources */,
-				BB10DD931C59E55D0079C480 /* Panton-SemiBold.otf in Resources */,
-				BB10DD921C59E55D0079C480 /* Panton-Regular.otf in Resources */,
+				BBE54C7E1C9D5B0D00EA9E7A /* Panton-Heavy.otf in Resources */,
 				BB10DD391C59DF940079C480 /* Assets.xcassets in Resources */,
+				BBE54C7A1C9D5B0D00EA9E7A /* Panton-Black.otf in Resources */,
+				BBE54C7C1C9D5B0D00EA9E7A /* Panton-ExtraBold.otf in Resources */,
+				BBE54C811C9D5B0D00EA9E7A /* Panton-SemiBold.otf in Resources */,
+				BBE54C7D1C9D5B0D00EA9E7A /* Panton-ExtraLight.otf in Resources */,
+				BBE54C791C9D5AF600EA9E7A /* ADAM.CG PRO.otf in Resources */,
+				BBE54C7F1C9D5B0D00EA9E7A /* Panton-Light.otf in Resources */,
+				BBE54C821C9D5B0D00EA9E7A /* Panton-Thin.otf in Resources */,
+				BBE54C801C9D5B0D00EA9E7A /* Panton-Regular.otf in Resources */,
 				BB10DD371C59DF940079C480 /* Main.storyboard in Resources */,
-				BB10DD8E1C59E55D0079C480 /* Panton-ExtraBold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -556,6 +566,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB10DD621C59DFDC0079C480 /* CALayer+DrawAnimation.m in Sources */,
+				BBE54C3C1C9D38C000EA9E7A /* MyAppsTableViewController.swift in Sources */,
 				BB10DD651C59DFFC0079C480 /* UILabel+DrawAnimation.m in Sources */,
 				BB10DD341C59DF940079C480 /* ViewController.swift in Sources */,
 				BBFFC4511C88AF2800A8B5C5 /* MyStoryViewController.swift in Sources */,
@@ -563,6 +574,7 @@
 				BBFFC4531C88AF3100A8B5C5 /* MyAppsViewController.swift in Sources */,
 				BBBBFAB71C97208400770E00 /* ExpandingTableViewController.swift in Sources */,
 				BB10DD961C59E5FD0079C480 /* SplashViewController.swift in Sources */,
+				BBE54C3A1C9D321400EA9E7A /* ExpandingCell.swift in Sources */,
 				BBBBFAB91C97209300770E00 /* ExpandingTableViewCell.swift in Sources */,
 				BBFFC4551C88AF7E00A8B5C5 /* MyInfoViewController.swift in Sources */,
 				BB34038B1C61E9D0004F53DF /* HomeViewController.swift in Sources */,
