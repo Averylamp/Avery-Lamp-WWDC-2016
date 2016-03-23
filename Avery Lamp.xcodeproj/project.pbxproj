@@ -18,6 +18,7 @@
 		BB10DD651C59DFFC0079C480 /* UILabel+DrawAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = BB10DD641C59DFFC0079C480 /* UILabel+DrawAnimation.m */; };
 		BB10DD961C59E5FD0079C480 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB10DD951C59E5FD0079C480 /* SplashViewController.swift */; };
 		BB34038B1C61E9D0004F53DF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34038A1C61E9D0004F53DF /* HomeViewController.swift */; };
+		BBB703BB1CA22EED00931736 /* FoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB703BA1CA22EED00931736 /* FoldingCell.swift */; };
 		BBBBFAB71C97208400770E00 /* ExpandingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBBFAB61C97208400770E00 /* ExpandingTableViewController.swift */; };
 		BBBBFAB91C97209300770E00 /* ExpandingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBBFAB81C97209300770E00 /* ExpandingTableViewCell.swift */; };
 		BBE54C3A1C9D321400EA9E7A /* ExpandingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE54C391C9D321400EA9E7A /* ExpandingCell.swift */; };
@@ -78,6 +79,7 @@
 		BB10DD641C59DFFC0079C480 /* UILabel+DrawAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+DrawAnimation.m"; sourceTree = "<group>"; };
 		BB10DD951C59E5FD0079C480 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		BB34038A1C61E9D0004F53DF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BBB703BA1CA22EED00931736 /* FoldingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoldingCell.swift; sourceTree = "<group>"; };
 		BBBBFAB61C97208400770E00 /* ExpandingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandingTableViewController.swift; sourceTree = "<group>"; };
 		BBBBFAB81C97209300770E00 /* ExpandingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandingTableViewCell.swift; sourceTree = "<group>"; };
 		BBE54C391C9D321400EA9E7A /* ExpandingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandingCell.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 		BB10DD301C59DF940079C480 /* Avery Lamp */ = {
 			isa = PBXGroup;
 			children = (
+				BBB703BA1CA22EED00931736 /* FoldingCell.swift */,
 				BB10DD311C59DF940079C480 /* AppDelegate.swift */,
 				BB10DD331C59DF940079C480 /* ViewController.swift */,
 				BB10DD951C59E5FD0079C480 /* SplashViewController.swift */,
@@ -566,6 +569,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB10DD621C59DFDC0079C480 /* CALayer+DrawAnimation.m in Sources */,
+				BBB703BB1CA22EED00931736 /* FoldingCell.swift in Sources */,
 				BBE54C3C1C9D38C000EA9E7A /* MyAppsTableViewController.swift in Sources */,
 				BB10DD651C59DFFC0079C480 /* UILabel+DrawAnimation.m in Sources */,
 				BB10DD341C59DF940079C480 /* ViewController.swift in Sources */,

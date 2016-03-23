@@ -20,7 +20,7 @@ class ExpandingCell: FoldingCell {
         foregroundView.clipsToBounds = true
         contentView.layer.cornerRadius = 10
 
-        highlightViews.forEach{ $0.backgroundColor = UIColor.orangeColor()}
+        highlightViews.forEach{ $0.backgroundColor = UIColor(red: 0.961, green: 0.651, blue: 0.133, alpha: 1.00)}
         super.awakeFromNib()
     }
     /*

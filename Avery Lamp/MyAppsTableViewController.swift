@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import FoldingCell
+
 
 class MyAppsTableViewController: UITableViewController {
 
@@ -19,7 +19,8 @@ class MyAppsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("Entering App tbvc")
+//        tableView.registerClass(ExpandingCell.self, forCellReuseIdentifier: "FoldingCell")
         for _ in 0...kRowsCount {
             cellHeights.append(kCloseCellHeight)
         }
@@ -89,6 +90,7 @@ class MyAppsTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("FoldingCell", forIndexPath: indexPath)
+        
         cell.backgroundColor = UIColor.clearColor()
         // Configure the cell...
 

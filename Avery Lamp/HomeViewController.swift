@@ -293,7 +293,7 @@ class HomeViewController: UIViewController {
     }
     
     func goToMyApps(){
-        self.navigationController?.pushViewController(ExpandingTableViewController(), animated: true)
+        self.navigationController?.pushViewController(MyAppsTableViewController(), animated: true)
         
     }
     

@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>FoldingCell.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>LTMorphingLabel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,22 +32,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1A42D5F735D5E7DE2C5A435EB4AA49F0</key>
+		<key>65C71F234494B61878C88FF107883964</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>44D04613A7591446E9F604C26C55657F</key>
+		<key>D847C49F5AA66A396C2849AA2054032E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8DBB07B38F38318F0FA88786ACED778A</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D5EB615E9C59018783F04FCB95D71911</key>
+		<key>EC54849776313918D76BB1489BC05884</key>
 		<dict>
 			<key>primary</key>
 			<true/>
