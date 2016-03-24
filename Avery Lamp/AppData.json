@@ -1,0 +1,52 @@
+{
+    "Apps":[
+          {
+            "title": "Smith",
+            "tagline": "Control your phone without touching it",
+            "shortDesc": "Smith analyzes vibration patterns to trigger custom actions",
+            "appIconImage":"SmithAppIcon",
+            "appDetailImage":"SmithDetailPicture",
+            "longDescription":"Smith was created as a productivity tool for those that sit at desks.  The user sets specific actions, which can be triggered by knocking specific patterns into the desk that the phone rests on."
+          },
+        {
+            "title": "Smith",
+            "tagline": "Control your phone without touching it",
+            "shortDesc": "Smith analyzes vibration patterns to trigger custom actions",
+            "appIconImage":"SmithAppIcon",
+            "appDetailImage":"SmithDetailPicture",
+            "longDescription":"Smith was created as a productivity tool for those that sit at desks.  The user sets specific actions, which can be triggered by knocking specific patterns into the desk that the phone rests on."
+        },
+        {
+            "title": "Smith",
+            "tagline": "Control your phone without touching it",
+            "shortDesc": "Smith analyzes vibration patterns to trigger custom actions",
+            "appIconImage":"SmithAppIcon",
+            "appDetailImage":"SmithDetailPicture",
+            "longDescription":"Smith was created as a productivity tool for those that sit at desks.  The user sets specific actions, which can be triggered by knocking specific patterns into the desk that the phone rests on."
+        },
+        {
+            "title": "Smith",
+            "tagline": "Control your phone without touching it",
+            "shortDesc": "Smith analyzes vibration patterns to trigger custom actions",
+            "appIconImage":"SmithAppIcon",
+            "appDetailImage":"SmithDetailPicture",
+            "longDescription":"Smith was created as a productivity tool for those that sit at desks.  The user sets specific actions, which can be triggered by knocking specific patterns into the desk that the phone rests on."
+        },
+        {
+            "title": "Smith",
+            "tagline": "Control your phone without touching it",
+            "shortDesc": "Smith analyzes vibration patterns to trigger custom actions",
+            "appIconImage":"SmithAppIcon",
+            "appDetailImage":"SmithDetailPicture",
+            "longDescription":"Smith was created as a productivity tool for those that sit at desks.  The user sets specific actions, which can be triggered by knocking specific patterns into the desk that the phone rests on."
+        },
+        {
+            "title": "Smith",
+            "tagline": "Control your phone without touching it",
+            "shortDesc": "Smith analyzes vibration patterns to trigger custom actions",
+            "appIconImage":"SmithAppIcon",
+            "appDetailImage":"SmithDetailPicture",
+            "longDescription":"Smith was created as a productivity tool for those that sit at desks.  The user sets specific actions, which can be triggered by knocking specific patterns into the desk that the phone rests on."
+        }
+    ]
+}

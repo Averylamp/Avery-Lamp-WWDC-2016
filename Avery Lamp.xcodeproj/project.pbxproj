@@ -17,12 +17,11 @@
 		BB10DD621C59DFDC0079C480 /* CALayer+DrawAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = BB10DD611C59DFDC0079C480 /* CALayer+DrawAnimation.m */; };
 		BB10DD651C59DFFC0079C480 /* UILabel+DrawAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = BB10DD641C59DFFC0079C480 /* UILabel+DrawAnimation.m */; };
 		BB10DD961C59E5FD0079C480 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB10DD951C59E5FD0079C480 /* SplashViewController.swift */; };
+		BB1D2FB51CA394EC002F6050 /* MyAppsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1D2FB41CA394EC002F6050 /* MyAppsTableViewController.swift */; };
+		BB1D2FB71CA39504002F6050 /* AppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1D2FB61CA39504002F6050 /* AppCell.swift */; };
+		BB1D2FB91CA3C067002F6050 /* AppData.json in Resources */ = {isa = PBXBuildFile; fileRef = BB1D2FB81CA3C067002F6050 /* AppData.json */; };
+		BB1D2FBB1CA3C267002F6050 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1D2FBA1CA3C267002F6050 /* SwiftyJSON.swift */; };
 		BB34038B1C61E9D0004F53DF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34038A1C61E9D0004F53DF /* HomeViewController.swift */; };
-		BBB703BB1CA22EED00931736 /* FoldingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB703BA1CA22EED00931736 /* FoldingCell.swift */; };
-		BBBBFAB71C97208400770E00 /* ExpandingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBBFAB61C97208400770E00 /* ExpandingTableViewController.swift */; };
-		BBBBFAB91C97209300770E00 /* ExpandingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBBBFAB81C97209300770E00 /* ExpandingTableViewCell.swift */; };
-		BBE54C3A1C9D321400EA9E7A /* ExpandingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE54C391C9D321400EA9E7A /* ExpandingCell.swift */; };
-		BBE54C3C1C9D38C000EA9E7A /* MyAppsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBE54C3B1C9D38C000EA9E7A /* MyAppsTableViewController.swift */; };
 		BBE54C791C9D5AF600EA9E7A /* ADAM.CG PRO.otf in Resources */ = {isa = PBXBuildFile; fileRef = BBE54C781C9D5A6600EA9E7A /* ADAM.CG PRO.otf */; };
 		BBE54C7A1C9D5B0D00EA9E7A /* Panton-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = BBE54C3D1C9D5A1F00EA9E7A /* Panton-Black.otf */; };
 		BBE54C7B1C9D5B0D00EA9E7A /* Panton-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BBE54C3E1C9D5A1F00EA9E7A /* Panton-Bold.otf */; };
@@ -34,7 +33,6 @@
 		BBE54C811C9D5B0D00EA9E7A /* Panton-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BBE54C441C9D5A1F00EA9E7A /* Panton-SemiBold.otf */; };
 		BBE54C821C9D5B0D00EA9E7A /* Panton-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = BBE54C451C9D5A1F00EA9E7A /* Panton-Thin.otf */; };
 		BBFFC4511C88AF2800A8B5C5 /* MyStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFFC4501C88AF2800A8B5C5 /* MyStoryViewController.swift */; };
-		BBFFC4531C88AF3100A8B5C5 /* MyAppsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFFC4521C88AF3100A8B5C5 /* MyAppsViewController.swift */; };
 		BBFFC4551C88AF7E00A8B5C5 /* MyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFFC4541C88AF7E00A8B5C5 /* MyInfoViewController.swift */; };
 		FD28E1FA33D009710E4BE6F8 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85EB57D2745956D1EC5A9497 /* Pods.framework */; };
 /* End PBXBuildFile section */
@@ -78,12 +76,11 @@
 		BB10DD631C59DFFC0079C480 /* UILabel+DrawAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+DrawAnimation.h"; sourceTree = "<group>"; };
 		BB10DD641C59DFFC0079C480 /* UILabel+DrawAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+DrawAnimation.m"; sourceTree = "<group>"; };
 		BB10DD951C59E5FD0079C480 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		BB1D2FB41CA394EC002F6050 /* MyAppsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAppsTableViewController.swift; sourceTree = "<group>"; };
+		BB1D2FB61CA39504002F6050 /* AppCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCell.swift; sourceTree = "<group>"; };
+		BB1D2FB81CA3C067002F6050 /* AppData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AppData.json; sourceTree = "<group>"; };
+		BB1D2FBA1CA3C267002F6050 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		BB34038A1C61E9D0004F53DF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		BBB703BA1CA22EED00931736 /* FoldingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoldingCell.swift; sourceTree = "<group>"; };
-		BBBBFAB61C97208400770E00 /* ExpandingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandingTableViewController.swift; sourceTree = "<group>"; };
-		BBBBFAB81C97209300770E00 /* ExpandingTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandingTableViewCell.swift; sourceTree = "<group>"; };
-		BBE54C391C9D321400EA9E7A /* ExpandingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandingCell.swift; sourceTree = "<group>"; };
-		BBE54C3B1C9D38C000EA9E7A /* MyAppsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAppsTableViewController.swift; sourceTree = "<group>"; };
 		BBE54C3D1C9D5A1F00EA9E7A /* Panton-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Panton-Black.otf"; path = "Panton Font/Panton-Black.otf"; sourceTree = "<group>"; };
 		BBE54C3E1C9D5A1F00EA9E7A /* Panton-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Panton-Bold.otf"; path = "Panton Font/Panton-Bold.otf"; sourceTree = "<group>"; };
 		BBE54C3F1C9D5A1F00EA9E7A /* Panton-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Panton-ExtraBold.otf"; path = "Panton Font/Panton-ExtraBold.otf"; sourceTree = "<group>"; };
@@ -145,7 +142,6 @@
 		BBE54C771C9D5A4400EA9E7A /* SummitThin-SolidTwo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitThin-SolidTwo.otf"; path = "Summit Font/SummitThin-SolidTwo.otf"; sourceTree = "<group>"; };
 		BBE54C781C9D5A6600EA9E7A /* ADAM.CG PRO.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ADAM.CG PRO.otf"; sourceTree = "<group>"; };
 		BBFFC4501C88AF2800A8B5C5 /* MyStoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyStoryViewController.swift; sourceTree = "<group>"; };
-		BBFFC4521C88AF3100A8B5C5 /* MyAppsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAppsViewController.swift; sourceTree = "<group>"; };
 		BBFFC4541C88AF7E00A8B5C5 /* MyInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyInfoViewController.swift; sourceTree = "<group>"; };
 		BDD472C5AB65D9D3A8B2AD0D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -351,12 +347,10 @@
 		BBBBFAB51C97206900770E00 /* My Apps */ = {
 			isa = PBXGroup;
 			children = (
-				BBB703BA1CA22EED00931736 /* FoldingCell.swift */,
-				BBE54C3B1C9D38C000EA9E7A /* MyAppsTableViewController.swift */,
-				BBE54C391C9D321400EA9E7A /* ExpandingCell.swift */,
-				BBFFC4521C88AF3100A8B5C5 /* MyAppsViewController.swift */,
-				BBBBFAB61C97208400770E00 /* ExpandingTableViewController.swift */,
-				BBBBFAB81C97209300770E00 /* ExpandingTableViewCell.swift */,
+				BB1D2FBA1CA3C267002F6050 /* SwiftyJSON.swift */,
+				BB1D2FB81CA3C067002F6050 /* AppData.json */,
+				BB1D2FB41CA394EC002F6050 /* MyAppsTableViewController.swift */,
+				BB1D2FB61CA39504002F6050 /* AppCell.swift */,
 			);
 			name = "My Apps";
 			sourceTree = "<group>";
@@ -475,6 +469,7 @@
 				BBE54C7E1C9D5B0D00EA9E7A /* Panton-Heavy.otf in Resources */,
 				BB10DD391C59DF940079C480 /* Assets.xcassets in Resources */,
 				BBE54C7A1C9D5B0D00EA9E7A /* Panton-Black.otf in Resources */,
+				BB1D2FB91CA3C067002F6050 /* AppData.json in Resources */,
 				BBE54C7C1C9D5B0D00EA9E7A /* Panton-ExtraBold.otf in Resources */,
 				BBE54C811C9D5B0D00EA9E7A /* Panton-SemiBold.otf in Resources */,
 				BBE54C7D1C9D5B0D00EA9E7A /* Panton-ExtraLight.otf in Resources */,
@@ -569,17 +564,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				BB10DD621C59DFDC0079C480 /* CALayer+DrawAnimation.m in Sources */,
-				BBB703BB1CA22EED00931736 /* FoldingCell.swift in Sources */,
-				BBE54C3C1C9D38C000EA9E7A /* MyAppsTableViewController.swift in Sources */,
 				BB10DD651C59DFFC0079C480 /* UILabel+DrawAnimation.m in Sources */,
+				BB1D2FB51CA394EC002F6050 /* MyAppsTableViewController.swift in Sources */,
+				BB1D2FBB1CA3C267002F6050 /* SwiftyJSON.swift in Sources */,
 				BB10DD341C59DF940079C480 /* ViewController.swift in Sources */,
 				BBFFC4511C88AF2800A8B5C5 /* MyStoryViewController.swift in Sources */,
+				BB1D2FB71CA39504002F6050 /* AppCell.swift in Sources */,
 				BB10DD321C59DF940079C480 /* AppDelegate.swift in Sources */,
-				BBFFC4531C88AF3100A8B5C5 /* MyAppsViewController.swift in Sources */,
-				BBBBFAB71C97208400770E00 /* ExpandingTableViewController.swift in Sources */,
 				BB10DD961C59E5FD0079C480 /* SplashViewController.swift in Sources */,
-				BBE54C3A1C9D321400EA9E7A /* ExpandingCell.swift in Sources */,
-				BBBBFAB91C97209300770E00 /* ExpandingTableViewCell.swift in Sources */,
 				BBFFC4551C88AF7E00A8B5C5 /* MyInfoViewController.swift in Sources */,
 				BB34038B1C61E9D0004F53DF /* HomeViewController.swift in Sources */,
 			);

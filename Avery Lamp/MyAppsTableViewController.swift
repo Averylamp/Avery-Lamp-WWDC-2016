@@ -2,35 +2,60 @@
 //  MyAppsTableViewController.swift
 //  Avery Lamp
 //
-//  Created by Avery Lamp on 3/19/16.
+//  Created by Avery Lamp on 3/23/16.
 //  Copyright © 2016 Avery Lamp. All rights reserved.
 //
 
 import UIKit
 
-
 class MyAppsTableViewController: UITableViewController {
 
     
-    let kCloseCellHeight: CGFloat = 168
-    let kOpenCellHeight: CGFloat = 648
-    let kRowsCount = 6
-    var cellHeights = [CGFloat]()
-
+    let rowNumber = 6
+    var cellHeights: [CGFloat] = [CGFloat]()
+    let closedCellHeight: CGFloat = 150 + 16
+    var openedCellHeight: CGFloat = 630 + 16 // 630 + 16 for iPhone 6 /515 + 16 for iPhone 5
+    var cellType = "AppCell"
+    var jsonData: JSON?
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("Entering App tbvc")
-//        tableView.registerClass(ExpandingCell.self, forCellReuseIdentifier: "FoldingCell")
-        for _ in 0...kRowsCount {
-            cellHeights.append(kCloseCellHeight)
+        tableView.backgroundColor = UIColor(red: 0.678, green: 0.922, blue: 0.973, alpha: 1.00)
+        for _ in 0...rowNumber {
+            cellHeights.append(closedCellHeight)
         }
-        tableView.backgroundColor = UIColor(red: 0.671, green: 0.910, blue: 0.965, alpha: 1.00)
-
+        let screenHeight = UIScreen.mainScreen().bounds.height
+        
+        if screenHeight > 630 {
+            openedCellHeight = 630 + 16
+        }else {
+            cellType = "AppCell2"
+            openedCellHeight = 515 + 16
+        }
+        setupJSON()
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    func setupJSON(){
+        if let path = NSBundle.mainBundle().pathForResource("AppData", ofType: "json"){
+            do {
+                let data = try NSData(contentsOfURL: NSURL(fileURLWithPath: path), options: NSDataReadingOptions.DataReadingMappedIfSafe)
+                jsonData = JSON(data: data)
+                if jsonData != JSON.null {
+                    print("jsonData:\(jsonData!)")
+                } else {
+                    print("could not get json from file, make sure that file contains valid json.")
+                }
+            }catch let error as NSError {
+                print(error.localizedDescription)
+            }
+        } else {
+            print("file not found")
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,45 +63,8 @@ class MyAppsTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    
     // MARK: - Table view data source
 
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let cell = tableView.cellForRowAtIndexPath(indexPath) as! FoldingCell
-        
-        var duration = 0.0
-        if cellHeights[indexPath.row] == kCloseCellHeight { // open cell
-            cellHeights[indexPath.row] = kOpenCellHeight
-            cell.selectedAnimation(true, animated: true, completion: nil)
-            duration = 0.5
-        } else {// close cell
-            cellHeights[indexPath.row] = kCloseCellHeight
-            cell.selectedAnimation(false, animated: true, completion: nil)
-            duration = 1.1
-        }
-        
-        UIView.animateWithDuration(duration, delay: 0, options: .CurveEaseOut, animations: { () -> Void in
-            tableView.beginUpdates()
-            tableView.endUpdates()
-            }, completion: nil)
-    }
-    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
-        
-        if cell is FoldingCell {
-            let foldingCell = cell as! FoldingCell
-            
-            if cellHeights[indexPath.row] == kCloseCellHeight {
-                foldingCell.selectedAnimation(false, animated: false, completion:nil)
-            } else {
-                foldingCell.selectedAnimation(true, animated: false, completion: nil)
-            }
-        }
-    }
-    
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return cellHeights[indexPath.row]
-    }
-    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
@@ -84,19 +72,47 @@ class MyAppsTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return kRowsCount
+        return rowNumber
     }
-
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return cellHeights[indexPath.row]
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let cell = tableView.cellForRowAtIndexPath(indexPath) as! AppCell
+        if cellHeights[indexPath.row] == closedCellHeight {
+            cell.openAnimation()
+            cellHeights[indexPath.row] = openedCellHeight
+        }else{
+            cell.closeAnimation()
+            cellHeights[indexPath.row] = closedCellHeight
+        }
+        
+        UIView.animateWithDuration(1.0, delay: 0, options: .CurveEaseOut, animations: { 
+            tableView.beginUpdates()
+            tableView.endUpdates()
+            }, completion: nil)
+    }
+    
+    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+    }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("FoldingCell", forIndexPath: indexPath) as! ExpandingCell
-        cell.containerHeights = [150,150,150,115,65]
-        cell.backgroundColor = UIColor.clearColor()
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellType, forIndexPath: indexPath) as! AppCell
+        
+        return cell
+    }
+
+    /*
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+
         // Configure the cell...
 
         return cell
     }
-    
+    */
 
     /*
     // Override to support conditional editing of the table view.
