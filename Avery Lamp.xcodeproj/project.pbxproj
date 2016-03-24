@@ -218,7 +218,6 @@
 		BB10DD301C59DF940079C480 /* Avery Lamp */ = {
 			isa = PBXGroup;
 			children = (
-				BBB703BA1CA22EED00931736 /* FoldingCell.swift */,
 				BB10DD311C59DF940079C480 /* AppDelegate.swift */,
 				BB10DD331C59DF940079C480 /* ViewController.swift */,
 				BB10DD951C59E5FD0079C480 /* SplashViewController.swift */,
@@ -352,6 +351,7 @@
 		BBBBFAB51C97206900770E00 /* My Apps */ = {
 			isa = PBXGroup;
 			children = (
+				BBB703BA1CA22EED00931736 /* FoldingCell.swift */,
 				BBE54C3B1C9D38C000EA9E7A /* MyAppsTableViewController.swift */,
 				BBE54C391C9D321400EA9E7A /* ExpandingCell.swift */,
 				BBFFC4521C88AF3100A8B5C5 /* MyAppsViewController.swift */,

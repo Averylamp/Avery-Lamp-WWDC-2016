@@ -89,8 +89,8 @@ class MyAppsTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("FoldingCell", forIndexPath: indexPath)
-        
+        let cell = tableView.dequeueReusableCellWithIdentifier("FoldingCell", forIndexPath: indexPath) as! ExpandingCell
+        cell.containerHeights = [150,150,150,115,65]
         cell.backgroundColor = UIColor.clearColor()
         // Configure the cell...
 
