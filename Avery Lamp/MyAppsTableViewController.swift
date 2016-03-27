@@ -8,10 +8,10 @@
 
 import UIKit
 
-class MyAppsTableViewController: UITableViewController {
+class MyAppsTableViewController: UITableViewController, UIViewControllerTransitioningDelegate{
 
     
-    let rowNumber = 6
+    var rowNumber = 6
     var cellHeights: [CGFloat] = [CGFloat]()
     let closedCellHeight: CGFloat = 150 + 16
     var openedCellHeight: CGFloat = 630 + 16 // 630 + 16 for iPhone 6 /515 + 16 for iPhone 5
@@ -33,7 +33,8 @@ class MyAppsTableViewController: UITableViewController {
             openedCellHeight = 515 + 16
         }
         setupJSON()
-        
+        rowNumber = jsonData["Apps"].count
+        tableView.separatorStyle = .None
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -122,7 +123,49 @@ class MyAppsTableViewController: UITableViewController {
                 cell.detailPictures.forEach{ $0.image = UIImage(named: jsonData["Apps"][indexPath.row]["appDetailImage"].string!)}
             }
             
+            cell.exploreMoreButtons.forEach{
+                $0.tag = indexPath.row
+                $0.addTarget(self, action: #selector(MyAppsTableViewController.exploreMoreButtonClicked(_:)), forControlEvents: UIControlEvents.TouchUpInside) }
+            
         }
         return cell
     }
+    
+    func exploreMoreButtonClicked(button: UIButton){
+        exploreMoreButtonClicked = button
+        print("\(button.backgroundColor)")
+        self.performSegueWithIdentifier("exploreMoreSegue", sender: self)
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let controller = segue.destinationViewController as? AppExploreMoreViewController {
+            controller.transitioningDelegate = self
+            controller.modalPresentationStyle = .Custom
+            
+        }
+    }
+    
+    let expandingTransition = ExpandingTransition()
+    var exploreMoreButtonClicked:UIButton?
+    
+    // MARK: UIViewControllerTransitioningDelegate
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        expandingTransition.transitionMode = .Present
+        let pointInVC = exploreMoreButtonClicked!.convertPoint(exploreMoreButtonClicked!.center, toView: self.view)
+//            self.view.convertPoint(exploreMoreButtonClicked!.center, fromView: exploreMoreButtonClicked)
+        expandingTransition.startPoint = pointInVC
+        print("Transition Center : \(pointInVC)")
+        expandingTransition.transitionColor = exploreMoreButtonClicked!.backgroundColor!
+        return expandingTransition
+    }
+    
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        expandingTransition.transitionMode = .Dismiss
+        expandingTransition.startPoint = exploreMoreButtonClicked!.center
+        expandingTransition.transitionColor = exploreMoreButtonClicked!.backgroundColor!
+        return expandingTransition
+
+    }
+    
 }

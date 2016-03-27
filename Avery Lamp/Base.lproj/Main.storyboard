@@ -12,6 +12,7 @@
             <string>ADAM.CGPRO</string>
             <string>ADAM.CGPRO</string>
             <string>ADAM.CGPRO</string>
+            <string>ADAM.CGPRO</string>
         </mutableArray>
         <mutableArray key="Panton-Light.otf">
             <string>Panton-Light</string>
@@ -511,6 +512,7 @@
                                     <outletCollection property="longDescriptionLabels" destination="opi-iy-RUn" collectionClass="NSMutableArray" id="imE-sM-KRp"/>
                                     <outletCollection property="exploreMoreButtons" destination="JX1-jn-l6u" collectionClass="NSMutableArray" id="3p4-OY-gqu"/>
                                     <outletCollection property="mediumDescriptionLabels" destination="5h6-Yx-6oK" collectionClass="NSMutableArray" id="Xmd-TA-c2K"/>
+                                    <outletCollection property="highlightViews" destination="JX1-jn-l6u" collectionClass="NSMutableArray" id="Qnj-LJ-kfF"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AppCell2" rowHeight="864" id="76V-q3-Yri" customClass="AppCell" customModule="Avery_Lamp">
@@ -892,6 +894,7 @@
                                     <outletCollection property="exploreMoreButtons" destination="GNk-GZ-I5E" collectionClass="NSMutableArray" id="ZBo-gI-4Qb"/>
                                     <outletCollection property="longDescriptionLabels" destination="fbp-Pb-898" collectionClass="NSMutableArray" id="22t-ft-6yB"/>
                                     <outletCollection property="mediumDescriptionLabels" destination="Cxn-tj-L79" collectionClass="NSMutableArray" id="DU4-4P-sVn"/>
+                                    <outletCollection property="highlightViews" destination="GNk-GZ-I5E" collectionClass="NSMutableArray" id="sQP-58-1Oq"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -903,10 +906,47 @@
                     <navigationItem key="navigationItem" id="jFh-8D-PCw"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="600"/>
+                    <connections>
+                        <segue destination="vBf-dA-3HV" kind="presentation" identifier="exploreMoreSegue" id="InH-u3-Akr"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SFO-Cx-2pr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2287" y="344"/>
+        </scene>
+        <!--App Explore More View Controller-->
+        <scene sceneID="8PA-EM-Zec">
+            <objects>
+                <viewController id="vBf-dA-3HV" customClass="AppExploreMoreViewController" customModule="Avery_Lamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ITj-Fu-8rc"/>
+                        <viewControllerLayoutGuide type="bottom" id="aSK-vN-3em"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CrD-Yl-z7f">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SMITH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7s-jL-gph">
+                                <rect key="frame" x="30" y="45" width="540" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="4n4-1c-alV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ADAM.CGPRO" family="ADAM.CG PRO" pointSize="30"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="h7s-jL-gph" firstAttribute="top" secondItem="ITj-Fu-8rc" secondAttribute="bottom" constant="25" id="ME9-SN-jlB"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="h7s-jL-gph" secondAttribute="trailing" constant="10" id="RMr-E2-Afv"/>
+                            <constraint firstItem="h7s-jL-gph" firstAttribute="leading" secondItem="CrD-Yl-z7f" secondAttribute="leadingMargin" constant="10" id="hPC-vy-7Yp"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ydM-wd-5jP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2987" y="344"/>
         </scene>
     </scenes>
     <resources>

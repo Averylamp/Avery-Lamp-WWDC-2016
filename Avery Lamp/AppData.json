@@ -1,15 +1,5 @@
 {
     "Apps":[
-          {
-            "title": "Smith",
-            "highlightColor":"#F5A623",
-            "tagline": "Control your phone without touching it",
-            "shortDescription": "Smith analyzes vibration patterns to trigger custom actions",
-            "appIconImage":"SmithAppIcon",
-            "mediumDescription":"Smith was created at HackBCA, my second hackathon, in February of 2015.  It won overall 2nd place.",
-            "appDetailImage":"SmithDetailPicture",
-            "longDescription":"Smith was created as a productivity tool for those that sit at desks.  The user sets specific actions, which can be triggered by knocking specific patterns into the desk that the phone rests on."
-          },
         {
             "title": "PocketLab",
             "highlightColor":"#D0021B",
@@ -21,6 +11,26 @@
             "longDescription":"PocketLab is a collection of tools for blood analysis using the iPhone, made as a proof of concept.  It performs a variety of tests using computer vision, including haematocrit and blood cell shape analysis."
         },
         {
+            "title": "Smith",
+            "highlightColor":"#F5A623",
+            "tagline": "Control your phone without touching it",
+            "shortDescription": "Smith analyzes vibration patterns to trigger custom actions",
+            "appIconImage":"SmithAppIcon",
+            "mediumDescription":"Smith was created at HackBCA, my second hackathon, in February of 2015.  It won overall 2nd place.",
+            "appDetailImage":"SmithDetailPicture",
+            "longDescription":"Smith was created as a productivity tool for those that sit at desks.  The user sets specific actions, which can be triggered by knocking specific patterns into the desk that the phone rests on."
+        },
+        {
+            "title": "Tap Attack!!",
+            "highlightColor":"#7ED321",
+            "tagline": "Organize your photo collection",
+            "shortDescription": "Tap Attack is a simple tapping game, made to test finger accuracy and speed",
+            "appIconImage":"TapAttackIcon",
+            "mediumDescription":"Tap Attack was made in some free time I had over a school break.",
+            "appDetailImage":"TapAttackDetailPicture",
+            "longDescription":"In Tap Attack, green dots appear and shrink, and the player has to tap all of the green dots before they disappear.  As the game progresses, more complex elements are introduced into the game, while the game speeds up."
+        },
+        {
             "title": "ViewZik",
             "highlightColor":"#9013FE",
             "tagline": "Visualize and DJ your music",
@@ -30,35 +40,15 @@
             "appDetailImage":"ViewZikDetailPicture",
             "longDescription":"ViewZik was created as a live music visualizer and DJ set.  It has a waveform display as well as four simple effects built into the app for live editing of music: looping, phaser , flanger, and bass boost."
         },
-            {
+        {
             "title": "Snappr",
-            "highlightColor":"#7ED321",
-            "tagline": "Organize your photo collection",
-            "shortDescription": "Snappr declutters your camera by automatically organizing photos",
+            "highlightColor":"#309f5f",
+            "tagline": "Organize your camera roll",
+            "shortDescription": "Snappr organizes your camera roll by grouping photos based the time they were taken",
             "appIconImage":"SnapprAppIcon",
-            "mediumDescription":"Snappr was created by Isometric iOS development, my freelancing group, in our free time",
+            "mediumDescription":"Snappr was created for fun with Isometric Studios, the freelancing/hackathon team of highschool iOS Devs I work with.",
             "appDetailImage":"SnapprDetailPicture",
-            "longDescription":"Snappr is a tool for people with regular schedules.  It allows people to set classes with time periods to automatically organize photos and media taken within a certain time period into folders for easy access."
-            },
-        {
-            "title": "Smith",
-            "highlightColor":"#F5A623",
-            "tagline": "Control your phone without touching it",
-            "shortDescription": "Smith analyzes vibration patterns to trigger custom actions",
-            "appIconImage":"SmithAppIcon",
-            "mediumDescription":"Smith was created at HackBCA, my second hackathon, in February of 2015.  It won overall 2nd place.",
-            "appDetailImage":"SmithDetailPicture",
-            "longDescription":"Smith was created as a productivity tool for those that sit at desks.  The user sets specific actions, which can be triggered by knocking specific patterns into the desk that the phone rests on."
-        },
-        {
-            "title": "Smith",
-            "highlightColor":"#F5A623",
-            "tagline": "Control your phone without touching it",
-            "shortDescription": "Smith analyzes vibration patterns to trigger custom actions",
-            "appIconImage":"SmithAppIcon",
-            "mediumDescription":"Smith was created at HackBCA, my second hackathon, in February of 2015.  It won overall 2nd place.",
-            "appDetailImage":"SmithDetailPicture",
-            "longDescription":"Smith was created as a productivity tool for those that sit at desks.  The user sets specific actions, which can be triggered by knocking specific patterns into the desk that the phone rests on."
+            "longDescription":"Snappr allows users to set schedules for their phone to automatically group photos.  If the user take a picture at a time that was defined by the user, the photo will automatically be moved to a folder for easy access within the app."
         }
     ]
 }

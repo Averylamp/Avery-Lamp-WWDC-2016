@@ -22,6 +22,8 @@
 		BB1D2FB91CA3C067002F6050 /* AppData.json in Resources */ = {isa = PBXBuildFile; fileRef = BB1D2FB81CA3C067002F6050 /* AppData.json */; };
 		BB1D2FBB1CA3C267002F6050 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1D2FBA1CA3C267002F6050 /* SwiftyJSON.swift */; };
 		BB34038B1C61E9D0004F53DF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34038A1C61E9D0004F53DF /* HomeViewController.swift */; };
+		BBA8B33F1CA7AD7000E45BE2 /* ExpandingTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA8B33E1CA7AD7000E45BE2 /* ExpandingTransition.swift */; };
+		BBA8B3411CA7B8D900E45BE2 /* AppExploreMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA8B3401CA7B8D900E45BE2 /* AppExploreMoreViewController.swift */; };
 		BBE54C791C9D5AF600EA9E7A /* ADAM.CG PRO.otf in Resources */ = {isa = PBXBuildFile; fileRef = BBE54C781C9D5A6600EA9E7A /* ADAM.CG PRO.otf */; };
 		BBE54C7A1C9D5B0D00EA9E7A /* Panton-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = BBE54C3D1C9D5A1F00EA9E7A /* Panton-Black.otf */; };
 		BBE54C7B1C9D5B0D00EA9E7A /* Panton-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BBE54C3E1C9D5A1F00EA9E7A /* Panton-Bold.otf */; };
@@ -81,6 +83,8 @@
 		BB1D2FB81CA3C067002F6050 /* AppData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AppData.json; sourceTree = "<group>"; };
 		BB1D2FBA1CA3C267002F6050 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		BB34038A1C61E9D0004F53DF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BBA8B33E1CA7AD7000E45BE2 /* ExpandingTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandingTransition.swift; sourceTree = "<group>"; };
+		BBA8B3401CA7B8D900E45BE2 /* AppExploreMoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppExploreMoreViewController.swift; sourceTree = "<group>"; };
 		BBE54C3D1C9D5A1F00EA9E7A /* Panton-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Panton-Black.otf"; path = "Panton Font/Panton-Black.otf"; sourceTree = "<group>"; };
 		BBE54C3E1C9D5A1F00EA9E7A /* Panton-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Panton-Bold.otf"; path = "Panton Font/Panton-Bold.otf"; sourceTree = "<group>"; };
 		BBE54C3F1C9D5A1F00EA9E7A /* Panton-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Panton-ExtraBold.otf"; path = "Panton Font/Panton-ExtraBold.otf"; sourceTree = "<group>"; };
@@ -350,6 +354,8 @@
 				BB1D2FBA1CA3C267002F6050 /* SwiftyJSON.swift */,
 				BB1D2FB81CA3C067002F6050 /* AppData.json */,
 				BB1D2FB41CA394EC002F6050 /* MyAppsTableViewController.swift */,
+				BBA8B3401CA7B8D900E45BE2 /* AppExploreMoreViewController.swift */,
+				BBA8B33E1CA7AD7000E45BE2 /* ExpandingTransition.swift */,
 				BB1D2FB61CA39504002F6050 /* AppCell.swift */,
 			);
 			name = "My Apps";
@@ -572,7 +578,9 @@
 				BB1D2FB71CA39504002F6050 /* AppCell.swift in Sources */,
 				BB10DD321C59DF940079C480 /* AppDelegate.swift in Sources */,
 				BB10DD961C59E5FD0079C480 /* SplashViewController.swift in Sources */,
+				BBA8B33F1CA7AD7000E45BE2 /* ExpandingTransition.swift in Sources */,
 				BBFFC4551C88AF7E00A8B5C5 /* MyInfoViewController.swift in Sources */,
+				BBA8B3411CA7B8D900E45BE2 /* AppExploreMoreViewController.swift in Sources */,
 				BB34038B1C61E9D0004F53DF /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
