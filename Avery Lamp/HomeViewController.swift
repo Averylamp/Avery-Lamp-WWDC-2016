@@ -288,12 +288,15 @@ class HomeViewController: UIViewController {
     }
     
     func goToMyInfo(){
+        
         self.navigationController?.pushViewController(MyInfoViewController(), animated: true)
         
     }
     
     func goToMyApps(){
-        self.navigationController?.pushViewController(MyAppsTableViewController(), animated: true)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let myAppsTVC = storyboard.instantiateViewControllerWithIdentifier("MyAppsTVC")
+        self.navigationController?.pushViewController(myAppsTVC, animated: true)
         
     }
     

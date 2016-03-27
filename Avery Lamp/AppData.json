@@ -2,49 +2,61 @@
     "Apps":[
           {
             "title": "Smith",
+            "highlightColor":"#F5A623",
             "tagline": "Control your phone without touching it",
-            "shortDesc": "Smith analyzes vibration patterns to trigger custom actions",
+            "shortDescription": "Smith analyzes vibration patterns to trigger custom actions",
             "appIconImage":"SmithAppIcon",
+            "mediumDescription":"Smith was created at HackBCA, my second hackathon, in February of 2015.  It won overall 2nd place.",
             "appDetailImage":"SmithDetailPicture",
             "longDescription":"Smith was created as a productivity tool for those that sit at desks.  The user sets specific actions, which can be triggered by knocking specific patterns into the desk that the phone rests on."
           },
         {
+            "title": "PocketLab",
+            "highlightColor":"#D0021B",
+            "tagline": "Diagnose blood abnormalities with an iPhone",
+            "shortDescription": "Pocket Lab uses computer vision to detect abnormalities in blood",
+            "appIconImage":"PocketLabAppIcon",
+            "mediumDescription":"PocketLab was created at PennApps XII in September of 2015.  It won the Hottest Health Hack Prize form PennApps sponsor Epic.",
+            "appDetailImage":"PocketLabDetailPicture",
+            "longDescription":"PocketLab is a collection of tools for blood analysis using the iPhone, made as a proof of concept.  It performs a variety of tests using computer vision, including haematocrit and blood cell shape analysis."
+        },
+        {
+            "title": "ViewZik",
+            "highlightColor":"#9013FE",
+            "tagline": "Visualize and DJ your music",
+            "shortDescription": "ViewZik uses the SuperPowered SDK to create waveforms and live DJ music",
+            "appIconImage":"ViewZikAppIcon",
+            "mediumDescription":"ViewZik was created at CodeDay NYC in February of 2015.  It won best Application.",
+            "appDetailImage":"ViewZikDetailPicture",
+            "longDescription":"ViewZik was created as a live music visualizer and DJ set.  It has a waveform display as well as four simple effects built into the app for live editing of music: looping, phaser , flanger, and bass boost."
+        },
+            {
+            "title": "Snappr",
+            "highlightColor":"#7ED321",
+            "tagline": "Organize your photo collection",
+            "shortDescription": "Snappr declutters your camera by automatically organizing photos",
+            "appIconImage":"SnapprAppIcon",
+            "mediumDescription":"Snappr was created by Isometric iOS development, my freelancing group, in our free time",
+            "appDetailImage":"SnapprDetailPicture",
+            "longDescription":"Snappr is a tool for people with regular schedules.  It allows people to set classes with time periods to automatically organize photos and media taken within a certain time period into folders for easy access."
+            },
+        {
             "title": "Smith",
+            "highlightColor":"#F5A623",
             "tagline": "Control your phone without touching it",
-            "shortDesc": "Smith analyzes vibration patterns to trigger custom actions",
+            "shortDescription": "Smith analyzes vibration patterns to trigger custom actions",
             "appIconImage":"SmithAppIcon",
+            "mediumDescription":"Smith was created at HackBCA, my second hackathon, in February of 2015.  It won overall 2nd place.",
             "appDetailImage":"SmithDetailPicture",
             "longDescription":"Smith was created as a productivity tool for those that sit at desks.  The user sets specific actions, which can be triggered by knocking specific patterns into the desk that the phone rests on."
         },
         {
             "title": "Smith",
+            "highlightColor":"#F5A623",
             "tagline": "Control your phone without touching it",
-            "shortDesc": "Smith analyzes vibration patterns to trigger custom actions",
+            "shortDescription": "Smith analyzes vibration patterns to trigger custom actions",
             "appIconImage":"SmithAppIcon",
-            "appDetailImage":"SmithDetailPicture",
-            "longDescription":"Smith was created as a productivity tool for those that sit at desks.  The user sets specific actions, which can be triggered by knocking specific patterns into the desk that the phone rests on."
-        },
-        {
-            "title": "Smith",
-            "tagline": "Control your phone without touching it",
-            "shortDesc": "Smith analyzes vibration patterns to trigger custom actions",
-            "appIconImage":"SmithAppIcon",
-            "appDetailImage":"SmithDetailPicture",
-            "longDescription":"Smith was created as a productivity tool for those that sit at desks.  The user sets specific actions, which can be triggered by knocking specific patterns into the desk that the phone rests on."
-        },
-        {
-            "title": "Smith",
-            "tagline": "Control your phone without touching it",
-            "shortDesc": "Smith analyzes vibration patterns to trigger custom actions",
-            "appIconImage":"SmithAppIcon",
-            "appDetailImage":"SmithDetailPicture",
-            "longDescription":"Smith was created as a productivity tool for those that sit at desks.  The user sets specific actions, which can be triggered by knocking specific patterns into the desk that the phone rests on."
-        },
-        {
-            "title": "Smith",
-            "tagline": "Control your phone without touching it",
-            "shortDesc": "Smith analyzes vibration patterns to trigger custom actions",
-            "appIconImage":"SmithAppIcon",
+            "mediumDescription":"Smith was created at HackBCA, my second hackathon, in February of 2015.  It won overall 2nd place.",
             "appDetailImage":"SmithDetailPicture",
             "longDescription":"Smith was created as a productivity tool for those that sit at desks.  The user sets specific actions, which can be triggered by knocking specific patterns into the desk that the phone rests on."
         }

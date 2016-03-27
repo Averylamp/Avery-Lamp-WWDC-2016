@@ -17,6 +17,14 @@ class AppCell: UITableViewCell {
     @IBOutlet weak var openView: UIView!
     
     @IBOutlet var openViewContainers: [UIView]!
+    @IBOutlet var appIcons: [UIImageView]!
+    @IBOutlet var titleLabels: [UILabel]!
+    @IBOutlet var taglineLabels: [UILabel]!
+    @IBOutlet var shortDescriptionLabels: [UILabel]!
+    @IBOutlet var mediumDescriptionLabels: [UILabel]!
+    @IBOutlet var detailPictures: [UIImageView]!
+    @IBOutlet var longDescriptionLabels: [UILabel]!
+    @IBOutlet var exploreMoreButtons: [UIButton]!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,7 +36,7 @@ class AppCell: UITableViewCell {
         openViewTopConstraint?.constant = (closedViewTopConstraint?.constant)!
         openView.alpha = 0.0
         
-        highlightViews.forEach { $0.backgroundColor = UIColor(red: 0.961, green: 0.651, blue: 0.137, alpha: 1.00) }
+//        highlightViews.forEach { $0.backgroundColor = UIColor(red: 0.961, green: 0.651, blue: 0.137, alpha: 1.00) }
         // Initialization code
     }
     
@@ -39,9 +47,19 @@ class AppCell: UITableViewCell {
     }
     
     var isAnimating = false
-    func openAnimation() {
+    func openAnimation(animated:Bool) {
         isAnimating = true
-        UIView.animateWithDuration(0.3) {
+        
+        var fadeDuration = 0.3
+        var subviewFadeDelay = 0.3
+        var subviewFadeDuration = 0.2
+        if animated == false{
+            //Sorry :(
+            fadeDuration = 0.0
+            subviewFadeDelay = 0.0
+            subviewFadeDuration = 0.0
+        }
+        UIView.animateWithDuration(fadeDuration) {
             self.closedView.alpha = 0.0
             self.openView.alpha = 1.0
         }
@@ -49,7 +67,7 @@ class AppCell: UITableViewCell {
         openViewContainers.first?.superview?.constraints.filter{ $0.identifier == "divisionTop"}.forEach { $0.constant = 30}
         openViewContainers.first?.superview?.layoutIfNeeded()
         for subview in openViewContainers {
-            UIView.animateWithDuration(0.2, delay: Double(subview.tag) * 0.3, options: .CurveEaseInOut, animations: {
+            UIView.animateWithDuration(subviewFadeDuration, delay: Double(subview.tag) * subviewFadeDelay, options: .CurveEaseInOut, animations: {
                 subview.alpha = 1.0
                 let topConstraint = subview.superview?.constraints.filter(){ if $0.identifier == "divisionTop"{
                     if(($0.firstItem as! NSObject == subview && $0.firstAttribute == .Top) || ($0.secondItem as! NSObject == subview && $0.secondAttribute == .Top)){
@@ -69,9 +87,14 @@ class AppCell: UITableViewCell {
         isAnimating = false
     }
     
-    func closeAnimation(){
+    func closeAnimation(animated:Bool){
         isAnimating = true
-        UIView.animateWithDuration(0.7) {
+        var fadeDuration = 0.7
+        if animated == false {
+            // :(
+            fadeDuration = 0.0
+        }
+        UIView.animateWithDuration(fadeDuration) {
             self.closedView.alpha = 1.0
             self.openView.alpha = 0.0
         }
