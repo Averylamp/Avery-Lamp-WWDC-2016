@@ -42,11 +42,12 @@ class ExpandingTransition: NSObject, UIViewControllerAnimatedTransitioning {
             let originalCenter = presentingViewController.center
             let originalSize = presentingViewController.frame.size
             
-            let maxX = max(originalCenter.x, originalSize.width -  originalCenter.x)
-            let maxY = max(originalCenter.y, originalSize.height -  originalCenter.y)
-            let farthestCorner = sqrt(maxX * maxX + maxY * maxY) * 2
+            let maxX = max(startPoint.x, originalSize.width -  startPoint.x)
+            let maxY = max(startPoint.y, originalSize.height -  startPoint.y)
+            print("Max X - \(maxX)  Max Y - \(maxY) ")
+            let fullHeight = sqrt(maxX * maxX + maxY * maxY) * 2
             
-            expandingObject = UIView(frame: CGRect(origin: CGPointZero, size: CGSizeMake(farthestCorner, farthestCorner)))
+            expandingObject = UIView(frame: CGRect(origin: CGPointZero, size: CGSizeMake(fullHeight, fullHeight)))
             expandingObject?.layer.cornerRadius = expandingObject!.frame.size.height / 2
             expandingObject?.center = startPoint
             expandingObject?.transform = CGAffineTransformMakeScale(0.001, 0.001)
@@ -60,7 +61,7 @@ class ExpandingTransition: NSObject, UIViewControllerAnimatedTransitioning {
             UIView.animateWithDuration(duration, animations: { 
                 self.expandingObject?.transform = CGAffineTransformIdentity
                 presentingViewController.transform = CGAffineTransformIdentity
-//                presentingViewController.alpha = 1.0
+                presentingViewController.alpha = 1.0
                 presentingViewController.center = originalCenter
                 }, completion: { (_) in
                     transitionContext.completeTransition(true)
@@ -74,8 +75,8 @@ class ExpandingTransition: NSObject, UIViewControllerAnimatedTransitioning {
             
             if let expandingObject = expandingObject {
                 
-                let maxX = max(originalCenter.x, originalSize.width -  originalCenter.x)
-                let maxY = max(originalCenter.y, originalSize.height -  originalCenter.y)
+                let maxX = max(startPoint.x, originalSize.width -  startPoint.x)
+                let maxY = max(startPoint.y, originalSize.height -  startPoint.y)
                 let farthestCorner = sqrt(maxX * maxX + maxY * maxY) * 2
 
                 expandingObject.frame = CGRect(origin: CGPointZero, size: CGSizeMake(farthestCorner, farthestCorner))

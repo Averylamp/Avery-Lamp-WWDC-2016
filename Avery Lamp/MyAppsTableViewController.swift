@@ -110,6 +110,7 @@ class MyAppsTableViewController: UITableViewController, UIViewControllerTransiti
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        print("\(cellType)")
         let cell = tableView.dequeueReusableCellWithIdentifier(cellType, forIndexPath: indexPath) as! AppCell
         if cell.titleLabels != nil{
             cell.titleLabels.forEach { $0.text = jsonData["Apps"][indexPath.row]["title"].string!}
@@ -142,6 +143,7 @@ class MyAppsTableViewController: UITableViewController, UIViewControllerTransiti
         if let controller = segue.destinationViewController as? AppExploreMoreViewController {
             controller.transitioningDelegate = self
             controller.modalPresentationStyle = .Custom
+            segue.destinationViewController.view.backgroundColor = exploreMoreButtonClicked?.backgroundColor
             
         }
     }
@@ -152,17 +154,18 @@ class MyAppsTableViewController: UITableViewController, UIViewControllerTransiti
     // MARK: UIViewControllerTransitioningDelegate
     func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         expandingTransition.transitionMode = .Present
-        let pointInVC = exploreMoreButtonClicked!.convertPoint(exploreMoreButtonClicked!.center, toView: self.view)
+        let pointInVC = exploreMoreButtonClicked!.convertPoint(exploreMoreButtonClicked!.center, toView: nil)
 //            self.view.convertPoint(exploreMoreButtonClicked!.center, fromView: exploreMoreButtonClicked)
         expandingTransition.startPoint = pointInVC
-        print("Transition Center : \(pointInVC)")
+        print("Transition Center : \(pointInVC)\nBounds of View \(self.view.bounds)\nBounds of Center \(exploreMoreButtonClicked?.bounds)")
         expandingTransition.transitionColor = exploreMoreButtonClicked!.backgroundColor!
         return expandingTransition
     }
     
     func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         expandingTransition.transitionMode = .Dismiss
-        expandingTransition.startPoint = exploreMoreButtonClicked!.center
+        let pointInVC = exploreMoreButtonClicked!.convertPoint(exploreMoreButtonClicked!.center, toView: nil)
+        expandingTransition.startPoint = pointInVC
         expandingTransition.transitionColor = exploreMoreButtonClicked!.backgroundColor!
         return expandingTransition
 
