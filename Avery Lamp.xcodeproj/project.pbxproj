@@ -14,8 +14,6 @@
 		BB10DD3C1C59DF940079C480 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB10DD3A1C59DF940079C480 /* LaunchScreen.storyboard */; };
 		BB10DD471C59DF940079C480 /* Avery_LampTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB10DD461C59DF940079C480 /* Avery_LampTests.swift */; };
 		BB10DD521C59DF940079C480 /* Avery_LampUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB10DD511C59DF940079C480 /* Avery_LampUITests.swift */; };
-		BB10DD621C59DFDC0079C480 /* CALayer+DrawAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = BB10DD611C59DFDC0079C480 /* CALayer+DrawAnimation.m */; };
-		BB10DD651C59DFFC0079C480 /* UILabel+DrawAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = BB10DD641C59DFFC0079C480 /* UILabel+DrawAnimation.m */; };
 		BB10DD961C59E5FD0079C480 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB10DD951C59E5FD0079C480 /* SplashViewController.swift */; };
 		BB1D2FB51CA394EC002F6050 /* MyAppsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1D2FB41CA394EC002F6050 /* MyAppsTableViewController.swift */; };
 		BB1D2FB71CA39504002F6050 /* AppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1D2FB61CA39504002F6050 /* AppCell.swift */; };
@@ -24,6 +22,7 @@
 		BB34038B1C61E9D0004F53DF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34038A1C61E9D0004F53DF /* HomeViewController.swift */; };
 		BBA8B33F1CA7AD7000E45BE2 /* ExpandingTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA8B33E1CA7AD7000E45BE2 /* ExpandingTransition.swift */; };
 		BBA8B3411CA7B8D900E45BE2 /* AppExploreMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA8B3401CA7B8D900E45BE2 /* AppExploreMoreViewController.swift */; };
+		BBD95A761CBAFCCD0038904D /* UILabel+Drawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD95A751CBAFCCD0038904D /* UILabel+Drawing.swift */; };
 		BBE54C791C9D5AF600EA9E7A /* ADAM.CG PRO.otf in Resources */ = {isa = PBXBuildFile; fileRef = BBE54C781C9D5A6600EA9E7A /* ADAM.CG PRO.otf */; };
 		BBE54C7A1C9D5B0D00EA9E7A /* Panton-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = BBE54C3D1C9D5A1F00EA9E7A /* Panton-Black.otf */; };
 		BBE54C7B1C9D5B0D00EA9E7A /* Panton-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BBE54C3E1C9D5A1F00EA9E7A /* Panton-Bold.otf */; };
@@ -73,10 +72,6 @@
 		BB10DD511C59DF940079C480 /* Avery_LampUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avery_LampUITests.swift; sourceTree = "<group>"; };
 		BB10DD531C59DF940079C480 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BB10DD5F1C59DFDB0079C480 /* Avery Lamp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Avery Lamp-Bridging-Header.h"; sourceTree = "<group>"; };
-		BB10DD601C59DFDC0079C480 /* CALayer+DrawAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+DrawAnimation.h"; sourceTree = "<group>"; };
-		BB10DD611C59DFDC0079C480 /* CALayer+DrawAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+DrawAnimation.m"; sourceTree = "<group>"; };
-		BB10DD631C59DFFC0079C480 /* UILabel+DrawAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+DrawAnimation.h"; sourceTree = "<group>"; };
-		BB10DD641C59DFFC0079C480 /* UILabel+DrawAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+DrawAnimation.m"; sourceTree = "<group>"; };
 		BB10DD951C59E5FD0079C480 /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		BB1D2FB41CA394EC002F6050 /* MyAppsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAppsTableViewController.swift; sourceTree = "<group>"; };
 		BB1D2FB61CA39504002F6050 /* AppCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCell.swift; sourceTree = "<group>"; };
@@ -85,6 +80,7 @@
 		BB34038A1C61E9D0004F53DF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BBA8B33E1CA7AD7000E45BE2 /* ExpandingTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandingTransition.swift; sourceTree = "<group>"; };
 		BBA8B3401CA7B8D900E45BE2 /* AppExploreMoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppExploreMoreViewController.swift; sourceTree = "<group>"; };
+		BBD95A751CBAFCCD0038904D /* UILabel+Drawing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Drawing.swift"; sourceTree = "<group>"; };
 		BBE54C3D1C9D5A1F00EA9E7A /* Panton-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Panton-Black.otf"; path = "Panton Font/Panton-Black.otf"; sourceTree = "<group>"; };
 		BBE54C3E1C9D5A1F00EA9E7A /* Panton-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Panton-Bold.otf"; path = "Panton Font/Panton-Bold.otf"; sourceTree = "<group>"; };
 		BBE54C3F1C9D5A1F00EA9E7A /* Panton-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Panton-ExtraBold.otf"; path = "Panton Font/Panton-ExtraBold.otf"; sourceTree = "<group>"; };
@@ -260,10 +256,7 @@
 				BBE54C781C9D5A6600EA9E7A /* ADAM.CG PRO.otf */,
 				BB10DD701C59E3450079C480 /* Panton Font */,
 				BB3403891C61E957004F53DF /* Summit Font */,
-				BB10DD601C59DFDC0079C480 /* CALayer+DrawAnimation.h */,
-				BB10DD611C59DFDC0079C480 /* CALayer+DrawAnimation.m */,
-				BB10DD631C59DFFC0079C480 /* UILabel+DrawAnimation.h */,
-				BB10DD641C59DFFC0079C480 /* UILabel+DrawAnimation.m */,
+				BBD95A751CBAFCCD0038904D /* UILabel+Drawing.swift */,
 			);
 			name = "Fancy Text Drawing";
 			sourceTree = "<group>";
@@ -569,8 +562,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB10DD621C59DFDC0079C480 /* CALayer+DrawAnimation.m in Sources */,
-				BB10DD651C59DFFC0079C480 /* UILabel+DrawAnimation.m in Sources */,
 				BB1D2FB51CA394EC002F6050 /* MyAppsTableViewController.swift in Sources */,
 				BB1D2FBB1CA3C267002F6050 /* SwiftyJSON.swift in Sources */,
 				BB10DD341C59DF940079C480 /* ViewController.swift in Sources */,
@@ -582,6 +573,7 @@
 				BBFFC4551C88AF7E00A8B5C5 /* MyInfoViewController.swift in Sources */,
 				BBA8B3411CA7B8D900E45BE2 /* AppExploreMoreViewController.swift in Sources */,
 				BB34038B1C61E9D0004F53DF /* HomeViewController.swift in Sources */,
+				BBD95A761CBAFCCD0038904D /* UILabel+Drawing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

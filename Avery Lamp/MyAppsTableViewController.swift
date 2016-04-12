@@ -110,7 +110,6 @@ class MyAppsTableViewController: UITableViewController, UIViewControllerTransiti
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        print("\(cellType)")
         let cell = tableView.dequeueReusableCellWithIdentifier(cellType, forIndexPath: indexPath) as! AppCell
         if cell.titleLabels != nil{
             cell.titleLabels.forEach { $0.text = jsonData["Apps"][indexPath.row]["title"].string!}

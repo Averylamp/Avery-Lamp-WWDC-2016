@@ -52,14 +52,16 @@ class SplashViewController: UIViewController {
         welcomeLabel.text = "Hello"
         welcomeLabel.font = UIFont(name: "Panton-Light", size: 30)
         self.view.addSubview(welcomeLabel)
-        welcomeLabel.drawOutlineAnimatedWithLineWidth(0.5, withDuration: 2, fadeToLabel: true)
-        
+//        welcomeLabel.drawOutlineAnimatedWithLineWidth(0.5, withDuration: 2, fadeToLabel: true)
+        welcomeLabel.strokeTextAnimated(width: 0.5, delay: 0.0, duration: 2, fade: true)
         
         let myNameLabel  = UILabel(frame: CGRectMake(0,self.view.frame.height * 1 / 2 ,self.view.frame.width, 40))
         myNameLabel.text = "My name is Avery"
         myNameLabel.font = UIFont(name: "Panton-Light", size: 20)
         self.view.addSubview(myNameLabel)
-        myNameLabel.drawOutlineAnimatedWithLineWidth(0.7, withDuration: 1.5, withDelay: 2.0, fadeToLabel: true);
+//        myNameLabel.drawOutlineAnimatedWithLineWidth(0.7, withDuration: 1.5, withDelay: 2.0, fadeToLabel: true);
+        myNameLabel.strokeTextAnimated(width: 0.7, delay: 2.0, duration: 1.5, fade: true)
+        
         
         //Picture
         let picSize = myNameLabel.frame.origin.y - welcomeLabel.frame.origin.y - welcomeLabel.frame.height - 50

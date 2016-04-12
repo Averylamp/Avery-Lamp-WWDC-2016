@@ -56,8 +56,8 @@ class HomeViewController: UIViewController {
         
         let circleDrawDelay = 1.0
         let circleDrawDuration = 1.0
-        let labelDrawDelay = Float(1.0)
-        let labelDrawDuration = Float(1.0)
+        let labelDrawDelay = Double(1.0)
+        let labelDrawDuration = Double(2.0)
         //My Story
         let topIconsHeightOffset = height / 3 + 60 + 20
         let detailFontSize = CGFloat(25)
@@ -67,7 +67,7 @@ class HomeViewController: UIViewController {
         storyLabel.text = "My Story"
         storyLabel.font = UIFont(name: "Panton-Light", size: detailFontSize)
         storyLabel.textAlignment = NSTextAlignment.Center
-        storyLabel.drawOutlineAnimatedWithLineWidth(0.4, withDuration: labelDrawDuration, withDelay: labelDrawDelay, fadeToLabel: true)
+        storyLabel.strokeTextSimultaneously(width: 0.4, delay: labelDrawDelay, duration: labelDrawDuration, fade: true)
         self.view.addSubview(storyLabel)
         
         let myStoryButton = UIButton(frame: CGRectMake(0,0,120,120))
@@ -88,7 +88,7 @@ class HomeViewController: UIViewController {
         infoLabel.text = "My Info"
         infoLabel.font = UIFont(name: "Panton-Light", size: detailFontSize)
         infoLabel.textAlignment = NSTextAlignment.Center
-        infoLabel.drawOutlineAnimatedWithLineWidth(0.4, withDuration: labelDrawDuration, withDelay: labelDrawDelay, fadeToLabel: true)
+        infoLabel.strokeTextSimultaneously(width: 0.4, delay: labelDrawDelay, duration: labelDrawDuration, fade: true)
         self.view.addSubview(infoLabel)
         
         let myInfoButton = UIButton(frame: CGRectMake(0,0,120,120))
@@ -106,7 +106,7 @@ class HomeViewController: UIViewController {
         appsLabel.text = "My Apps"
         appsLabel.font = UIFont(name: "Panton-Light", size: detailFontSize)
         appsLabel.textAlignment = NSTextAlignment.Center
-        appsLabel.drawOutlineAnimatedWithLineWidth(0.4, withDuration: labelDrawDuration, withDelay: labelDrawDelay, fadeToLabel: true)
+        appsLabel.strokeTextSimultaneously(width: 0.4, delay: labelDrawDelay, duration: labelDrawDuration, fade: true)
         self.view.addSubview(appsLabel)
         
         let myAppsButton = UIButton(frame: CGRectMake(0,0,120,120))
@@ -123,8 +123,7 @@ class HomeViewController: UIViewController {
         label.font = UIFont(name: "Panton-Regular", size: 40)
         label.textAlignment = NSTextAlignment.Center
         self.view.addSubview(label)
-        label.drawOutlineAnimatedWithLineWidth(1.0, withDuration: 2, fadeToLabel: true)
-        
+        label.strokeTextAnimated(width: 1.0, duration: 2, fade: true)
     }
     
     //Drawing the circle from the side
