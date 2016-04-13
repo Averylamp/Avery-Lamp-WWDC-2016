@@ -42,14 +42,14 @@ extension UILabel {
             
         }
         if onePath{
-           return  [fullPath]
+            return  [fullPath]
         }else{
             return allLetterPaths
         }
     }
     
-    
-    func strokeTextAnimated(width width:CGFloat = 0.5,delay:Double = 0.0 , duration:Double, fade:Bool){
+    //NOTE Returning CASHAPELAYER does not work with a delay
+    func strokeTextAnimated(width width:CGFloat = 0.5,delay:Double = 0.0 , duration:Double, fade:Bool)-> [CAShapeLayer]{
         
         if delay != 0.0{
             self.alpha = 0.0
@@ -57,7 +57,7 @@ extension UILabel {
                 self.alpha = 1.0
                 self.strokeTextAnimated(width: width, delay: 0.0, duration: duration, fade: fade)
             })
-            return
+            return []
         }
         
         self.baselineAdjustment = .AlignBaselines
@@ -79,7 +79,7 @@ extension UILabel {
         fullLabelShape.lineWidth = width
         fullLabelShape.lineJoin = kCALineJoinRound
         fullLabelShape.position = CGPointMake(fullLabelShape.position.x, fullLabelShape.position.y + self.font.descender)
-
+        
         self.layer.superlayer?.addSublayer(fullLabelShape)
         
         
@@ -96,10 +96,10 @@ extension UILabel {
         
         CATransaction.begin()
         CATransaction.setAnimationDuration(duration)
-        CATransaction.setCompletionBlock { 
+        CATransaction.setCompletionBlock {
             if fade {
                 CATransaction.begin()
-                CATransaction.setCompletionBlock({ 
+                CATransaction.setCompletionBlock({
                     fullLabelShape.removeFromSuperlayer()
                 })
                 UIView.animateWithDuration(1.0, animations: {
@@ -111,10 +111,12 @@ extension UILabel {
         }
         fullLabelShape.addAnimation(strokeAnimation, forKey: "strokeEnd")
         CATransaction.commit()
+        return [fullLabelShape]
         
     }
     
-    func strokeTextSimultaneously(width width:CGFloat = 0.5, delay:Double = 0.0, duration: Double, fade:Bool){
+    //NOTE Returning CASHAPELAYER does not work with a delay
+    func strokeTextSimultaneously(width width:CGFloat = 0.5, delay:Double = 0.0, duration: Double, fade:Bool) -> [CAShapeLayer]{
         
         if delay != 0.0{
             self.alpha = 0.0
@@ -122,7 +124,7 @@ extension UILabel {
                 self.alpha = 1.0
                 self.strokeTextSimultaneously(width: width, delay: 0.0, duration: duration, fade: fade)
             })
-            return
+            return []
         }
         
         self.baselineAdjustment = .AlignBaselines
@@ -179,7 +181,9 @@ extension UILabel {
         
         CATransaction.commit()
         
-        }
+        return allLetterShapes
+        
+    }
     
 }
 
