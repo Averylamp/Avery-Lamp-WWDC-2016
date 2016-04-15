@@ -48,7 +48,7 @@ class MyAppsTableViewController: UITableViewController, UIViewControllerTransiti
                 let data = try NSData(contentsOfURL: NSURL(fileURLWithPath: path), options: NSDataReadingOptions.DataReadingMappedIfSafe)
                 jsonData = JSON(data: data)
                 if jsonData != JSON.null {
-                    print("jsonData:\(jsonData["Apps"])")
+//                    print("jsonData:\(jsonData["Apps"])")
                 } else {
                     print("could not get json")
                 }
@@ -133,7 +133,7 @@ class MyAppsTableViewController: UITableViewController, UIViewControllerTransiti
     
     func exploreMoreButtonClicked(button: UIButton){
         exploreMoreButtonClicked = button
-        print("\(button.backgroundColor)")
+
         self.performSegueWithIdentifier("exploreMoreSegue", sender: self)
         
     }
@@ -142,7 +142,56 @@ class MyAppsTableViewController: UITableViewController, UIViewControllerTransiti
         if let controller = segue.destinationViewController as? AppExploreMoreViewController {
             controller.transitioningDelegate = self
             controller.modalPresentationStyle = .Custom
-            segue.destinationViewController.view.backgroundColor = exploreMoreButtonClicked?.backgroundColor
+            controller.view.backgroundColor = exploreMoreButtonClicked?.backgroundColor
+            controller.view.layoutIfNeeded()
+            controller.scrollView.layoutIfNeeded()
+            controller.exploreMoreInfo = jsonData["Apps"][(exploreMoreButtonClicked?.tag)!]
+            controller.titleLabel.text = jsonData["Apps"][(exploreMoreButtonClicked?.tag)!]["title"].string
+            controller.taglineLabel.text = jsonData["Apps"][(exploreMoreButtonClicked?.tag)!]["tagline"].string
+            controller.shortDescriptionLabel.text = jsonData["Apps"][(exploreMoreButtonClicked?.tag)!]["shortDescription"].string
+            if jsonData["Apps"][(exploreMoreButtonClicked?.tag)!]["theme"].string == "light"{
+                controller.themeLabels.forEach{ $0.textColor = UIColor.blackColor()}
+            }else{
+                controller.themeLabels.forEach{ $0.textColor = UIColor.whiteColor()}
+            }
+            if let expandingInfo:JSON? = jsonData["Apps"][(exploreMoreButtonClicked?.tag)!]["expandedDetails"] {
+                controller.scrollView.pagingEnabled = true
+                controller.scrollView.contentSize = CGSizeMake(controller.scrollView.frame.width * CGFloat(expandingInfo!.count), controller.scrollView.frame.height)
+                
+                print(controller.scrollView.frame)
+                print(controller.scrollView.contentSize)
+                var lastSlide: UIView?
+                for index in 0..<expandingInfo!.count {
+                    if expandingInfo![index]["style"].string != ""{
+                        let slide = UIView()
+                        let slideViewController = AppExploreMoreSlideViewController()
+                        slideViewController.view = slide
+                        
+                        slide.translatesAutoresizingMaskIntoConstraints = false
+                        
+                        controller.scrollView.addSubview(slide)
+                        controller.scrollView.addConstraint(NSLayoutConstraint(item: slide, attribute: .Height, relatedBy: .Equal, toItem: controller.scrollView, attribute: .Height, multiplier: 1.0, constant: 0))
+                        controller.scrollView.addConstraint(NSLayoutConstraint(item: slide, attribute: .Width, relatedBy: .Equal, toItem: controller.scrollView, attribute: .Width, multiplier: 1.0, constant: 0))
+                        controller.scrollView.addConstraint(NSLayoutConstraint(item: slide, attribute: .CenterY, relatedBy: .Equal, toItem: controller.scrollView, attribute: .CenterY, multiplier: 1.0, constant: 0))
+                        if index == 0 {
+                            controller.scrollView.addConstraint(NSLayoutConstraint(item: slide, attribute: .Left, relatedBy: .Equal, toItem: controller.scrollView, attribute: .Left, multiplier: 1.0, constant: 0))
+                        }else{
+                            controller.scrollView.addConstraint(NSLayoutConstraint(item: slide, attribute: .Left, relatedBy: .Equal, toItem: lastSlide, attribute: .Right, multiplier: 1.0, constant: 0))
+                        }
+                        slide.layoutIfNeeded()
+                        print(slide.frame)
+                        slideViewController.slideData = expandingInfo![index]
+                        print("Item \(index) =  \(expandingInfo![index])")
+                        slideViewController.createViewsWithLayouts()
+                        
+                        lastSlide = slide
+                        
+                    }
+                    
+                }
+                
+            }
+            
             
         }
     }
@@ -155,8 +204,8 @@ class MyAppsTableViewController: UITableViewController, UIViewControllerTransiti
         expandingTransition.transitionMode = .Present
         let pointInVC = exploreMoreButtonClicked!.convertPoint(exploreMoreButtonClicked!.center, toView: nil)
 //            self.view.convertPoint(exploreMoreButtonClicked!.center, fromView: exploreMoreButtonClicked)
-        expandingTransition.startPoint = pointInVC
-        print("Transition Center : \(pointInVC)\nBounds of View \(self.view.bounds)\nBounds of Center \(exploreMoreButtonClicked?.bounds)")
+        expandingTransition.startPoint = CGPointMake(self.view.frame.width / 2, pointInVC.y)
+//        print("Transition Center : \(pointInVC)\nBounds of View \(self.view.bounds)\nBounds of Center \(exploreMoreButtonClicked?.bounds)")
         expandingTransition.transitionColor = exploreMoreButtonClicked!.backgroundColor!
         return expandingTransition
     }
@@ -164,7 +213,7 @@ class MyAppsTableViewController: UITableViewController, UIViewControllerTransiti
     func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         expandingTransition.transitionMode = .Dismiss
         let pointInVC = exploreMoreButtonClicked!.convertPoint(exploreMoreButtonClicked!.center, toView: nil)
-        expandingTransition.startPoint = pointInVC
+        expandingTransition.startPoint = CGPointMake(self.view.frame.width / 2, pointInVC.y)
         expandingTransition.transitionColor = exploreMoreButtonClicked!.backgroundColor!
         return expandingTransition
 

@@ -13,31 +13,51 @@ extension UILabel {
     
     func getPathOfText(onePath: Bool) ->[CGPath]{
         let font = CTFontCreateWithName(self.font.fontName as CFString, self.font.pointSize, nil)
-        let attributes = NSDictionary(object: font, forKey: kCTFontAttributeName as String)
-        let attributedString = NSAttributedString(string: self.text!, attributes: attributes as? [String : AnyObject])
+//        let attributes = NSDictionary(object: font, forKey: kCTFontAttributeName as String)
+//        var attributedString = NSAttributedString(string: self.text!, attributes: attributes as? [String : AnyObject])
+        let attributedString = self.attributedText!
+        print(attributedString)
+
         
-        let line = CTLineCreateWithAttributedString(attributedString)
-        let allRuns = CTLineGetGlyphRuns(line)
+        let mutablePath = CGPathCreateMutable()
+        CGPathAddRect(mutablePath, nil, self.bounds)
+        let ctFramesetter = CTFramesetterCreateWithAttributedString(attributedString)
+        let ctFrame = CTFramesetterCreateFrame(ctFramesetter, CFRangeMake(0, attributedString.length), mutablePath,  nil)
+        
         let fullPath = CGPathCreateMutable()
         var allLetterPaths = Array<CGPath>()
+        let allLines = CTFrameGetLines(ctFrame)
+        let count = (allLines as NSArray).count
+        var lineOrigins = [CGPoint](count: count, repeatedValue: CGPointZero)
+        CTFrameGetLineOrigins(ctFrame, CFRangeMake(0, 0), &lineOrigins)
         
-        for runIndex in 0..<CFArrayGetCount(allRuns){
-            let run:CTRun = (allRuns as NSArray)[runIndex] as! CTRun
+        print(lineOrigins)
+        
+        for lineIndex in 0..<CFArrayGetCount(allLines){
+
+            let line = (allLines as NSArray)[lineIndex] as! CTLine
+//            let line = CTLineCreateWithAttributedString(attributedString)
+            let allRuns = CTLineGetGlyphRuns(line)
             
-            for glyphIndex in 0..<CTRunGetGlyphCount(run){
-                let range = CFRangeMake(glyphIndex, 1)
-                var glyph = CGGlyph()
-                var position = CGPointZero
+            for runIndex in 0..<CFArrayGetCount(allRuns){
+                let run:CTRun = (allRuns as NSArray)[runIndex] as! CTRun
                 
-                CTRunGetGlyphs(run, range, &glyph)
-                CTRunGetPositions(run, range, &position)
+                for glyphIndex in 0..<CTRunGetGlyphCount(run){
+                    let range = CFRangeMake(glyphIndex, 1)
+                    var glyph = CGGlyph()
+                    var position = CGPointZero
+                    
+                    CTRunGetGlyphs(run, range, &glyph)
+                    CTRunGetPositions(run, range, &position)
+                    
+                    let pathOfLetter = CTFontCreatePathForGlyph(font, glyph, nil)
+                    var transformation = CGAffineTransformMakeTranslation(position.x, position.y + CGFloat(lineOrigins[lineIndex].y))
+                    let tempPath = CGPathCreateMutable()
+                    CGPathAddPath(tempPath, &transformation, pathOfLetter)
+                    allLetterPaths.append(tempPath)
+                    CGPathAddPath(fullPath, &transformation, pathOfLetter)
+                }
                 
-                let pathOfLetter = CTFontCreatePathForGlyph(font, glyph, nil)
-                var transformation = CGAffineTransformMakeTranslation(position.x, position.y)
-                let tempPath = CGPathCreateMutable()
-                CGPathAddPath(tempPath, &transformation, pathOfLetter)
-                allLetterPaths.append(tempPath)
-                CGPathAddPath(fullPath, &transformation, pathOfLetter)
             }
             
         }
@@ -78,10 +98,8 @@ extension UILabel {
         fullLabelShape.fillColor = UIColor.clearColor().CGColor
         fullLabelShape.lineWidth = width
         fullLabelShape.lineJoin = kCALineJoinRound
-        fullLabelShape.position = CGPointMake(fullLabelShape.position.x, fullLabelShape.position.y + self.font.descender)
         
         self.layer.superlayer?.addSublayer(fullLabelShape)
-        
         
         let strokeAnimation = CABasicAnimation(keyPath: "strokeEnd")
         strokeAnimation.duration = duration
@@ -145,7 +163,6 @@ extension UILabel {
             singleLetterShape.fillColor = UIColor.clearColor().CGColor
             singleLetterShape.lineWidth = width
             singleLetterShape.lineJoin = kCALineJoinRound
-            singleLetterShape.position = CGPointMake(singleLetterShape.position.x, singleLetterShape.position.y + self.font.descender)
             self.layer.superlayer?.addSublayer(singleLetterShape)
             allLetterShapes.append(singleLetterShape)
         }

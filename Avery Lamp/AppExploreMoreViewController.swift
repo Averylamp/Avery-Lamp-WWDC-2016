@@ -10,10 +10,37 @@ import UIKit
 
 class AppExploreMoreViewController: UIViewController {
 
+    var exploreMoreInfo:JSON?
+    
+    @IBOutlet var themeLabels: [UILabel]!
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    
+    @IBOutlet weak var taglineLabel: UILabel!
+    
+    @IBOutlet weak var shortDescriptionLabel: UILabel!
+    
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        if exploreMoreInfo != nil{
+            scrollView.contentSize = CGSizeMake(scrollView.frame.width * CGFloat(exploreMoreInfo!["expandedDetails"].count), scrollView.frame.height)
+        }
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        scrollView.pagingEnabled = true
+//        print("More Info Data \(exploreMoreInfo)")
+        
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        
+//        print("More Info Data TAKE 2 \(exploreMoreInfo)")
     }
 
     override func didReceiveMemoryWarning() {

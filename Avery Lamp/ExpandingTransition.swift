@@ -44,7 +44,7 @@ class ExpandingTransition: NSObject, UIViewControllerAnimatedTransitioning {
             
             let maxX = max(startPoint.x, originalSize.width -  startPoint.x)
             let maxY = max(startPoint.y, originalSize.height -  startPoint.y)
-            print("Max X - \(maxX)  Max Y - \(maxY) ")
+//            print("Max X - \(maxX)  Max Y - \(maxY) ")
             let fullHeight = sqrt(maxX * maxX + maxY * maxY) * 2
             
             expandingObject = UIView(frame: CGRect(origin: CGPointZero, size: CGSizeMake(fullHeight, fullHeight)))

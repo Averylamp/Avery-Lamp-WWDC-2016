@@ -19,11 +19,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let label = UILabel(frame: CGRect(origin: CGPointMake(0, 0), size: CGSizeMake(self.view.frame.width, 80)))
-        label.textAlignment = .Center
+        label.textAlignment = .Left
         self.view.addSubview(label)
         label.text = "Hello"
         label.font = UIFont(name: "Panton-Light", size: 80)
-        singleStroke = label.strokeTextAnimated(width:2.5, delay: 0.0, duration: 5, fade: false)
+        singleStroke = label.strokeTextAnimated(width:2.5, delay: 0.0, duration: 5, fade: true)
         
         
         let secondLabel = UILabel(frame: CGRectMake(0,100,self.view.frame.width, 100))
@@ -31,10 +31,18 @@ class ViewController: UIViewController {
         secondLabel.font = UIFont(name: "Panton-Regular", size: 30)
         allLettersLayer = secondLabel.layer
         self.view.addSubview(secondLabel)
-        allLetters =  secondLabel.strokeTextSimultaneously(width: 0.5,delay: 0.0, duration: 4.0, fade: false)
+        allLetters =  secondLabel.strokeTextSimultaneously(width: 0.5,delay: 0.0, duration: 4.0, fade: true)
         
-        
-                // Do any additional setup after loading the view, typically from a nib.
+        let thirdLabel = UILabel(frame: CGRectMake(20,200,self.view.frame.width - 40, 200))
+        thirdLabel.text = "Smith was created as a productivity tool for those that sit at desks.  The user sets specific actions, which can be triggered by knocking specific patterns into the desk that the phone rests on."
+        thirdLabel.numberOfLines = 0
+        thirdLabel.lineBreakMode = .ByWordWrapping
+        thirdLabel.font = UIFont(name: "Panton-Regular", size: 16)
+//        thirdLabel.textAlignment = .Center
+        self.view.addSubview(thirdLabel)
+        allLettersLayer = thirdLabel.layer
+        allLetters = thirdLabel.strokeTextSimultaneously(width: 0.5, delay: 0.0, duration: 4.0, fade: false)
+    
     }
 
     override func didReceiveMemoryWarning() {
