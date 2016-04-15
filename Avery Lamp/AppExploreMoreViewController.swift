@@ -56,7 +56,7 @@ class AppExploreMoreViewController: UIViewController, UIScrollViewDelegate {
         let currentPage = Int(scrollView.contentOffset.x / scrollView.frame.size.width)
         var indexOfDestination = currentPage
         print("Current Page \(currentPage)")
-        let scrollDuration = 1.0
+        let scrollDuration = 0.8
         var animationFired = false
         
         if(gesture.direction == UISwipeGestureRecognizerDirection.Left){
@@ -80,7 +80,7 @@ class AppExploreMoreViewController: UIViewController, UIScrollViewDelegate {
             }
         }
         if animationFired{
-            let letterDrawDuration = scrollDuration * 2.0
+            let letterDrawDuration = scrollDuration * 3.0
             slideViewControllers[indexOfDestination].textLabel.layer.opacity = 0.0
             slideViewControllers[indexOfDestination].textLayersToAnimate.forEach{ $0.strokeEnd = 0.0}
             CATransaction.begin()

@@ -89,7 +89,9 @@ class AppExploreMoreSlideViewController: UIViewController {
     func setupAnimatableLayers() {
         textLayersToAnimate = textLabel.strokeTextSimultaneously(width: 0.7, delay: 0, duration: 0.0, fade: false)
         textLabel.layer.opacity = 1.0
-        
+        if slideNumber != 0{
+            textLayersToAnimate.forEach{ $0.strokeEnd = 0.0}
+        }
     }
 
     override func didReceiveMemoryWarning() {

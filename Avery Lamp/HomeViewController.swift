@@ -193,36 +193,33 @@ class HomeViewController: UIViewController {
     //Animation for background color flow
     func startAnimation () {
         UIView.animateWithDuration(5.0, delay: 0, options: UIViewAnimationOptions.CurveLinear, animations: {
-            [weak self] in
-            if let strongSelf = self {
-                if strongSelf.animationFlag == .Down {
-                    strongSelf.bgScroll!.frame.origin.y = -strongSelf.bgScroll!.frame.height + UIScreen.mainScreen().bounds.height
-                    strongSelf.bgScroll2!.frame.origin.y = -strongSelf.bgScroll2!.frame.height + UIScreen.mainScreen().bounds.height
-                    strongSelf.animationFlag = .Up
-                } else if strongSelf.animationFlag == .Up {
-                    strongSelf.bgScroll!.frame.origin.y = 0
-                    strongSelf.bgScroll2!.frame.origin.y = 0
-                    strongSelf.animationFlag = .Down
-                }
+            if self.animationFlag == .Down {
+                self.bgScroll!.frame.origin.y = -self.bgScroll!.frame.height + UIScreen.mainScreen().bounds.height
+                self.bgScroll2!.frame.origin.y = -self.bgScroll2!.frame.height + UIScreen.mainScreen().bounds.height
+                self.animationFlag = .Up
+            } else if self.animationFlag == .Up {
+                self.bgScroll!.frame.origin.y = 0
+                self.bgScroll2!.frame.origin.y = 0
+                self.animationFlag = .Down
             }
-            }, completion: { [weak self] finished in
-                if self?.animationFlag != .Stop{
-                    UIView.animateWithDuration(3, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {[weak self] in
-                        if let strongSelf = self {
-                            if self?.animationFlag == .Up{
-                                if strongSelf.bgNumFlag == .First{
-                                    strongSelf.bgScroll!.alpha = 0.0
-                                    strongSelf.bgScroll2!.image = strongSelf.randomizedBGColor()
-                                    strongSelf.bgScroll2!.alpha = 1.0
-                                    strongSelf.bgNumFlag = .Second
+            
+            }, completion: { (finished: Bool) in
+                if self.animationFlag != .Stop{
+                    UIView.animateWithDuration(3, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
+                            if self.animationFlag == .Up{
+                                if self.bgNumFlag == .First{
+                                    self.bgScroll!.alpha = 0.0
+                                    self.bgScroll2!.image = self.randomizedBGColor()
+                                    self.bgScroll2!.alpha = 1.0
+                                    self.bgNumFlag = .Second
                                 }else{
-                                    strongSelf.bgScroll!.image = strongSelf.randomizedBGColor()
-                                    strongSelf.bgScroll!.alpha = 1.0
-                                    strongSelf.bgScroll2!.alpha = 0.0
-                                    strongSelf.bgNumFlag = .First
+                                    self.bgScroll!.image = self.randomizedBGColor()
+                                    self.bgScroll!.alpha = 1.0
+                                    self.bgScroll2!.alpha = 0.0
+                                    self.bgNumFlag = .First
                                 }
                             }
-                        }
+                        
                         }, completion: { [weak self] finished in
                             self?.startAnimation()
                     })

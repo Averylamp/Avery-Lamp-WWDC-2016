@@ -86,12 +86,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="eIB-Lb-Gn5" kind="relationship" relationship="rootViewController" id="v0d-t5-a2B"/>
+                        <segue destination="dmY-kj-iYw" kind="relationship" relationship="rootViewController" id="PB0-9T-aVj"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D3p-Qt-VlN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="359" y="332"/>
+            <point key="canvasLocation" x="271" y="344"/>
         </scene>
         <!--Full Apps Table View Controller-->
         <scene sceneID="AHB-9z-60N">
@@ -1142,7 +1142,4 @@
         <image name="SmithAppIcon" width="200" height="200"/>
         <image name="SmithDetailPicture" width="400" height="268"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="v0d-t5-a2B"/>
-    </inferredMetricsTieBreakers>
 </document>

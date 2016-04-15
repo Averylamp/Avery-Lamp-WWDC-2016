@@ -20,9 +20,9 @@
                                },
                                {
                                "style":"imageTextRatio",
-                               "ratio":"45",
+                               "ratio":"60",
                                "image":"ReppinMainScreen",
-                               "detailText":"Pocketlab is a collection of tools for blood analysis built as a proof of concept. One of the main functions is image analysis with OpenCV performing hematocrit analysis and shape detection on blood smears. We aim to diagnose:  Anemia, Leukemia, Hereditary Elliptocytosis, Sickle Cell, Hemolytic Anemia."
+                               "detailText":"Reppin starts with a login, allowing users to set a goal. The user then can choose from a variety of workouts ranging in difficulty."
                                },
                                {
                                "style":"imageTextRatio",
@@ -45,7 +45,7 @@
                                {
                                "style":"imageTextRatio",
                                "ratio":"40",
-                               "image":"PocketLabMicroscopy",
+                               "image":"PocketLabDetailPicture",
                                "detailText":"Using computer vision the app detects the cell shapes and  draws red and green highlights around cells. The ratio of normal to abnormal cells gives a good indication of a possible diagnosis. I had experience in openCV from a freelance job over the summer, so I programmed almost the entirety of the cell analysis tool. It was my greatest contribution to the project."
                                },
                                {
@@ -101,7 +101,7 @@
                                {
                                "style":"imageTextRatio",
                                "ratio":"40",
-                               "image":"PocketLabMicroscopy",
+                               "image":"PocketLabDetailPicture",
                                "detailText":"Using computer vision the app detects the cell shapes and  draws red and green highlights around cells. The ratio of normal to abnormal cells gives a good indication of a possible diagnosis. I had experience in openCV from a freelance job over the summer, so I programmed almost the entirety of the cell analysis tool. It was my greatest contribution to the project."
                                },
                                {
