@@ -479,21 +479,21 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smith analyzes vibration patterns to trigger custom actions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="6iX-ly-Chn">
-                                                    <rect key="frame" x="125" y="83" width="433" height="60"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="60" id="1vz-4J-qhF"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="Panton-Light" family="Panton" pointSize="14"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Control your phone without touching it" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="M3v-kN-hmD">
                                                     <rect key="frame" x="125" y="48" width="433" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="Nze-9u-vTg"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Panton-Regular" family="Panton" pointSize="14"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smith analyzes vibration patterns to trigger custom actions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="6iX-ly-Chn">
+                                                    <rect key="frame" x="125" y="83" width="433" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="1vz-4J-qhF"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Panton-Light" family="Panton" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -957,6 +957,7 @@
                                     <outletCollection property="longDescriptionLabels" destination="fbp-Pb-898" collectionClass="NSMutableArray" id="22t-ft-6yB"/>
                                     <outletCollection property="mediumDescriptionLabels" destination="Cxn-tj-L79" collectionClass="NSMutableArray" id="DU4-4P-sVn"/>
                                     <outletCollection property="highlightViews" destination="GNk-GZ-I5E" collectionClass="NSMutableArray" id="sQP-58-1Oq"/>
+                                    <outletCollection property="appIcons" destination="1Mt-jz-niA" collectionClass="NSMutableArray" id="FFe-4U-ApU"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -988,8 +989,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="SMITH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7s-jL-gph">
-                                <rect key="frame" x="30" y="35" width="540" height="70"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SMITH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7s-jL-gph">
+                                <rect key="frame" x="30" y="25" width="540" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="4n4-1c-alV"/>
                                 </constraints>
@@ -997,14 +998,14 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y4f-dp-b7Q" userLabel="HighlightTitleLine">
-                                <rect key="frame" x="120" y="93" width="360" height="2"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y4f-dp-b7Q" userLabel="HighlightTitleLine">
+                                <rect key="frame" x="120" y="83" width="360" height="2"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="2" id="fe5-Xp-rgX"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ekg-Wb-oTu">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ekg-Wb-oTu">
                                 <rect key="frame" x="30" y="30" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="Qfn-Tk-Shv"/>
@@ -1015,8 +1016,8 @@
                                     <action selector="backButtonClicked:" destination="vBf-dA-3HV" eventType="touchUpInside" id="vJO-Zn-H4d"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Control your phone without touching it" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="OYm-dl-RBt">
-                                <rect key="frame" x="30" y="105" width="540" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Control your phone without touching it" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="OYm-dl-RBt">
+                                <rect key="frame" x="30" y="85" width="540" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="BZs-FU-zN8"/>
                                 </constraints>
@@ -1024,10 +1025,10 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Smith analyzes vibration patterns to trigger custom actions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="FRG-0N-2xK">
-                                <rect key="frame" x="30" y="135" width="540" height="60"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smith analyzes vibration patterns to trigger custom actions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="FRG-0N-2xK">
+                                <rect key="frame" x="30" y="115" width="540" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="qYQ-b1-hNL"/>
+                                    <constraint firstAttribute="height" constant="50" id="qYQ-b1-hNL"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Panton-Light" family="Panton" pointSize="16"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -1045,31 +1046,53 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uF-Ef-coZ">
+                                <rect key="frame" x="240" y="165" width="120" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="4ik-g9-mfW"/>
+                                    <constraint firstAttribute="width" constant="120" id="y7q-aS-GvY"/>
+                                </constraints>
+                                <state key="normal" title="Link for more info"/>
+                                <connections>
+                                    <action selector="moreInfoLinkClicked:" destination="vBf-dA-3HV" eventType="touchUpInside" id="NpL-pN-Zdc"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Y4f-dp-b7Q" firstAttribute="centerX" secondItem="CrD-Yl-z7f" secondAttribute="centerX" id="5vu-C5-3FG"/>
                             <constraint firstItem="Y4f-dp-b7Q" firstAttribute="bottom" secondItem="h7s-jL-gph" secondAttribute="bottom" constant="-10" id="6oq-ni-Y5k"/>
+                            <constraint firstItem="nHs-90-xha" firstAttribute="top" secondItem="5uF-Ef-coZ" secondAttribute="bottom" id="9v6-ft-Tkm"/>
                             <constraint firstItem="FRG-0N-2xK" firstAttribute="leading" secondItem="CrD-Yl-z7f" secondAttribute="leadingMargin" constant="10" id="A8E-Rh-pWR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="OYm-dl-RBt" secondAttribute="trailing" constant="10" id="Hnp-Km-ma6"/>
                             <constraint firstItem="OYm-dl-RBt" firstAttribute="leading" secondItem="CrD-Yl-z7f" secondAttribute="leadingMargin" constant="10" id="Hro-0h-4At"/>
                             <constraint firstItem="Y4f-dp-b7Q" firstAttribute="width" secondItem="CrD-Yl-z7f" secondAttribute="width" multiplier="0.6" id="Ivz-cr-IuS"/>
-                            <constraint firstItem="h7s-jL-gph" firstAttribute="top" secondItem="ITj-Fu-8rc" secondAttribute="bottom" constant="15" id="ME9-SN-jlB"/>
-                            <constraint firstItem="nHs-90-xha" firstAttribute="top" secondItem="FRG-0N-2xK" secondAttribute="bottom" constant="10" id="MlO-7H-iF1"/>
+                            <constraint firstItem="h7s-jL-gph" firstAttribute="top" secondItem="ITj-Fu-8rc" secondAttribute="bottom" constant="5" id="ME9-SN-jlB"/>
+                            <constraint firstItem="nHs-90-xha" firstAttribute="top" secondItem="FRG-0N-2xK" secondAttribute="bottom" constant="20" id="MlO-7H-iF1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="nHs-90-xha" secondAttribute="trailing" constant="10" id="PS5-ka-czM"/>
                             <constraint firstAttribute="trailingMargin" secondItem="FRG-0N-2xK" secondAttribute="trailing" constant="10" id="Qwn-Nu-lAC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="h7s-jL-gph" secondAttribute="trailing" constant="10" id="RMr-E2-Afv"/>
+                            <constraint firstItem="5uF-Ef-coZ" firstAttribute="top" secondItem="nHs-90-xha" secondAttribute="top" id="Xy6-ML-GsZ"/>
                             <constraint firstItem="Ekg-Wb-oTu" firstAttribute="top" secondItem="ITj-Fu-8rc" secondAttribute="bottom" constant="10" id="ZAh-rj-Bqa"/>
-                            <constraint firstItem="OYm-dl-RBt" firstAttribute="top" secondItem="Y4f-dp-b7Q" secondAttribute="bottom" constant="10" id="dHf-vw-Htw"/>
+                            <constraint firstItem="OYm-dl-RBt" firstAttribute="top" secondItem="Y4f-dp-b7Q" secondAttribute="bottom" id="dHf-vw-Htw"/>
+                            <constraint firstItem="5uF-Ef-coZ" firstAttribute="centerX" secondItem="CrD-Yl-z7f" secondAttribute="centerX" id="eJV-HW-Utu"/>
                             <constraint firstItem="h7s-jL-gph" firstAttribute="leading" secondItem="CrD-Yl-z7f" secondAttribute="leadingMargin" constant="10" id="hPC-vy-7Yp"/>
                             <constraint firstItem="Ekg-Wb-oTu" firstAttribute="leading" secondItem="CrD-Yl-z7f" secondAttribute="leadingMargin" constant="10" id="i9r-YL-PIf"/>
                             <constraint firstItem="FRG-0N-2xK" firstAttribute="top" secondItem="OYm-dl-RBt" secondAttribute="bottom" id="irR-xU-U9Z"/>
                             <constraint firstItem="nHs-90-xha" firstAttribute="centerX" secondItem="CrD-Yl-z7f" secondAttribute="centerX" id="jJS-Vk-dt5"/>
                             <constraint firstItem="aSK-vN-3em" firstAttribute="top" secondItem="nHs-90-xha" secondAttribute="bottom" constant="20" id="mge-4M-pb4"/>
+                            <constraint firstItem="5uF-Ef-coZ" firstAttribute="bottom" secondItem="nHs-90-xha" secondAttribute="bottom" id="sHd-us-gbY"/>
                             <constraint firstItem="nHs-90-xha" firstAttribute="leading" secondItem="CrD-Yl-z7f" secondAttribute="leadingMargin" constant="10" id="u8b-WX-sny"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Xy6-ML-GsZ"/>
+                                <exclude reference="sHd-us-gbY"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="moreInfoButton" destination="5uF-Ef-coZ" id="Qn1-7N-8TL"/>
                         <outlet property="scrollView" destination="nHs-90-xha" id="YGe-uc-1QL"/>
                         <outlet property="shortDescriptionLabel" destination="FRG-0N-2xK" id="ukt-Rl-3Kr"/>
                         <outlet property="taglineLabel" destination="OYm-dl-RBt" id="Vnr-2A-a8r"/>

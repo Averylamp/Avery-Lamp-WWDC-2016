@@ -13,11 +13,7 @@ extension UILabel {
     
     func getPathOfText(onePath: Bool) ->[CGPath]{
         let font = CTFontCreateWithName(self.font.fontName as CFString, self.font.pointSize, nil)
-//        let attributes = NSDictionary(object: font, forKey: kCTFontAttributeName as String)
-//        var attributedString = NSAttributedString(string: self.text!, attributes: attributes as? [String : AnyObject])
         let attributedString = self.attributedText!
-        print(attributedString)
-
         
         let mutablePath = CGPathCreateMutable()
         CGPathAddRect(mutablePath, nil, self.bounds)
@@ -31,12 +27,9 @@ extension UILabel {
         var lineOrigins = [CGPoint](count: count, repeatedValue: CGPointZero)
         CTFrameGetLineOrigins(ctFrame, CFRangeMake(0, 0), &lineOrigins)
         
-        print(lineOrigins)
-        
         for lineIndex in 0..<CFArrayGetCount(allLines){
 
             let line = (allLines as NSArray)[lineIndex] as! CTLine
-//            let line = CTLineCreateWithAttributedString(attributedString)
             let allRuns = CTLineGetGlyphRuns(line)
             
             for runIndex in 0..<CFArrayGetCount(allRuns){
@@ -166,7 +159,6 @@ extension UILabel {
             self.layer.superlayer?.addSublayer(singleLetterShape)
             allLetterShapes.append(singleLetterShape)
         }
-        
         
         let strokeAnimation = CABasicAnimation(keyPath: "strokeEnd")
         strokeAnimation.duration = duration

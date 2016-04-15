@@ -22,6 +22,8 @@ class AppExploreMoreViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var scrollView: UIScrollView!
     
+    @IBOutlet weak var moreInfoButton: UIButton!
+    
     var slideViewControllers = [AppExploreMoreSlideViewController]()
     
     override func viewDidLayoutSubviews() {
@@ -41,7 +43,7 @@ class AppExploreMoreViewController: UIViewController, UIScrollViewDelegate {
         var swipeRecognizer = UISwipeGestureRecognizer(target: self, action: "handleSwipe:")
         swipeRecognizer.direction = UISwipeGestureRecognizerDirection.Left
         self.scrollView.addGestureRecognizer(swipeRecognizer)
-        swipeRecognizer = UISwipeGestureRecognizer(target: self, action: "handleSwipe:")
+        swipeRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(AppExploreMoreViewController.handleSwipe(_:)))
         swipeRecognizer.direction = UISwipeGestureRecognizerDirection.Right
         self.scrollView.addGestureRecognizer(swipeRecognizer)
 
@@ -55,12 +57,13 @@ class AppExploreMoreViewController: UIViewController, UIScrollViewDelegate {
         var indexOfDestination = currentPage
         print("Current Page \(currentPage)")
         let scrollDuration = 1.0
-        
+        var animationFired = false
         
         if(gesture.direction == UISwipeGestureRecognizerDirection.Left){
             print("Right")
             if currentPage < slideViewControllers.count - 1{
                 indexOfDestination += 1
+                animationFired = true
                 UIView.animateWithDuration(scrollDuration, delay: 0.0, options: .CurveEaseInOut, animations: {
                         self.scrollView.setContentOffset(CGPointMake((CGFloat(currentPage) + 1.0) * self.scrollView.frame.width, self.scrollView.contentOffset.y), animated: false)
                     }, completion: nil)
@@ -69,34 +72,37 @@ class AppExploreMoreViewController: UIViewController, UIScrollViewDelegate {
         if(gesture.direction == UISwipeGestureRecognizerDirection.Right){
             print("Left")
             if currentPage > 0{
+                animationFired = true
                 indexOfDestination -= 1
                 UIView.animateWithDuration(scrollDuration, delay: 0.0, options: .CurveEaseInOut, animations: {
                     self.scrollView.setContentOffset(CGPointMake((CGFloat(currentPage) - 1.0) * self.scrollView.frame.width, self.scrollView.contentOffset.y), animated: false)
                     }, completion: nil)
             }
         }
-        let letterDrawDuration = scrollDuration * 2.0
-        slideViewControllers[indexOfDestination].textLabel.layer.opacity = 0.0
-        slideViewControllers[indexOfDestination].textLayersToAnimate.forEach{ $0.strokeEnd = 0.0}
-        CATransaction.begin()
-        CATransaction.setAnimationDuration(scrollDuration)
-        CATransaction.setAnimationTimingFunction(CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut))
-        let currentSlideGlyphs = self.slideViewControllers[currentPage].textLayersToAnimate
-        currentSlideGlyphs.forEach{ $0.strokeEnd = 0.0 }
-        UIView.animateWithDuration(scrollDuration / 10) {
-            self.slideViewControllers[currentPage].textLabel.layer.opacity = 0.0
-        }
-        CATransaction.commit()
-        delay(scrollDuration / 10) {
+        if animationFired{
+            let letterDrawDuration = scrollDuration * 2.0
+            slideViewControllers[indexOfDestination].textLabel.layer.opacity = 0.0
+            slideViewControllers[indexOfDestination].textLayersToAnimate.forEach{ $0.strokeEnd = 0.0}
             CATransaction.begin()
-            CATransaction.setAnimationDuration(letterDrawDuration)
+            CATransaction.setAnimationDuration(scrollDuration)
             CATransaction.setAnimationTimingFunction(CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut))
-            let destinationSlideGlyphs = self.slideViewControllers[indexOfDestination].textLayersToAnimate
-            destinationSlideGlyphs.forEach{ $0.strokeEnd = 1.0 }
-            UIView.animateWithDuration(scrollDuration / 5, delay: letterDrawDuration, options: .CurveEaseInOut, animations: {
-                self.slideViewControllers[indexOfDestination].textLabel.layer.opacity = 1.0
-                }, completion: nil)
+            let currentSlideGlyphs = self.slideViewControllers[currentPage].textLayersToAnimate
+            currentSlideGlyphs.forEach{ $0.strokeEnd = 0.0 }
+            UIView.animateWithDuration(scrollDuration / 10) {
+                self.slideViewControllers[currentPage].textLabel.layer.opacity = 0.0
+            }
             CATransaction.commit()
+            delay(scrollDuration / 10) {
+                CATransaction.begin()
+                CATransaction.setAnimationDuration(letterDrawDuration)
+                CATransaction.setAnimationTimingFunction(CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut))
+                let destinationSlideGlyphs = self.slideViewControllers[indexOfDestination].textLayersToAnimate
+                destinationSlideGlyphs.forEach{ $0.strokeEnd = 1.0 }
+                UIView.animateWithDuration(scrollDuration / 5, delay: letterDrawDuration, options: .CurveEaseInOut, animations: {
+                    self.slideViewControllers[indexOfDestination].textLabel.layer.opacity = 1.0
+                    }, completion: nil)
+                CATransaction.commit()
+            }
         }
         
     }
@@ -112,7 +118,7 @@ class AppExploreMoreViewController: UIViewController, UIScrollViewDelegate {
 
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
-
+        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -127,6 +133,21 @@ class AppExploreMoreViewController: UIViewController, UIScrollViewDelegate {
     
     @IBAction func backButtonClicked(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    @IBAction func moreInfoLinkClicked(sender: AnyObject) {
+        if let urlString = exploreMoreInfo!["extraInfoLink"].string {
+            var url = NSURL(string: urlString)!
+            if UIApplication.sharedApplication().canOpenURL(url)  {
+                UIApplication.sharedApplication().openURL(url)
+            } else {
+                if var index = urlString.rangeOfString("://watch?v=", options: .BackwardsSearch)?.startIndex {
+                    index = index.advancedBy(11)
+                    url = NSURL(string: "https://youtu.be/\(urlString.substringFromIndex(index))")!
+                }
+                UIApplication.sharedApplication().openURL(url)
+            }
+        }
     }
 
     /*

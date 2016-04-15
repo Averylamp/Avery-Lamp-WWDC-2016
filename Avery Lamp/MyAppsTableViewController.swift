@@ -149,6 +149,12 @@ class MyAppsTableViewController: UITableViewController, UIViewControllerTransiti
             controller.titleLabel.text = jsonData["Apps"][(exploreMoreButtonClicked?.tag)!]["title"].string
             controller.taglineLabel.text = jsonData["Apps"][(exploreMoreButtonClicked?.tag)!]["tagline"].string
             controller.shortDescriptionLabel.text = jsonData["Apps"][(exploreMoreButtonClicked?.tag)!]["shortDescription"].string
+            if jsonData["Apps"][(exploreMoreButtonClicked?.tag)!]["extraInfoLink"].string != nil {
+                controller.moreInfoButton.setTitle("Link for \(jsonData["Apps"][(exploreMoreButtonClicked?.tag)!]["extraInfoType"].string!)", forState: .Normal)
+            }else{
+                controller.moreInfoButton.alpha = 0.0
+            }
+            
             if jsonData["Apps"][(exploreMoreButtonClicked?.tag)!]["theme"].string == "light"{
                 controller.themeLabels.forEach{ $0.textColor = UIColor.blackColor()}
             }else{

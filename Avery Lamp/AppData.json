@@ -1,6 +1,62 @@
 {
     "Apps":[
         {
+            "title": "Reppin",
+            "highlightColor":"#3cbc28",
+            "tagline": "Analyze your workouts",
+            "shortDescription": "Reppin uses computer vision to keep a rep count",
+            "appIconImage":"ReppinAppIcon",
+            "mediumDescription":"Reppin was created at HackBCA III in April of 2016.  It won third place and best mobile app.",
+            "appDetailImage":"ReppinDetailPicture",
+            "longDescription":"Reppin is a hands free rep counter that uses computer vision to count reps and voice them to you.  It also provides workout analytics to improve your workout.",
+            "theme":"light",
+            "extraInfoLink":"http://devpost.com/software/reppin",
+            "extraInfoType":"Devpost",
+            "expandedDetails":[
+                               {
+                               "style":"oneOneImageDetailText",
+                               "image":"ReppinAppIcon",
+                               "detailText":"PocketLab was created at PennApps XII in September of 2015.  It won the Hottest Health Hack Prize form PennApps sponsor Epic."
+                               },
+                               {
+                               "style":"imageTextRatio",
+                               "ratio":"45",
+                               "image":"ReppinMainScreen",
+                               "detailText":"Pocketlab is a collection of tools for blood analysis built as a proof of concept. One of the main functions is image analysis with OpenCV performing hematocrit analysis and shape detection on blood smears. We aim to diagnose:  Anemia, Leukemia, Hereditary Elliptocytosis, Sickle Cell, Hemolytic Anemia."
+                               },
+                               {
+                               "style":"imageTextRatio",
+                               "ratio":"60",
+                               "image":"PocketLabCentrifuge",
+                               "detailText":"As PocketLab was a proof of concept, we built a pocket centrifuge which uses the accelerometer to detect circular motion and tell the user to speed or slow down to get a desired centrifugal force."
+                               },
+                               {
+                               "style":"imageTextRatio",
+                               "ratio":"50",
+                               "image":"PocketLabHaematocritAnalysis",
+                               "detailText":"When a doctor has centrifuged blood, a hematocrit test can be performed to help form a diagnosis. We built in a computer vision algorithm to determine the percentage of different layers of blood in test tubes.  "
+                               },
+                               {
+                               "style":"imageTextRatio",
+                               "ratio":"70",
+                               "image":"PocketLabHaematocritTest",
+                               "detailText":"The Hematocrit Analysis tool also does live image analysis. This is a sample we made for demos. It was not real blood (mustard & jelly), but it works."
+                               },
+                               {
+                               "style":"imageTextRatio",
+                               "ratio":"40",
+                               "image":"PocketLabMicroscopy",
+                               "detailText":"Using computer vision the app detects the cell shapes and  draws red and green highlights around cells. The ratio of normal to abnormal cells gives a good indication of a possible diagnosis. I had experience in openCV from a freelance job over the summer, so I programmed almost the entirety of the cell analysis tool. It was my greatest contribution to the project."
+                               },
+                               {
+                               "style":"imageTextRatio",
+                               "ratio":"80",
+                               "image":"PocketLabMicroscopySample",
+                               "detailText":"Here is a side by side comparison of samples"
+                               },
+                               ]
+        },
+        {
             "title": "PocketLab",
             "highlightColor":"#FF6074",
             "tagline": "Diagnose blood abnormalities with an iPhone",
@@ -10,6 +66,51 @@
             "appDetailImage":"PocketLabDetailPicture",
             "longDescription":"PocketLab is a collection of tools for blood analysis using the iPhone, made as a proof of concept.  It performs a variety of tests using computer vision, including haematocrit and blood cell shape analysis.",
             "theme":"light",
+            "extraInfoLink":"http://devpost.com/software/pocketlab-a-field-blood-diagnosis-tool",
+            "extraInfoType":"Devpost",
+            "expandedDetails":[
+                               {
+                               "style":"oneOneImageDetailText",
+                               "image":"PocketLabAppIcon",
+                               "detailText":"PocketLab was created at PennApps XII in September of 2015.  It won the Hottest Health Hack Prize form PennApps sponsor Epic."
+                               },
+                               {
+                               "style":"imageTextRatio",
+                               "ratio":"45",
+                               "image":"PocketLabMainScreen",
+                               "detailText":"Pocketlab is a collection of tools for blood analysis built as a proof of concept. One of the main functions is image analysis with OpenCV performing hematocrit analysis and shape detection on blood smears. We aim to diagnose:  Anemia, Leukemia, Hereditary Elliptocytosis, Sickle Cell, Hemolytic Anemia."
+                               },
+                               {
+                               "style":"imageTextRatio",
+                               "ratio":"60",
+                               "image":"PocketLabCentrifuge",
+                               "detailText":"As PocketLab was a proof of concept, we built a pocket centrifuge which uses the accelerometer to detect circular motion and tell the user to speed or slow down to get a desired centrifugal force."
+                               },
+                               {
+                               "style":"imageTextRatio",
+                               "ratio":"50",
+                               "image":"PocketLabHaematocritAnalysis",
+                               "detailText":"When a doctor has centrifuged blood, a hematocrit test can be performed to help form a diagnosis. We built in a computer vision algorithm to determine the percentage of different layers of blood in test tubes.  "
+                               },
+                               {
+                               "style":"imageTextRatio",
+                               "ratio":"70",
+                               "image":"PocketLabHaematocritTest",
+                               "detailText":"The Hematocrit Analysis tool also does live image analysis. This is a sample we made for demos. It was not real blood (mustard & jelly), but it works."
+                               },
+                               {
+                               "style":"imageTextRatio",
+                               "ratio":"40",
+                               "image":"PocketLabMicroscopy",
+                               "detailText":"Using computer vision the app detects the cell shapes and  draws red and green highlights around cells. The ratio of normal to abnormal cells gives a good indication of a possible diagnosis. I had experience in openCV from a freelance job over the summer, so I programmed almost the entirety of the cell analysis tool. It was my greatest contribution to the project."
+                               },
+                               {
+                               "style":"imageTextRatio",
+                               "ratio":"80",
+                               "image":"PocketLabMicroscopySample",
+                               "detailText":"Here is a side by side comparison of samples"
+                               },
+                               ]
         },
         {
             "title": "Smith",
@@ -30,13 +131,20 @@
                                {
                                    "style":"imageTextRatio",
                                    "ratio":"40",
-                                   "image":"SmithAppIcon",
-                                   "detailText":"Smith was created at HackBCA, my second hackathon, in February of 2015.  It won overall 2nd place."
+                                   "image":"SmithDetailPicture",
+                                   "detailText":"Smith is a utility for productivity. Smith runs in the background listening for specific knocking patterns. The user can set a pattern to call their best friend, then the phone would listen for that pattern with the accelerometer. When the pattern is knocked, the phone will dial the number and call the best friend automatically."
                                },
                                {
-                                   "style":"oneOneImageDetailText",
-                                   "image":"SmithAppIcon",
-                                   "detailText":"Smith was created at HackBCA, my second hackathon, in February of 2015.  It won overall 2nd place."
+                                   "style":"imageTextRatio",
+                                   "ratio":"60",
+                                   "image":"SmithActionsPage",
+                                   "detailText":"By swiping to the right from the main screen where the active recognition is on, an actions screen is brought up. It has a list of all of the actions the user created and a button that allows the user to add more actions."
+                               },
+                               {
+                               "style":"imageTextRatio",
+                               "ratio":"50",
+                               "image":"SmithCreateAction",
+                               "detailText":"To create an action, the user records a pattern. Smith supports many actions, such as running custom Workflows, playing playlists of music, calling, texting, receiving weather information, opening web pages, mail, maps, and Facetime."
                                },
             ]
         },
@@ -50,6 +158,33 @@
             "appDetailImage":"TapAttackDetailPicture",
             "longDescription":"In Tap Attack, green dots appear and shrink, and the player has to tap all of the green dots before they disappear.  As the game progresses, more complex elements are introduced into the game, while the game speeds up.",
             "theme":"light",
+            "extraInfoLink":"https://itunes.apple.com/us/app/tap-attack!!/id981780175?mt=8",
+            "extraInfoType":"App",
+            "expandedDetails":[
+                               {
+                               "style":"oneOneImageDetailText",
+                               "image":"SmithAppIcon",
+                               "detailText":"Smith was created at HackBCA, my second hackathon, in February of 2015.  It won overall 2nd place."
+                               },
+                               {
+                               "style":"imageTextRatio",
+                               "ratio":"40",
+                               "image":"SmithDetailPicture",
+                               "detailText":"Smith is a utility for productivity. Smith runs in the background listening for specific knocking patterns. The user can set a pattern to call their best friend, then the phone would listen for that pattern with the accelerometer. When the pattern is knocked, the phone will dial the number and call the best friend automatically."
+                               },
+                               {
+                               "style":"imageTextRatio",
+                               "ratio":"60",
+                               "image":"SmithActionsPage",
+                               "detailText":"By swiping to the right from the main screen where the active recognition is on, an actions screen is brought up. It has a list of all of the actions the user created and a button that allows the user to add more actions."
+                               },
+                               {
+                               "style":"imageTextRatio",
+                               "ratio":"50",
+                               "image":"SmithCreateAction",
+                               "detailText":"To create an action, the user records a pattern. Smith supports many actions, such as running custom Workflows, playing playlists of music, calling, texting, receiving weather information, opening web pages, mail, maps, and Facetime."
+                               },
+                               ]
         },
         {
             "title": "ViewZik",
@@ -61,6 +196,33 @@
             "appDetailImage":"ViewZikDetailPicture",
             "longDescription":"ViewZik was created as a live music visualizer and DJ set.  It has a waveform display as well as four simple effects built into the app for live editing of music: looping, phaser , flanger, and bass boost.",
             "theme":"light",
+            "extraInfoLink":"youtube://watch?v=Ptg2XUZ_fmE",
+            "extraInfoType":"Video",
+            "expandedDetails":[
+                               {
+                               "style":"oneOneImageDetailText",
+                               "image":"ViewZikAppIcon",
+                               "detailText":"ViewZik was created at CodeDay NYC in February of 2015.  It won the best Application prize"
+                               },
+                               {
+                               "style":"imageTextRatio",
+                               "ratio":"40",
+                               "image":"ViewZikDetailPicture",
+                               "detailText":"ViewZik is a music visualizer that includes a waveform and live music DJ'ing. It has four effects built into the app: looping, a phaser effect, a flanger effect, and a bass boost."
+                               },
+                               {
+                               "style":"imageTextRatio",
+                               "ratio":"60",
+                               "image":"SmithActionsPage",
+                               "detailText":"By swiping to the right from the main screen where the active recognition is on, an actions screen is brought up. It has a list of all of the actions the user created and a button that allows the user to add more actions."
+                               },
+                               {
+                               "style":"imageTextRatio",
+                               "ratio":"50",
+                               "image":"SmithCreateAction",
+                               "detailText":"To create an action, the user records a pattern. Smith supports many actions, such as running custom Workflows, playing playlists of music, calling, texting, receiving weather information, opening web pages, mail, maps, and Facetime."
+                               },
+                               ]
         },
         {
             "title": "Snappr",
@@ -72,6 +234,31 @@
             "appDetailImage":"SnapprDetailPicture",
             "longDescription":"Snappr allows users to set schedules for their phone to automatically group photos.  If the user take a picture at a time that was defined by the user, the photo will automatically be moved to a folder for easy access within the app.",
             "theme":"light",
+            "expandedDetails":[
+                               {
+                               "style":"oneOneImageDetailText",
+                               "image":"SmithAppIcon",
+                               "detailText":"Smith was created at HackBCA, my second hackathon, in February of 2015.  It won overall 2nd place."
+                               },
+                               {
+                               "style":"imageTextRatio",
+                               "ratio":"40",
+                               "image":"SmithDetailPicture",
+                               "detailText":"Smith is a utility for productivity. Smith runs in the background listening for specific knocking patterns. The user can set a pattern to call their best friend, then the phone would listen for that pattern with the accelerometer. When the pattern is knocked, the phone will dial the number and call the best friend automatically."
+                               },
+                               {
+                               "style":"imageTextRatio",
+                               "ratio":"60",
+                               "image":"SmithActionsPage",
+                               "detailText":"By swiping to the right from the main screen where the active recognition is on, an actions screen is brought up. It has a list of all of the actions the user created and a button that allows the user to add more actions."
+                               },
+                               {
+                               "style":"imageTextRatio",
+                               "ratio":"50",
+                               "image":"SmithCreateAction",
+                               "detailText":"To create an action, the user records a pattern. Smith supports many actions, such as running custom Workflows, playing playlists of music, calling, texting, receiving weather information, opening web pages, mail, maps, and Facetime."
+                               },
+                               ]
         }
     ]
 }
