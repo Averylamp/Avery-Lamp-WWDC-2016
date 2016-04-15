@@ -17,56 +17,58 @@ class AppExploreMoreSlideViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     var textLayersToAnimate = [CAShapeLayer]()
-    
-    
+    var imageView = UIImageView()
+    var textLabel = UILabel()
+    var slideNumber = 0
     
     func createViewsWithLayouts(){
         if slideData != nil{
             
-            let image = UIImageView(image: UIImage(named: slideData!["image"].string!))
-            image.translatesAutoresizingMaskIntoConstraints = false
-            self.view.addSubview(image)
-            image.backgroundColor = UIColor.lightGrayColor()
-            image.contentMode = .ScaleAspectFit
+            imageView = UIImageView(image: UIImage(named: slideData!["image"].string!))
+            imageView.translatesAutoresizingMaskIntoConstraints = false
+            self.view.addSubview(imageView)
+            imageView.backgroundColor = UIColor.lightGrayColor()
+            imageView.contentMode = .ScaleAspectFit
             
             
-            let text = UILabel()
-            text.translatesAutoresizingMaskIntoConstraints = false
-            self.view.addSubview(text)
-            text.text = slideData!["detailText"].string
-            text.font = UIFont(name: "Panton-Regular", size: 16)
-            text.textAlignment = .Center
-            text.minimumScaleFactor = 0.5
-            text.adjustsFontSizeToFitWidth = true
-            text.numberOfLines = 0
-            
+            textLabel = UILabel()
+            textLabel.translatesAutoresizingMaskIntoConstraints = false
+            self.view.addSubview(textLabel)
+            textLabel.text = slideData!["detailText"].string
+            textLabel.font = UIFont(name: "Panton-Thin", size: 16)
+            textLabel.textAlignment = .Left
+            textLabel.minimumScaleFactor = 0.5
+            textLabel.adjustsFontSizeToFitWidth = true
+            textLabel.numberOfLines = 0
+            textLabel.lineBreakMode = .ByWordWrapping
+//            textLabel.layer.opacity = 0.0
             
             switch slideData!["style"].string! {
             case "oneOneImageDetailText":
-                self.view.addConstraint(NSLayoutConstraint(item: image, attribute: .Top, relatedBy: .Equal, toItem: self.view, attribute: .Top, multiplier: 1.0, constant: 10))
-                self.view.addConstraint(NSLayoutConstraint(item: image, attribute: .Left, relatedBy: .Equal, toItem: self.view, attribute: .Left, multiplier: 1.0, constant: 10))
-                self.view.addConstraint(NSLayoutConstraint(item: image, attribute: .Right, relatedBy: .Equal, toItem: self.view, attribute: .Right, multiplier: 1.0, constant: -10))
-                image.addConstraint(NSLayoutConstraint(item: image, attribute: .Width, relatedBy: .Equal, toItem: image, attribute: .Height, multiplier: 1.0, constant: 0))
+                self.view.addConstraint(NSLayoutConstraint(item: imageView, attribute: .Top, relatedBy: .Equal, toItem: self.view, attribute: .Top, multiplier: 1.0, constant: 10))
+                self.view.addConstraint(NSLayoutConstraint(item: imageView, attribute: .Left, relatedBy: .Equal, toItem: self.view, attribute: .Left, multiplier: 1.0, constant: 10))
+                self.view.addConstraint(NSLayoutConstraint(item: imageView, attribute: .Right, relatedBy: .Equal, toItem: self.view, attribute: .Right, multiplier: 1.0, constant: -10))
+                imageView.addConstraint(NSLayoutConstraint(item: imageView, attribute: .Width, relatedBy: .Equal, toItem: imageView, attribute: .Height, multiplier: 1.0, constant: 0))
                 
-                self.view.addConstraint(NSLayoutConstraint(item: text, attribute: .Top, relatedBy: .Equal, toItem: image, attribute: .Bottom, multiplier: 1.0, constant: 5))
-                self.view.addConstraint(NSLayoutConstraint(item: text, attribute: .Left, relatedBy: .Equal, toItem: image, attribute: .Left, multiplier: 1.0, constant: 0))
-                self.view.addConstraint(NSLayoutConstraint(item: text, attribute: .Right, relatedBy: .Equal, toItem: image, attribute: .Right, multiplier: 1.0, constant: 0))
-                self.view.addConstraint(NSLayoutConstraint(item: text, attribute: .Bottom, relatedBy: .Equal, toItem: self.view, attribute: .Bottom, multiplier: 1.0, constant: -10))
+                self.view.addConstraint(NSLayoutConstraint(item: textLabel, attribute: .Top, relatedBy: .Equal, toItem: imageView, attribute: .Bottom, multiplier: 1.0, constant: 5))
+                self.view.addConstraint(NSLayoutConstraint(item: textLabel, attribute: .Left, relatedBy: .Equal, toItem: imageView, attribute: .Left, multiplier: 1.0, constant: 0))
+                self.view.addConstraint(NSLayoutConstraint(item: textLabel, attribute: .Right, relatedBy: .Equal, toItem: imageView, attribute: .Right, multiplier: 1.0, constant: 0))
+                self.view.addConstraint(NSLayoutConstraint(item: textLabel, attribute: .Bottom, relatedBy: .Equal, toItem: self.view, attribute: .Bottom, multiplier: 1.0, constant: -10))
                 
                 
             break
             case "imageTextRatio":
                 let ratio = CGFloat(Int(slideData!["ratio"].string!)!)
                 
-                self.view.addConstraint(NSLayoutConstraint(item: image, attribute: .Top, relatedBy: .Equal, toItem: self.view, attribute: .Top, multiplier: 1.0, constant: 10))
-                self.view.addConstraint(NSLayoutConstraint(item: image, attribute: .Left, relatedBy: .Equal, toItem: self.view, attribute: .Left, multiplier: 1.0, constant: 10))
-                self.view.addConstraint(NSLayoutConstraint(item: image, attribute: .Right, relatedBy: .Equal, toItem: self.view, attribute: .Right, multiplier: 1.0, constant: -10))
-                self.view.addConstraint(NSLayoutConstraint(item: image, attribute: .Height, relatedBy: .Equal, toItem: self.view, attribute: .Height, multiplier: ratio / 100, constant: 0))
+                self.view.addConstraint(NSLayoutConstraint(item: imageView, attribute: .Top, relatedBy: .Equal, toItem: self.view, attribute: .Top, multiplier: 1.0, constant: 10))
+                self.view.addConstraint(NSLayoutConstraint(item: imageView, attribute: .Left, relatedBy: .Equal, toItem: self.view, attribute: .Left, multiplier: 1.0, constant: 10))
+                self.view.addConstraint(NSLayoutConstraint(item: imageView, attribute: .Right, relatedBy: .Equal, toItem: self.view, attribute: .Right, multiplier: 1.0, constant: -10))
+                self.view.addConstraint(NSLayoutConstraint(item: imageView, attribute: .Height, relatedBy: .Equal, toItem: self.view, attribute: .Height, multiplier: ratio / 100, constant: 0))
                 
-                self.view.addConstraint(NSLayoutConstraint(item: text, attribute: .Top, relatedBy: .Equal, toItem: image, attribute: .Bottom, multiplier: 1.0, constant: 5))
-                self.view.addConstraint(NSLayoutConstraint(item: text, attribute: .Left, relatedBy: .Equal, toItem: image, attribute: .Left, multiplier: 1.0, constant: 0))
-                self.view.addConstraint(NSLayoutConstraint(item: text, attribute: .Right, relatedBy: .Equal, toItem: image, attribute: .Right, multiplier: 1.0, constant: 0))
-                self.view.addConstraint(NSLayoutConstraint(item: text, attribute: .Bottom, relatedBy: .Equal, toItem: self.view, attribute: .Bottom, multiplier: 1.0, constant: -10))
+                self.view.addConstraint(NSLayoutConstraint(item: textLabel, attribute: .Top, relatedBy: .Equal, toItem: imageView, attribute: .Bottom, multiplier: 1.0, constant: 5))
+                self.view.addConstraint(NSLayoutConstraint(item: textLabel, attribute: .Left, relatedBy: .Equal, toItem: imageView, attribute: .Left, multiplier: 1.0, constant: 0))
+                self.view.addConstraint(NSLayoutConstraint(item: textLabel, attribute: .Right, relatedBy: .Equal, toItem: imageView, attribute: .Right, multiplier: 1.0, constant: 0))
+                self.view.addConstraint(NSLayoutConstraint(item: textLabel, attribute: .Bottom, relatedBy: .Equal, toItem: self.view, attribute: .Bottom, multiplier: 1.0, constant: -10))
                 
                 
                 break
@@ -80,6 +82,13 @@ class AppExploreMoreSlideViewController: UIViewController {
             
             
         }
+        
+    }
+    
+    //ONLY CALL AFTER AUTOLAYOUT SETTLES
+    func setupAnimatableLayers() {
+        textLayersToAnimate = textLabel.strokeTextSimultaneously(width: 0.7, delay: 0, duration: 0.0, fade: false)
+        textLabel.layer.opacity = 1.0
         
     }
 

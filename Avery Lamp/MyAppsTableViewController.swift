@@ -165,7 +165,9 @@ class MyAppsTableViewController: UITableViewController, UIViewControllerTransiti
                     if expandingInfo![index]["style"].string != ""{
                         let slide = UIView()
                         let slideViewController = AppExploreMoreSlideViewController()
+                        slideViewController.slideNumber = index
                         slideViewController.view = slide
+                        controller.slideViewControllers.append(slideViewController)
                         
                         slide.translatesAutoresizingMaskIntoConstraints = false
                         
@@ -183,7 +185,6 @@ class MyAppsTableViewController: UITableViewController, UIViewControllerTransiti
                         slideViewController.slideData = expandingInfo![index]
                         print("Item \(index) =  \(expandingInfo![index])")
                         slideViewController.createViewsWithLayouts()
-                        
                         lastSlide = slide
                         
                     }
