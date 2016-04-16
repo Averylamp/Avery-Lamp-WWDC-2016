@@ -17,6 +17,8 @@ class MyAppsTableViewController: UITableViewController, UIViewControllerTransiti
     var openedCellHeight: CGFloat = 630 + 16 // 630 + 16 for iPhone 6 /515 + 16 for iPhone 5
     var cellType = "AppCell"
     var jsonData: JSON! = nil
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.backgroundColor = UIColor(red: 0.678, green: 0.922, blue: 0.973, alpha: 1.00)
@@ -24,6 +26,21 @@ class MyAppsTableViewController: UITableViewController, UIViewControllerTransiti
             cellHeights.append(closedCellHeight)
         }
         let screenHeight = UIScreen.mainScreen().bounds.height
+        
+        let headerView = UIView(frame: CGRectMake(0,0,self.view.frame.width, 60))
+        headerView.backgroundColor = tableView.backgroundColor
+        tableView.tableHeaderView = headerView
+        
+        let myProjectsTitle = UILabel(frame: CGRectMake(0,20,self.view.frame.width, 40))
+        myProjectsTitle.text = "My Projects"
+        myProjectsTitle.textAlignment = .Center
+        myProjectsTitle.font = UIFont(name: "ADAM.CG PRO", size: 30)
+        headerView.addSubview(myProjectsTitle)
+        
+        let backButton = UIButton(frame: CGRectMake(10,10,30,30))
+        backButton.setTitle("Back", forState: .Normal)
+        backButton.addTarget(self, action: #selector(MyAppsTableViewController.backButtonClicked), forControlEvents: .TouchUpInside)
+        headerView.addSubview(backButton)
         
         if screenHeight > 630 {
             openedCellHeight = 630 + 16 
@@ -224,6 +241,11 @@ class MyAppsTableViewController: UITableViewController, UIViewControllerTransiti
         expandingTransition.transitionColor = exploreMoreButtonClicked!.backgroundColor!
         return expandingTransition
 
+    }
+    
+    func backButtonClicked() {
+        self.navigationController?.popViewControllerAnimated(true)
+        
     }
     
 }

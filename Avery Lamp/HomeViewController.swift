@@ -24,6 +24,7 @@ class HomeViewController: UIViewController {
     
     var animationFlag: BackgroundDirection = .Up
     var bgNumFlag: BackgroundNum = .First
+    var lastState:BackgroundDirection?
     
     var bgScroll:UIImageView?
     var bgScroll2:UIImageView?
@@ -126,6 +127,14 @@ class HomeViewController: UIViewController {
         label.strokeTextAnimated(width: 1.0, duration: 2, fade: true)
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        if animationFlag == .Stop && lastState != nil{
+            animationFlag = lastState!
+            startAnimation()
+        }
+    }
+    
     //Drawing the circle from the side
     func createLineCircle(delayt: Double, duration: Double, fadeDelay:Double, location: CGPoint, size: CGFloat, left: Bool){
         let line = CAShapeLayer()
@@ -202,7 +211,7 @@ class HomeViewController: UIViewController {
                 self.bgScroll2!.frame.origin.y = 0
                 self.animationFlag = .Down
             }
-            
+            self.lastState = self.animationFlag
             }, completion: { (finished: Bool) in
                 if self.animationFlag != .Stop{
                     UIView.animateWithDuration(3, delay: 0, options: UIViewAnimationOptions.CurveEaseInOut, animations: {
@@ -290,6 +299,7 @@ class HomeViewController: UIViewController {
     }
     
     func goToMyApps(){
+        self.animationFlag = .Stop
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let myAppsTVC = storyboard.instantiateViewControllerWithIdentifier("MyAppsTVC")
         self.navigationController?.pushViewController(myAppsTVC, animated: true)
