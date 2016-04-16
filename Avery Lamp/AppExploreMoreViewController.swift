@@ -40,7 +40,7 @@ class AppExploreMoreViewController: UIViewController, UIScrollViewDelegate {
         scrollView.delegate = self
         scrollView.scrollEnabled = false
         
-        var swipeRecognizer = UISwipeGestureRecognizer(target: self, action: "handleSwipe:")
+        var swipeRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(AppExploreMoreViewController.handleSwipe(_:)))
         swipeRecognizer.direction = UISwipeGestureRecognizerDirection.Left
         self.scrollView.addGestureRecognizer(swipeRecognizer)
         swipeRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(AppExploreMoreViewController.handleSwipe(_:)))

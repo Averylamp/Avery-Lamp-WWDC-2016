@@ -3,7 +3,7 @@
 //  https://github.com/lexrus/LTMorphingLabel
 //
 //  The MIT License (MIT)
-//  Copyright (c) 2015 Lex Tang, http://lexrus.com
+//  Copyright (c) 2016 Lex Tang, http://lexrus.com
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a
 //  copy of this software and associated documentation files
@@ -32,7 +32,7 @@ extension LTMorphingLabel {
     
     func PixelateLoad() {
         
-        effectClosures["Pixelate\(phaseDisappear)"] = {
+        effectClosures["Pixelate\(LTMorphingPhases.Disappear)"] = {
             char, index, progress in
             
             return LTCharacterLimbo(
@@ -43,7 +43,7 @@ extension LTMorphingLabel {
                 drawingProgress: CGFloat(progress))
         }
         
-        effectClosures["Pixelate\(phaseAppear)"] = {
+        effectClosures["Pixelate\(LTMorphingPhases.Appear)"] = {
             char, index, progress in
             
             return LTCharacterLimbo(
@@ -55,7 +55,7 @@ extension LTMorphingLabel {
             )
         }
         
-        drawingClosures["Pixelate\(phaseDraw)"] = {
+        drawingClosures["Pixelate\(LTMorphingPhases.Draw)"] = {
             limbo in
             
             if limbo.drawingProgress > 0.0 {

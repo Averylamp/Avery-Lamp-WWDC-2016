@@ -3,7 +3,7 @@
 //  https://github.com/lexrus/LTMorphingLabel
 //
 //  The MIT License (MIT)
-//  Copyright (c) 2015 Lex Tang, http://lexrus.com
+//  Copyright (c) 2016 Lex Tang, http://lexrus.com
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a
 //  copy of this software and associated documentation files
@@ -32,14 +32,14 @@ extension LTMorphingLabel {
     
     func EvaporateLoad() {
         
-        progressClosures["Evaporate\(phaseProgress)"] = {
+        progressClosures["Evaporate\(LTMorphingPhases.Progress)"] = {
             (index: Int, progress: Float, isNewChar: Bool) in
             let j: Int = Int(round(cos(Double(index)) * 1.2))
             let delay = isNewChar ? self.morphingCharacterDelay * -1.0 : self.morphingCharacterDelay
             return min(1.0, max(0.0, self.morphingProgress + delay * Float(j)))
         }
         
-        effectClosures["Evaporate\(phaseDisappear)"] = {
+        effectClosures["Evaporate\(LTMorphingPhases.Disappear)"] = {
             char, index, progress in
             
             let newProgress = LTEasing.easeOutQuint(progress, 0.0, 1.0, 1.0)
@@ -55,7 +55,7 @@ extension LTMorphingLabel {
                 drawingProgress: 0.0)
         }
         
-        effectClosures["Evaporate\(phaseAppear)"] = {
+        effectClosures["Evaporate\(LTMorphingPhases.Appear)"] = {
             char, index, progress in
             
             let newProgress = 1.0 - LTEasing.easeOutQuint(progress, 0.0, 1.0)

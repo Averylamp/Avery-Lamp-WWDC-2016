@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import UIColor_Hex_Swift
+
 
 //background color fading
 enum BackgroundDirection {
@@ -288,13 +288,15 @@ class HomeViewController: UIViewController {
     
     // MARK: - Navigation
     func goToMyStory(){
+        self.animationFlag = .Stop
         self.navigationController?.pushViewController(MyStoryViewController(), animated: true)
-        
     }
     
     func goToMyInfo(){
-        
-        self.navigationController?.pushViewController(MyInfoViewController(), animated: true)
+        self.animationFlag = .Stop
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let myAppsTVC = storyboard.instantiateViewControllerWithIdentifier("MyInfoVC")
+        self.navigationController?.pushViewController(myAppsTVC, animated: true)
         
     }
     

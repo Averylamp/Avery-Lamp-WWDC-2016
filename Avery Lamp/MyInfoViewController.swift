@@ -11,52 +11,56 @@ import UIKit
 
 class MyInfoViewController: UIViewController,UIScrollViewDelegate {
 
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    @IBOutlet weak var pageControl: UIPageControl!
+    
+    var jsonData:JSON! = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor(red: 0.463, green: 0.486, blue: 0.549, alpha: 1.00)
+        setupJSON()
+//        print(jsonData["InfoSections"].count)
+        let numberOfPages = Int(ceil(Double(jsonData["InfoSections"].count) / 2.0))
+        pageControl.numberOfPages = numberOfPages
+        scrollView.pagingEnabled = true
+        scrollView.contentSize = CGSizeMake(scrollView.frame.width * CGFloat(numberOfPages), scrollView.frame.height)
+        scrollView.delegate = self
         
-        let height = self.view.frame.height
-        let width = self.view.frame.width
-        
-        pageScrollView = UIScrollView(frame: CGRectMake(0,0,width, height))
-        pageScrollView.pagingEnabled = true
-        pageScrollView.contentSize = CGSizeMake( width * 4, height)
-        pageScrollView.delegate = self
-        self.view.addSubview(pageScrollView)
-        
-        
-        let borderWidth = CGFloat(30)
-        firstPage = UIView(frame: CGRectMake(width + borderWidth, 0 + borderWidth, width - borderWidth * 2 , height - borderWidth * 2))
-        firstPage.layer.borderWidth = 2
-        firstPage.layer.borderColor = UIColor.blackColor().CGColor
-        pageScrollView.addSubview(firstPage)
-        let label = UILabel(frame: CGRectMake(0,0,firstPage.frame.width, 100))
-        label.text = "Avery Lamp"
-        label.font = UIFont(name: "Panton-Regular", size: 40)
-        firstPage.addSubview(label)
         
         
     }
     
-    var firstPage = UIView()
+    override func viewDidAppear(animated: Bool) {
+        scrollView.contentSize = CGSizeMake(scrollView.frame.width * CGFloat(pageControl.numberOfPages), scrollView.frame.height)
+    }
+    
+    func setupJSON(){
+        if let path = NSBundle.mainBundle().pathForResource("InfoData", ofType: "json"){
+            do {
+                let data = try NSData(contentsOfURL: NSURL(fileURLWithPath: path), options: NSDataReadingOptions.DataReadingMappedIfSafe)
+                jsonData = JSON(data: data)
+                if jsonData != JSON.null {
+                    //                    print("jsonData:\(jsonData["Apps"])")
+                } else {
+                    print("could not get json")
+                }
+            }catch let error as NSError {
+                print(error.localizedDescription)
+            }
+        } else {
+            print("file not found")
+        }
+    }
 
+    
+    //MARK: -ScrollView Delegate Functions
     func scrollViewDidScroll(scrollView: UIScrollView) {
-        
-        let height = self.view.frame.height
-        let width = self.view.frame.width
-        let xRotate = (scrollView.contentOffset.x / width) - 1
-        var perpectiveTransform = CATransform3DIdentity
-        perpectiveTransform.m34 = -1.0 / width
-        
-        let rotateX = CATransform3DMakeRotation(CGFloat(M_PI_4) , 0, xRotate, 0)
-        self.firstPage.layer.transform = CATransform3DConcat(perpectiveTransform, rotateX)
-        
-        
-        print(xRotate)
+        let fractionalPage = self.scrollView.contentOffset.x / scrollView.frame.width
+        let page = Int(round(fractionalPage))
+        pageControl.currentPage = page
     }
-    
-    var pageScrollView = UIScrollView()
-
     
     
     override func didReceiveMemoryWarning() {
@@ -75,4 +79,7 @@ class MyInfoViewController: UIViewController,UIScrollViewDelegate {
     }
     */
 
+    @IBAction func backButtonClicked(sender: AnyObject) {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
 }

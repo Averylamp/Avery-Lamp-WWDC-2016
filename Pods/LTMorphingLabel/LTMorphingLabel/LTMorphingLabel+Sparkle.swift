@@ -3,7 +3,7 @@
 //  https://github.com/lexrus/LTMorphingLabel
 //
 //  The MIT License (MIT)
-//  Copyright (c) 2015 Lex Tang, http://lexrus.com
+//  Copyright (c) 2016 Lex Tang, http://lexrus.com
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a
 //  copy of this software and associated documentation files 
@@ -67,11 +67,11 @@ extension LTMorphingLabel {
     
     func SparkleLoad() {
         
-        startClosures["Sparkle\(phaseStart)"] = {
+        startClosures["Sparkle\(LTMorphingPhases.Start)"] = {
             self.emitterView.removeAllEmitters()
         }
         
-        progressClosures["Sparkle\(phaseProgress)"] = {
+        progressClosures["Sparkle\(LTMorphingPhases.Progress)"] = {
             (index: Int, progress: Float, isNewChar: Bool) in
             
             if !isNewChar {
@@ -89,7 +89,7 @@ extension LTMorphingLabel {
             
         }
         
-        effectClosures["Sparkle\(phaseDisappear)"] = {
+        effectClosures["Sparkle\(LTMorphingPhases.Disappear)"] = {
             char, index, progress in
             
             return LTCharacterLimbo(
@@ -100,7 +100,7 @@ extension LTMorphingLabel {
                 drawingProgress: 0.0)
         }
         
-        effectClosures["Sparkle\(phaseAppear)"] = {
+        effectClosures["Sparkle\(LTMorphingPhases.Appear)"] = {
             char, index, progress in
             
             if char != " " {
@@ -142,7 +142,7 @@ extension LTMorphingLabel {
             )
         }
         
-        drawingClosures["Sparkle\(phaseDraw)"] = {
+        drawingClosures["Sparkle\(LTMorphingPhases.Draw)"] = {
             (charLimbo: LTCharacterLimbo) in
             
             if charLimbo.drawingProgress > 0.0 {
@@ -159,7 +159,7 @@ extension LTMorphingLabel {
             return false
         }
         
-        skipFramesClosures["Sparkle\(phaseSkipFrames)"] = {
+        skipFramesClosures["Sparkle\(LTMorphingPhases.SkipFrames)"] = {
             return 1
         }
     }

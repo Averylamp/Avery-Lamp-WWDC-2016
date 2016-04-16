@@ -49,6 +49,12 @@
 		<string>Panton-Thin.otf</string>
 		<string>ADAM.CG PRO.otf</string>
 		<string>SummitThin-Display.otf</string>
+		<string>Lato-Regular.ttf</string>
+		<string>Lato-Medium.ttf</string>
+		<string>Lato-Light.ttf</string>
+		<string>Lato-Semibold.ttf</string>
+		<string>Lato-Thin.ttf</string>
+		<string>Lato-Hairline.ttf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

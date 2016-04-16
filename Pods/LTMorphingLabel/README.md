@@ -36,7 +36,7 @@ The ```.Scale``` effect mimicked [Apple's QuickType animation of iOS 8](https://
 
 ## Requirements
 
-1. Xcode 7.2
+1. Xcode 7.3
 2. iOS 8.0+
 
 ## Installation
@@ -70,6 +70,8 @@ there guarantee both compatibility and stability.
 And the most outstanding one is
 [ZCAnimatedLabel](https://github.com/overboming/ZCAnimatedLabel).
 I’d like to recommend it for production use.
+
+And finally, [an Android port](https://github.com/hanks-zyh/HTextView).
 
 ## License
 
