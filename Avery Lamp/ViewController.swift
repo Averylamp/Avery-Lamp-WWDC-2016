@@ -41,14 +41,14 @@ class ViewController: UIViewController {
         setupJSON()
         
         
-        let testInfoElement1 = InfoElement(frame: CGRectMake(30, 30, self.view.frame.width - 60, 100))
+        let testInfoElement1 = InfoElement(frame: CGRectMake(30, 50, self.view.frame.width - 60, 100))
         self.view.addSubview(testInfoElement1)
-        testInfoElement1.layer.borderColor = UIColor.blackColor().CGColor
-        testInfoElement1.layer.borderWidth = 3
-        testInfoElement1.createLayout(data: jsonData["InfoSections"][0], left: true)
-        let testInfoElement = InfoElement(frame: CGRectMake(30, 200, self.view.frame.width - 60, 100))
+        testInfoElement1.viewData = jsonData["InfoSections"][0]
+        testInfoElement1.createLayout(left: true)
+        let testInfoElement = InfoElement(frame: CGRectMake(30, 250, self.view.frame.width - 60, 100))
+        testInfoElement.viewData = jsonData["InfoSections"][0]
         self.view.addSubview(testInfoElement)
-        testInfoElement.createLayout(data: jsonData["InfoSections"][0], left: false)
+        testInfoElement.createLayout(left: false)
         
         
         

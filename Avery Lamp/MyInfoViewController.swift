@@ -17,23 +17,86 @@ class MyInfoViewController: UIViewController,UIScrollViewDelegate {
     
     var jsonData:JSON! = nil
     
+    var InfoElements = [InfoElement]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(red: 0.463, green: 0.486, blue: 0.549, alpha: 1.00)
         setupJSON()
 //        print(jsonData["InfoSections"].count)
         let numberOfPages = Int(ceil(Double(jsonData["InfoSections"].count) / 2.0))
+        var numberOfSections = jsonData["InfoSections"].count
         pageControl.numberOfPages = numberOfPages
         scrollView.pagingEnabled = true
         scrollView.contentSize = CGSizeMake(scrollView.frame.width * CGFloat(numberOfPages), scrollView.frame.height)
         scrollView.delegate = self
         
+//        scrollView.layer.borderWidth = 2
+//        scrollView.layer.borderColor = UIColor.lightGrayColor().CGColor
         
+        var lastPage:UIView?
+        for index in 0..<numberOfPages{
+            let page = UIView()
+            page.translatesAutoresizingMaskIntoConstraints = false
+            scrollView.addSubview(page)
+            scrollView.addConstraint(NSLayoutConstraint(item: page, attribute: .Width, relatedBy: .Equal, toItem: scrollView, attribute: .Width, multiplier: 1.0, constant: 0))
+            scrollView.addConstraint(NSLayoutConstraint(item: page, attribute: .Height, relatedBy: .Equal, toItem: scrollView, attribute: .Height, multiplier: 1.0, constant: 0))
+            scrollView.addConstraint(NSLayoutConstraint(item: page, attribute: .CenterY, relatedBy: .Equal, toItem: scrollView, attribute: .CenterY, multiplier: 1.0, constant: 0))
+            if index == 0{
+                scrollView.addConstraint(NSLayoutConstraint(item: page, attribute: .Left, relatedBy: .Equal, toItem: scrollView, attribute: .Left, multiplier: 1.0, constant: 0))
+            }else{
+                scrollView.addConstraint(NSLayoutConstraint(item: page, attribute: .Left, relatedBy: .Equal, toItem: lastPage, attribute: .Right, multiplier: 1.0, constant: 0))
+            }
+            lastPage = page
+
+            let widthRatio:CGFloat = 0.9
+            
+            let topSection = InfoElement()
+            topSection.tag = index * 2
+            topSection.viewData = jsonData["InfoSections"][index * 2]
+            topSection.translatesAutoresizingMaskIntoConstraints = false
+            page.addSubview(topSection)
+            
+            page.addConstraint(NSLayoutConstraint(item: topSection, attribute: .Top, relatedBy: .Equal, toItem: page, attribute: .Top, multiplier: 1.0, constant: 0))
+            page.addConstraint(NSLayoutConstraint(item: topSection, attribute: .CenterX, relatedBy: .Equal, toItem: page, attribute: .CenterX, multiplier: 1.0, constant: 0))
+            page.addConstraint(NSLayoutConstraint(item: topSection, attribute: .Width, relatedBy: .Equal, toItem: page, attribute: .Width, multiplier: widthRatio, constant: 0))
+            page.addConstraint(NSLayoutConstraint(item: topSection, attribute: .Height, relatedBy: .Equal, toItem: page, attribute: .Height, multiplier: 0.48, constant: 0))
+            
+            InfoElements.append(topSection)
+            numberOfSections -= 1
+            
+            if numberOfSections > 0{
+                
+                let bottomSection = InfoElement()
+                bottomSection.viewData = jsonData["InfoSections"][index * 2 + 1]
+                bottomSection.tag = index * 2 + 1
+                bottomSection.translatesAutoresizingMaskIntoConstraints = false
+                page.addSubview(bottomSection)
+                
+                page.addConstraint(NSLayoutConstraint(item: bottomSection, attribute: .Top, relatedBy: .Equal, toItem: topSection, attribute: .Bottom, multiplier: 1.0, constant: 0))
+                page.addConstraint(NSLayoutConstraint(item: bottomSection, attribute: .CenterX, relatedBy: .Equal, toItem: page, attribute: .CenterX, multiplier: 1.0, constant: 0))
+                page.addConstraint(NSLayoutConstraint(item: bottomSection, attribute: .Width, relatedBy: .Equal, toItem: page, attribute: .Width, multiplier: widthRatio, constant: 0))
+                page.addConstraint(NSLayoutConstraint(item: bottomSection, attribute: .Height, relatedBy: .Equal, toItem: page, attribute: .Height, multiplier: 0.48, constant: 0))
+                InfoElements.append(bottomSection)
+                
+                numberOfSections -= 1
+            }
+            
+        }
         
+        InfoElements.forEach {
+//            $0.layoutIfNeeded()
+            if $0.tag % 2 == 0 {
+                $0.createLayout(left: true)
+            }else{
+                $0.createLayout(left: false)
+            }
+        }
     }
     
     override func viewDidAppear(animated: Bool) {
         scrollView.contentSize = CGSizeMake(scrollView.frame.width * CGFloat(pageControl.numberOfPages), scrollView.frame.height)
+        
     }
     
     func setupJSON(){

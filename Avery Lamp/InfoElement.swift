@@ -21,11 +21,10 @@ class InfoElement: UIView {
     var buttonLabel = UIButton()
     var backgroundImage = UIImageView()
     
-    func createLayout(data data:JSON, left: Bool){
-        viewData = data
-        
+    func createLayout(left left: Bool){
+//
         let finalHeight = self.frame.width * ratioToFit
-        print("Final Height - \(finalHeight)  \nCurrent Height -\(self.frame.height)")
+//        print("Final Height - \(finalHeight)  \nCurrent Height -\(self.frame.height)")
         
         if  finalHeight > self.frame.height {
             print("ENCLOSING VIEW OF INFO ELEMENT TOO SMALL,  RESIZING")
@@ -43,7 +42,7 @@ class InfoElement: UIView {
         print("Button Clicked")
     }
     
-    func setInfo(){
+    private func setInfo(){
         buttonLabel.backgroundColor = UIColor(rgba: viewData["HighlightColor"].string! + "CC")
 //        buttonLabel.setImage(getImageWithColor(UIColor(rgba: viewData["HighlightColor"].string!)), forState: .Normal)
 //        buttonLabel.alpha = 0.7
@@ -94,11 +93,21 @@ class InfoElement: UIView {
     
     var ratioToFit:CGFloat = 0.65
     
-    func createAutolayout(left: Bool){
+    private func createAutolayout(left: Bool){
         self.addSubview(backgroundImage)
         self.addSubview(buttonLabel)
         buttonLabel.translatesAutoresizingMaskIntoConstraints = false
         backgroundImage.translatesAutoresizingMaskIntoConstraints = false
+        
+        buttonLabel.layer.shadowOffset = CGSizeMake(0, 15)
+        buttonLabel.layer.shadowColor = UIColor.blackColor().CGColor
+        buttonLabel.layer.shadowRadius = 20
+        buttonLabel.layer.shadowOpacity = 0.5
+        
+        backgroundImage.layer.shadowOffset = CGSizeMake(0, 15)
+        backgroundImage.layer.shadowColor = UIColor.blackColor().CGColor
+        backgroundImage.layer.shadowRadius = 10
+        backgroundImage.layer.shadowOpacity = 0.6
         
         self.addConstraint(NSLayoutConstraint(item: backgroundImage, attribute: .Width, relatedBy: .Equal, toItem: self, attribute: .Width, multiplier: 1.0, constant: 0))
         self.addConstraint(NSLayoutConstraint(item: backgroundImage, attribute: .Height, relatedBy: .Equal, toItem: buttonLabel, attribute: .Height, multiplier: 0.85, constant: 1.0))
