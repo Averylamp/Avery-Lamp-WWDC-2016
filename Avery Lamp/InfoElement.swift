@@ -36,9 +36,13 @@ class InfoElement: UIView {
         setInfo()
         createAutolayout(left)
         
+        buttonLabel.addTarget(self, action: #selector(InfoElement.buttonClicked), forControlEvents: .TouchUpInside)
 
     }
 
+    func buttonClicked() {
+        print("Button Clicked")
+    }
     
     private func setInfo(){
         buttonLabel.backgroundColor = UIColor(rgba: viewData["HighlightColor"].string! + "CC")

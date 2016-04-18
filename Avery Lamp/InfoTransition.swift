@@ -56,27 +56,41 @@ class InfoTransition: NSObject, UIViewControllerAnimatedTransitioning {
             infoSectionToExpand?.alpha = 0.0
             
             animationInfoSection.backgroundImage.layoutIfNeeded()
+            animationInfoSection.buttonLabel.layoutIfNeeded()
             backgroundImageConstraintsToReturnTo = animationInfoSection.backgroundImage.constraints
             buttonLabelConstraintsToReturnTo = animationInfoSection.buttonLabel.constraints
             animationInfoSectionConstraintsToReturnTo = animationInfoSection.constraints
             infoSectionFrameToReturnTo = animationInfoSection.frame
+//            let frameForBackgroundImageInView = animationInfoSection.convertRect(animationInfoSection.backgroundImage.frame, toView: nil)
+//            let frameForButtonLabelInView = animationInfoSection.convertRect(animationInfoSection.buttonLabel.frame, toView: nil)
+//            let testView = UIView(frame: frameForButtonLabelInView)
+//            print("BackgroundImage Frame \(frameForBackgroundImageInView)\nButton Label Frame - \(frameForButtonLabelInView)")
+//            testView.backgroundColor = UIColor.yellowColor()
+//            testView.alpha = 1.0
+//            presentingView.addSubview(testView)
+            
+            presentingViewController?.buttonLabel = animationInfoSection.buttonLabel
+            presentingViewController?.imageView = animationInfoSection.backgroundImage
+            
+            
+            
             UIView.animateWithDuration(duration, animations: {
                 let backgroundImage = animationInfoSection.backgroundImage
                 let buttonLabel = animationInfoSection.buttonLabel
-
-                print("view subconstraints count - \(animationInfoSection.constraints.count)")
                 animationInfoSection.removeConstraints(animationInfoSection.constraints)
                 
+                //NEEDS TO PROBABLY BE CHANGED
+                animationInfoSection.frame = presentingView.frame
                 
                 presentingView.addConstraint(NSLayoutConstraint(item: backgroundImage, attribute: .Width, relatedBy: .Equal, toItem: presentingView, attribute: .Width, multiplier: 1.0, constant: 0))
                 presentingView.addConstraint(NSLayoutConstraint(item: backgroundImage, attribute: .Top, relatedBy: .Equal, toItem: presentingView, attribute: .Top, multiplier: 1.0, constant: 0))
                 presentingView.addConstraint(NSLayoutConstraint(item: backgroundImage, attribute: .CenterX, relatedBy: .Equal, toItem: presentingView, attribute: .CenterX, multiplier: 1.0, constant: 0))
                 presentingView.addConstraint(NSLayoutConstraint(item: backgroundImage, attribute: .Height, relatedBy: .Equal, toItem: presentingView, attribute: .Height, multiplier: 0.35, constant: 0))
                 
-                presentingView.addConstraint(NSLayoutConstraint(item: buttonLabel, attribute: .Width, relatedBy: .Equal, toItem: presentingView, attribute: .Width, multiplier: 1.0, constant: 0.0))
-                presentingView.addConstraint(NSLayoutConstraint(item: buttonLabel, attribute: .CenterX, relatedBy: .Equal, toItem: presentingView, attribute: .CenterX, multiplier: 1.0, constant: 0.0))
+                presentingView.addConstraint(NSLayoutConstraint(item: buttonLabel, attribute: .Width, relatedBy: .Equal, toItem: presentingView, attribute: .Width, multiplier: 0.5, constant: 0.0))
+                presentingView.addConstraint(NSLayoutConstraint(item: buttonLabel, attribute: .Left, relatedBy: .Equal, toItem: presentingView, attribute: .Left, multiplier: 1.0, constant: 0.0))
                 presentingView.addConstraint(NSLayoutConstraint(item: buttonLabel, attribute: .Top, relatedBy: .Equal, toItem: backgroundImage, attribute: .Bottom, multiplier: 1.0, constant: 0.0))
-//                presentingView.addConstraint(NSLayoutConstraint(item: buttonLabel, attribute: .Width, relatedBy: .Equal, toItem: buttonLabel, attribute: .Height, multiplier: 1.0, constant: 0.0))
+                presentingView.addConstraint(NSLayoutConstraint(item: buttonLabel, attribute: .Width, relatedBy: .Equal, toItem: buttonLabel, attribute: .Height, multiplier: 1.0, constant: 0.0))
                 
                 
                 presentingView.layoutIfNeeded()
@@ -84,7 +98,7 @@ class InfoTransition: NSObject, UIViewControllerAnimatedTransitioning {
                 
                 
                 }, completion: nil)
-            //            animationInfoSection.buttonLabel.removeConstraints(animationInfoSection)
+            
             
             allDissappearingViews.forEach({ (view) in
                 UIView.animateWithDuration(duration / 2, animations: {
