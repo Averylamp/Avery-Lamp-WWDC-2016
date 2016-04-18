@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AppExploreMoreViewController: UIViewController, UIScrollViewDelegate {
+class AppExploreMoreViewController: UIViewController {
 
     var exploreMoreInfo:JSON?
     
@@ -37,7 +37,6 @@ class AppExploreMoreViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollView.pagingEnabled = true
-        scrollView.delegate = self
         scrollView.scrollEnabled = false
         
         var swipeRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(AppExploreMoreViewController.handleSwipe(_:)))
@@ -116,10 +115,6 @@ class AppExploreMoreViewController: UIViewController, UIScrollViewDelegate {
             dispatch_get_main_queue(), closure)
     }
 
-    
-    func scrollViewDidScroll(scrollView: UIScrollView) {
-        
-    }
     
     override func viewDidAppear(animated: Bool) {
         slideViewControllers.forEach{ $0.setupAnimatableLayers() }

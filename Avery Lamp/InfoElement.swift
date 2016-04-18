@@ -20,14 +20,15 @@ class InfoElement: UIView {
     var viewData:JSON! = nil
     var buttonLabel = UIButton()
     var backgroundImage = UIImageView()
+    var sideLeft = true
     
     func createLayout(left left: Bool){
-//
+        self.sideLeft = left
         let finalHeight = self.frame.width * ratioToFit
 //        print("Final Height - \(finalHeight)  \nCurrent Height -\(self.frame.height)")
         
         if  finalHeight > self.frame.height {
-            print("ENCLOSING VIEW OF INFO ELEMENT TOO SMALL,  RESIZING")
+            print("ENCLOSING VIEW OF INFO ELEMENT TOO SMALL")
 //            self.frame = CGRect(origin: self.frame.origin, size: CGSizeMake(self.frame.width, finalHeight))
         }
 //        self.addSubview(buttonLabel)
@@ -35,12 +36,9 @@ class InfoElement: UIView {
         setInfo()
         createAutolayout(left)
         
-        buttonLabel.addTarget(self, action: #selector(InfoElement.buttonClicked), forControlEvents: .TouchUpInside)
+
     }
-    
-    func buttonClicked() {
-        print("Button Clicked")
-    }
+
     
     private func setInfo(){
         buttonLabel.backgroundColor = UIColor(rgba: viewData["HighlightColor"].string! + "CC")

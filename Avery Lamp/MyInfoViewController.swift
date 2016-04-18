@@ -9,7 +9,7 @@
 import UIKit
 
 
-class MyInfoViewController: UIViewController,UIScrollViewDelegate {
+class MyInfoViewController: UIViewController,UIScrollViewDelegate, UIViewControllerTransitioningDelegate {
 
     @IBOutlet weak var scrollView: UIScrollView!
     
@@ -52,7 +52,9 @@ class MyInfoViewController: UIViewController,UIScrollViewDelegate {
             let widthRatio:CGFloat = 0.9
             
             let topSection = InfoElement()
-            topSection.tag = index * 2
+            topSection.tag = index * 2 + 1000
+            topSection.buttonLabel.tag = index * 2
+            topSection.buttonLabel.addTarget(self, action: "expandInfoSectionClicked:", forControlEvents: .TouchUpInside)
             topSection.viewData = jsonData["InfoSections"][index * 2]
             topSection.translatesAutoresizingMaskIntoConstraints = false
             page.addSubview(topSection)
@@ -69,7 +71,9 @@ class MyInfoViewController: UIViewController,UIScrollViewDelegate {
                 
                 let bottomSection = InfoElement()
                 bottomSection.viewData = jsonData["InfoSections"][index * 2 + 1]
-                bottomSection.tag = index * 2 + 1
+                bottomSection.tag = index * 2 + 1 + 1000
+                bottomSection.buttonLabel.tag = index * 2 + 1
+                bottomSection.buttonLabel.addTarget(self, action: #selector(MyInfoViewController.expandInfoSectionClicked(_:)), forControlEvents: .TouchUpInside)
                 bottomSection.translatesAutoresizingMaskIntoConstraints = false
                 page.addSubview(bottomSection)
                 
@@ -94,11 +98,6 @@ class MyInfoViewController: UIViewController,UIScrollViewDelegate {
         }
     }
     
-    override func viewDidAppear(animated: Bool) {
-        scrollView.contentSize = CGSizeMake(scrollView.frame.width * CGFloat(pageControl.numberOfPages), scrollView.frame.height)
-        
-    }
-    
     func setupJSON(){
         if let path = NSBundle.mainBundle().pathForResource("InfoData", ofType: "json"){
             do {
@@ -116,7 +115,30 @@ class MyInfoViewController: UIViewController,UIScrollViewDelegate {
             print("file not found")
         }
     }
-
+    
+    func expandInfoSectionClicked(button: UIButton){
+        print("Expand Info Clicked")
+        let clickedInfoElement = scrollView.viewWithTag(button.tag + 1000) as! InfoElement
+        
+        infoTransitionAnimator.infoSectionToExpand = clickedInfoElement
+        self.performSegueWithIdentifier("expandedInfoSegue", sender: self)
+    }
+    
+    let infoTransitionAnimator = InfoTransition()
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let destinationController = segue.destinationViewController as? ExpandedInfoViewController {
+            destinationController.transitioningDelegate = self
+            destinationController.modalPresentationStyle = .Custom
+            
+            
+        }
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        scrollView.contentSize = CGSizeMake(scrollView.frame.width * CGFloat(pageControl.numberOfPages), scrollView.frame.height)
+        
+    }
     
     //MARK: -ScrollView Delegate Functions
     func scrollViewDidScroll(scrollView: UIScrollView) {
@@ -131,7 +153,18 @@ class MyInfoViewController: UIViewController,UIScrollViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-
+    //MARK: - UIViewControllerTransitioningDelegate
+    
+    
+    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        infoTransitionAnimator.transitionMode = .Present
+        return infoTransitionAnimator
+    }
+    
+    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        infoTransitionAnimator.transitionMode = .Dismiss
+        return infoTransitionAnimator
+    }
     /*
     // MARK: - Navigation
 

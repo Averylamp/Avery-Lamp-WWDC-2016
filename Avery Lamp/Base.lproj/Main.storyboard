@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -86,7 +87,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="OSw-If-S58"/>
+                        <segue destination="X4x-bE-K0U" kind="relationship" relationship="rootViewController" id="2lR-ev-BwB"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D3p-Qt-VlN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -411,15 +412,6 @@
                                                         <constraint firstAttribute="width" constant="6" id="bmz-ur-x45"/>
                                                     </constraints>
                                                 </view>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SMITH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9P-Kt-9kZ">
-                                                    <rect key="frame" x="125" y="15" width="433" height="30"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="30" id="kja-zi-80E"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="ADAM.CGPRO" family="ADAM.CG PRO" pointSize="20"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Control your phone without touching it" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="M3v-kN-hmD">
                                                     <rect key="frame" x="125" y="48" width="433" height="35"/>
                                                     <constraints>
@@ -435,6 +427,15 @@
                                                         <constraint firstAttribute="height" constant="60" id="1vz-4J-qhF"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Panton-Light" family="Panton" pointSize="14"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SMITH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9P-Kt-9kZ">
+                                                    <rect key="frame" x="125" y="15" width="433" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="kja-zi-80E"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="ADAM.CGPRO" family="ADAM.CG PRO" pointSize="20"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -975,14 +976,93 @@
                             <constraint firstItem="Pfm-Zd-BB4" firstAttribute="top" secondItem="grF-ey-fj1" secondAttribute="bottom" constant="10" id="zOp-jB-afV"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="jly-Ow-V58"/>
                     <connections>
                         <outlet property="pageControl" destination="ydt-5y-RZz" id="AW3-n0-UbX"/>
                         <outlet property="scrollView" destination="h0t-wv-wj9" id="5fg-ST-0lz"/>
+                        <segue destination="94g-eZ-pBJ" kind="presentation" identifier="expandedInfoSegue" id="F1y-5J-BIi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VkN-JB-e4v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2265" y="1079"/>
+            <point key="canvasLocation" x="2334" y="1060"/>
+        </scene>
+        <!--Expanded Info View Controller-->
+        <scene sceneID="gcc-xM-ZvH">
+            <objects>
+                <viewController id="94g-eZ-pBJ" customClass="ExpandedInfoViewController" customModule="Avery_Lamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="uI5-GS-HBa"/>
+                        <viewControllerLayoutGuide type="bottom" id="NgT-3k-QTI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nMd-bJ-t4E">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1oA-SZ-bIh">
+                                <rect key="frame" x="0.0" y="257" width="207" height="207"/>
+                                <color key="backgroundColor" red="0.4823529411764706" green="0.44313725490196076" blue="0.74509803921568629" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="1oA-SZ-bIh" secondAttribute="height" id="aB1-GU-pzF"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nhj-Gx-gy3">
+                                <rect key="frame" x="0.0" y="461" width="414" height="272"/>
+                                <color key="backgroundColor" red="0.32941176470588235" green="0.3529411764705882" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="tgD-F3-Hmg">
+                                <rect key="frame" x="157.5" y="696" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="JLT-ek-y8v"/>
+                                    <constraint firstAttribute="width" constant="100" id="K9r-Qd-CZT"/>
+                                </constraints>
+                            </pageControl>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MITPicture" translatesAutoresizingMaskIntoConstraints="NO" id="PIZ-7e-eTO">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="257.5"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="1oA-SZ-bIh" firstAttribute="width" secondItem="nMd-bJ-t4E" secondAttribute="width" multiplier="0.5" id="03T-S2-mfD"/>
+                            <constraint firstItem="Nhj-Gx-gy3" firstAttribute="centerX" secondItem="nMd-bJ-t4E" secondAttribute="centerX" id="30X-ea-puR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="tgD-F3-Hmg" secondAttribute="trailing" id="3Ia-ZF-vBl"/>
+                            <constraint firstItem="Nhj-Gx-gy3" firstAttribute="top" secondItem="1oA-SZ-bIh" secondAttribute="bottom" id="62r-MU-zQ2"/>
+                            <constraint firstItem="1oA-SZ-bIh" firstAttribute="leading" secondItem="nMd-bJ-t4E" secondAttribute="leadingMargin" id="Fso-1V-gK4"/>
+                            <constraint firstItem="PIZ-7e-eTO" firstAttribute="leading" secondItem="nMd-bJ-t4E" secondAttribute="leadingMargin" id="Grc-et-pQj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PIZ-7e-eTO" secondAttribute="trailing" id="RKO-5Z-E82"/>
+                            <constraint firstItem="PIZ-7e-eTO" firstAttribute="top" secondItem="nMd-bJ-t4E" secondAttribute="topMargin" id="TKx-Os-G3R"/>
+                            <constraint firstItem="1oA-SZ-bIh" firstAttribute="top" secondItem="PIZ-7e-eTO" secondAttribute="bottom" id="XH0-U9-saf"/>
+                            <constraint firstItem="Nhj-Gx-gy3" firstAttribute="width" secondItem="nMd-bJ-t4E" secondAttribute="width" id="Xqd-fW-fdq"/>
+                            <constraint firstItem="PIZ-7e-eTO" firstAttribute="centerX" secondItem="nMd-bJ-t4E" secondAttribute="centerX" id="YTg-Bd-SPQ"/>
+                            <constraint firstItem="NgT-3k-QTI" firstAttribute="top" secondItem="Nhj-Gx-gy3" secondAttribute="bottom" id="ZmE-JL-4l9"/>
+                            <constraint firstItem="PIZ-7e-eTO" firstAttribute="width" secondItem="nMd-bJ-t4E" secondAttribute="width" id="a1i-ej-wiz"/>
+                            <constraint firstItem="NgT-3k-QTI" firstAttribute="top" secondItem="tgD-F3-Hmg" secondAttribute="bottom" id="doe-a5-qO3"/>
+                            <constraint firstItem="tgD-F3-Hmg" firstAttribute="centerX" secondItem="nMd-bJ-t4E" secondAttribute="centerX" id="fvW-zw-UqX"/>
+                            <constraint firstItem="tgD-F3-Hmg" firstAttribute="leading" secondItem="nMd-bJ-t4E" secondAttribute="leadingMargin" id="h1H-oJ-6dX"/>
+                            <constraint firstItem="PIZ-7e-eTO" firstAttribute="height" secondItem="nMd-bJ-t4E" secondAttribute="height" multiplier="0.35" id="sRc-XP-KGF"/>
+                            <constraint firstItem="1oA-SZ-bIh" firstAttribute="leading" secondItem="nMd-bJ-t4E" secondAttribute="leadingMargin" constant="-20" id="ws1-NH-egu"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Grc-et-pQj"/>
+                                <exclude reference="RKO-5Z-E82"/>
+                                <exclude reference="Fso-1V-gK4"/>
+                                <exclude reference="3Ia-ZF-vBl"/>
+                                <exclude reference="h1H-oJ-6dX"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="buttonLabel" destination="1oA-SZ-bIh" id="tWO-9X-O0X"/>
+                        <outlet property="imageView" destination="PIZ-7e-eTO" id="vaI-fZ-dYh"/>
+                        <outlet property="scrollView" destination="Nhj-Gx-gy3" id="XJ4-Tj-2Wp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nDj-5D-4Wj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2888" y="1128"/>
         </scene>
         <!--App Explore More View Controller-->
         <scene sceneID="8PA-EM-Zec">
@@ -1146,6 +1226,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="MITPicture" width="598" height="394"/>
         <image name="SmithAppIcon" width="200" height="200"/>
         <image name="SmithDetailPicture" width="400" height="268"/>
     </resources>

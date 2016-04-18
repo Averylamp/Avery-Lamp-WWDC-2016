@@ -38,9 +38,9 @@ class ExpandingTransition: NSObject, UIViewControllerAnimatedTransitioning {
         let originalView = transitionContext.containerView()
         
         if transitionMode == .Present {
-            let presentingViewController = transitionContext.viewForKey(UITransitionContextToViewKey)!
-            let originalCenter = presentingViewController.center
-            let originalSize = presentingViewController.frame.size
+            let presentingView = transitionContext.viewForKey(UITransitionContextToViewKey)!
+            let originalCenter = presentingView.center
+            let originalSize = presentingView.frame.size
             
             let maxX = max(startPoint.x, originalSize.width -  startPoint.x)
             let maxY = max(startPoint.y, originalSize.height -  startPoint.y)
@@ -54,15 +54,15 @@ class ExpandingTransition: NSObject, UIViewControllerAnimatedTransitioning {
             expandingObject?.backgroundColor = transitionColor
             originalView!.addSubview(expandingObject!)
             
-            presentingViewController.center = startPoint
-            presentingViewController.transform = CGAffineTransformMakeScale(0.001, 0.001)
-            presentingViewController.alpha = 0
-            originalView?.addSubview(presentingViewController)
+            presentingView.center = startPoint
+            presentingView.transform = CGAffineTransformMakeScale(0.001, 0.001)
+            presentingView.alpha = 0
+            originalView?.addSubview(presentingView)
             UIView.animateWithDuration(duration, animations: { 
                 self.expandingObject?.transform = CGAffineTransformIdentity
-                presentingViewController.transform = CGAffineTransformIdentity
-                presentingViewController.alpha = 1.0
-                presentingViewController.center = originalCenter
+                presentingView.transform = CGAffineTransformIdentity
+                presentingView.alpha = 1.0
+                presentingView.center = originalCenter
                 }, completion: { (_) in
                     transitionContext.completeTransition(true)
             })

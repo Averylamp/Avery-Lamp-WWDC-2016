@@ -20,6 +20,7 @@
 		BB1D2FB91CA3C067002F6050 /* AppData.json in Resources */ = {isa = PBXBuildFile; fileRef = BB1D2FB81CA3C067002F6050 /* AppData.json */; };
 		BB1D2FBB1CA3C267002F6050 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1D2FBA1CA3C267002F6050 /* SwiftyJSON.swift */; };
 		BB34038B1C61E9D0004F53DF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34038A1C61E9D0004F53DF /* HomeViewController.swift */; };
+		BB80F4311CC342B400585A75 /* InfoTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB80F4301CC342B400585A75 /* InfoTransition.swift */; };
 		BBA8B33F1CA7AD7000E45BE2 /* ExpandingTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA8B33E1CA7AD7000E45BE2 /* ExpandingTransition.swift */; };
 		BBA8B3411CA7B8D900E45BE2 /* AppExploreMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA8B3401CA7B8D900E45BE2 /* AppExploreMoreViewController.swift */; };
 		BBB80A0E1CC23567006088C6 /* InfoData.json in Resources */ = {isa = PBXBuildFile; fileRef = BBB80A0D1CC23567006088C6 /* InfoData.json */; };
@@ -49,6 +50,7 @@
 		BBE54C801C9D5B0D00EA9E7A /* Panton-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BBE54C431C9D5A1F00EA9E7A /* Panton-Regular.otf */; };
 		BBE54C811C9D5B0D00EA9E7A /* Panton-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BBE54C441C9D5A1F00EA9E7A /* Panton-SemiBold.otf */; };
 		BBE54C821C9D5B0D00EA9E7A /* Panton-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = BBE54C451C9D5A1F00EA9E7A /* Panton-Thin.otf */; };
+		BBF4C4AC1CC41A33004BB567 /* ExpandedInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF4C4AB1CC41A33004BB567 /* ExpandedInfoViewController.swift */; };
 		BBFFC4511C88AF2800A8B5C5 /* MyStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFFC4501C88AF2800A8B5C5 /* MyStoryViewController.swift */; };
 		BBFFC4551C88AF7E00A8B5C5 /* MyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFFC4541C88AF7E00A8B5C5 /* MyInfoViewController.swift */; };
 		FD28E1FA33D009710E4BE6F8 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85EB57D2745956D1EC5A9497 /* Pods.framework */; };
@@ -94,6 +96,7 @@
 		BB1D2FB81CA3C067002F6050 /* AppData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AppData.json; sourceTree = "<group>"; };
 		BB1D2FBA1CA3C267002F6050 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		BB34038A1C61E9D0004F53DF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BB80F4301CC342B400585A75 /* InfoTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTransition.swift; sourceTree = "<group>"; };
 		BBA8B33E1CA7AD7000E45BE2 /* ExpandingTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandingTransition.swift; sourceTree = "<group>"; };
 		BBA8B3401CA7B8D900E45BE2 /* AppExploreMoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppExploreMoreViewController.swift; sourceTree = "<group>"; };
 		BBB80A0D1CC23567006088C6 /* InfoData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = InfoData.json; sourceTree = "<group>"; };
@@ -173,6 +176,7 @@
 		BBE54C761C9D5A4400EA9E7A /* SummitThin-SolidThree.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitThin-SolidThree.otf"; path = "Summit Font/SummitThin-SolidThree.otf"; sourceTree = "<group>"; };
 		BBE54C771C9D5A4400EA9E7A /* SummitThin-SolidTwo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitThin-SolidTwo.otf"; path = "Summit Font/SummitThin-SolidTwo.otf"; sourceTree = "<group>"; };
 		BBE54C781C9D5A6600EA9E7A /* ADAM.CG PRO.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ADAM.CG PRO.otf"; sourceTree = "<group>"; };
+		BBF4C4AB1CC41A33004BB567 /* ExpandedInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandedInfoViewController.swift; sourceTree = "<group>"; };
 		BBFFC4501C88AF2800A8B5C5 /* MyStoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyStoryViewController.swift; sourceTree = "<group>"; };
 		BBFFC4541C88AF7E00A8B5C5 /* MyInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyInfoViewController.swift; sourceTree = "<group>"; };
 		BDD472C5AB65D9D3A8B2AD0D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -255,6 +259,8 @@
 				BBBBFAB51C97206900770E00 /* My Apps */,
 				BBFFC4541C88AF7E00A8B5C5 /* MyInfoViewController.swift */,
 				BBB80A111CC2428D006088C6 /* InfoElement.swift */,
+				BBF4C4AB1CC41A33004BB567 /* ExpandedInfoViewController.swift */,
+				BB80F4301CC342B400585A75 /* InfoTransition.swift */,
 				BBB80A0D1CC23567006088C6 /* InfoData.json */,
 				BBB80A0F1CC2359A006088C6 /* UIColorExtension.swift */,
 				BB10DD991C59EB760079C480 /* Fancy Graphic Helpers */,
@@ -632,6 +638,7 @@
 			files = (
 				BBD885CA1CBF3E8200C50F16 /* FullAppsTableViewController.swift in Sources */,
 				BB1D2FB51CA394EC002F6050 /* MyAppsTableViewController.swift in Sources */,
+				BBF4C4AC1CC41A33004BB567 /* ExpandedInfoViewController.swift in Sources */,
 				BB1D2FBB1CA3C267002F6050 /* SwiftyJSON.swift in Sources */,
 				BB10DD341C59DF940079C480 /* ViewController.swift in Sources */,
 				BBB80A121CC2428D006088C6 /* InfoElement.swift in Sources */,
@@ -646,6 +653,7 @@
 				BBA8B3411CA7B8D900E45BE2 /* AppExploreMoreViewController.swift in Sources */,
 				BB34038B1C61E9D0004F53DF /* HomeViewController.swift in Sources */,
 				BBD95A761CBAFCCD0038904D /* UILabel+Drawing.swift in Sources */,
+				BB80F4311CC342B400585A75 /* InfoTransition.swift in Sources */,
 				BBD885CC1CBF494C00C50F16 /* moreDetailsImageTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
