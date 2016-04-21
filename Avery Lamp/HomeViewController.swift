@@ -201,7 +201,7 @@ class HomeViewController: UIViewController {
     
     //Animation for background color flow
     func startAnimation () {
-        UIView.animateWithDuration(5.0, delay: 0, options: UIViewAnimationOptions.CurveLinear, animations: {
+        UIView.animateWithDuration(4.0, delay: 0, options: UIViewAnimationOptions.CurveLinear, animations: {
             if self.animationFlag == .Down {
                 self.bgScroll!.frame.origin.y = -self.bgScroll!.frame.height + UIScreen.mainScreen().bounds.height
                 self.bgScroll2!.frame.origin.y = -self.bgScroll2!.frame.height + UIScreen.mainScreen().bounds.height

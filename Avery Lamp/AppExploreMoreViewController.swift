@@ -55,7 +55,7 @@ class AppExploreMoreViewController: UIViewController {
         let currentPage = Int(scrollView.contentOffset.x / scrollView.frame.size.width)
         var indexOfDestination = currentPage
         print("Current Page \(currentPage)")
-        let scrollDuration = 0.8
+        let scrollDuration = 0.4
         var animationFired = false
         
         if(gesture.direction == UISwipeGestureRecognizerDirection.Left){

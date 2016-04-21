@@ -53,14 +53,42 @@ class SplashViewController: UIViewController {
         welcomeLabel.font = UIFont(name: "Panton-Light", size: 30)
         self.view.addSubview(welcomeLabel)
 //        welcomeLabel.drawOutlineAnimatedWithLineWidth(0.5, withDuration: 2, fadeToLabel: true)
-        welcomeLabel.strokeTextAnimated(width: 0.5, delay: 0.0, duration: 2, fade: true)
+        welcomeLabel.strokeTextAnimated(width: 0.7, delay: 0.0, duration: 1, fade: false)
+        delay(1.0) {
+            UIView.animateWithDuration(1.0, animations: {
+                welcomeLabel.layer.opacity = 1.0
+            })
+        }
+        
         
         let myNameLabel  = UILabel(frame: CGRectMake(0,self.view.frame.height * 1 / 2 ,self.view.frame.width, 40))
-        myNameLabel.text = "My name is Avery"
+        myNameLabel.text = "My name is Avery Lamp"
         myNameLabel.font = UIFont(name: "Panton-Light", size: 20)
         self.view.addSubview(myNameLabel)
-//        myNameLabel.drawOutlineAnimatedWithLineWidth(0.7, withDuration: 1.5, withDelay: 2.0, fadeToLabel: true);
-        myNameLabel.strokeTextAnimated(width: 0.7, delay: 2.0, duration: 1.5, fade: true)
+
+        myNameLabel.strokeTextAnimated(width: 0.6, delay: 1.0, duration: 1.5, fade: false)
+        delay(2.5) { 
+            UIView.animateWithDuration(1.0, animations: { 
+                myNameLabel.layer.opacity = 1.0
+            })
+        }
+        
+        let thankYouLabel1 = UILabel(frame: CGRectMake(0,0, self.view.frame.width, 30))
+        thankYouLabel1.text = "Thank you for reviewing my app!"
+        thankYouLabel1.center = CGPointMake(myNameLabel.center.x , myNameLabel.center.y + 50)
+        thankYouLabel1.textAlignment = .Center
+        thankYouLabel1.font = UIFont(name: "Panton-Light", size: 16)
+        self.view.addSubview(thankYouLabel1)
+        thankYouLabel1.strokeTextSimultaneously(width: 0.6, delay: 3.5, duration: 2.0, fade: false)
+      
+        let thankYouLabel2 = UILabel(frame: CGRectMake(0,0, self.view.frame.width, 50))
+        thankYouLabel2.text = "I hope you enjoy it!"
+        thankYouLabel2.center = CGPointMake(myNameLabel.center.x , myNameLabel.center.y + 80)
+        thankYouLabel2.textAlignment = .Center
+        thankYouLabel2.font = UIFont(name: "Panton-Light", size: 16)
+        self.view.addSubview(thankYouLabel2)
+        thankYouLabel2.strokeTextSimultaneously(width: 0.6, delay: 5.0, duration: 2.0, fade: false)
+        
         
         
         //Picture
@@ -88,7 +116,7 @@ class SplashViewController: UIViewController {
         drawAnimation.toValue = NSNumber(float: 1.0)
         drawAnimation.timingFunction =  CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
         
-        delay(3.5) { () -> () in
+        delay(2.5) { () -> () in
             circle.lineWidth = 3
             circle.addAnimation(drawAnimation, forKey: "drawCircleAnimation")
             self.delay(2.0, closure: { () -> () in
@@ -96,7 +124,7 @@ class SplashViewController: UIViewController {
             })
         }
         
-        UIView.animateWithDuration(2.5, delay: 2.5, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+        UIView.animateWithDuration(2.5, delay: 1.0, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
             proPic.alpha = 1.0
             }) { (finished) -> Void in}
        
@@ -118,7 +146,7 @@ class SplashViewController: UIViewController {
         shimmerView.contentView = continueLabel
         shimmerView.shimmering = true
         continueLabel.alpha = 0.0
-        delay(5.0) {
+        delay(4.0) {
             shimmerView.addSubview(continueLabel)
             continueLabel.alpha = 1.0
             continueLabel.text = "Tap to Continue"
@@ -228,6 +256,7 @@ class SplashViewController: UIViewController {
         
         //Remove all views
         view.subviews.forEach({ $0.removeFromSuperview() })
+        view.layer.sublayers?.forEach{ $0.removeFromSuperlayer() }
         for v in 0...vertPics - 1 {
             for h in 0...horzPics - 1 {
                 let imgView = UIImageView(frame: CGRectMake(CGFloat(h) * imageSize, CGFloat(v) * imageSize , images[v][h].size.width / UIScreen.mainScreen().scale, images[v][h].size.height / UIScreen.mainScreen().scale))

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LTMorphingLabel
 
 class InfoElement: UIView {
 
@@ -21,6 +22,9 @@ class InfoElement: UIView {
     var buttonLabel = UIButton()
     var backgroundImage = UIImageView()
     var sideLeft = true
+    var detailInfoView: UIView?
+    var detailInfoLabel: LTMorphingLabel?
+    
     
     func createLayout(left left: Bool){
         self.sideLeft = left
@@ -68,7 +72,7 @@ class InfoElement: UIView {
         buttonLabel.addConstraint(NSLayoutConstraint(item: sectionTitleLabel, attribute: .Top, relatedBy: .Equal, toItem: buttonLabel, attribute: .Bottom, multiplier: 0.3, constant: 0))
         buttonLabel.addConstraint(NSLayoutConstraint(item: sectionTitleLabel, attribute: .Height, relatedBy: .Equal, toItem: buttonLabel, attribute: .Height, multiplier: 0.2, constant: 0))
         buttonLabel.addConstraint(NSLayoutConstraint(item: sectionTitleLabel, attribute: .Left, relatedBy: .Equal, toItem: buttonLabel, attribute: .Right, multiplier: leftIndent, constant: 0))
-        buttonLabel.addConstraint(NSLayoutConstraint(item: sectionTitleLabel, attribute: .Width, relatedBy: .Equal, toItem: buttonLabel, attribute: .Width, multiplier: 1 - leftIndent, constant: 0))
+        buttonLabel.addConstraint(NSLayoutConstraint(item: sectionTitleLabel, attribute: .Width, relatedBy: .Equal, toItem: buttonLabel, attribute: .Width, multiplier: 1 - leftIndent - 0.1, constant: 0))
 
         let sectionSubtitleLabel = UILabel()
         sectionSubtitleLabel.text = viewData["SectionSubtitle"].string
@@ -85,10 +89,11 @@ class InfoElement: UIView {
         buttonLabel.addConstraint(NSLayoutConstraint(item: sectionSubtitleLabel, attribute: .Top, relatedBy: .Equal, toItem: buttonLabel, attribute: .Bottom, multiplier: 0.5, constant: 0))
         buttonLabel.addConstraint(NSLayoutConstraint(item: sectionSubtitleLabel, attribute: .Height, relatedBy: .Equal, toItem: buttonLabel, attribute: .Height, multiplier: 0.3, constant: 0))
         buttonLabel.addConstraint(NSLayoutConstraint(item: sectionSubtitleLabel, attribute: .Left, relatedBy: .Equal, toItem: buttonLabel, attribute: .Right, multiplier: leftIndent, constant: 0))
-        buttonLabel.addConstraint(NSLayoutConstraint(item: sectionSubtitleLabel, attribute: .Width, relatedBy: .Equal, toItem: buttonLabel, attribute: .Width, multiplier: 1.0 - leftIndent, constant: 0))
+        buttonLabel.addConstraint(NSLayoutConstraint(item: sectionSubtitleLabel, attribute: .Width, relatedBy: .Equal, toItem: buttonLabel, attribute: .Width, multiplier: 1.0 - leftIndent - 0.1, constant: 0))
         
         backgroundImage.image = UIImage(named:  viewData["BackgroundImage"].string!)
-        backgroundImage.contentMode = .ScaleToFill
+        backgroundImage.contentMode = .ScaleAspectFill
+        backgroundImage.clipsToBounds = true
         
         
     }

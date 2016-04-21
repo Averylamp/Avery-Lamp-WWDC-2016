@@ -10,14 +10,22 @@ import UIKit
 
 class ExpandedInfoViewController: UIViewController {
 
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var buttonLabel: UIButton!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var pageControl: UIPageControl!
+    var detailTextLabel:UILabel?
+    var viewData:JSON?
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print(viewData)
         // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(animated: Bool) {
-        delay(5.0) {
+        detailTextLabel!.attributedText = getDetailText(section: 0)
+        delay(2.0) {
             print("DISMISSING VC")
             self.dismissViewControllerAnimated(true, completion: nil)
         }
@@ -26,6 +34,19 @@ class ExpandedInfoViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func getDetailText(section section:Int)->NSAttributedString{
+        let flavorText = viewData!["ExtraInfoSlides"][section]["FlavorText"].string
+        let subText = viewData!["ExtraInfoSlides"][section]["FlavorSubtext"].string
+        let attributedString = NSMutableAttributedString(string: flavorText! + "\n" + subText!)
+        let font = detailTextLabel?.font
+        attributedString.addAttributes([NSFontAttributeName : font!], range: NSRangeFromString(flavorText!))
+        let subtextFont = UIFont(name: font!.fontName, size: font!.pointSize - 4)
+        attributedString.addAttributes([NSFontAttributeName : subtextFont!], range: NSMakeRange(flavorText!.characters.count + 1, subText!.characters.count))
+        
+        
+        return attributedString
     }
     
     
@@ -39,12 +60,6 @@ class ExpandedInfoViewController: UIViewController {
     }
     
 
-    @IBOutlet weak var imageView: UIImageView!
-    
-    @IBOutlet weak var buttonLabel: UIButton!
-    
-    @IBOutlet weak var scrollView: UIScrollView!
-    
     /*
     // MARK: - Navigation
 

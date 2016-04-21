@@ -119,10 +119,11 @@ class MyInfoViewController: UIViewController,UIScrollViewDelegate, UIViewControl
     func expandInfoSectionClicked(button: UIButton){
         print("Expand Info Clicked")
         let clickedInfoElement = scrollView.viewWithTag(button.tag + 1000) as! InfoElement
-        
+        indexOfClickedElement = button.tag
         infoTransitionAnimator.infoSectionToExpand = clickedInfoElement
         self.performSegueWithIdentifier("expandedInfoSegue", sender: self)
     }
+    var indexOfClickedElement:Int = 0
     
     let infoTransitionAnimator = InfoTransition()
     
@@ -130,7 +131,7 @@ class MyInfoViewController: UIViewController,UIScrollViewDelegate, UIViewControl
         if let destinationController = segue.destinationViewController as? ExpandedInfoViewController {
             destinationController.transitioningDelegate = self
             destinationController.modalPresentationStyle = .Custom
-            
+            destinationController.viewData = jsonData["InfoSections"][indexOfClickedElement]
             
         }
     }
