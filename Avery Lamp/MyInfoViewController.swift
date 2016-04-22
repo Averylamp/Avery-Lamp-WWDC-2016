@@ -132,7 +132,6 @@ class MyInfoViewController: UIViewController,UIScrollViewDelegate, UIViewControl
             destinationController.transitioningDelegate = self
             destinationController.modalPresentationStyle = .Custom
             destinationController.viewData = jsonData["InfoSections"][indexOfClickedElement]
-            
         }
     }
     

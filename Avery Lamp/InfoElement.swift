@@ -23,8 +23,9 @@ class InfoElement: UIView {
     var backgroundImage = UIImageView()
     var sideLeft = true
     var detailInfoView: UIView?
-    var detailInfoLabel: LTMorphingLabel?
-    
+    var detailInfoLabel: UILabel?
+    var sectionTitle: UILabel! = nil
+    var sectionSubtitle: UILabel! = nil
     
     func createLayout(left left: Bool){
         self.sideLeft = left
@@ -53,43 +54,43 @@ class InfoElement: UIView {
 //        buttonLabel.setImage(getImageWithColor(UIColor(rgba: viewData["HighlightColor"].string!)), forState: .Normal)
 //        buttonLabel.alpha = 0.7
         
-        let sectionTitleLabel = UILabel()
-        sectionTitleLabel.text = viewData["SectionTitle"].string
-        sectionTitleLabel.textAlignment = .Left
+        sectionTitle = UILabel()
+        sectionTitle.text = viewData["SectionTitle"].string
+        sectionTitle.textAlignment = .Left
         let font = UIFont(name: "Lato-Semibold", size: 26)
-        sectionTitleLabel.font = font
-        sectionTitleLabel.adjustsFontSizeToFitWidth = true
-        sectionTitleLabel.minimumScaleFactor = 0.5
-        sectionTitleLabel.numberOfLines = 0
-        sectionTitleLabel.lineBreakMode = .ByWordWrapping
-        sectionTitleLabel.textColor = UIColor.whiteColor()
-        buttonLabel.addSubview(sectionTitleLabel)
-        sectionTitleLabel.translatesAutoresizingMaskIntoConstraints = false
+        sectionTitle.font = font
+        sectionTitle.adjustsFontSizeToFitWidth = true
+        sectionTitle.minimumScaleFactor = 0.5
+        sectionTitle.numberOfLines = 0
+        sectionTitle.lineBreakMode = .ByWordWrapping
+        sectionTitle.textColor = UIColor.whiteColor()
+        buttonLabel.addSubview(sectionTitle)
+        sectionTitle.translatesAutoresizingMaskIntoConstraints = false
         
         let leftIndent:CGFloat = 0.1
         
         
-        buttonLabel.addConstraint(NSLayoutConstraint(item: sectionTitleLabel, attribute: .Top, relatedBy: .Equal, toItem: buttonLabel, attribute: .Bottom, multiplier: 0.3, constant: 0))
-        buttonLabel.addConstraint(NSLayoutConstraint(item: sectionTitleLabel, attribute: .Height, relatedBy: .Equal, toItem: buttonLabel, attribute: .Height, multiplier: 0.2, constant: 0))
-        buttonLabel.addConstraint(NSLayoutConstraint(item: sectionTitleLabel, attribute: .Left, relatedBy: .Equal, toItem: buttonLabel, attribute: .Right, multiplier: leftIndent, constant: 0))
-        buttonLabel.addConstraint(NSLayoutConstraint(item: sectionTitleLabel, attribute: .Width, relatedBy: .Equal, toItem: buttonLabel, attribute: .Width, multiplier: 1 - leftIndent - 0.1, constant: 0))
+        buttonLabel.addConstraint(NSLayoutConstraint(item: sectionTitle, attribute: .Top, relatedBy: .Equal, toItem: buttonLabel, attribute: .Bottom, multiplier: 0.3, constant: 0))
+        buttonLabel.addConstraint(NSLayoutConstraint(item: sectionTitle, attribute: .Height, relatedBy: .Equal, toItem: buttonLabel, attribute: .Height, multiplier: 0.2, constant: 0))
+        buttonLabel.addConstraint(NSLayoutConstraint(item: sectionTitle, attribute: .Left, relatedBy: .Equal, toItem: buttonLabel, attribute: .Right, multiplier: leftIndent, constant: 0))
+        buttonLabel.addConstraint(NSLayoutConstraint(item: sectionTitle, attribute: .Width, relatedBy: .Equal, toItem: buttonLabel, attribute: .Width, multiplier: 1 - leftIndent - 0.1, constant: 0))
 
-        let sectionSubtitleLabel = UILabel()
-        sectionSubtitleLabel.text = viewData["SectionSubtitle"].string
-        sectionSubtitleLabel.textAlignment = .Left
-        sectionSubtitleLabel.font = UIFont(name: "Lato-Regular", size: 16)
-        sectionSubtitleLabel.adjustsFontSizeToFitWidth = true
-        sectionSubtitleLabel.minimumScaleFactor = 0.5
-        sectionSubtitleLabel.numberOfLines = 0
-        sectionSubtitleLabel.lineBreakMode = .ByWordWrapping
-        sectionSubtitleLabel.textColor = UIColor.whiteColor()
-        buttonLabel.addSubview(sectionSubtitleLabel)
-        sectionSubtitleLabel.translatesAutoresizingMaskIntoConstraints = false
+        sectionSubtitle = UILabel()
+        sectionSubtitle.text = viewData["SectionSubtitle"].string
+        sectionSubtitle.textAlignment = .Left
+        sectionSubtitle.font = UIFont(name: "Lato-Regular", size: 16)
+        sectionSubtitle.adjustsFontSizeToFitWidth = true
+        sectionSubtitle.minimumScaleFactor = 0.5
+        sectionSubtitle.numberOfLines = 0
+        sectionSubtitle.lineBreakMode = .ByWordWrapping
+        sectionSubtitle.textColor = UIColor.whiteColor()
+        buttonLabel.addSubview(sectionSubtitle)
+        sectionSubtitle.translatesAutoresizingMaskIntoConstraints = false
         
-        buttonLabel.addConstraint(NSLayoutConstraint(item: sectionSubtitleLabel, attribute: .Top, relatedBy: .Equal, toItem: buttonLabel, attribute: .Bottom, multiplier: 0.5, constant: 0))
-        buttonLabel.addConstraint(NSLayoutConstraint(item: sectionSubtitleLabel, attribute: .Height, relatedBy: .Equal, toItem: buttonLabel, attribute: .Height, multiplier: 0.3, constant: 0))
-        buttonLabel.addConstraint(NSLayoutConstraint(item: sectionSubtitleLabel, attribute: .Left, relatedBy: .Equal, toItem: buttonLabel, attribute: .Right, multiplier: leftIndent, constant: 0))
-        buttonLabel.addConstraint(NSLayoutConstraint(item: sectionSubtitleLabel, attribute: .Width, relatedBy: .Equal, toItem: buttonLabel, attribute: .Width, multiplier: 1.0 - leftIndent - 0.1, constant: 0))
+        buttonLabel.addConstraint(NSLayoutConstraint(item: sectionSubtitle, attribute: .Top, relatedBy: .Equal, toItem: buttonLabel, attribute: .Bottom, multiplier: 0.5, constant: 0))
+        buttonLabel.addConstraint(NSLayoutConstraint(item: sectionSubtitle, attribute: .Height, relatedBy: .Equal, toItem: buttonLabel, attribute: .Height, multiplier: 0.3, constant: 0))
+        buttonLabel.addConstraint(NSLayoutConstraint(item: sectionSubtitle, attribute: .Left, relatedBy: .Equal, toItem: buttonLabel, attribute: .Right, multiplier: leftIndent, constant: 0))
+        buttonLabel.addConstraint(NSLayoutConstraint(item: sectionSubtitle, attribute: .Width, relatedBy: .Equal, toItem: buttonLabel, attribute: .Width, multiplier: 1.0 - leftIndent - 0.1, constant: 0))
         
         backgroundImage.image = UIImage(named:  viewData["BackgroundImage"].string!)
         backgroundImage.contentMode = .ScaleAspectFill

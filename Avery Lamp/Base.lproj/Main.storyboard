@@ -87,7 +87,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="dmY-kj-iYw" kind="relationship" relationship="rootViewController" id="EDC-3T-hxr"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="395-wI-fup"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D3p-Qt-VlN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -917,7 +917,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SFO-Cx-2pr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2265" y="352"/>
+            <point key="canvasLocation" x="2233" y="384"/>
         </scene>
         <!--My Info View Controller-->
         <scene sceneID="HId-TG-7pp">
@@ -1028,7 +1028,7 @@
                                 <rect key="frame" x="0.0" y="461" width="414" height="272"/>
                                 <color key="backgroundColor" red="0.32941176470588235" green="0.3529411764705882" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
                             </scrollView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="tgD-F3-Hmg">
+                            <pageControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tgD-F3-Hmg">
                                 <rect key="frame" x="158" y="696" width="100" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="JLT-ek-y8v"/>

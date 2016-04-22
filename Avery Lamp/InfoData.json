@@ -7,16 +7,10 @@
                     "BackgroundImage":"ContactInfoBackground",
                     "ExtraInfoSlides":[
                                        {
-                                       "DetailText":"MIT will be my new home for the next four years.  #MIT2020",
+                                       "DetailText":"You can contact or connect with me through any of the above information",
                                        "DetailImage":"ContactInfoBackground",
                                        "FlavorText":"Avery Lamp",
-                                       "FlavorSubtext":"averylamp@gmail.com\n(973)-873-8225"
-                                       },
-                                       {
-                                       "DetailText":"MIT will be my new home for the next four years.  #MIT2020",
-                                       "DetailImage":"MITPicture",
-                                       "FlavorText":"Class of 2020",
-                                       "FlavorSubtext":"Computer Science"
+                                       "FlavorSubtext":"averylamp@gmail.com\n(973)-873-8225\naverylamp.me\nGithub.com/averylamp"
                                        }
                                        ]
                     },
@@ -27,28 +21,32 @@
                     "BackgroundImage":"MITPicture",
                     "ExtraInfoSlides":[
                                        {
-                                       "DetailText":"MIT will be my new home for the next four years.  #MIT2020",
+                                       "DetailText":"Next year I am super excited to be given the opportunity to enroll in MIT, where I will most likely major in Computer Science and minor/major in finance.  I will bring my iOS development skills and hopefully find others and create a development team",
                                        "DetailImage":"MITPicture",
                                        "FlavorText":"Class of 2020",
-                                       "FlavorSubtext":"Computer Science"
+                                       "FlavorSubtext":"Computer Science",
+                                       "SectionSubtitle":"Massachusetts Institute of Technology"
                                        },
                                        {
-                                       "DetailText":"MIT will be my new home for the next four years.  #MIT2020",
-                                       "DetailImage":"ContactInfoBackground",
-                                       "FlavorText":"Class of 2020",
-                                       "FlavorSubtext":"Computer Science"
+                                       "DetailText":"I have been in Millburn High for the last four years, taking a variety of classes.  My favorite classes include: Advanced Robotics, AP Computer Science, and AP Physics B & C",
+                                       "DetailImage":"Millburn-high",
+                                       "FlavorText":"Class of 2016",
+                                       "FlavorSubtext":"Graduating this June!",
+                                       "SectionSubtitle":"Millburn High School"
                                        },
                                        {
-                                       "DetailText":"MIT will be my new home for the next four years.  #MIT2020",
+                                       "DetailText":"Lorem ipsum dolor sit amet, nunc risus in diam qui sit, wisi ipsum lacus et est erat elit, nec quisque, faucibus metus adipiscing eget suspendisse wisi, quis proin elit ligula. In enim sodales et.",
                                        "DetailImage":"MITPicture",
                                        "FlavorText":"Class of 2020",
-                                       "FlavorSubtext":"Computer Science"
+                                       "FlavorSubtext":"Computer Science",
+                                       "SectionSubtitle":"Massachusetts Institute of Technology"
                                        },
                                        {
-                                       "DetailText":"MIT will be my new home for the next four years.  #MIT2020",
+                                       "DetailText":"Lorem ipsum dolor sit amet, nunc risus in diam qui sit, wisi ipsum lacus et est erat elit, nec quisque, faucibus metus adipiscing eget suspendisse wisi, quis proin elit ligula. In enim sodales et.",
                                        "DetailImage":"MITPicture",
                                        "FlavorText":"Class of 2020",
-                                       "FlavorSubtext":"Computer Science"
+                                       "FlavorSubtext":"Computer Science",
+                                       "SectionSubtitle":"Massachusetts Institute of Technology"
                                        }
                                        ]
                     },
@@ -59,28 +57,32 @@
                     "BackgroundImage":"MITPicture",
                     "ExtraInfoSlides":[
                                        {
-                                       "DetailText":"MIT will be my new home for the next four years.  #MIT2020",
+                                       "DetailText":"Lorem ipsum dolor sit amet, nunc risus in diam qui sit, wisi ipsum lacus et est erat elit, nec quisque, faucibus metus adipiscing eget suspendisse wisi, quis proin elit ligula. In enim sodales et.",
                                        "DetailImage":"MITPicture",
                                        "FlavorText":"Class of 2020",
-                                       "FlavorSubtext":"Computer Science"
+                                       "FlavorSubtext":"Computer Science",
+                                       "SectionSubtitle":"Massachusetts Institute of Technology"
                                        },
                                        {
-                                       "DetailText":"MIT will be my new home for the next four years.  #MIT2020",
+                                       "DetailText":"Lorem ipsum dolor sit amet, nunc risus in diam qui sit, wisi ipsum lacus et est erat elit, nec quisque, faucibus metus adipiscing eget suspendisse wisi, quis proin elit ligula. In enim sodales et.",
                                        "DetailImage":"MITPicture",
                                        "FlavorText":"Class of 2020",
-                                       "FlavorSubtext":"Computer Science"
+                                       "FlavorSubtext":"Computer Science",
+                                       "SectionSubtitle":"Massachusetts Institute of Technology"
                                        },
                                        {
-                                       "DetailText":"MIT will be my new home for the next four years.  #MIT2020",
+                                       "DetailText":"Lorem ipsum dolor sit amet, nunc risus in diam qui sit, wisi ipsum lacus et est erat elit, nec quisque, faucibus metus adipiscing eget suspendisse wisi, quis proin elit ligula. In enim sodales et.",
                                        "DetailImage":"MITPicture",
                                        "FlavorText":"Class of 2020",
-                                       "FlavorSubtext":"Computer Science"
+                                       "FlavorSubtext":"Computer Science",
+                                       "SectionSubtitle":"Massachusetts Institute of Technology"
                                        },
                                        {
-                                       "DetailText":"MIT will be my new home for the next four years.  #MIT2020",
+                                       "DetailText":"Lorem ipsum dolor sit amet, nunc risus in diam qui sit, wisi ipsum lacus et est erat elit, nec quisque, faucibus metus adipiscing eget suspendisse wisi, quis proin elit ligula. In enim sodales et.",
                                        "DetailImage":"MITPicture",
                                        "FlavorText":"Class of 2020",
-                                       "FlavorSubtext":"Computer Science"
+                                       "FlavorSubtext":"Computer Science",
+                                       "SectionSubtitle":"Massachusetts Institute of Technology"
                                        }
                                        ]
                     },
@@ -91,28 +93,32 @@
                     "BackgroundImage":"MITPicture",
                     "ExtraInfoSlides":[
                                        {
-                                       "DetailText":"MIT will be my new home for the next four years.  #MIT2020",
+                                       "DetailText":"Lorem ipsum dolor sit amet, nunc risus in diam qui sit, wisi ipsum lacus et est erat elit, nec quisque, faucibus metus adipiscing eget suspendisse wisi, quis proin elit ligula. In enim sodales et.",
                                        "DetailImage":"MITPicture",
                                        "FlavorText":"Class of 2020",
-                                       "FlavorSubtext":"Computer Science"
+                                       "FlavorSubtext":"Computer Science",
+                                       "SectionSubtitle":"Massachusetts Institute of Technology"
                                        },
                                        {
-                                       "DetailText":"MIT will be my new home for the next four years.  #MIT2020",
+                                       "DetailText":"Lorem ipsum dolor sit amet, nunc risus in diam qui sit, wisi ipsum lacus et est erat elit, nec quisque, faucibus metus adipiscing eget suspendisse wisi, quis proin elit ligula. In enim sodales et.",
                                        "DetailImage":"MITPicture",
                                        "FlavorText":"Class of 2020",
-                                       "FlavorSubtext":"Computer Science"
+                                       "FlavorSubtext":"Computer Science",
+                                       "SectionSubtitle":"Massachusetts Institute of Technology"
                                        },
                                        {
-                                       "DetailText":"MIT will be my new home for the next four years.  #MIT2020",
+                                       "DetailText":"Lorem ipsum dolor sit amet, nunc risus in diam qui sit, wisi ipsum lacus et est erat elit, nec quisque, faucibus metus adipiscing eget suspendisse wisi, quis proin elit ligula. In enim sodales et.",
                                        "DetailImage":"MITPicture",
                                        "FlavorText":"Class of 2020",
-                                       "FlavorSubtext":"Computer Science"
+                                       "FlavorSubtext":"Computer Science",
+                                       "SectionSubtitle":"Massachusetts Institute of Technology"
                                        },
                                        {
-                                       "DetailText":"MIT will be my new home for the next four years.  #MIT2020",
+                                       "DetailText":"Lorem ipsum dolor sit amet, nunc risus in diam qui sit, wisi ipsum lacus et est erat elit, nec quisque, faucibus metus adipiscing eget suspendisse wisi, quis proin elit ligula. In enim sodales et.",
                                        "DetailImage":"MITPicture",
                                        "FlavorText":"Class of 2020",
-                                       "FlavorSubtext":"Computer Science"
+                                       "FlavorSubtext":"Computer Science",
+                                       "SectionSubtitle":"Massachusetts Institute of Technology"
                                        }
                                        ]
                     },
@@ -123,28 +129,32 @@
                     "BackgroundImage":"MITPicture",
                     "ExtraInfoSlides":[
                                        {
-                                       "DetailText":"MIT will be my new home for the next four years.  #MIT2020",
+                                       "DetailText":"Lorem ipsum dolor sit amet, nunc risus in diam qui sit, wisi ipsum lacus et est erat elit, nec quisque, faucibus metus adipiscing eget suspendisse wisi, quis proin elit ligula. In enim sodales et.",
                                        "DetailImage":"MITPicture",
                                        "FlavorText":"Class of 2020",
-                                       "FlavorSubtext":"Computer Science"
+                                       "FlavorSubtext":"Computer Science",
+                                       "SectionSubtitle":"Massachusetts Institute of Technology"
                                        },
                                        {
-                                       "DetailText":"MIT will be my new home for the next four years.  #MIT2020",
+                                       "DetailText":"Lorem ipsum dolor sit amet, nunc risus in diam qui sit, wisi ipsum lacus et est erat elit, nec quisque, faucibus metus adipiscing eget suspendisse wisi, quis proin elit ligula. In enim sodales et.",
                                        "DetailImage":"MITPicture",
                                        "FlavorText":"Class of 2020",
-                                       "FlavorSubtext":"Computer Science"
+                                       "FlavorSubtext":"Computer Science",
+                                       "SectionSubtitle":"Massachusetts Institute of Technology"
                                        },
                                        {
-                                       "DetailText":"MIT will be my new home for the next four years.  #MIT2020",
+                                       "DetailText":"Lorem ipsum dolor sit amet, nunc risus in diam qui sit, wisi ipsum lacus et est erat elit, nec quisque, faucibus metus adipiscing eget suspendisse wisi, quis proin elit ligula. In enim sodales et.",
                                        "DetailImage":"MITPicture",
                                        "FlavorText":"Class of 2020",
-                                       "FlavorSubtext":"Computer Science"
+                                       "FlavorSubtext":"Computer Science",
+                                       "SectionSubtitle":"Massachusetts Institute of Technology"
                                        },
                                        {
-                                       "DetailText":"MIT will be my new home for the next four years.  #MIT2020",
+                                       "DetailText":"Lorem ipsum dolor sit amet, nunc risus in diam qui sit, wisi ipsum lacus et est erat elit, nec quisque, faucibus metus adipiscing eget suspendisse wisi, quis proin elit ligula. In enim sodales et.",
                                        "DetailImage":"MITPicture",
                                        "FlavorText":"Class of 2020",
-                                       "FlavorSubtext":"Computer Science"
+                                       "FlavorSubtext":"Computer Science",
+                                       "SectionSubtitle":"Massachusetts Institute of Technology"
                                        }
                                        ]
                     },
@@ -155,28 +165,32 @@
                     "BackgroundImage":"MITPicture",
                     "ExtraInfoSlides":[
                                        {
-                                       "DetailText":"MIT will be my new home for the next four years.  #MIT2020",
+                                       "DetailText":"Lorem ipsum dolor sit amet, nunc risus in diam qui sit, wisi ipsum lacus et est erat elit, nec quisque, faucibus metus adipiscing eget suspendisse wisi, quis proin elit ligula. In enim sodales et.",
                                        "DetailImage":"MITPicture",
                                        "FlavorText":"Class of 2020",
-                                       "FlavorSubtext":"Computer Science"
+                                       "FlavorSubtext":"Computer Science",
+                                       "SectionSubtitle":"Massachusetts Institute of Technology"
                                        },
                                        {
-                                       "DetailText":"MIT will be my new home for the next four years.  #MIT2020",
+                                       "DetailText":"Lorem ipsum dolor sit amet, nunc risus in diam qui sit, wisi ipsum lacus et est erat elit, nec quisque, faucibus metus adipiscing eget suspendisse wisi, quis proin elit ligula. In enim sodales et.",
                                        "DetailImage":"MITPicture",
                                        "FlavorText":"Class of 2020",
-                                       "FlavorSubtext":"Computer Science"
+                                       "FlavorSubtext":"Computer Science",
+                                       "SectionSubtitle":"Massachusetts Institute of Technology"
                                        },
                                        {
-                                       "DetailText":"MIT will be my new home for the next four years.  #MIT2020",
+                                       "DetailText":"Lorem ipsum dolor sit amet, nunc risus in diam qui sit, wisi ipsum lacus et est erat elit, nec quisque, faucibus metus adipiscing eget suspendisse wisi, quis proin elit ligula. In enim sodales et.",
                                        "DetailImage":"MITPicture",
                                        "FlavorText":"Class of 2020",
-                                       "FlavorSubtext":"Computer Science"
+                                       "FlavorSubtext":"Computer Science",
+                                       "SectionSubtitle":"Massachusetts Institute of Technology"
                                        },
                                        {
-                                       "DetailText":"MIT will be my new home for the next four years.  #MIT2020",
+                                       "DetailText":"Lorem ipsum dolor sit amet, nunc risus in diam qui sit, wisi ipsum lacus et est erat elit, nec quisque, faucibus metus adipiscing eget suspendisse wisi, quis proin elit ligula. In enim sodales et.",
                                        "DetailImage":"MITPicture",
                                        "FlavorText":"Class of 2020",
-                                       "FlavorSubtext":"Computer Science"
+                                       "FlavorSubtext":"Computer Science",
+                                       "SectionSubtitle":"Massachusetts Institute of Technology"
                                        }
                                        ]
                     }

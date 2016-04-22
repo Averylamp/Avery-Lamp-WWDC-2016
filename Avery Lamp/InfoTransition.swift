@@ -83,10 +83,10 @@ class InfoTransition: NSObject, UIViewControllerAnimatedTransitioning {
        
             animationInfoSectionConstraintsToReturnTo = animationInfoSection.constraints
             
-            let detailInfoLabel = LTMorphingLabel()
-            detailInfoLabel.morphingEnabled = false
+            let detailInfoLabel = UILabel()
             animationInfoSection.detailInfoLabel = detailInfoLabel
             presentingViewController?.detailTextLabel = detailInfoLabel
+            presentingViewController?.infoElement = animationInfoSection
             detailInfoLabel.translatesAutoresizingMaskIntoConstraints = false
             detailInfoView.addSubview(detailInfoLabel)
             detailInfoView.addConstraint(NSLayoutConstraint(item: detailInfoLabel, attribute: .Width, relatedBy: .Equal, toItem: detailInfoView, attribute: .Width, multiplier: 0.9, constant: 0.0))

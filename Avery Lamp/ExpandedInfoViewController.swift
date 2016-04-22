@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import LTMorphingLabel
 
 class ExpandedInfoViewController: UIViewController, UIScrollViewDelegate {
 
@@ -16,8 +15,8 @@ class ExpandedInfoViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var backButton: UIButton!
-    
-    var detailTextLabel:LTMorphingLabel?
+    var infoElement: InfoElement?
+    var detailTextLabel:UILabel?
     var viewData:JSON?
 
     override func viewDidLoad() {
@@ -79,7 +78,8 @@ class ExpandedInfoViewController: UIViewController, UIScrollViewDelegate {
             textLabel.layer.opacity = 0.0
             page.layoutIfNeeded()
             if index == 0 {
-                textLabel.strokeTextSimultaneously(width: 0.6, delay: 0.0, duration: textAnimationDuration, fade: true)
+                textLabel.strokeTextLetterByLetter(width: 0.6, delay: 0.0, duration: textAnimationDuration, characterStrokeDuration: textAnimationDuration / 3, fade: true, returnStuff: false)
+//                textLabel.strokeTextSimultaneously(width: 0.6, delay: 0.0, duration: textAnimationDuration, fade: true)
                 animationFired[0]  = true
             }
             
@@ -94,7 +94,7 @@ class ExpandedInfoViewController: UIViewController, UIScrollViewDelegate {
 //        }
     }
     
-    var textAnimationDuration = 0.5
+    var textAnimationDuration = 1.5
     var animationFired = [Bool]()
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
@@ -112,12 +112,34 @@ class ExpandedInfoViewController: UIViewController, UIScrollViewDelegate {
                             }, completion: nil)
                 })
             }
+            if viewData!["ExtraInfoSlides"][page]["SectionSubtitle"].string != viewData!["ExtraInfoSlides"][pageControl.currentPage]["SectionSubtitle"].string{
+                UIView.animateWithDuration(imageFadeDuration / 2, animations: {
+                    self.infoElement?.sectionSubtitle.alpha = 0.0
+                    }, completion: { (finished) in
+                        self.infoElement?.sectionSubtitle.text = self.viewData!["ExtraInfoSlides"][page]["SectionSubtitle"].string
+                        UIView.animateWithDuration(imageFadeDuration / 2 , animations: {
+                            self.infoElement?.sectionSubtitle.alpha = 1.0
+                            }, completion: nil)
+                })
+            }
+            if viewData!["ExtraInfoSlides"][page]["FlavorText"].string != viewData!["ExtraInfoSlides"][pageControl.currentPage]["FlavorText"].string || viewData!["ExtraInfoSlides"][page]["FlavorSubtext"].string != viewData!["ExtraInfoSlides"][pageControl.currentPage]["FlavorSubtext"].string {
+                UIView.animateWithDuration(imageFadeDuration / 2, animations: {
+                    self.detailTextLabel!.alpha = 0.0
+                    }, completion: { (finished) in
+                        self.detailTextLabel!.attributedText = self.getDetailText(section: page)
+                        UIView.animateWithDuration(imageFadeDuration / 2 , animations: {
+                            self.detailTextLabel!.alpha = 1.0
+                            }, completion: nil)
+                })
+
+            }
             
             pageControl.currentPage = page
         }
         
         if animationFired[page] == false && labelForSection[page].layer.opacity == 0.0 {
-            labelForSection[page].strokeTextSimultaneously(width: 0.6, delay: 0.0, duration: textAnimationDuration, fade: true)
+            labelForSection[page].strokeTextLetterByLetter(width: 0.6, delay: 0.0, duration: textAnimationDuration, characterStrokeDuration: textAnimationDuration / 3, fade: true, fadeDuration: 0.4, returnStuff: false)
+//            labelForSection[page].strokeTextSimultaneously(width: 0.6, delay: 0.0, duration: textAnimationDuration, fade: true)
             animationFired[page] = true
         }
 
@@ -164,14 +186,7 @@ class ExpandedInfoViewController: UIViewController, UIScrollViewDelegate {
     }
     
     
-    func delay(delay:Double, closure:()->()) {
-        dispatch_after(
-            dispatch_time(
-                DISPATCH_TIME_NOW,
-                Int64(delay * Double(NSEC_PER_SEC))
-            ),
-            dispatch_get_main_queue(), closure)
-    }
+ 
     
 
     /*

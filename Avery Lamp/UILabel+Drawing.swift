@@ -128,7 +128,7 @@ extension UILabel {
     }
     
     //NOTE Returning CASHAPELAYER does not work with a delay
-    func strokeTextSimultaneously(width width:CGFloat = 0.5, delay:Double = 0.0, duration: Double, fade:Bool) -> [CAShapeLayer]{
+    func strokeTextSimultaneously(width width:CGFloat = 0.5, delay:Double = 0.0, duration: Double, fade:Bool, returnStuff: Bool = true) -> [CAShapeLayer]{
         
         if delay != 0.0{
             self.alpha = 0.0
@@ -177,9 +177,11 @@ extension UILabel {
         CATransaction.setCompletionBlock {
             if fade {
                 CATransaction.begin()
-                CATransaction.setCompletionBlock({
-                    allLetterShapes.forEach { $0.removeFromSuperlayer()}
-                })
+                if returnStuff == false{
+                    CATransaction.setCompletionBlock({
+                        allLetterShapes.forEach { $0.removeFromSuperlayer()}
+                    })
+                }
                 UIView.animateWithDuration(1.0, animations: {
                     self.layer.opacity = 1.0
                 })
@@ -195,7 +197,7 @@ extension UILabel {
         
     }
     
-    func strokeTextLetterByLetter(width width:CGFloat = 0.5, delay:Double = 0.0, duration: Double, characterStrokeDuration:Double = 1.5, fade:Bool) -> [CAShapeLayer]{
+    func strokeTextLetterByLetter(width width:CGFloat = 0.5, delay:Double = 0.0, duration: Double, characterStrokeDuration:Double = 1.5, fade:Bool, fadeDuration: Double = 1.0, returnStuff:Bool = true) -> [CAShapeLayer]{
         
         if delay != 0.0{
             self.alpha = 0.0
@@ -239,7 +241,7 @@ extension UILabel {
         
         let fadeOutAnimation = CABasicAnimation(keyPath: "opacity")
         fadeOutAnimation.beginTime = CACurrentMediaTime() + duration
-        fadeOutAnimation.duration = 1.0
+        fadeOutAnimation.duration = fadeDuration
         fadeOutAnimation.fromValue = 1.0
         fadeOutAnimation.toValue = 0.0
         fadeOutAnimation.fillMode = kCAFillModeForwards
@@ -262,10 +264,10 @@ extension UILabel {
             allLetterShapes.forEach { $0.addAnimation(fadeOutAnimation, forKey: "fadeOut")}
 
             
-            UIView.animateWithDuration(1.0, delay: duration, options: .CurveEaseIn, animations: {
+            UIView.animateWithDuration(fadeDuration, delay: duration, options: .CurveEaseIn, animations: {
                 self.layer.opacity = 1.0
                 }, completion: { (finished) in
-                    
+                    allLetterShapes.forEach {$0.removeFromSuperlayer()}
             })
 
             

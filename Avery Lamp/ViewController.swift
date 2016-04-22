@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import LTMorphingLabel
 
 class ViewController: UIViewController {
 
@@ -69,7 +69,7 @@ class ViewController: UIViewController {
 //        self.view.addSubview(secondLabel)
 //        allLetters =  secondLabel.strokeTextSimultaneously(width: 0.5,delay: 0.0, duration: 4.0, fade: true)
         
-        let thirdLabel = UILabel(frame: CGRectMake(20,200,self.view.frame.width - 40, 200))
+        let thirdLabel = LTMorphingLabel(frame: CGRectMake(20,200,self.view.frame.width - 40, 200))
         thirdLabel.text = "     Lorem ipsum dolor sit amet, ad sea populo pericula iracundia, mei ut convenire iudicabit. Cu audire vocibus liberavisse mel, tota sanctus ne pro. Probo tractatos laboramus an his. Usu ne brute mundi, invidunt eleifend reprimique ut usu.  \n     Wisi verterem mandamus eos te, ei vix natum elaboraret. Vim at docendi gloriatur accommodare, vel solum alienum eu. Consul iisque suavitate eum cu, cu eius impedit eam. Atqui doctus feugait mei cu, per quod inermis cu."
         thirdLabel.numberOfLines = 0
         thirdLabel.lineBreakMode = .ByWordWrapping
@@ -77,13 +77,27 @@ class ViewController: UIViewController {
 //        thirdLabel.textAlignment = .Center
         self.view.addSubview(thirdLabel)
         allLettersLayer = thirdLabel.layer
-        allLetters = thirdLabel.strokeTextLetterByLetter(width: 0.6, delay: 0.0, duration: 10.0, characterStrokeDuration: 1.0, fade: true)
-    
+        //allLetters = thirdLabel.strokeTextLetterByLetter(width: 0.6, delay: 0.0, duration: 10.0, characterStrokeDuration: 1.0, fade: true)
+        delay(3.0) {
+            thirdLabel.text = "asdfl asdlfkj asdjkfa;sldfalsdfa;lkfjaslfj9erhipqoenrvq[iner[igjqw erjqc[o qwoeifjqodfjqwp feiqwef"
+            self.delay(3.0, closure: { 
+                thirdLabel.text = " qowijpovqowef f qwef09q93q4 asdvnasdf wqe qwefjiqowef qw qwe qpowdef9-8hqg-98ert   "
+            })
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func delay(delay:Double, closure:()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), closure)
     }
 
     @IBAction func sliderForStrokeEnds(sender: AnyObject) {
