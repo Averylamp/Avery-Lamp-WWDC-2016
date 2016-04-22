@@ -87,7 +87,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="dmY-kj-iYw" kind="relationship" relationship="rootViewController" id="MPp-Ar-vNy"/>
+                        <segue destination="dmY-kj-iYw" kind="relationship" relationship="rootViewController" id="EDC-3T-hxr"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D3p-Qt-VlN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -941,7 +941,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pfm-Zd-BB4">
-                                <rect key="frame" x="30" y="23" width="25" height="25"/>
+                                <rect key="frame" x="30" y="22.5" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="3FZ-WN-BgH"/>
                                     <constraint firstAttribute="height" constant="25" id="tqA-tI-9Zh"/>
@@ -1262,6 +1262,7 @@
                             <constraint firstItem="mcI-on-93n" firstAttribute="leading" secondItem="26U-5X-Ykf" secondAttribute="leadingMargin" id="hkh-OP-lzA"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="qKb-nV-lqJ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RHb-Ek-NE3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

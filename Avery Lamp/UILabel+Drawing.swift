@@ -28,7 +28,7 @@ extension UILabel {
         CTFrameGetLineOrigins(ctFrame, CFRangeMake(0, 0), &lineOrigins)
         
         for lineIndex in 0..<CFArrayGetCount(allLines){
-
+            
             let line = (allLines as NSArray)[lineIndex] as! CTLine
             let allRuns = CTLineGetGlyphRuns(line)
             
@@ -45,6 +45,7 @@ extension UILabel {
                     
                     let pathOfLetter = CTFontCreatePathForGlyph(font, glyph, nil)
                     var transformation = CGAffineTransformMakeTranslation(position.x, position.y + CGFloat(lineOrigins[lineIndex].y))
+                    
                     let tempPath = CGPathCreateMutable()
                     CGPathAddPath(tempPath, &transformation, pathOfLetter)
                     allLetterPaths.append(tempPath)
@@ -193,6 +194,86 @@ extension UILabel {
         return allLetterShapes
         
     }
+    
+    func strokeTextLetterByLetter(width width:CGFloat = 0.5, delay:Double = 0.0, duration: Double, characterStrokeDuration:Double = 1.5, fade:Bool) -> [CAShapeLayer]{
+        
+        if delay != 0.0{
+            self.alpha = 0.0
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(delay * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), {
+                self.alpha = 1.0
+                self.strokeTextSimultaneously(width: width, delay: 0.0, duration: duration, fade: fade)
+            })
+            return []
+        }
+        
+        self.baselineAdjustment = .AlignBaselines
+        let originalCenter = self.center
+        self.sizeToFit()
+        self.center = originalCenter
+        self.layer.opacity = 0.0
+        
+        let allLetterPaths = getPathOfText(false)
+        var allLetterShapes = Array<CAShapeLayer> ()
+        for index in 0..<allLetterPaths.count {
+            let singleLetterShape = CAShapeLayer()
+            singleLetterShape.frame = self.layer.frame
+            singleLetterShape.bounds = self.layer.bounds
+            singleLetterShape.path = allLetterPaths[index]
+            singleLetterShape.strokeColor = UIColor.blackColor().CGColor
+            singleLetterShape.geometryFlipped = true
+            singleLetterShape.fillColor = UIColor.clearColor().CGColor
+            singleLetterShape.lineWidth = width
+            singleLetterShape.lineJoin = kCALineJoinRound
+            self.layer.superlayer?.addSublayer(singleLetterShape)
+            allLetterShapes.append(singleLetterShape)
+            singleLetterShape.strokeEnd = 0.0
+        }
+        
+        let strokeAnimation = CABasicAnimation(keyPath: "strokeEnd")
+        strokeAnimation.duration = characterStrokeDuration
+        strokeAnimation.fromValue = 0.0
+        strokeAnimation.toValue = 1.0
+        strokeAnimation.fillMode = kCAFillModeForwards
+        strokeAnimation.removedOnCompletion = false
+        strokeAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+        
+        let fadeOutAnimation = CABasicAnimation(keyPath: "opacity")
+        fadeOutAnimation.beginTime = CACurrentMediaTime() + duration
+        fadeOutAnimation.duration = 1.0
+        fadeOutAnimation.fromValue = 1.0
+        fadeOutAnimation.toValue = 0.0
+        fadeOutAnimation.fillMode = kCAFillModeForwards
+        fadeOutAnimation.removedOnCompletion = false
+        
+        let delayPerCharacter = (duration - characterStrokeDuration) / Double(allLetterShapes.count)
+        
+        CATransaction.begin()
+        CATransaction.setAnimationDuration(duration)
+
+        
+        for index in 0..<allLetterShapes.count {
+            strokeAnimation.beginTime = CACurrentMediaTime() + delayPerCharacter * Double(index)
+            allLetterShapes[index].addAnimation(strokeAnimation, forKey: "strokeEnd")
+        }
+        CATransaction.commit()
+        
+        if fade {
+            
+            allLetterShapes.forEach { $0.addAnimation(fadeOutAnimation, forKey: "fadeOut")}
+
+            
+            UIView.animateWithDuration(1.0, delay: duration, options: .CurveEaseIn, animations: {
+                self.layer.opacity = 1.0
+                }, completion: { (finished) in
+                    
+            })
+
+            
+        }
+        return allLetterShapes
+        
+    }
+
     
 }
 

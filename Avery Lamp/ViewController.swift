@@ -41,15 +41,15 @@ class ViewController: UIViewController {
         setupJSON()
         
         
-        let testInfoElement1 = InfoElement(frame: CGRectMake(30, 50, self.view.frame.width - 60, 100))
-        self.view.addSubview(testInfoElement1)
-        testInfoElement1.viewData = jsonData["InfoSections"][0]
-        testInfoElement1.createLayout(left: true)
-        let testInfoElement = InfoElement(frame: CGRectMake(30, 250, self.view.frame.width - 60, 100))
-        testInfoElement.viewData = jsonData["InfoSections"][0]
-        self.view.addSubview(testInfoElement)
-        testInfoElement.createLayout(left: false)
-        
+//        let testInfoElement1 = InfoElement(frame: CGRectMake(30, 50, self.view.frame.width - 60, 100))
+//        self.view.addSubview(testInfoElement1)
+//        testInfoElement1.viewData = jsonData["InfoSections"][0]
+//        testInfoElement1.createLayout(left: true)
+//        let testInfoElement = InfoElement(frame: CGRectMake(30, 250, self.view.frame.width - 60, 100))
+//        testInfoElement.viewData = jsonData["InfoSections"][0]
+//        self.view.addSubview(testInfoElement)
+//        testInfoElement.createLayout(left: false)
+//        
         
         
         
@@ -68,16 +68,16 @@ class ViewController: UIViewController {
 //        allLettersLayer = secondLabel.layer
 //        self.view.addSubview(secondLabel)
 //        allLetters =  secondLabel.strokeTextSimultaneously(width: 0.5,delay: 0.0, duration: 4.0, fade: true)
-//        
-//        let thirdLabel = UILabel(frame: CGRectMake(20,200,self.view.frame.width - 40, 200))
-//        thirdLabel.text = "Smith was created as a productivity tool for those that sit at desks.  The user sets specific actions, which can be triggered by knocking specific patterns into the desk that the phone rests on."
-//        thirdLabel.numberOfLines = 0
-//        thirdLabel.lineBreakMode = .ByWordWrapping
-//        thirdLabel.font = UIFont(name: "Panton-Regular", size: 16)
-////        thirdLabel.textAlignment = .Center
-//        self.view.addSubview(thirdLabel)
-//        allLettersLayer = thirdLabel.layer
-//        allLetters = thirdLabel.strokeTextSimultaneously(width: 0.5, delay: 0.0, duration: 4.0, fade: false)
+        
+        let thirdLabel = UILabel(frame: CGRectMake(20,200,self.view.frame.width - 40, 200))
+        thirdLabel.text = "     Lorem ipsum dolor sit amet, ad sea populo pericula iracundia, mei ut convenire iudicabit. Cu audire vocibus liberavisse mel, tota sanctus ne pro. Probo tractatos laboramus an his. Usu ne brute mundi, invidunt eleifend reprimique ut usu.  \n     Wisi verterem mandamus eos te, ei vix natum elaboraret. Vim at docendi gloriatur accommodare, vel solum alienum eu. Consul iisque suavitate eum cu, cu eius impedit eam. Atqui doctus feugait mei cu, per quod inermis cu."
+        thirdLabel.numberOfLines = 0
+        thirdLabel.lineBreakMode = .ByWordWrapping
+        thirdLabel.font = UIFont(name: "Panton-Regular", size: 16)
+//        thirdLabel.textAlignment = .Center
+        self.view.addSubview(thirdLabel)
+        allLettersLayer = thirdLabel.layer
+        allLetters = thirdLabel.strokeTextLetterByLetter(width: 0.6, delay: 0.0, duration: 10.0, characterStrokeDuration: 1.0, fade: true)
     
     }
 
