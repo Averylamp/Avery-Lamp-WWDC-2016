@@ -23,6 +23,9 @@
 		BB80F4311CC342B400585A75 /* InfoTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB80F4301CC342B400585A75 /* InfoTransition.swift */; };
 		BBA8B33F1CA7AD7000E45BE2 /* ExpandingTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA8B33E1CA7AD7000E45BE2 /* ExpandingTransition.swift */; };
 		BBA8B3411CA7B8D900E45BE2 /* AppExploreMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA8B3401CA7B8D900E45BE2 /* AppExploreMoreViewController.swift */; };
+		BBB57F8D1CC97E90005D6BF1 /* MavenProLight-100.otf in Resources */ = {isa = PBXBuildFile; fileRef = BBB57F8A1CC97E90005D6BF1 /* MavenProLight-100.otf */; };
+		BBB57F8E1CC97E90005D6BF1 /* MavenProLight-200.otf in Resources */ = {isa = PBXBuildFile; fileRef = BBB57F8B1CC97E90005D6BF1 /* MavenProLight-200.otf */; };
+		BBB57F8F1CC97E90005D6BF1 /* MavenProLight-300.otf in Resources */ = {isa = PBXBuildFile; fileRef = BBB57F8C1CC97E90005D6BF1 /* MavenProLight-300.otf */; };
 		BBB80A0E1CC23567006088C6 /* InfoData.json in Resources */ = {isa = PBXBuildFile; fileRef = BBB80A0D1CC23567006088C6 /* InfoData.json */; };
 		BBB80A101CC2359A006088C6 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB80A0F1CC2359A006088C6 /* UIColorExtension.swift */; };
 		BBB80A121CC2428D006088C6 /* InfoElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB80A111CC2428D006088C6 /* InfoElement.swift */; };
@@ -99,6 +102,9 @@
 		BB80F4301CC342B400585A75 /* InfoTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTransition.swift; sourceTree = "<group>"; };
 		BBA8B33E1CA7AD7000E45BE2 /* ExpandingTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandingTransition.swift; sourceTree = "<group>"; };
 		BBA8B3401CA7B8D900E45BE2 /* AppExploreMoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppExploreMoreViewController.swift; sourceTree = "<group>"; };
+		BBB57F8A1CC97E90005D6BF1 /* MavenProLight-100.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MavenProLight-100.otf"; sourceTree = "<group>"; };
+		BBB57F8B1CC97E90005D6BF1 /* MavenProLight-200.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MavenProLight-200.otf"; sourceTree = "<group>"; };
+		BBB57F8C1CC97E90005D6BF1 /* MavenProLight-300.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MavenProLight-300.otf"; sourceTree = "<group>"; };
 		BBB80A0D1CC23567006088C6 /* InfoData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = InfoData.json; sourceTree = "<group>"; };
 		BBB80A0F1CC2359A006088C6 /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		BBB80A111CC2428D006088C6 /* InfoElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoElement.swift; sourceTree = "<group>"; };
@@ -295,6 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				BBD95A751CBAFCCD0038904D /* UILabel+Drawing.swift */,
+				BBB57F901CC97E95005D6BF1 /* Maven Pro */,
 				BBE54C781C9D5A6600EA9E7A /* ADAM.CG PRO.otf */,
 				BBB80A131CC24653006088C6 /* Lato Font */,
 				BB10DD701C59E3450079C480 /* Panton Font */,
@@ -381,6 +388,16 @@
 				BBE54C771C9D5A4400EA9E7A /* SummitThin-SolidTwo.otf */,
 			);
 			name = "Summit Font";
+			sourceTree = "<group>";
+		};
+		BBB57F901CC97E95005D6BF1 /* Maven Pro */ = {
+			isa = PBXGroup;
+			children = (
+				BBB57F8A1CC97E90005D6BF1 /* MavenProLight-100.otf */,
+				BBB57F8B1CC97E90005D6BF1 /* MavenProLight-200.otf */,
+				BBB57F8C1CC97E90005D6BF1 /* MavenProLight-300.otf */,
+			);
+			name = "Maven Pro";
 			sourceTree = "<group>";
 		};
 		BBB80A131CC24653006088C6 /* Lato Font */ = {
@@ -528,7 +545,9 @@
 			files = (
 				BBB80A461CC24EEB006088C6 /* Lato-Heavy.ttf in Resources */,
 				BBE54C7B1C9D5B0D00EA9E7A /* Panton-Bold.otf in Resources */,
+				BBB57F8E1CC97E90005D6BF1 /* MavenProLight-200.otf in Resources */,
 				BBB80A451CC24EEB006088C6 /* Lato-Hairline.ttf in Resources */,
+				BBB57F8F1CC97E90005D6BF1 /* MavenProLight-300.otf in Resources */,
 				BBB80A481CC24EEB006088C6 /* Lato-Medium.ttf in Resources */,
 				BB10DD3C1C59DF940079C480 /* LaunchScreen.storyboard in Resources */,
 				BBE54C7E1C9D5B0D00EA9E7A /* Panton-Heavy.otf in Resources */,
@@ -544,6 +563,7 @@
 				BBE54C791C9D5AF600EA9E7A /* ADAM.CG PRO.otf in Resources */,
 				BBD885CE1CBF49BB00C50F16 /* moreDetailsImageTextView.xib in Resources */,
 				BBB80A4A1CC24EEB006088C6 /* Lato-Semibold.ttf in Resources */,
+				BBB57F8D1CC97E90005D6BF1 /* MavenProLight-100.otf in Resources */,
 				BBB80A0E1CC23567006088C6 /* InfoData.json in Resources */,
 				BBE54C7F1C9D5B0D00EA9E7A /* Panton-Light.otf in Resources */,
 				BBE54C821C9D5B0D00EA9E7A /* Panton-Thin.otf in Resources */,

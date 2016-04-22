@@ -55,6 +55,9 @@
 		<string>Lato-Semibold.ttf</string>
 		<string>Lato-Thin.ttf</string>
 		<string>Lato-Hairline.ttf</string>
+		<string>MavenProLight-100.otf</string>
+		<string>MavenProLight-200.otf</string>
+		<string>MavenProLight-300.otf</string>
 	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>

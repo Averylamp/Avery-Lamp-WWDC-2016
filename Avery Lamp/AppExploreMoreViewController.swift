@@ -24,12 +24,15 @@ class AppExploreMoreViewController: UIViewController {
     
     @IBOutlet weak var moreInfoButton: UIButton!
     
+    @IBOutlet weak var pageControl: UIPageControl!
+    
     var slideViewControllers = [AppExploreMoreSlideViewController]()
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         if exploreMoreInfo != nil{
             scrollView.contentSize = CGSizeMake(scrollView.frame.width * CGFloat(exploreMoreInfo!["expandedDetails"].count), scrollView.frame.height)
+            pageControl.numberOfPages = exploreMoreInfo!["expandedDetails"].count
         }
         
     }
@@ -79,6 +82,7 @@ class AppExploreMoreViewController: UIViewController {
             }
         }
         if animationFired{
+            pageControl.currentPage = indexOfDestination
             let letterDrawDuration = scrollDuration * 3.0
             slideViewControllers[indexOfDestination].textLabel.layer.opacity = 0.0
             slideViewControllers[indexOfDestination].textLayersToAnimate.forEach{ $0.strokeEnd = 0.0}

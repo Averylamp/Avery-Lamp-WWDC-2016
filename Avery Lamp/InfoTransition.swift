@@ -170,6 +170,7 @@ class InfoTransition: NSObject, UIViewControllerAnimatedTransitioning {
             UIView.animateWithDuration(duration / 3, animations: {
                 presentingViewController?.pageControl.alpha = 0.0
                 presentingViewController?.scrollView.alpha = 0.0
+                presentingViewController?.backButton.alpha = 0.0
                 }, completion: nil)
             
             self.animationInfoSection.layoutIfNeeded()
