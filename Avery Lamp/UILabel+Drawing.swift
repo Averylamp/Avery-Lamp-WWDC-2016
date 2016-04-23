@@ -260,7 +260,6 @@ extension UILabel {
         CATransaction.commit()
         
         if fade {
-            
             allLetterShapes.forEach { $0.addAnimation(fadeOutAnimation, forKey: "fadeOut")}
 
             
@@ -277,7 +276,6 @@ extension UILabel {
     }
 
     
+    
+    
 }
-
-
-

@@ -7,7 +7,7 @@
                     "BackgroundImage":"ContactInfoBackground",
                     "ExtraInfoSlides":[
                                        {
-                                       "DetailText":"You can contact or connect with me through any of the above information.\n\nI am currently 18 Years old and a resident of Short Hills, NJ",
+                                       "DetailText":"You can contact or connect with me through any of the above information.\n\nI am currently 18 Years old and reside in Short Hills, NJ",
                                        "DetailImage":"ContactInfoBackground",
                                        "FlavorText":"Avery Lamp",
                                        "FlavorSubtext":"averylamp@gmail.com\n(973)-873-8225\naverylamp.me\nGithub.com/averylamp"
@@ -35,7 +35,7 @@
                                        "SectionSubtitle":"Massachusetts Institute of Technology"
                                        },
                                        {
-                                       "DetailText":"I have been in Millburn High for the last four years, taking a variety of classes.  My favorite classes include: Advanced Robotics, AP Computer Science, and AP Physics B & C.  I will be graduating with high honors.",
+                                       "DetailText":"I am graduating from Millburn High School this June with high honors.  I challenged myself in many classes and some of my favorites were Advanced Robotics, AP Computer Science, and AP Physics B & C.  As a Math/Science guy, I almost died in AP English Language and Composition.",
                                        "DetailImage":"Millburn-high",
                                        "FlavorText":"Class of 2016",
                                        "FlavorSubtext":"Graduating this June!",
@@ -46,47 +46,54 @@
                     {
                     "SectionTitle":"Programing and Experience",
                     "SectionSubtitle":"Skills and Jobs",
-                    "HighlightColor":"#39a0ed",
-                    "BackgroundImage":"MITPicture",
+                    "HighlightColor":"#cc4125",
+                    "BackgroundImage":"computerBackground",
                     "ExtraInfoSlides":[
                                        {
-                                       "DetailText":"I started learning programming in 9th grade, when I took Computer Science 1 as an elective.  ",
-                                       "DetailImage":"MITPicture",
+                                       "DetailText":"I started learning programming in 9th grade, when I took Computer Science 1 in Java as an elective. I absolutely loved it, so I started programming in my free time.  In 10th Grade I learned how to make apps in Objective-C and in 11th grade I went to my first hackathon.",
+                                       "DetailImage":"computerBackground",
                                        "FlavorText":"Languages",
                                        "FlavorSubtext":"Swift, Objective-C/C++, Java, JS, HTML, CSS",
-                                       "SectionSubtitle":"Massachusetts Institute of Technology"
+                                       "SectionSubtitle":"Skills"
                                        },
                                        {
-                                       "DetailText":"Lorem ipsum dolor sit amet, nunc risus in diam qui sit, wisi ipsum lacus et est erat elit, nec quisque, faucibus metus adipiscing eget suspendisse wisi, quis proin elit ligula. In enim sodales et.",
-                                       "DetailImage":"MITPicture",
-                                       "FlavorText":"Class of 2020",
-                                       "FlavorSubtext":"Computer Science",
-                                       "SectionSubtitle":"Massachusetts Institute of Technology"
+                                       "DetailText":"When I went to my first hackathon, I met a few nearby iOS developers in high school. Together we decided to form Isometric Studios, a team to work on freelance projects and attend hackathons. To date I worked on four different jobs with apps in categories ranging from video editing to object tracking to informative apps.",
+                                       "DetailImage":"IsometricLogo",
+                                       "FlavorText":"iOS Freelancer",
+                                       "FlavorSubtext":"Isometric Studios\nisometric.co",
+                                       "SectionSubtitle":"Jobs"
                                        },
                                        {
-                                       "DetailText":"Lorem ipsum dolor sit amet, nunc risus in diam qui sit, wisi ipsum lacus et est erat elit, nec quisque, faucibus metus adipiscing eget suspendisse wisi, quis proin elit ligula. In enim sodales et.",
-                                       "DetailImage":"MITPicture",
-                                       "FlavorText":"Class of 2020",
-                                       "FlavorSubtext":"Computer Science",
-                                       "SectionSubtitle":"Massachusetts Institute of Technology"
+                                       "DetailText":"In the summer of 2014 I was an iOS intern at U.S. Squash. I built a prototype of an informational iPad app for members. This was the first large app I ever built and I learned about code organization, network connections, and the importance of design. It was my first time working in an office.",
+                                       "DetailImage":"USSquashLogo",
+                                       "FlavorText":"Internship",
+                                       "FlavorSubtext":"iOS intern, U.S. Squash\nSummer of 2014",
+                                       "SectionSubtitle":"Jobs"
                                        },
                                        {
-                                       "DetailText":"Lorem ipsum dolor sit amet, nunc risus in diam qui sit, wisi ipsum lacus et est erat elit, nec quisque, faucibus metus adipiscing eget suspendisse wisi, quis proin elit ligula. In enim sodales et.",
-                                       "DetailImage":"MITPicture",
-                                       "FlavorText":"Class of 2020",
-                                       "FlavorSubtext":"Computer Science",
-                                       "SectionSubtitle":"Massachusetts Institute of Technology"
+                                       "DetailText":"In the summer of 2015 I interned again and built a scoring app scores live on the U.S. Squash website. They currently use the scoring app in the higher level sanctioned U.S. Squash Junior tournaments.  It is super satisfying playing in tournaments and seeing all of the refs use an app that I worked on.",
+                                       "DetailImage":"USSquashLogo",
+                                       "FlavorText":"Internship",
+                                       "FlavorSubtext":"iOS intern, U.S. Squash\nSummer of 2015",
+                                       "SectionSubtitle":"Jobs"
+                                       },
+                                       {
+                                       "DetailText":"Right now I am working on a freelancing project in Swift. In terms of skills, I recently became extremely interested in UI/UX. The designs of the My Info and My Apps sections are both variations of UX animations that I found and loved on dribbble.com. Implementing them taught me lots about low level animation in iOS.",
+                                       "DetailImage":"DribbleLogo",
+                                       "FlavorText":"My Future",
+                                       "FlavorSubtext":"Current: Freelance Project\nSkills Developing: UI/UX\nExploring: Machine Learning\nNext Languages: Haskell, Python, R",
+                                       "SectionSubtitle":"Skills"
                                        }
                                        ]
                     },
                     {
-                    "SectionTitle":"Education",
-                    "SectionSubtitle":"My School",
+                    "SectionTitle":"Hackathons",
+                    "SectionSubtitle":"Coding Marathons",
                     "HighlightColor":"#39a0ed",
-                    "BackgroundImage":"MITPicture",
+                    "BackgroundImage":"IsometricAtCodeDay",
                     "ExtraInfoSlides":[
                                        {
-                                       "DetailText":"Lorem ipsum dolor sit amet, nunc risus in diam qui sit, wisi ipsum lacus et est erat elit, nec quisque, faucibus metus adipiscing eget suspendisse wisi, quis proin elit ligula. In enim sodales et.",
+                                       "DetailText":"The first time I went to a hackathon I was amazed. I formed a team with complete strangers, each one of them wanting to create something amazing.  ",
                                        "DetailImage":"MITPicture",
                                        "FlavorText":"Class of 2020",
                                        "FlavorSubtext":"Computer Science",

@@ -115,6 +115,7 @@ class InfoElement: UIView {
         backgroundImage.layer.shadowColor = UIColor.blackColor().CGColor
         backgroundImage.layer.shadowRadius = 10
         backgroundImage.layer.shadowOpacity = 0.6
+        backgroundImage.layer.cornerRadius = 5
         
         self.addConstraint(NSLayoutConstraint(item: backgroundImage, attribute: .Width, relatedBy: .Equal, toItem: self, attribute: .Width, multiplier: 1.0, constant: 0))
         self.addConstraint(NSLayoutConstraint(item: backgroundImage, attribute: .Height, relatedBy: .Equal, toItem: buttonLabel, attribute: .Height, multiplier: 0.85, constant: 1.0))

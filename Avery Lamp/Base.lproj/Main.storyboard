@@ -107,7 +107,7 @@
                                 <rect key="frame" x="0.0" y="28" width="600" height="844"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IeD-Ow-UrD" id="Jj6-jO-xfl">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="844"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="843.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JAN-wp-GpW" userLabel="OpenView">
@@ -523,7 +523,7 @@
                                 <rect key="frame" x="0.0" y="872" width="600" height="864"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="76V-q3-Yri" id="xTl-En-mTz">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="864"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="863.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rXx-sv-B0v" userLabel="OpenView">
@@ -1028,10 +1028,10 @@
                                 <rect key="frame" x="0.0" y="461" width="414" height="272"/>
                                 <color key="backgroundColor" red="0.32941176470588235" green="0.3529411764705882" blue="0.41568627450980389" alpha="1" colorSpace="calibratedRGB"/>
                             </scrollView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tgD-F3-Hmg">
-                                <rect key="frame" x="158" y="696" width="100" height="40"/>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="tgD-F3-Hmg">
+                                <rect key="frame" x="157" y="711" width="100" height="25"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="JLT-ek-y8v"/>
+                                    <constraint firstAttribute="height" constant="25" id="JLT-ek-y8v"/>
                                     <constraint firstAttribute="width" constant="100" id="K9r-Qd-CZT"/>
                                 </constraints>
                             </pageControl>
@@ -1270,7 +1270,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="MITPicture" width="598" height="394"/>
+        <image name="MITPicture" width="1080" height="671"/>
         <image name="SmithAppIcon" width="200" height="200"/>
         <image name="SmithDetailPicture" width="400" height="268"/>
         <image name="backArrow" width="200" height="200"/>
