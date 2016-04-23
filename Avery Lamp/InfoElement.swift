@@ -60,9 +60,8 @@ class InfoElement: UIView {
         let font = UIFont(name: "Lato-Semibold", size: 26)
         sectionTitle.font = font
         sectionTitle.adjustsFontSizeToFitWidth = true
-        sectionTitle.minimumScaleFactor = 0.5
-        sectionTitle.numberOfLines = 0
-        sectionTitle.lineBreakMode = .ByWordWrapping
+        sectionTitle.minimumScaleFactor = 0.8
+        sectionTitle.numberOfLines = 2
         sectionTitle.textColor = UIColor.whiteColor()
         buttonLabel.addSubview(sectionTitle)
         sectionTitle.translatesAutoresizingMaskIntoConstraints = false
@@ -70,8 +69,8 @@ class InfoElement: UIView {
         let leftIndent:CGFloat = 0.1
         
         
-        buttonLabel.addConstraint(NSLayoutConstraint(item: sectionTitle, attribute: .Top, relatedBy: .Equal, toItem: buttonLabel, attribute: .Bottom, multiplier: 0.3, constant: 0))
-        buttonLabel.addConstraint(NSLayoutConstraint(item: sectionTitle, attribute: .Height, relatedBy: .Equal, toItem: buttonLabel, attribute: .Height, multiplier: 0.2, constant: 0))
+        buttonLabel.addConstraint(NSLayoutConstraint(item: sectionTitle, attribute: .Top, relatedBy: .Equal, toItem: buttonLabel, attribute: .Bottom, multiplier: 0.25, constant: 0))
+        buttonLabel.addConstraint(NSLayoutConstraint(item: sectionTitle, attribute: .Height, relatedBy: .Equal, toItem: buttonLabel, attribute: .Height, multiplier: 0.3, constant: 0))
         buttonLabel.addConstraint(NSLayoutConstraint(item: sectionTitle, attribute: .Left, relatedBy: .Equal, toItem: buttonLabel, attribute: .Right, multiplier: leftIndent, constant: 0))
         buttonLabel.addConstraint(NSLayoutConstraint(item: sectionTitle, attribute: .Width, relatedBy: .Equal, toItem: buttonLabel, attribute: .Width, multiplier: 1 - leftIndent - 0.1, constant: 0))
 
@@ -88,9 +87,9 @@ class InfoElement: UIView {
         sectionSubtitle.translatesAutoresizingMaskIntoConstraints = false
         
         buttonLabel.addConstraint(NSLayoutConstraint(item: sectionSubtitle, attribute: .Top, relatedBy: .Equal, toItem: buttonLabel, attribute: .Bottom, multiplier: 0.5, constant: 0))
-        buttonLabel.addConstraint(NSLayoutConstraint(item: sectionSubtitle, attribute: .Height, relatedBy: .Equal, toItem: buttonLabel, attribute: .Height, multiplier: 0.3, constant: 0))
+        buttonLabel.addConstraint(NSLayoutConstraint(item: sectionSubtitle, attribute: .Height, relatedBy: .Equal, toItem: buttonLabel, attribute: .Height, multiplier: 0.35, constant: 0))
         buttonLabel.addConstraint(NSLayoutConstraint(item: sectionSubtitle, attribute: .Left, relatedBy: .Equal, toItem: buttonLabel, attribute: .Right, multiplier: leftIndent, constant: 0))
-        buttonLabel.addConstraint(NSLayoutConstraint(item: sectionSubtitle, attribute: .Width, relatedBy: .Equal, toItem: buttonLabel, attribute: .Width, multiplier: 1.0 - leftIndent - 0.1, constant: 0))
+        buttonLabel.addConstraint(NSLayoutConstraint(item: sectionSubtitle, attribute: .Width, relatedBy: .Equal, toItem: buttonLabel, attribute: .Width, multiplier: 1.0 - leftIndent - 0.05, constant: 0))
         
         backgroundImage.image = UIImage(named:  viewData["BackgroundImage"].string!)
         backgroundImage.contentMode = .ScaleAspectFill

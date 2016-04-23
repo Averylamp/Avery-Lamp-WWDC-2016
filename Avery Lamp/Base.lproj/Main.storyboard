@@ -87,12 +87,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="395-wI-fup"/>
+                        <segue destination="dmY-kj-iYw" kind="relationship" relationship="rootViewController" id="KxE-FD-GI0"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D3p-Qt-VlN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="303" y="320"/>
+            <point key="canvasLocation" x="317" y="332"/>
         </scene>
         <!--My Apps Table View Controller-->
         <scene sceneID="fcd-dt-PRG">
@@ -107,7 +107,7 @@
                                 <rect key="frame" x="0.0" y="28" width="600" height="844"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IeD-Ow-UrD" id="Jj6-jO-xfl">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="843.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="844"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JAN-wp-GpW" userLabel="OpenView">
@@ -523,7 +523,7 @@
                                 <rect key="frame" x="0.0" y="872" width="600" height="864"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="76V-q3-Yri" id="xTl-En-mTz">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="863.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="864"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rXx-sv-B0v" userLabel="OpenView">
@@ -941,7 +941,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pfm-Zd-BB4">
-                                <rect key="frame" x="30" y="22.5" width="25" height="25"/>
+                                <rect key="frame" x="30" y="23" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="3FZ-WN-BgH"/>
                                     <constraint firstAttribute="height" constant="25" id="tqA-tI-9Zh"/>

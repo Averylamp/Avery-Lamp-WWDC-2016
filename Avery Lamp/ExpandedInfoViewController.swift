@@ -103,16 +103,20 @@ class ExpandedInfoViewController: UIViewController, UIScrollViewDelegate {
         if pageControl.currentPage != page {
             let imageFadeDuration = 0.8
             if viewData!["ExtraInfoSlides"][page]["DetailImage"].string != viewData!["ExtraInfoSlides"][pageControl.currentPage]["DetailImage"].string{
+                self.imageView.layer.removeAllAnimations()
                 UIView.animateWithDuration(imageFadeDuration / 2, animations: {
+                    print("Changing Images \(page) \(self.viewData!["ExtraInfoSlides"][page]["DetailImage"].string!)")
                     self.imageView.alpha = 0.0
                     }, completion: { (finished) in
                         self.imageView.image = UIImage(named: self.viewData!["ExtraInfoSlides"][page]["DetailImage"].string!)
-                        UIView.animateWithDuration(imageFadeDuration / 2 , animations: { 
+                        UIView.animateWithDuration(imageFadeDuration / 2 , animations: {
+                            
                             self.imageView.alpha = 1.0
                             }, completion: nil)
                 })
             }
             if viewData!["ExtraInfoSlides"][page]["SectionSubtitle"].string != viewData!["ExtraInfoSlides"][pageControl.currentPage]["SectionSubtitle"].string{
+                self.infoElement?.sectionSubtitle.layer.removeAllAnimations()
                 UIView.animateWithDuration(imageFadeDuration / 2, animations: {
                     self.infoElement?.sectionSubtitle.alpha = 0.0
                     }, completion: { (finished) in
@@ -123,6 +127,7 @@ class ExpandedInfoViewController: UIViewController, UIScrollViewDelegate {
                 })
             }
             if viewData!["ExtraInfoSlides"][page]["FlavorText"].string != viewData!["ExtraInfoSlides"][pageControl.currentPage]["FlavorText"].string || viewData!["ExtraInfoSlides"][page]["FlavorSubtext"].string != viewData!["ExtraInfoSlides"][pageControl.currentPage]["FlavorSubtext"].string {
+                self.detailTextLabel?.layer.removeAllAnimations()
                 UIView.animateWithDuration(imageFadeDuration / 2, animations: {
                     self.detailTextLabel!.alpha = 0.0
                     }, completion: { (finished) in

@@ -2,7 +2,7 @@
 //  SplashViewController.swift
 //  Avery Lamp
 //
-//  Created by Avery Lamp on 1/28/16.
+//  Created by Avery Lamp on 3/28/16.
 //  Copyright © 2016 Avery Lamp. All rights reserved.
 //
 
@@ -79,7 +79,8 @@ class SplashViewController: UIViewController {
         thankYouLabel1.textAlignment = .Center
         thankYouLabel1.font = UIFont(name: "Panton-Light", size: 16)
         self.view.addSubview(thankYouLabel1)
-        thankYouLabel1.strokeTextSimultaneously(width: 0.6, delay: 3.5, duration: 2.0, fade: false)
+        thankYouLabel1.strokeTextLetterByLetter(width: 0.6, delay: 3.5, duration: 2.0, characterStrokeDuration: 1.0, fade: false, fadeDuration: 1.0, returnStuff: false)
+//        thankYouLabel1.strokeTextSimultaneously(width: 0.6, delay: 3.5, duration: 2.0, fade: false)
       
         let thankYouLabel2 = UILabel(frame: CGRectMake(0,0, self.view.frame.width, 50))
         thankYouLabel2.text = "I hope you enjoy it!"
@@ -87,8 +88,8 @@ class SplashViewController: UIViewController {
         thankYouLabel2.textAlignment = .Center
         thankYouLabel2.font = UIFont(name: "Panton-Light", size: 16)
         self.view.addSubview(thankYouLabel2)
-        thankYouLabel2.strokeTextSimultaneously(width: 0.6, delay: 5.0, duration: 2.0, fade: false)
-        
+//        thankYouLabel2.strokeTextSimultaneously(width: 0.6, delay: 5.0, duration: 2.0, fade: false)
+        thankYouLabel2.strokeTextLetterByLetter(width: 0.6, delay: 4.5, duration: 2.0, characterStrokeDuration: 0.5, fade: false, fadeDuration: 1.0, returnStuff: false)
         
         
         //Picture

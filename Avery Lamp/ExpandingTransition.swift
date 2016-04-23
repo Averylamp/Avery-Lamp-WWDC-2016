@@ -2,7 +2,7 @@
 //  ExpandingTransition.swift
 //  Avery Lamp
 //
-//  Created by Avery Lamp on 3/27/16.
+//  Created by Avery Lamp on 4/7/16.
 //  Copyright © 2016 Avery Lamp. All rights reserved.
 //
 

@@ -7,7 +7,7 @@
                     "BackgroundImage":"ContactInfoBackground",
                     "ExtraInfoSlides":[
                                        {
-                                       "DetailText":"You can contact or connect with me through any of the above information",
+                                       "DetailText":"You can contact or connect with me through any of the above information.\n\nI am currently 18 Years old and a resident of Short Hills, NJ",
                                        "DetailImage":"ContactInfoBackground",
                                        "FlavorText":"Avery Lamp",
                                        "FlavorSubtext":"averylamp@gmail.com\n(973)-873-8225\naverylamp.me\nGithub.com/averylamp"
@@ -28,39 +28,32 @@
                                        "SectionSubtitle":"Massachusetts Institute of Technology"
                                        },
                                        {
-                                       "DetailText":"I have been in Millburn High for the last four years, taking a variety of classes.  My favorite classes include: Advanced Robotics, AP Computer Science, and AP Physics B & C",
+                                       "DetailText":"I am excited for a huge variety of opportunities that MIT offers.  Currently, I am thinking of joining the MIT Rocket Team, UAV Team, and the Tech X group that organizes CS events for MIT like Hack MIT.",
+                                       "DetailImage":"HackMITLogo",
+                                       "FlavorText":"Class of 2020",
+                                       "FlavorSubtext":"Computer Science",
+                                       "SectionSubtitle":"Massachusetts Institute of Technology"
+                                       },
+                                       {
+                                       "DetailText":"I have been in Millburn High for the last four years, taking a variety of classes.  My favorite classes include: Advanced Robotics, AP Computer Science, and AP Physics B & C.  I will be graduating with high honors.",
                                        "DetailImage":"Millburn-high",
                                        "FlavorText":"Class of 2016",
                                        "FlavorSubtext":"Graduating this June!",
                                        "SectionSubtitle":"Millburn High School"
-                                       },
-                                       {
-                                       "DetailText":"Lorem ipsum dolor sit amet, nunc risus in diam qui sit, wisi ipsum lacus et est erat elit, nec quisque, faucibus metus adipiscing eget suspendisse wisi, quis proin elit ligula. In enim sodales et.",
-                                       "DetailImage":"MITPicture",
-                                       "FlavorText":"Class of 2020",
-                                       "FlavorSubtext":"Computer Science",
-                                       "SectionSubtitle":"Massachusetts Institute of Technology"
-                                       },
-                                       {
-                                       "DetailText":"Lorem ipsum dolor sit amet, nunc risus in diam qui sit, wisi ipsum lacus et est erat elit, nec quisque, faucibus metus adipiscing eget suspendisse wisi, quis proin elit ligula. In enim sodales et.",
-                                       "DetailImage":"MITPicture",
-                                       "FlavorText":"Class of 2020",
-                                       "FlavorSubtext":"Computer Science",
-                                       "SectionSubtitle":"Massachusetts Institute of Technology"
                                        }
                                        ]
                     },
                     {
-                    "SectionTitle":"Education",
-                    "SectionSubtitle":"My School",
+                    "SectionTitle":"Programing and Experience",
+                    "SectionSubtitle":"Skills and Jobs",
                     "HighlightColor":"#39a0ed",
                     "BackgroundImage":"MITPicture",
                     "ExtraInfoSlides":[
                                        {
-                                       "DetailText":"Lorem ipsum dolor sit amet, nunc risus in diam qui sit, wisi ipsum lacus et est erat elit, nec quisque, faucibus metus adipiscing eget suspendisse wisi, quis proin elit ligula. In enim sodales et.",
+                                       "DetailText":"I started learning programming in 9th grade, when I took Computer Science 1 as an elective.  ",
                                        "DetailImage":"MITPicture",
-                                       "FlavorText":"Class of 2020",
-                                       "FlavorSubtext":"Computer Science",
+                                       "FlavorText":"Languages",
+                                       "FlavorSubtext":"Swift, Objective-C/C++, Java, JS, HTML, CSS",
                                        "SectionSubtitle":"Massachusetts Institute of Technology"
                                        },
                                        {

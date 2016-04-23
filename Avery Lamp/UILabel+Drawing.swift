@@ -203,7 +203,7 @@ extension UILabel {
             self.alpha = 0.0
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(delay * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), {
                 self.alpha = 1.0
-                self.strokeTextSimultaneously(width: width, delay: 0.0, duration: duration, fade: fade)
+                self.strokeTextLetterByLetter(width: width, delay: 0.0, duration: duration, characterStrokeDuration: characterStrokeDuration, fade: fade, fadeDuration: fadeDuration, returnStuff: false)
             })
             return []
         }
