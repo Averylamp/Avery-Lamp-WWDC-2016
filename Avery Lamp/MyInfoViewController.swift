@@ -54,7 +54,7 @@ class MyInfoViewController: UIViewController,UIScrollViewDelegate, UIViewControl
             let topSection = InfoElement()
             topSection.tag = index * 2 + 1000
             topSection.buttonLabel.tag = index * 2
-            topSection.buttonLabel.addTarget(self, action: "expandInfoSectionClicked:", forControlEvents: .TouchUpInside)
+            topSection.buttonLabel.addTarget(self, action: #selector(MyInfoViewController.expandInfoSectionClicked(_:)), forControlEvents: .TouchUpInside)
             topSection.viewData = jsonData["InfoSections"][index * 2]
             topSection.translatesAutoresizingMaskIntoConstraints = false
             page.addSubview(topSection)

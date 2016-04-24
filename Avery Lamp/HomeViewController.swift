@@ -289,14 +289,16 @@ class HomeViewController: UIViewController {
     // MARK: - Navigation
     func goToMyStory(){
         self.animationFlag = .Stop
-        self.navigationController?.pushViewController(MyStoryViewController(), animated: true)
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let myStoryTVC = storyboard.instantiateViewControllerWithIdentifier("MyStoryVC")
+        self.navigationController?.pushViewController(myStoryTVC, animated: true)
     }
     
     func goToMyInfo(){
         self.animationFlag = .Stop
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let myAppsTVC = storyboard.instantiateViewControllerWithIdentifier("MyInfoVC")
-        self.navigationController?.pushViewController(myAppsTVC, animated: true)
+        let myInfoTVC = storyboard.instantiateViewControllerWithIdentifier("MyInfoVC")
+        self.navigationController?.pushViewController(myInfoTVC, animated: true)
         
     }
     

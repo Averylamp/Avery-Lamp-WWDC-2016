@@ -3,11 +3,11 @@
                     {
                     "SectionTitle":"Contact Info",
                     "SectionSubtitle":"",
-                    "HighlightColor":"#7b71bf",
+                    "HighlightColor":"#95c570",
                     "BackgroundImage":"ContactInfoBackground",
                     "ExtraInfoSlides":[
                                        {
-                                       "DetailText":"You can contact or connect with me through any of the above information.\n\nI am currently 18 Years old and reside in Short Hills, NJ",
+                                       "DetailText":"You can connect with me through any of the above information.\n\nI am currently 18 Years old and reside in Short Hills, NJ",
                                        "DetailImage":"ContactInfoBackground",
                                        "FlavorText":"Avery Lamp",
                                        "FlavorSubtext":"averylamp@gmail.com\n(973)-873-8225\naverylamp.me\nGithub.com/averylamp"
@@ -17,25 +17,25 @@
                     {
                     "SectionTitle":"Education",
                     "SectionSubtitle":"Massachusetts Institute of Technology",
-                    "HighlightColor":"#39a0ed",
+                    "HighlightColor":"#b83e9a",
                     "BackgroundImage":"MITPicture",
                     "ExtraInfoSlides":[
                                        {
-                                       "DetailText":"Next year I am super excited to be given the opportunity to enroll in MIT, where I will most likely major in Computer Science and minor/major in finance.  I will bring my iOS development skills and hopefully find others and create a development team",
+                                       "DetailText":"I am excited to attend MIT next year, where I will most likely major in Computer Science and minor/major in finance.  I will bring my iOS development skills and hopefully find others and create a development team",
                                        "DetailImage":"MITPicture",
                                        "FlavorText":"Class of 2020",
                                        "FlavorSubtext":"Computer Science",
                                        "SectionSubtitle":"Massachusetts Institute of Technology"
                                        },
                                        {
-                                       "DetailText":"I am excited for a huge variety of opportunities that MIT offers.  Currently, I am thinking of joining the MIT Rocket Team, UAV Team, and the Tech X group that organizes CS events for MIT like Hack MIT.",
+                                       "DetailText":"MIT offers a huge variety of opportunities that I can't wait to take advantage of. I hope to join the MIT Rocket Team, UAV Team, and the Tech X group that organizes CS events for MIT like Hack MIT.",
                                        "DetailImage":"HackMITLogo",
                                        "FlavorText":"Class of 2020",
                                        "FlavorSubtext":"Computer Science",
                                        "SectionSubtitle":"Massachusetts Institute of Technology"
                                        },
                                        {
-                                       "DetailText":"I am graduating from Millburn High School this June with high honors.  I challenged myself in many classes and some of my favorites were Advanced Robotics, AP Computer Science, and AP Physics B & C.  As a Math/Science guy, I almost died in AP English Language and Composition.",
+                                       "DetailText":"I will graduate from Millburn High School this June with high honors.  I challenged myself in a variety classes; some of my favorites were Advanced Robotics, AP Computer Science, and AP Physics B & C.  As a Math/Science guy, I almost died in AP English Language and Composition, but persevered.",
                                        "DetailImage":"Millburn-high",
                                        "FlavorText":"Class of 2016",
                                        "FlavorSubtext":"Graduating this June!",
@@ -46,11 +46,11 @@
                     {
                     "SectionTitle":"Programing and Experience",
                     "SectionSubtitle":"Skills and Jobs",
-                    "HighlightColor":"#cc4125",
+                    "HighlightColor":"#d28f61",
                     "BackgroundImage":"computerBackground",
                     "ExtraInfoSlides":[
                                        {
-                                       "DetailText":"I started learning programming in 9th grade, when I took Computer Science 1 in Java as an elective. I absolutely loved it, so I started programming in my free time.  In 10th Grade I learned how to make apps in Objective-C and in 11th grade I went to my first hackathon.",
+                                       "DetailText":"I started learning programming in 9th grade, when I took Computer Science 1 in Java as an elective. I absolutely loved it, so I began programming in my free time. In 10th Grade I learned how to make apps in Objective-C and in 11th grade I went to my first hackathon.",
                                        "DetailImage":"computerBackground",
                                        "FlavorText":"Languages",
                                        "FlavorSubtext":"Swift, Objective-C/C++, Java, JS, HTML, CSS",
@@ -89,110 +89,181 @@
                     {
                     "SectionTitle":"Hackathons",
                     "SectionSubtitle":"Coding Marathons",
-                    "HighlightColor":"#39a0ed",
+                    "HighlightColor":"#d83f42",
                     "BackgroundImage":"IsometricAtCodeDay",
                     "ExtraInfoSlides":[
                                        {
-                                       "DetailText":"The first time I went to a hackathon I was amazed. I formed a team with complete strangers, each one of them wanting to create something amazing.  ",
-                                       "DetailImage":"MITPicture",
-                                       "FlavorText":"Class of 2020",
-                                       "FlavorSubtext":"Computer Science",
-                                       "SectionSubtitle":"Massachusetts Institute of Technology"
+                                       "DetailText":"The first time I went to a hackathon I was amazed. I formed a team with complete strangers, each one of them wanting to create something new and cool. Teams helped each other out, with no competitive motivation.  I had found a community I was pround to be a part of.",
+                                       "DetailImage":"IsometricAtCodeDay",
+                                       "FlavorText":"My introduction to Hackathons",
+                                       "FlavorSubtext":"This is a picture of 3/4 Isometric Studios Members at Codeday NYC in February 2015",
+                                       "SectionSubtitle":"Coding Marathons"
                                        },
                                        {
-                                       "DetailText":"Lorem ipsum dolor sit amet, nunc risus in diam qui sit, wisi ipsum lacus et est erat elit, nec quisque, faucibus metus adipiscing eget suspendisse wisi, quis proin elit ligula. In enim sodales et.",
-                                       "DetailImage":"MITPicture",
-                                       "FlavorText":"Class of 2020",
-                                       "FlavorSubtext":"Computer Science",
-                                       "SectionSubtitle":"Massachusetts Institute of Technology"
+                                       "DetailText":"My first Hackathon was PennApps XI.  I went not knowing what a hackathon was, nor having a team. I met people who I still build apps with today and have been to over ten hackathons since. PennApps XI inspired me to build projects on my own. Many of the other hackathons I went to can be found in My Story.",
+                                       "DetailImage":"IsometricAtPennAppsXI",
+                                       "FlavorText":"PennApps XI",
+                                       "FlavorSubtext":"My First Hackathon\nJanuary 2015",
+                                       "SectionSubtitle":"Coding Marathons"
                                        },
                                        {
-                                       "DetailText":"Lorem ipsum dolor sit amet, nunc risus in diam qui sit, wisi ipsum lacus et est erat elit, nec quisque, faucibus metus adipiscing eget suspendisse wisi, quis proin elit ligula. In enim sodales et.",
-                                       "DetailImage":"MITPicture",
-                                       "FlavorText":"Class of 2020",
-                                       "FlavorSubtext":"Computer Science",
-                                       "SectionSubtitle":"Massachusetts Institute of Technology"
+                                       "DetailText":"Over the summer of 2015, a group of friends and I initiated a planning committee to bring a hackathon to Millburn. On October 10th, we held hackMHS, which I was a lead organizer of. At the event, I did a lot of the logistics and I also taught an iOS workshop.",
+                                       "DetailImage":"HackMHSPizza",
+                                       "FlavorText":"Hack MHS",
+                                       "FlavorSubtext":"Millburn High School's first Hackathon\n100+ Participants\n12 Hours\nhackmhs.com",
+                                       "SectionSubtitle":"Coding Marathons"
                                        },
                                        {
-                                       "DetailText":"Lorem ipsum dolor sit amet, nunc risus in diam qui sit, wisi ipsum lacus et est erat elit, nec quisque, faucibus metus adipiscing eget suspendisse wisi, quis proin elit ligula. In enim sodales et.",
-                                       "DetailImage":"MITPicture",
-                                       "FlavorText":"Class of 2020",
-                                       "FlavorSubtext":"Computer Science",
-                                       "SectionSubtitle":"Massachusetts Institute of Technology"
+                                       "DetailText":"Hack MHS was such a success that we will be bringing back Hack MHS this May, with more participants, an overnight stay, and sponsors.  I will be leading logistics for the whole event, as well as running an iOS workshop.",
+                                       "DetailImage":"HackMHSSignUp",
+                                       "FlavorText":"Hack MHS II",
+                                       "FlavorSubtext":"Learn. Create. Discover\nMillburn, NJ May 21-22, 2016\n200 Participants\n24 Hours\nhackmhs.com",
+                                       "SectionSubtitle":"Coding Marathons"
                                        }
                                        ]
                     },
                     {
-                    "SectionTitle":"Education",
-                    "SectionSubtitle":"My School",
-                    "HighlightColor":"#39a0ed",
+                    "SectionTitle":"Awards",
+                    "SectionSubtitle":"Academic and Extracirricular",
+                    "HighlightColor":"#1aaaa2",
                     "BackgroundImage":"MITPicture",
                     "ExtraInfoSlides":[
                                        {
-                                       "DetailText":"Lorem ipsum dolor sit amet, nunc risus in diam qui sit, wisi ipsum lacus et est erat elit, nec quisque, faucibus metus adipiscing eget suspendisse wisi, quis proin elit ligula. In enim sodales et.",
+                                       "DetailText":"AP Scholar With Distinction\nMerck Physics Test - 7th in NJ\nSt. Anselm - College Book Award\nUSA Biology Olympiad - Semifinalist\nUSA Computing Olympiad - Silver",
                                        "DetailImage":"MITPicture",
-                                       "FlavorText":"Class of 2020",
-                                       "FlavorSubtext":"Computer Science",
-                                       "SectionSubtitle":"Massachusetts Institute of Technology"
+                                       "FlavorText":"",
+                                       "FlavorSubtext":"\"There is only one thing that makes a dream impossible to achieve: the fear of failure - Paulo Coelho\"",
+                                       "SectionSubtitle":"Academic Awards"
                                        },
                                        {
-                                       "DetailText":"Lorem ipsum dolor sit amet, nunc risus in diam qui sit, wisi ipsum lacus et est erat elit, nec quisque, faucibus metus adipiscing eget suspendisse wisi, quis proin elit ligula. In enim sodales et.",
-                                       "DetailImage":"MITPicture",
-                                       "FlavorText":"Class of 2020",
-                                       "FlavorSubtext":"Computer Science",
-                                       "SectionSubtitle":"Massachusetts Institute of Technology"
+                                       "DetailText":"HackBCA III - 3rd Place, Best Mobile App\nTreeHacks - Facebook's Favorite Choice\nPennApps XII - Hottest Health Hack\nHackBCA II - 2nd Place\nDream it. Code it. Win it. - Winner\nCode Day NYC - Best Application",
+                                       "DetailImage":"IsometricHackBCAStage",
+                                       "FlavorText":"Hackathons are one of my biggest passions",
+                                       "FlavorSubtext":"I love to innovate and challenge myself to create new projects.",
+                                       "SectionSubtitle":"Hackathon Awards"
                                        },
                                        {
-                                       "DetailText":"Lorem ipsum dolor sit amet, nunc risus in diam qui sit, wisi ipsum lacus et est erat elit, nec quisque, faucibus metus adipiscing eget suspendisse wisi, quis proin elit ligula. In enim sodales et.",
-                                       "DetailImage":"MITPicture",
-                                       "FlavorText":"Class of 2020",
-                                       "FlavorSubtext":"Computer Science",
-                                       "SectionSubtitle":"Massachusetts Institute of Technology"
-                                       },
-                                       {
-                                       "DetailText":"Lorem ipsum dolor sit amet, nunc risus in diam qui sit, wisi ipsum lacus et est erat elit, nec quisque, faucibus metus adipiscing eget suspendisse wisi, quis proin elit ligula. In enim sodales et.",
-                                       "DetailImage":"MITPicture",
-                                       "FlavorText":"Class of 2020",
-                                       "FlavorSubtext":"Computer Science",
-                                       "SectionSubtitle":"Massachusetts Institute of Technology"
+                                       "DetailText":"U.S. Squash - National Rank 26th in BU19\nU.S. Squash - National Rank 12th in BU17\nU.S. Squash - Scholar Athlete Award\nFTC World Championship - 13th\nFTC NJ Championship - 1st\nBotball State Qualifier - 3rd",
+                                       "DetailImage":"RoboticsAwards",
+                                       "FlavorText":"Squash and Robotics",
+                                       "FlavorSubtext":"",
+                                       "SectionSubtitle":"Other Awards"
                                        }
                                        ]
                     },
                     {
-                    "SectionTitle":"Education",
-                    "SectionSubtitle":"My School",
+                    "SectionTitle":"Hobbies and Interests",
+                    "SectionSubtitle":"Squash, Robotics, Photography",
                     "HighlightColor":"#39a0ed",
-                    "BackgroundImage":"MITPicture",
+                    "BackgroundImage":"SquashDivingShot",
                     "ExtraInfoSlides":[
                                        {
-                                       "DetailText":"Lorem ipsum dolor sit amet, nunc risus in diam qui sit, wisi ipsum lacus et est erat elit, nec quisque, faucibus metus adipiscing eget suspendisse wisi, quis proin elit ligula. In enim sodales et.",
-                                       "DetailImage":"MITPicture",
-                                       "FlavorText":"Class of 2020",
-                                       "FlavorSubtext":"Computer Science",
-                                       "SectionSubtitle":"Massachusetts Institute of Technology"
+                                       "DetailText":"I've been playing squash since I was 12. I enjoy the competition and the intensity of the sport.  I play squash almost every day and will continue playing throughout college. Squash has taught me determination and perseverence, two essentials of any sport.",
+                                       "DetailImage":"SquashDivingShot",
+                                       "FlavorText":"Squash",
+                                       "FlavorSubtext":"(The sport, not the vegetable)",
+                                       "SectionSubtitle":"Squash"
                                        },
                                        {
-                                       "DetailText":"Lorem ipsum dolor sit amet, nunc risus in diam qui sit, wisi ipsum lacus et est erat elit, nec quisque, faucibus metus adipiscing eget suspendisse wisi, quis proin elit ligula. In enim sodales et.",
-                                       "DetailImage":"MITPicture",
-                                       "FlavorText":"Class of 2020",
-                                       "FlavorSubtext":"Computer Science",
-                                       "SectionSubtitle":"Massachusetts Institute of Technology"
+                                       "DetailText":"Not only do I play squash, but I also teach squash.  Every other Friday, I volunteer teaching squash to underprivledged kids in Newark under the program Street Squash. It is fun playing with them and watching them get better.",
+                                       "DetailImage":"StreetSquashTeamPhoto",
+                                       "FlavorText":"Squash",
+                                       "FlavorSubtext":"(The sport, not the vegetable)",
+                                       "SectionSubtitle":"Squash"
                                        },
                                        {
-                                       "DetailText":"Lorem ipsum dolor sit amet, nunc risus in diam qui sit, wisi ipsum lacus et est erat elit, nec quisque, faucibus metus adipiscing eget suspendisse wisi, quis proin elit ligula. In enim sodales et.",
-                                       "DetailImage":"MITPicture",
-                                       "FlavorText":"Class of 2020",
-                                       "FlavorSubtext":"Computer Science",
-                                       "SectionSubtitle":"Massachusetts Institute of Technology"
+                                       "DetailText":"I have been on different robotics teams for three years. My junior year, I was on Millburn's first FTC team and we achieved 13th in the world, expanding the robotics program at my school greatly. This past year, I was the build team captain.",
+                                       "DetailImage":"MillburnRoboticsBanner",
+                                       "FlavorText":"Millburn Robotics",
+                                       "FlavorSubtext":"FTC Team 8405\nPicture from Worlds 2015, where we placed 13th",
+                                       "SectionSubtitle":"Robotics"
                                        },
                                        {
-                                       "DetailText":"Lorem ipsum dolor sit amet, nunc risus in diam qui sit, wisi ipsum lacus et est erat elit, nec quisque, faucibus metus adipiscing eget suspendisse wisi, quis proin elit ligula. In enim sodales et.",
-                                       "DetailImage":"MITPicture",
-                                       "FlavorText":"Class of 2020",
-                                       "FlavorSubtext":"Computer Science",
-                                       "SectionSubtitle":"Massachusetts Institute of Technology"
+                                       "DetailText":"Not only do I participate on Robotics teams, but I also teach robotics at a local elementary school. One day a week I have a class teaching lego mindstorms to a bunch of crazy 3rd-5th graders. I also volunteer at robotics publicity events like the one seen above, helping robotics expand in my community.",
+                                       "DetailImage":"MillburnRoboticsHelpingKids",
+                                       "FlavorText":"Teaching Robotics and the Community",
+                                       "FlavorSubtext":"",
+                                       "SectionSubtitle":"Robotics"
+                                       },
+                                       {
+                                       "DetailText":"Another one of my biggest hobbies is photography. I used to be a very active photographer, before I took up iOS development. I began running my own Photography Facebook page which got over 600 likes. The following slides are seven of my favorite photos I took.",
+                                       "DetailImage":"ALPRiver",
+                                       "FlavorText":"Photography",
+                                       "FlavorSubtext":"Facebook - Avery Lamp Photography\nTaken in Costa Rica\nAperture: F/22.0 \nExposure: 2.5s",
+                                       "SectionSubtitle":"Photography"
+                                       },
+                                       {
+                                       "DetailText":"One of the reasons I love photography, is for the ability to capture moments like these. When you see things through a photographer's perspective, the world is a different place.",
+                                       "DetailImage":"ALPHummingbird",
+                                       "FlavorText":"Photography",
+                                       "FlavorSubtext":"Facebook - Avery Lamp Photography\nTaken in Costa Rica\nAperture: F/5.6 \nExposure: 1/500s",
+                                       "SectionSubtitle":"Photography"
+                                       },
+                                       {
+                                       "DetailText":"For those funny moments when you meet a sloth on a walk, and he smiles right back at you.",
+                                       "DetailImage":"ALPSloth",
+                                       "FlavorText":"Photography",
+                                       "FlavorSubtext":"Facebook - Avery Lamp Photography\nTaken in Costa Rica\nAperture: F/5.6 \nExposure: 1/800s",
+                                       "SectionSubtitle":"Photography"
+                                       },
+                                       {
+                                       "DetailText":"Taken poolside at a hotel in Costa Rica.",
+                                       "DetailImage":"ALPNightBar",
+                                       "FlavorText":"Photography",
+                                       "FlavorSubtext":"Facebook - Avery Lamp Photography\nTaken in Costa Rica\nAperture: F/20 \nExposure: 5s",
+                                       "SectionSubtitle":"Photography"
+                                       },
+                                       {
+                                       "DetailText":"Some pretty flowers after a light drizzle.",
+                                       "DetailImage":"ALPRhododendrons",
+                                       "FlavorText":"Photography",
+                                       "FlavorSubtext":"Facebook - Avery Lamp Photography\nTaken near my house\nAperture: F/20 \nExposure: 1/50s",
+                                       "SectionSubtitle":"Photography"
+                                       },
+                                       {
+                                       "DetailText":"My mom walking through the Badwater Basin, the lowest point in the United States.",
+                                       "DetailImage":"ALPDeathValley",
+                                       "FlavorText":"Photography",
+                                       "FlavorSubtext":"Facebook - Avery Lamp Photography\nTaken in Death Valley, Nevada\nAperture: F/8 \nExposure: 1/250s",
+                                       "SectionSubtitle":"Photography"
+                                       },
+                                       {
+                                       "DetailText":"I drove to the shore bright and early to take this shot.",
+                                       "DetailImage":"ALPJerseyShore",
+                                       "FlavorText":"Photography",
+                                       "FlavorSubtext":"Facebook - Avery Lamp Photography\nTaken at the Jersey Shore\nAperture: F/22 \nExposure: 1/4s",
+                                       "SectionSubtitle":"Photography"
                                        }
                                        ]
-                    }
+                    },
+                    {
+                    "SectionTitle":"WWDC 2016",
+                    "SectionSubtitle":"And My Hopes for the Future",
+                    "HighlightColor":"#54bb5e",
+                    "BackgroundImage":"WWDC16Wallpaper",
+                    "ExtraInfoSlides":[
+                                       {
+                                       "DetailText":"I applied for a WWDC 2015 scholarship, but unfortunately was rejected.  I really hope to attend this year and learn a lot about Apple Technologies! In the past two years, I have grown tremendously as a developer, and I hope that shows in this application.",
+                                       "DetailImage":"WWDC16Wallpaper",
+                                       "FlavorText":"",
+                                       "FlavorSubtext":"\"There is only one thing that makes a dream impossible to achieve: the fear of failure - Paulo Coelho\"",
+                                       "SectionSubtitle":"WWDC 2016"
+                                       },
+                                       {
+                                       "DetailText":"One thing that I really hope to take out of WWDC 2016, is learning about Apple TV apps. I recieved an Apple TV under the early release program, and I have started on building prototypes of a Dashboard App that I want to publish. Unfortunately, it isn't complete enough to submit.",
+                                       "DetailImage":"Dashboard+AppDesign",
+                                       "FlavorText":"Dashboard +",
+                                       "FlavorSubtext":"My current side project is a customizable Apple TV dashboard",
+                                       "SectionSubtitle":"WWDC 2016"
+                                       },
+                                       {
+                                       "DetailText":"This summer if I finish Dashboard+, I hope to eventually publish a beautiful stock homepage for Apple TV. I believe it would be a valuable app to leave open and get news. I also would like to add a mock stock portfolio function, so people can make trades and practice with a portfolio.",
+                                       "DetailImage":"AppleTV",
+                                       "FlavorText":"Apple TV Stock Homepage",
+                                       "FlavorSubtext":"My Next Next Project",
+                                       "SectionSubtitle":"WWDC 2016"
+                                       }
+                                       ]
+                    },
                     ]
 }

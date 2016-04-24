@@ -53,6 +53,8 @@
 		BBE54C801C9D5B0D00EA9E7A /* Panton-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = BBE54C431C9D5A1F00EA9E7A /* Panton-Regular.otf */; };
 		BBE54C811C9D5B0D00EA9E7A /* Panton-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = BBE54C441C9D5A1F00EA9E7A /* Panton-SemiBold.otf */; };
 		BBE54C821C9D5B0D00EA9E7A /* Panton-Thin.otf in Resources */ = {isa = PBXBuildFile; fileRef = BBE54C451C9D5A1F00EA9E7A /* Panton-Thin.otf */; };
+		BBF47E8F1CCCAA82006D3D3A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BBF47E8E1CCCAA82006D3D3A /* MapKit.framework */; };
+		BBF47E911CCCB9FB006D3D3A /* StoryData.json in Resources */ = {isa = PBXBuildFile; fileRef = BBF47E901CCCB9FB006D3D3A /* StoryData.json */; };
 		BBF4C4AC1CC41A33004BB567 /* ExpandedInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF4C4AB1CC41A33004BB567 /* ExpandedInfoViewController.swift */; };
 		BBFFC4511C88AF2800A8B5C5 /* MyStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFFC4501C88AF2800A8B5C5 /* MyStoryViewController.swift */; };
 		BBFFC4551C88AF7E00A8B5C5 /* MyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFFC4541C88AF7E00A8B5C5 /* MyInfoViewController.swift */; };
@@ -182,6 +184,8 @@
 		BBE54C761C9D5A4400EA9E7A /* SummitThin-SolidThree.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitThin-SolidThree.otf"; path = "Summit Font/SummitThin-SolidThree.otf"; sourceTree = "<group>"; };
 		BBE54C771C9D5A4400EA9E7A /* SummitThin-SolidTwo.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "SummitThin-SolidTwo.otf"; path = "Summit Font/SummitThin-SolidTwo.otf"; sourceTree = "<group>"; };
 		BBE54C781C9D5A6600EA9E7A /* ADAM.CG PRO.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "ADAM.CG PRO.otf"; sourceTree = "<group>"; };
+		BBF47E8E1CCCAA82006D3D3A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		BBF47E901CCCB9FB006D3D3A /* StoryData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = StoryData.json; sourceTree = "<group>"; };
 		BBF4C4AB1CC41A33004BB567 /* ExpandedInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandedInfoViewController.swift; sourceTree = "<group>"; };
 		BBFFC4501C88AF2800A8B5C5 /* MyStoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyStoryViewController.swift; sourceTree = "<group>"; };
 		BBFFC4541C88AF7E00A8B5C5 /* MyInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyInfoViewController.swift; sourceTree = "<group>"; };
@@ -193,6 +197,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBF47E8F1CCCAA82006D3D3A /* MapKit.framework in Frameworks */,
 				FD28E1FA33D009710E4BE6F8 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -217,6 +222,7 @@
 		189F8D80997FDECC53280483 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BBF47E8E1CCCAA82006D3D3A /* MapKit.framework */,
 				85EB57D2745956D1EC5A9497 /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -262,12 +268,9 @@
 				BB10DD351C59DF940079C480 /* Main.storyboard */,
 				BB34038A1C61E9D0004F53DF /* HomeViewController.swift */,
 				BBFFC4501C88AF2800A8B5C5 /* MyStoryViewController.swift */,
+				BBF47E901CCCB9FB006D3D3A /* StoryData.json */,
 				BBBBFAB51C97206900770E00 /* My Apps */,
-				BBFFC4541C88AF7E00A8B5C5 /* MyInfoViewController.swift */,
-				BBB80A111CC2428D006088C6 /* InfoElement.swift */,
-				BBF4C4AB1CC41A33004BB567 /* ExpandedInfoViewController.swift */,
-				BB80F4301CC342B400585A75 /* InfoTransition.swift */,
-				BBB80A0D1CC23567006088C6 /* InfoData.json */,
+				BBF47E8D1CCCA42B006D3D3A /* My Info */,
 				BBB80A0F1CC2359A006088C6 /* UIColorExtension.swift */,
 				BB10DD991C59EB760079C480 /* Fancy Graphic Helpers */,
 				BB10DD661C59E0000079C480 /* Fancy Text Drawing */,
@@ -434,6 +437,18 @@
 			name = "My Apps";
 			sourceTree = "<group>";
 		};
+		BBF47E8D1CCCA42B006D3D3A /* My Info */ = {
+			isa = PBXGroup;
+			children = (
+				BBFFC4541C88AF7E00A8B5C5 /* MyInfoViewController.swift */,
+				BBB80A111CC2428D006088C6 /* InfoElement.swift */,
+				BBF4C4AB1CC41A33004BB567 /* ExpandedInfoViewController.swift */,
+				BB80F4301CC342B400585A75 /* InfoTransition.swift */,
+				BBB80A0D1CC23567006088C6 /* InfoData.json */,
+			);
+			name = "My Info";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -506,6 +521,11 @@
 					BB10DD2D1C59DF940079C480 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = 9XWYL3K4YT;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					BB10DD411C59DF940079C480 = {
 						CreatedOnToolsVersion = 7.2;
@@ -567,6 +587,7 @@
 				BBE54C7F1C9D5B0D00EA9E7A /* Panton-Light.otf in Resources */,
 				BBE54C821C9D5B0D00EA9E7A /* Panton-Thin.otf in Resources */,
 				BBE54C801C9D5B0D00EA9E7A /* Panton-Regular.otf in Resources */,
+				BBF47E911CCCB9FB006D3D3A /* StoryData.json in Resources */,
 				BBB80A4B1CC24EEB006088C6 /* Lato-Thin.ttf in Resources */,
 				BBB80A431CC24EEB006088C6 /* Lato-Black.ttf in Resources */,
 				BB10DD371C59DF940079C480 /* Main.storyboard in Resources */,

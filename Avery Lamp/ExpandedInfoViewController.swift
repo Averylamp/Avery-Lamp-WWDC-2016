@@ -71,7 +71,7 @@ class ExpandedInfoViewController: UIViewController, UIScrollViewDelegate {
             textLabel.minimumScaleFactor = 0.7
             textLabel.textColor = UIColor.whiteColor()
             textLabel.text = viewData!["ExtraInfoSlides"][index]["DetailText"].string
-            let font = UIFont(name: "Lato-Regular", size: 20)
+            let font = UIFont(name: "Panton-Regular", size: 20)
             textLabel.font = font
             page.addSubview(textLabel)
             page.addConstraint(NSLayoutConstraint(item: textLabel, attribute: .Width, relatedBy: .Equal, toItem: page, attribute: .Width, multiplier: 0.9, constant: 0.0))
@@ -108,7 +108,6 @@ class ExpandedInfoViewController: UIViewController, UIScrollViewDelegate {
             if viewData!["ExtraInfoSlides"][page]["DetailImage"].string != viewData!["ExtraInfoSlides"][pageControl.currentPage]["DetailImage"].string{
                 self.imageView.layer.removeAllAnimations()
                 UIView.animateWithDuration(imageFadeDuration / 2, animations: {
-                    print("Changing Images \(page) \(self.viewData!["ExtraInfoSlides"][page]["DetailImage"].string!)")
                     self.imageView.alpha = 0.0
                     }, completion: { (finished) in
                         self.imageView.image = UIImage(named: self.viewData!["ExtraInfoSlides"][page]["DetailImage"].string!)

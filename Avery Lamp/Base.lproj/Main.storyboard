@@ -15,6 +15,7 @@
             <string>ADAM.CGPRO</string>
             <string>ADAM.CGPRO</string>
             <string>ADAM.CGPRO</string>
+            <string>ADAM.CGPRO</string>
         </mutableArray>
         <mutableArray key="Panton-Light.otf">
             <string>Panton-Light</string>
@@ -38,6 +39,84 @@
         </mutableArray>
     </customFonts>
     <scenes>
+        <!--My Story View Controller-->
+        <scene sceneID="epT-mZ-L38">
+            <objects>
+                <viewController storyboardIdentifier="MyStoryVC" id="mc5-K4-UwW" customClass="MyStoryViewController" customModule="Avery_Lamp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DUj-1B-KSf"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wz7-sS-u6n"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zIa-ga-G3z">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Story" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtW-dU-32C">
+                                <rect key="frame" x="0.0" y="10" width="600" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="XIt-AH-rYr"/>
+                                    <constraint firstAttribute="height" constant="50" id="q2w-xd-7Lz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ADAM.CGPRO" family="ADAM.CG PRO" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="XIt-AH-rYr"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Puy-VA-Ycj">
+                                <rect key="frame" x="30" y="22.5" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="YoQ-qw-Ff8"/>
+                                    <constraint firstAttribute="height" constant="25" id="frt-e2-mhj"/>
+                                </constraints>
+                                <state key="normal" image="backArrow"/>
+                                <connections>
+                                    <action selector="backButtonClicked:" destination="mc5-K4-UwW" eventType="touchUpInside" id="Uof-pz-G10"/>
+                                </connections>
+                            </button>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5bg-TX-y2G">
+                                <rect key="frame" x="45" y="80" width="510" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="Ro4-ol-cEm"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="net-Nt-ha8">
+                                <rect key="frame" x="60" y="350" width="480" height="170"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Puy-VA-Ycj" firstAttribute="centerY" secondItem="mtW-dU-32C" secondAttribute="centerY" id="1wi-3b-jKq"/>
+                            <constraint firstItem="Wz7-sS-u6n" firstAttribute="top" secondItem="net-Nt-ha8" secondAttribute="bottom" constant="80" id="HQa-cP-9Hw"/>
+                            <constraint firstItem="5bg-TX-y2G" firstAttribute="top" secondItem="mtW-dU-32C" secondAttribute="bottom" constant="20" id="Qvc-cP-HqT"/>
+                            <constraint firstItem="5bg-TX-y2G" firstAttribute="centerX" secondItem="zIa-ga-G3z" secondAttribute="centerX" id="SJ5-yu-q0s"/>
+                            <constraint firstItem="mtW-dU-32C" firstAttribute="top" secondItem="zIa-ga-G3z" secondAttribute="topMargin" constant="10" id="UHJ-yP-lLP"/>
+                            <constraint firstItem="net-Nt-ha8" firstAttribute="top" secondItem="5bg-TX-y2G" secondAttribute="bottom" constant="20" id="UKz-oK-EGq"/>
+                            <constraint firstItem="5bg-TX-y2G" firstAttribute="width" secondItem="zIa-ga-G3z" secondAttribute="width" multiplier="0.85" id="Vbb-4Y-5wz"/>
+                            <constraint firstItem="Puy-VA-Ycj" firstAttribute="leading" secondItem="zIa-ga-G3z" secondAttribute="leadingMargin" constant="10" id="bII-EI-gXo"/>
+                            <constraint firstItem="mtW-dU-32C" firstAttribute="centerX" secondItem="zIa-ga-G3z" secondAttribute="centerX" id="kdJ-wK-A4f"/>
+                            <constraint firstItem="net-Nt-ha8" firstAttribute="width" secondItem="zIa-ga-G3z" secondAttribute="width" multiplier="0.8" id="urJ-lv-MGH"/>
+                            <constraint firstItem="net-Nt-ha8" firstAttribute="centerX" secondItem="zIa-ga-G3z" secondAttribute="centerX" id="wkd-rN-fp2"/>
+                            <constraint firstItem="mtW-dU-32C" firstAttribute="width" secondItem="zIa-ga-G3z" secondAttribute="width" id="zzL-js-Odo"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y7g-XH-jQB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2233" y="-357"/>
+        </scene>
         <!--Splash View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -931,15 +1010,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0wt-mA-ngg">
-                                <rect key="frame" x="0.0" y="10" width="600" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="ehH-Yc-7yf"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="ADAM.CGPRO" family="ADAM.CG PRO" pointSize="30"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pfm-Zd-BB4">
                                 <rect key="frame" x="30" y="23" width="25" height="25"/>
                                 <constraints>
@@ -959,6 +1029,15 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h0t-wv-wj9">
                                 <rect key="frame" x="0.0" y="80" width="600" height="520"/>
                             </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Info" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0wt-mA-ngg">
+                                <rect key="frame" x="0.0" y="10" width="600" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ehH-Yc-7yf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="ADAM.CGPRO" family="ADAM.CG PRO" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.46274509803921571" green="0.48627450980392156" blue="0.5490196078431373" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>

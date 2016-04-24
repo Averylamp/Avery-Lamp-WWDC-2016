@@ -174,7 +174,7 @@ class InfoTransition: NSObject, UIViewControllerAnimatedTransitioning {
                 }, completion: nil)
             
             self.animationInfoSection.layoutIfNeeded()
-            print("presenting view cons - \(presentingView.constraints.count)\nanimationv cons - \(self.animationInfoSection.constraints.count)\nto replace anv view cons - \(animationInfoSectionConstraintsToReturnTo?.count), button -  \(buttonLabelConstraintsToReturnTo?.count), image - \(backgroundImageConstraintsToReturnTo?.count)")
+//            print("presenting view cons - \(presentingView.constraints.count)\nanimationv cons - \(self.animationInfoSection.constraints.count)\nto replace anv view cons - \(animationInfoSectionConstraintsToReturnTo?.count), button -  \(buttonLabelConstraintsToReturnTo?.count), image - \(backgroundImageConstraintsToReturnTo?.count)")
             UIView.animateWithDuration(duration, animations: {
                 self.animationInfoSection.frame = self.infoSectionFrameToReturnTo!
                 presentingView.removeConstraints(presentingView.constraints)
