@@ -276,6 +276,106 @@ extension UILabel {
     }
 
     
+    func strokeTextLetterByLetterWithCenters(width width:CGFloat = 0.5, delay:Double = 0.0, duration: Double, characterStrokeDuration:Double = 1.5, fade:Bool, fadeDuration: Double = 1.0, returnStuff:Bool = true) -> [CAShapeLayer]{
+        
+        if delay != 0.0{
+            self.alpha = 0.0
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, Int64(delay * Double(NSEC_PER_SEC))), dispatch_get_main_queue(), {
+                self.alpha = 1.0
+                self.strokeTextLetterByLetter(width: width, delay: 0.0, duration: duration, characterStrokeDuration: characterStrokeDuration, fade: fade, fadeDuration: fadeDuration, returnStuff: false)
+            })
+            return []
+        }
+        
+        self.baselineAdjustment = .AlignBaselines
+        let originalCenter = self.center
+        self.sizeToFit()
+        self.center = originalCenter
+        self.layer.opacity = 0.0
+        
+        let allLetterPaths = getPathOfText(false)
+        var allLetterShapes = Array<CAShapeLayer> ()
+        for index in 0..<allLetterPaths.count {
+            let singleLetterShape = CAShapeLayer()
+            singleLetterShape.frame = self.layer.frame
+            //            singleLetterShape.bounds = self.layer.bounds
+            
+            let pathBounds = CGPathGetBoundingBox(allLetterPaths[index])
+            let pathCenter = CGPointMake(CGRectGetMidX(pathBounds), CGRectGetMidY(pathBounds))
+            var transform = CGAffineTransformMakeTranslation(-pathBounds.origin.x, -pathBounds.origin.y)
+            let centeredPath = CGPathCreateCopyByTransformingPath(allLetterPaths[index], &transform)
+            //            let centeredPath = CGPathCreateCopyByTransformingPath(allLetterPaths[index], nil)
+            singleLetterShape.frame = CGRectMake(singleLetterShape.frame.origin.x + pathBounds.origin.x, singleLetterShape.frame.origin.y + self.layer.frame.height -
+                pathBounds.size.height - pathBounds.origin.y, pathBounds.size.width, pathBounds.size.height)
+            
+            //            let testlay = CALayer()
+            //            testlay.frame = CGRectMake(0, 0, pathBounds.size.width, pathBounds.size.height)
+            //            testlay.backgroundColor = UIColor(rgba: "#aaaaaa55").CGColor
+            
+            
+            //            singleLetterShape.addSublayer(testlay)
+            print("Path Bounds \(CGPathGetBoundingBox(allLetterPaths[index]))")
+            singleLetterShape.path = centeredPath
+            singleLetterShape.backgroundColor = UIColor(rgba: "#aaaaaa55").CGColor
+            //            singleLetterShape.path = allLetterPaths[index]
+            singleLetterShape.strokeColor = UIColor.blackColor().CGColor
+            singleLetterShape.geometryFlipped = true
+            singleLetterShape.fillColor = UIColor.clearColor().CGColor
+            singleLetterShape.lineWidth = width
+            singleLetterShape.lineJoin = kCALineJoinRound
+            self.layer.superlayer?.addSublayer(singleLetterShape)
+            
+            allLetterShapes.append(singleLetterShape)
+            singleLetterShape.strokeEnd = 0.0
+            //            print("Frame - \(singleLetterShape.frame) Bounds \(singleLetterShape.bounds)")        
+        }
+        
+        let strokeAnimation = CABasicAnimation(keyPath: "strokeEnd")
+        strokeAnimation.duration = characterStrokeDuration
+        strokeAnimation.fromValue = 0.0
+        strokeAnimation.toValue = 1.0
+        strokeAnimation.fillMode = kCAFillModeForwards
+        strokeAnimation.removedOnCompletion = false
+        strokeAnimation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseOut)
+        
+        let fadeOutAnimation = CABasicAnimation(keyPath: "opacity")
+        fadeOutAnimation.beginTime = CACurrentMediaTime() + duration
+        fadeOutAnimation.duration = fadeDuration
+        fadeOutAnimation.fromValue = 1.0
+        fadeOutAnimation.toValue = 0.0
+        fadeOutAnimation.fillMode = kCAFillModeForwards
+        fadeOutAnimation.removedOnCompletion = false
+        
+        let delayPerCharacter = (duration - characterStrokeDuration) / Double(allLetterShapes.count)
+        
+        CATransaction.begin()
+        CATransaction.setAnimationDuration(duration)
+        
+        
+        for index in 0..<allLetterShapes.count {
+            strokeAnimation.beginTime = CACurrentMediaTime() + delayPerCharacter * Double(index)
+            allLetterShapes[index].addAnimation(strokeAnimation, forKey: "strokeEnd")
+        }
+        CATransaction.commit()
+        
+        if fade {
+            allLetterShapes.forEach { $0.addAnimation(fadeOutAnimation, forKey: "fadeOut")}
+            
+            
+            UIView.animateWithDuration(fadeDuration, delay: duration, options: .CurveEaseIn, animations: {
+                self.layer.opacity = 1.0
+                }, completion: { (finished) in
+                    allLetterShapes.forEach {$0.removeFromSuperlayer()}
+            })
+            
+            
+        }
+        return allLetterShapes
+        
+    }
+    
+
+    
     
     
 }

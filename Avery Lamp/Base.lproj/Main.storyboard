@@ -17,6 +17,9 @@
             <string>ADAM.CGPRO</string>
             <string>ADAM.CGPRO</string>
         </mutableArray>
+        <mutableArray key="MavenProLight-100.otf">
+            <string>MavenProLight100-Regular</string>
+        </mutableArray>
         <mutableArray key="Panton-Light.otf">
             <string>Panton-Light</string>
             <string>Panton-Light</string>
@@ -58,7 +61,7 @@
                                     <constraint firstAttribute="height" constant="50" id="q2w-xd-7Lz"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="ADAM.CGPRO" family="ADAM.CG PRO" pointSize="30"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -67,7 +70,7 @@
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Puy-VA-Ycj">
-                                <rect key="frame" x="30" y="22.5" width="25" height="25"/>
+                                <rect key="frame" x="30" y="22" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="YoQ-qw-Ff8"/>
                                     <constraint firstAttribute="height" constant="25" id="frt-e2-mhj"/>
@@ -88,34 +91,81 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="net-Nt-ha8">
-                                <rect key="frame" x="60" y="350" width="480" height="170"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SNW-0T-nsg">
+                                <rect key="frame" x="550" y="560" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="ZO0-Wb-Ceb"/>
+                                    <constraint firstAttribute="height" constant="30" id="cme-vP-E5g"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="rightButtonClicked:" destination="mc5-K4-UwW" eventType="touchUpInside" id="guv-Md-a9s"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GSf-Om-naI">
+                                <rect key="frame" x="20" y="560" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4BD-QO-rns"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="ntr-y2-q4z"/>
+                                    <constraint firstAttribute="width" constant="30" id="pvr-Kh-7ej"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="y5h-S2-YGA"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ntr-y2-q4z"/>
+                                        <exclude reference="y5h-S2-YGA"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="leftButtonClicked:" destination="mc5-K4-UwW" eventType="touchUpInside" id="YTb-i0-Ik2"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="egh-pj-pbw">
+                                <rect key="frame" x="60" y="350" width="480" height="190"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="net-Nt-ha8">
+                                <rect key="frame" x="60" y="350" width="480" height="190"/>
+                                <mutableString key="text">Lorem ipsum dolor sit amet, eu mucius definiebas disputationi mel. Quis fabulas omnesque eam te, et vis ceteros nominati sententiae. Ut everti praesent explicari vix, id per quot ceteros maiestatis, at probatus consequuntur usu. Sit in amet mucius, tale nulla eu vim. Eirmod pertinacia ut cum. Nec in vocent perfecto, no suas nemore vix.  Duo eu suas propriae. Est ex dolore facete, torquatos accommodare conclusionemque ius at. Lucilius legendos facilisis qui et, sed populo persequeris ut, adhuc nostrum cu his.</mutableString>
+                                <fontDescription key="fontDescription" name="MavenProLight100-Regular" family="Maven Pro Light" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Puy-VA-Ycj" firstAttribute="centerY" secondItem="mtW-dU-32C" secondAttribute="centerY" id="1wi-3b-jKq"/>
-                            <constraint firstItem="Wz7-sS-u6n" firstAttribute="top" secondItem="net-Nt-ha8" secondAttribute="bottom" constant="80" id="HQa-cP-9Hw"/>
+                            <constraint firstItem="Wz7-sS-u6n" firstAttribute="top" secondItem="GSf-Om-naI" secondAttribute="bottom" constant="10" id="E8D-Fo-oC8"/>
+                            <constraint firstItem="Wz7-sS-u6n" firstAttribute="top" secondItem="net-Nt-ha8" secondAttribute="bottom" constant="60" id="HQa-cP-9Hw"/>
+                            <constraint firstItem="Wz7-sS-u6n" firstAttribute="top" secondItem="SNW-0T-nsg" secondAttribute="bottom" constant="10" id="Ix1-I5-pj2"/>
                             <constraint firstItem="5bg-TX-y2G" firstAttribute="top" secondItem="mtW-dU-32C" secondAttribute="bottom" constant="20" id="Qvc-cP-HqT"/>
                             <constraint firstItem="5bg-TX-y2G" firstAttribute="centerX" secondItem="zIa-ga-G3z" secondAttribute="centerX" id="SJ5-yu-q0s"/>
                             <constraint firstItem="mtW-dU-32C" firstAttribute="top" secondItem="zIa-ga-G3z" secondAttribute="topMargin" constant="10" id="UHJ-yP-lLP"/>
                             <constraint firstItem="net-Nt-ha8" firstAttribute="top" secondItem="5bg-TX-y2G" secondAttribute="bottom" constant="20" id="UKz-oK-EGq"/>
                             <constraint firstItem="5bg-TX-y2G" firstAttribute="width" secondItem="zIa-ga-G3z" secondAttribute="width" multiplier="0.85" id="Vbb-4Y-5wz"/>
+                            <constraint firstItem="egh-pj-pbw" firstAttribute="height" secondItem="net-Nt-ha8" secondAttribute="height" id="Xqj-jK-WLa"/>
                             <constraint firstItem="Puy-VA-Ycj" firstAttribute="leading" secondItem="zIa-ga-G3z" secondAttribute="leadingMargin" constant="10" id="bII-EI-gXo"/>
+                            <constraint firstItem="egh-pj-pbw" firstAttribute="centerX" secondItem="net-Nt-ha8" secondAttribute="centerX" id="cXx-xy-hQ5"/>
+                            <constraint firstItem="egh-pj-pbw" firstAttribute="width" secondItem="net-Nt-ha8" secondAttribute="width" id="idJ-Rz-de6"/>
+                            <constraint firstItem="egh-pj-pbw" firstAttribute="centerY" secondItem="net-Nt-ha8" secondAttribute="centerY" id="j1O-N4-2xF"/>
                             <constraint firstItem="mtW-dU-32C" firstAttribute="centerX" secondItem="zIa-ga-G3z" secondAttribute="centerX" id="kdJ-wK-A4f"/>
+                            <constraint firstItem="GSf-Om-naI" firstAttribute="leading" secondItem="zIa-ga-G3z" secondAttribute="leadingMargin" id="orG-rr-wEN"/>
+                            <constraint firstItem="SNW-0T-nsg" firstAttribute="trailing" secondItem="zIa-ga-G3z" secondAttribute="trailingMargin" id="sMK-va-oMY"/>
                             <constraint firstItem="net-Nt-ha8" firstAttribute="width" secondItem="zIa-ga-G3z" secondAttribute="width" multiplier="0.8" id="urJ-lv-MGH"/>
                             <constraint firstItem="net-Nt-ha8" firstAttribute="centerX" secondItem="zIa-ga-G3z" secondAttribute="centerX" id="wkd-rN-fp2"/>
                             <constraint firstItem="mtW-dU-32C" firstAttribute="width" secondItem="zIa-ga-G3z" secondAttribute="width" id="zzL-js-Odo"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="fAe-6Z-daX"/>
+                    <connections>
+                        <outlet property="detailImageView" destination="egh-pj-pbw" id="iUP-ms-mSw"/>
+                        <outlet property="detailTextLabel" destination="net-Nt-ha8" id="SPf-Uo-eAa"/>
+                        <outlet property="leftButton" destination="GSf-Om-naI" id="EkS-Jv-zj0"/>
+                        <outlet property="mapView" destination="5bg-TX-y2G" id="Ayi-Zg-4C2"/>
+                        <outlet property="rightButton" destination="SNW-0T-nsg" id="RRD-cC-geE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y7g-XH-jQB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2233" y="-357"/>
+            <point key="canvasLocation" x="2233" y="-349"/>
         </scene>
         <!--Splash View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -166,7 +216,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="dmY-kj-iYw" kind="relationship" relationship="rootViewController" id="KxE-FD-GI0"/>
+                        <segue destination="mc5-K4-UwW" kind="relationship" relationship="rootViewController" id="siL-mf-Zly"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D3p-Qt-VlN" userLabel="First Responder" sceneMemberID="firstResponder"/>
