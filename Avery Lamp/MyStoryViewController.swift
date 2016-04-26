@@ -8,11 +8,12 @@
 
 import UIKit
 import MapKit
+import LTMorphingLabel
 
 class MyStoryViewController: UIViewController, MKMapViewDelegate {
-
+    
     var jsonData:JSON! = nil
-
+    
     @IBOutlet weak var mapView: MKMapView!
     
     @IBOutlet weak var detailTextLabel: UILabel!
@@ -24,26 +25,77 @@ class MyStoryViewController: UIViewController, MKMapViewDelegate {
     var leftButtonStrokeLayer: CAShapeLayer?
     var currentPage = 0
     
+    let counterLabel = LTMorphingLabel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.whiteColor()
         setupJSON()
         mapView.delegate = self
-        mapView.mapType = MKMapType.Hybrid
+        
+        mapView.mapType = MKMapType.HybridFlyover
+        mapView.pitchEnabled = true
+        mapView.showsCompass = false
+        animateMap()
         let xCoord = jsonData[0]["xCoord"].doubleValue
         let yCoord = jsonData[0]["yCoord"].doubleValue
         let region = MKCoordinateRegionMake(CLLocationCoordinate2DMake(xCoord, yCoord), MKCoordinateSpanMake(0.002, 0.002))
+        
         mapView.setRegion(region, animated: true)
+
         addAnnotations()
         drawButtons()
+        detailImageView.contentMode = .ScaleAspectFit
         detailTextLabel.numberOfLines = 0
         detailTextLabel.lineBreakMode = .ByWordWrapping
-        loadText(index: currentPage)
         maxRadius = self.view.frame.width / 2
         detailImageView.image = UIImage(named: jsonData[currentPage]["DetailImage"].string!)
+        view.bringSubviewToFront(detailTextLabel)
+        loadText(index: currentPage)
+        counterLabel.frame = CGRectMake(0, self.view.frame.height - 35, self.view.frame.width, 30)
+        counterLabel.morphingDuration = 1.0
+        counterLabel.textAlignment = .Center
+        counterLabel.font = UIFont(name: "Panton-Light", size: 20)
+        self.view.addSubview(counterLabel)
+        counterLabel.text = "1/\(jsonData.count)"
     }
     
+    override func viewDidAppear(animated: Bool) {
+    }
+    
+    var camerasArray = [MKMapCamera]()
+    
+    
+    func flyToLocation (location: CLLocationCoordinate2D, finalPitchCamera: MKMapCamera? = nil, flyoverAltitude:Double = 100, finalAltitude: Double = 100){
+        let startCoord = self.mapView.camera.centerCoordinate
+        let eyeCoord = CLLocationCoordinate2DMake(location.latitude, location.longitude)
+//        let upCam = MKMapCamera(lookingAtCenterCoordinate: startCoord, fromEyeCoordinate: startCoord, eyeAltitude: flyoverAltitude)
+        let turnCam = MKMapCamera(lookingAtCenterCoordinate: location, fromEyeCoordinate: startCoord, eyeAltitude: flyoverAltitude)
+//        let inCam = MKMapCamera(lookingAtCenterCoordinate: location, fromEyeCoordinate: eyeCoord, eyeAltitude: finalAltitude)
+        if finalPitchCamera != nil{
+            let inCam = MKMapCamera(lookingAtCenterCoordinate: location, fromEyeCoordinate: eyeCoord, eyeAltitude: finalAltitude * 2)
+            camerasArray = [turnCam, inCam,finalPitchCamera!]
+        }else{
+            let inCam = MKMapCamera(lookingAtCenterCoordinate: location, fromEyeCoordinate: eyeCoord, eyeAltitude: finalAltitude)
+            camerasArray = [turnCam, inCam]
+        }
+        goToNextCamera()
+    }
+    
+    func goToNextCamera() {
+        if camerasArray.count == 0{
+            return
+        }
+        let nextCam = self.camerasArray.first
+        self.camerasArray.removeAtIndex(0)
+        UIView.animateWithDuration(2.0) {
+            self.mapView.camera = nextCam!
+        }
+    }
+    
+    func mapView(mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+       goToNextCamera()
+    }
     
     func addAnnotations(){
         for index in 0..<jsonData.count{
@@ -54,7 +106,6 @@ class MyStoryViewController: UIViewController, MKMapViewDelegate {
             mapView.addAnnotation(pointAnnotation)
         }
     }
-
     
     func setupJSON(){
         if let path = NSBundle.mainBundle().pathForResource("StoryData", ofType: "json"){
@@ -73,55 +124,87 @@ class MyStoryViewController: UIViewController, MKMapViewDelegate {
             print("file not found")
         }
     }
-
+    
     var labelStrokes = [CAShapeLayer]()
     
     func loadText(index index:Int)  {
-//        detailTextLabel.layer.superlayer?.sublayers?.forEach { $0.removeFromSuperlayer() }
+        //        detailTextLabel.layer.superlayer?.sublayers?.forEach { $0.removeFromSuperlayer() }
         detailTextLabel.text = jsonData[index]["DetailText"].string
         detailTextLabel.layoutIfNeeded()
         
-        labelStrokes = detailTextLabel.strokeTextLetterByLetter(width: 0.6, delay: 0.0, duration: 2.0, characterStrokeDuration: 1.0, fade: false, fadeDuration: 0.3, returnStuff: true)
-        labelStrokes.forEach { $0.anchorPoint = CGPointMake(0.5, 0.5)}
+        labelStrokes = detailTextLabel.strokeTextLetterByLetter(width: 0.6, delay: 0.0, duration: 3.0, characterStrokeDuration: 1.0, fade: false, fadeDuration: 0.3, returnStuff: true)
+//        labelStrokes.forEach { $0.anchorPoint = CGPointMake(0.5, 0.5)}
+    }
+    
+    func updateTextWithNewSlide(){
+        let reverseStroke = CABasicAnimation(keyPath: "strokeEnd")
+        reverseStroke.duration = 2.0
+        reverseStroke.fromValue = 1.0
+        reverseStroke.toValue = 0.0
+        reverseStroke.fillMode = kCAFillModeForwards
+        reverseStroke.removedOnCompletion = false
+        
+        CATransaction.begin()
+        CATransaction.setAnimationDuration(2.0)
+        CATransaction.setCompletionBlock({
+            self.detailTextLabel.layer.sublayers?.forEach{ $0.removeFromSuperlayer() }
+            self.labelStrokes.forEach { $0.removeFromSuperlayer() }
+            self.labelStrokes = [CAShapeLayer]()
+            self.loadText(index: self.currentPage)
+        })
+        
+        labelStrokes.forEach { $0.strokeEnd = 0 }
+        
+        CATransaction.commit()
+        counterLabel.text = "\(currentPage + 1)/\(jsonData.count)"
+        
+        detailImageView.image = UIImage(named: jsonData[currentPage]["DetailImage"].string!)
+        
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         let touch = touches.first!
         let locationInText = touch.locationInView(self.view)
-//        print("Location \(locationInText) Force - \(touch.force)")
-        animateLabelWithTouch(touch, location: locationInText)
-        
+        if CGRectContainsPoint(detailTextLabel.frame, locationInText){
+            animateLabelWithTouch(touch, location: locationInText)
+        }
     }
     
     override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
         let touch = touches.first!
         let locationInText = touch.locationInView(self.view)
-//        print("Location \(locationInText) Force - \(touch.force)")
-        animateLabelWithTouch(touch, location: locationInText)
+        if CGRectContainsPoint(detailTextLabel.frame, locationInText){
+            animateLabelWithTouch(touch, location: locationInText)
+        }
         
     }
     
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         let touch = touches.first!
         let locationInText = touch.locationInView(self.view)
-//        print("Location \(locationInText) Force - \(touch.force)")
-        animateLabelWithTouch(touch, location: locationInText, ended:true)
+        
+        animateLabelWithTouch(touch, location: locationInText,ended: true)
+        
     }
     
     var maxRadius:CGFloat = 200.0
+    var transitioningBetweenSlides = false
     func animateLabelWithTouch(touch:UITouch, location: CGPoint, ended: Bool = false){
-        
-        labelStrokes.forEach {
-            CATransaction.begin()
-            CATransaction.setAnimationDuration(0.35)
-            if ended == false{
-                $0.strokeEnd = min( (1 - touch.force / touch.maximumPossibleForce), 1.0)
-                detailImageView.layer.opacity = 1.0 - Float($0.strokeEnd)
-            }else{
-                $0.strokeEnd = 1.0
-                detailImageView.layer.opacity = 0.0
+        //        print("Location \(locationInText) Force - \(touch.force)")
+        if transitioningBetweenSlides == false{
+            labelStrokes.forEach {
+//                $0.removeAllAnimations()
+//                CATransaction.begin()
+//                CATransaction.setAnimationDuration(0.5)
+                if ended == false{
+                    $0.strokeEnd = min( (1 - touch.force / touch.maximumPossibleForce), 1.0)
+                    detailImageView.layer.opacity = 1.0 - Float($0.strokeEnd)
+                }else{
+                    $0.strokeEnd = 1.0
+                    detailImageView.layer.opacity = 0.0
+                }
+//                CATransaction.commit()
             }
-            CATransaction.commit()
         }
     }
     
@@ -159,10 +242,10 @@ class MyStoryViewController: UIViewController, MKMapViewDelegate {
         leftShapeLayer.strokeColor = UIColor.blackColor().CGColor
         rightButton.layer.addSublayer(rightShapeLayer)
         leftButton.layer.addSublayer(leftShapeLayer)
-
+        
         rightButton.transform = CGAffineTransformMakeRotation(CGFloat(M_PI_2))
         leftButton.transform = CGAffineTransformMakeRotation(CGFloat(-M_PI_2))
-
+        
         rightShapeLayer.addAnimation(drawPath, forKey: "path Animation")
         leftShapeLayer.addAnimation(drawPath, forKey: "Path Animation")
         rightButtonStrokeLayer = rightShapeLayer
@@ -194,33 +277,33 @@ class MyStoryViewController: UIViewController, MKMapViewDelegate {
         return plusOnePath.CGPath
     }
     
+    func animateMap(){
+        let nextLocation = CLLocationCoordinate2DMake(jsonData[currentPage]["xCoord"].doubleValue,jsonData[currentPage]["yCoord"].doubleValue )
+        if jsonData[currentPage]["cam"] != nil {
+            let camData = jsonData[currentPage]["cam"]
+            let pitchCam = MKMapCamera(lookingAtCenterCoordinate: nextLocation, fromEyeCoordinate: CLLocationCoordinate2DMake(camData["xCoord"].doubleValue, camData["yCoord"].doubleValue), eyeAltitude: camData["altitude"].doubleValue)
+            pitchCam.pitch = CGFloat(camData["pitch"].doubleValue)
+            flyToLocation(nextLocation, finalPitchCamera: pitchCam , flyoverAltitude: jsonData[currentPage]["flyoverAltitude"].doubleValue, finalAltitude: camData["altitude"].doubleValue)
+        }else{
+            flyToLocation(nextLocation, finalPitchCamera: nil, flyoverAltitude: jsonData[currentPage]["flyoverAltitude"].doubleValue, finalAltitude: 80)
+        }
+        
+    }
     
     @IBAction func rightButtonClicked(sender: AnyObject) {
-//        rightButtonStrokeLayer?.removeAllAnimations()
-//        let originalPath = rightButtonStrokeLayer?.path
-//        let morph = CABasicAnimation(keyPath: "path")
-//        morph.fromValue = originalPath
-//        morph.toValue = plusOnePath(true)
-//        morph.duration =  0.1
-//        morph.autoreverses = true
-//        rightButtonStrokeLayer?.addAnimation(morph, forKey: "Path Morph")
+        if currentPage < jsonData.count - 1{
+            currentPage += 1
+            animateMap()
+            updateTextWithNewSlide()
+        }
     }
     
     @IBAction func leftButtonClicked(sender: AnyObject) {
-//        leftButtonStrokeLayer?.removeAllAnimations()
-//        let originalPath = leftButtonStrokeLayer?.path
-//        let morph = CABasicAnimation(keyPath: "path")
-//        morph.fromValue = originalPath
-//        morph.toValue = plusOnePath(false)
-//        morph.duration =  1.0
-//        let returnMorph = CABasicAnimation(keyPath: "path")
-//        returnMorph.toValue = originalPath
-//        returnMorph.fromValue = plusOnePath(false)
-//        returnMorph.duration =  1.0
-//        returnMorph.beginTime = 3 + CACurrentMediaTime()
-//        
-//        leftButtonStrokeLayer?.addAnimation(morph, forKey: "Path Morph")
-//        leftButtonStrokeLayer?.addAnimation(returnMorph, forKey: "Path Reverse Morph")
+        if currentPage > 0{
+            currentPage -= 1
+            animateMap()
+            updateTextWithNewSlide()
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -231,15 +314,25 @@ class MyStoryViewController: UIViewController, MKMapViewDelegate {
     @IBAction func backButtonClicked(sender: AnyObject) {
         self.navigationController?.popViewControllerAnimated(true)
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    func delay(delay:Double, closure:()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), closure)
     }
-    */
-
+    
+    
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }

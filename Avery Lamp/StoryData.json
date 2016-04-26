@@ -1,42 +1,88 @@
- [
-  {
-  "xCoord":"40.720883",
-  "yCoord":"-74.315715",
-  "DetailText":"Lorem ipsum dolor sit amet, eu mucius definiebas disputationi mel. Quis fabulas omnesque eam te, et vis ceteros nominati sententiae. Ut everti praesent explicari vix, id per quot ceteros maiestatis, at probatus consequuntur usu. Sit in amet mucius, tale nulla eu vim. Eirmod pertinacia ut cum. Nec in vocent perfecto, no suas nemore vix.  Duo eu suas propriae. Est ex dolore facete, torquatos accommodare conclusionemque ius at. Lucilius legendos facilisis qui et, sed populo persequeris ut, adhuc nostrum cu his. ",
-  "DetailTitle":"Millburn High School",
-  "DetailSubtitle":"Millburn, NJ",
-  "DetailImage":"MITPicture"
-  },
-  {
-  "xCoord":"72.00",
-  "yCoord":"72.00",
-  "DetailText":"Lorem ipsum dolor sit amet, eu mucius definiebas disputationi mel. Quis fabulas omnesque eam te, et vis ceteros nominati sententiae. Ut everti praesent explicari vix, id per quot ceteros maiestatis, at probatus consequuntur usu. Sit in amet mucius, tale nulla eu vim. Eirmod pertinacia ut cum. Nec in vocent perfecto, no suas nemore vix.  Duo eu suas propriae. Est ex dolore facete, torquatos accommodare conclusionemque ius at. Lucilius legendos facilisis qui et, sed populo persequeris ut, adhuc nostrum cu his. ",
-  "DetailTitle":"Title Text",
-  "DetailSubtitle":"SubtitleText",
-  "DetailImage":"MITPicture"
-  },
-  {
-  "xCoord":"72.00",
-  "yCoord":"72.00",
-  "DetailText":"Lorem ipsum dolor sit amet, eu mucius definiebas disputationi mel. Quis fabulas omnesque eam te, et vis ceteros nominati sententiae. Ut everti praesent explicari vix, id per quot ceteros maiestatis, at probatus consequuntur usu. Sit in amet mucius, tale nulla eu vim. Eirmod pertinacia ut cum. Nec in vocent perfecto, no suas nemore vix.  Duo eu suas propriae. Est ex dolore facete, torquatos accommodare conclusionemque ius at. Lucilius legendos facilisis qui et, sed populo persequeris ut, adhuc nostrum cu his. ",
-  "DetailTitle":"Title Text",
-  "DetailSubtitle":"SubtitleText",
-  "DetailImage":"MITPicture"
-  },
-  {
-  "xCoord":"72.00",
-  "yCoord":"72.00",
-  "DetailText":"Lorem ipsum dolor sit amet, eu mucius definiebas disputationi mel. Quis fabulas omnesque eam te, et vis ceteros nominati sententiae. Ut everti praesent explicari vix, id per quot ceteros maiestatis, at probatus consequuntur usu. Sit in amet mucius, tale nulla eu vim. Eirmod pertinacia ut cum. Nec in vocent perfecto, no suas nemore vix.  Duo eu suas propriae. Est ex dolore facete, torquatos accommodare conclusionemque ius at. Lucilius legendos facilisis qui et, sed populo persequeris ut, adhuc nostrum cu his. ",
-  "DetailTitle":"Title Text",
-  "DetailSubtitle":"SubtitleText",
-  "DetailImage":"MITPicture"
-  },
-  {
-  "xCoord":"72.00",
-  "yCoord":"72.00",
-  "DetailText":"Lorem ipsum dolor sit amet, eu mucius definiebas disputationi mel. Quis fabulas omnesque eam te, et vis ceteros nominati sententiae. Ut everti praesent explicari vix, id per quot ceteros maiestatis, at probatus consequuntur usu. Sit in amet mucius, tale nulla eu vim. Eirmod pertinacia ut cum. Nec in vocent perfecto, no suas nemore vix.  Duo eu suas propriae. Est ex dolore facete, torquatos accommodare conclusionemque ius at. Lucilius legendos facilisis qui et, sed populo persequeris ut, adhuc nostrum cu his. ",
-  "DetailTitle":"Title Text",
-  "DetailSubtitle":"SubtitleText",
-  "DetailImage":"MITPicture"
-  }
-  ]
+[
+ {
+ "xCoord":"40.720883",
+ "yCoord":"-74.315715",
+ "cam":{
+ "xCoord":"40.721995",
+ "yCoord":"-74.316518",
+ "altitude":"500",
+ "pitch":"10"
+ },
+ "DetailText":"My first line of code was written at Millburn High School in Computer Science 1, freshman year. I fell in love with coding and started coding in my free time, teaching myself what I know today. I continued with CS and Robotics courses all throughout High School, self teaching myself iOS development in 10th grade in free time. In the end of 10th grade, I published my first app as an English final to spread awareness on an issue of my choice. Besides that app, I was pretty inactive as a developer, until I went to my first Hackathon.\n\n",
+ "DetailTitle":"Millburn High School",
+ "DetailSubtitle":"Millburn, NJ",
+ "DetailImage":"Millburn-high"
+ },
+ {
+ "xCoord":"39.951752",
+ "yCoord":"-75.190952",
+ "cam":{
+ "xCoord":"39.9465113",
+ "yCoord":"-75.1939131",
+ "altitude":"400",
+ "pitch":"55"
+ },
+ "DetailText":"My first hackathon was at Penn Apps XI, a 1300+ person hackathon. I signed up knowledge of what a hackathon was and attended the event without having a team. At the event, I met three other great iOS devs and we collaborated in creating an app called MagicPen for 36 hours. It uses CLLocationManager's raw compass data to detects nearby magnets, interpolate their position, making a magnet into a stylus. It was the coolest project I ever worked on and inspired me to become a better iOS dev and work on my own projects.\n\n",
+ "DetailTitle":"Penn Apps XI",
+ "DetailSubtitle":"January 2015",
+ "DetailImage":"IsometricAtPennAppsXI"
+ },
+ {
+ "xCoord":"40.705496",
+ "yCoord":"-74.014050",
+ "cam":{
+ "xCoord":"40.703431",
+ "yCoord":"-74.015313",
+ "altitude":"300",
+ "pitch":"55"
+ },
+ "DetailText":"I loved PennApps so much, that in a little less than a month, I went to CodeDay in NYC. One of my PennApps partners, Sebastian Cain, was going and I brought a learning iOS developer, Ryan, from my school with me. We teamed up to make a music visualizer app named ViewZik (found in My Apps). At the end of 24 hours, I was exhausted, but we had a fully functioning music visualizer to show the judges. We ended up winning the Best Application Prize, which elated me as I knew I learning as a developer and my work was paying off.\n\n",
+ "DetailTitle":"CodeDay NYC",
+ "DetailSubtitle":"February 2015",
+ "DetailImage":"MITPicture"
+ },
+ {
+ "xCoord":"40.902165",
+ "yCoord":"-74.034143",
+ "cam":{
+ "xCoord":"40.901054",
+ "yCoord":"-74.037800",
+ "altitude":"200",
+ "pitch":"55"
+ },
+ "DetailText":"Fast forward two weeks and I was at another hackathon, HackBCA, the nations largest High School Hackathon at >500 participants. ",
+ "DetailTitle":"Bergen County Academies",
+ "DetailSubtitle":"Hack BCA II",
+ "DetailImage":"MITPicture"
+ },
+ {
+ "xCoord":"37.427619",
+ "yCoord":"-122.170213",
+ "cam":{
+ "xCoord":"37.432113",
+ "yCoord":"-122.168642",
+ "altitude":"80",
+ "pitch":"75"
+ },
+ "flyoverAltitude":"10000000",
+ "DetailText":"My first line of code was written at Millburn High School in Computer Science 1 freshman year. I fell in love with coding and started codind in my free time, teaching myself most of what I know today. I continued with CS and Robotics courses all throughout High School, self teaching myself iOS development in 10th grade in free time. I was pretty inactive as a developer, until I went to my first Hackathon. ",
+ "DetailTitle":"Title Text",
+ "DetailSubtitle":"SubtitleText",
+ "DetailImage":"MITPicture"
+ },
+ {
+ "xCoord":"39.901183",
+ "yCoord":"-75.171975",
+ "cam":{
+ "xCoord":"39.897289",
+ "yCoord":"-75.168142",
+ "altitude":"100",
+ "pitch":"75"
+ },
+ "flyoverAltitude":"100000",
+ "DetailText":"Wells Fargo center ",
+ "DetailTitle":"Title Text",
+ "DetailSubtitle":"SubtitleText",
+ "DetailImage":"MITPicture"
+ }
+ ]

@@ -70,10 +70,10 @@
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Puy-VA-Ycj">
-                                <rect key="frame" x="30" y="22" width="25" height="25"/>
+                                <rect key="frame" x="30" y="14.5" width="40" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="25" id="YoQ-qw-Ff8"/>
-                                    <constraint firstAttribute="height" constant="25" id="frt-e2-mhj"/>
+                                    <constraint firstAttribute="width" constant="40" id="YoQ-qw-Ff8"/>
+                                    <constraint firstAttribute="height" constant="40" id="frt-e2-mhj"/>
                                 </constraints>
                                 <state key="normal" image="backArrow"/>
                                 <connections>
@@ -91,6 +91,16 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="net-Nt-ha8">
+                                <rect key="frame" x="45" y="350" width="510" height="200"/>
+                                <string key="text">Lorem ipsum dolor sit amet, eu mucius definiebas disputationi mel. Quis fabulas omnesque eam te, et vis ceteros nominati sententiae. Ut everti praesent explicari vix, id per quot ceteros maiestatis, at probatus consequuntur usu. Sit in amet mucius, tale nulla eu vim. Eirmod pertinacia ut cum. Nec in vocent perfecto, no suas nemore vix.  Duo eu suas propriae. Est ex dolore facete, torquatos accommodare conclusionemque ius at. Lucilius legendos facilisis qui et, sed populo persequeris ut, adhuc nostrum cu his.</string>
+                                <fontDescription key="fontDescription" name="MavenProLight100-Regular" family="Maven Pro Light" pointSize="18"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="egh-pj-pbw">
+                                <rect key="frame" x="45" y="350" width="510" height="200"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SNW-0T-nsg">
                                 <rect key="frame" x="550" y="560" width="30" height="30"/>
                                 <constraints>
@@ -119,22 +129,12 @@
                                     <action selector="leftButtonClicked:" destination="mc5-K4-UwW" eventType="touchUpInside" id="YTb-i0-Ik2"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="egh-pj-pbw">
-                                <rect key="frame" x="60" y="350" width="480" height="190"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="net-Nt-ha8">
-                                <rect key="frame" x="60" y="350" width="480" height="190"/>
-                                <mutableString key="text">Lorem ipsum dolor sit amet, eu mucius definiebas disputationi mel. Quis fabulas omnesque eam te, et vis ceteros nominati sententiae. Ut everti praesent explicari vix, id per quot ceteros maiestatis, at probatus consequuntur usu. Sit in amet mucius, tale nulla eu vim. Eirmod pertinacia ut cum. Nec in vocent perfecto, no suas nemore vix.  Duo eu suas propriae. Est ex dolore facete, torquatos accommodare conclusionemque ius at. Lucilius legendos facilisis qui et, sed populo persequeris ut, adhuc nostrum cu his.</mutableString>
-                                <fontDescription key="fontDescription" name="MavenProLight100-Regular" family="Maven Pro Light" pointSize="18"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Puy-VA-Ycj" firstAttribute="centerY" secondItem="mtW-dU-32C" secondAttribute="centerY" id="1wi-3b-jKq"/>
                             <constraint firstItem="Wz7-sS-u6n" firstAttribute="top" secondItem="GSf-Om-naI" secondAttribute="bottom" constant="10" id="E8D-Fo-oC8"/>
-                            <constraint firstItem="Wz7-sS-u6n" firstAttribute="top" secondItem="net-Nt-ha8" secondAttribute="bottom" constant="60" id="HQa-cP-9Hw"/>
+                            <constraint firstItem="Wz7-sS-u6n" firstAttribute="top" secondItem="net-Nt-ha8" secondAttribute="bottom" constant="50" id="HQa-cP-9Hw"/>
                             <constraint firstItem="Wz7-sS-u6n" firstAttribute="top" secondItem="SNW-0T-nsg" secondAttribute="bottom" constant="10" id="Ix1-I5-pj2"/>
                             <constraint firstItem="5bg-TX-y2G" firstAttribute="top" secondItem="mtW-dU-32C" secondAttribute="bottom" constant="20" id="Qvc-cP-HqT"/>
                             <constraint firstItem="5bg-TX-y2G" firstAttribute="centerX" secondItem="zIa-ga-G3z" secondAttribute="centerX" id="SJ5-yu-q0s"/>
@@ -149,7 +149,7 @@
                             <constraint firstItem="mtW-dU-32C" firstAttribute="centerX" secondItem="zIa-ga-G3z" secondAttribute="centerX" id="kdJ-wK-A4f"/>
                             <constraint firstItem="GSf-Om-naI" firstAttribute="leading" secondItem="zIa-ga-G3z" secondAttribute="leadingMargin" id="orG-rr-wEN"/>
                             <constraint firstItem="SNW-0T-nsg" firstAttribute="trailing" secondItem="zIa-ga-G3z" secondAttribute="trailingMargin" id="sMK-va-oMY"/>
-                            <constraint firstItem="net-Nt-ha8" firstAttribute="width" secondItem="zIa-ga-G3z" secondAttribute="width" multiplier="0.8" id="urJ-lv-MGH"/>
+                            <constraint firstItem="net-Nt-ha8" firstAttribute="width" secondItem="zIa-ga-G3z" secondAttribute="width" multiplier="0.85" id="urJ-lv-MGH"/>
                             <constraint firstItem="net-Nt-ha8" firstAttribute="centerX" secondItem="zIa-ga-G3z" secondAttribute="centerX" id="wkd-rN-fp2"/>
                             <constraint firstItem="mtW-dU-32C" firstAttribute="width" secondItem="zIa-ga-G3z" secondAttribute="width" id="zzL-js-Odo"/>
                         </constraints>
@@ -216,7 +216,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="mc5-K4-UwW" kind="relationship" relationship="rootViewController" id="siL-mf-Zly"/>
+                        <segue destination="dmY-kj-iYw" kind="relationship" relationship="rootViewController" id="GIa-V3-OE5"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D3p-Qt-VlN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -501,8 +501,8 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </view>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Msk-dT-hZs" userLabel="ClosedView">
-                                            <rect key="frame" x="16" y="10" width="568" height="150"/>
+                                        <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Msk-dT-hZs" userLabel="ClosedView">
+                                            <rect key="frame" x="16" y="8" width="568" height="150"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oqo-Ra-5CR">
                                                     <rect key="frame" x="15" y="25" width="100" height="100"/>
@@ -1061,10 +1061,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pfm-Zd-BB4">
-                                <rect key="frame" x="30" y="23" width="25" height="25"/>
+                                <rect key="frame" x="30" y="15.5" width="40" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="25" id="3FZ-WN-BgH"/>
-                                    <constraint firstAttribute="height" constant="25" id="tqA-tI-9Zh"/>
+                                    <constraint firstAttribute="width" constant="40" id="3FZ-WN-BgH"/>
+                                    <constraint firstAttribute="height" constant="40" id="tqA-tI-9Zh"/>
                                 </constraints>
                                 <state key="normal" title="Back" image="backArrowWhite">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -1135,10 +1135,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jnB-uD-34X">
-                                <rect key="frame" x="20" y="40" width="25" height="25"/>
+                                <rect key="frame" x="20" y="40" width="40" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="25" id="7me-gz-pqY"/>
-                                    <constraint firstAttribute="height" constant="25" id="fxm-Ap-rry"/>
+                                    <constraint firstAttribute="width" constant="40" id="7me-gz-pqY"/>
+                                    <constraint firstAttribute="height" constant="40" id="fxm-Ap-rry"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="backArrowWhite"/>
                                 <connections>
@@ -1281,17 +1281,6 @@
                                     <action selector="moreInfoLinkClicked:" destination="vBf-dA-3HV" eventType="touchUpInside" id="NpL-pN-Zdc"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ekg-Wb-oTu">
-                                <rect key="frame" x="20" y="47" width="25" height="25"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="25" id="Qfn-Tk-Shv"/>
-                                    <constraint firstAttribute="height" constant="25" id="a0n-CC-zfA"/>
-                                </constraints>
-                                <state key="normal" title="Back" image="backArrow"/>
-                                <connections>
-                                    <action selector="backButtonClicked:" destination="vBf-dA-3HV" eventType="touchUpInside" id="vJO-Zn-H4d"/>
-                                </connections>
-                            </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nHs-90-xha">
                                 <rect key="frame" x="30" y="185" width="540" height="395"/>
                                 <userDefinedRuntimeAttributes>
@@ -1304,6 +1293,17 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ekg-Wb-oTu">
+                                <rect key="frame" x="20" y="39.5" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="Qfn-Tk-Shv"/>
+                                    <constraint firstAttribute="height" constant="40" id="a0n-CC-zfA"/>
+                                </constraints>
+                                <state key="normal" title="Back" image="backArrow"/>
+                                <connections>
+                                    <action selector="backButtonClicked:" destination="vBf-dA-3HV" eventType="touchUpInside" id="vJO-Zn-H4d"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1402,7 +1402,7 @@
         <image name="MITPicture" width="1080" height="671"/>
         <image name="SmithAppIcon" width="200" height="200"/>
         <image name="SmithDetailPicture" width="400" height="268"/>
-        <image name="backArrow" width="200" height="200"/>
-        <image name="backArrowWhite" width="200" height="200"/>
+        <image name="backArrow" width="280" height="280"/>
+        <image name="backArrowWhite" width="280" height="280"/>
     </resources>
 </document>

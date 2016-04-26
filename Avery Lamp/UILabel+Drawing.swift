@@ -14,11 +14,13 @@ extension UILabel {
     func getPathOfText(onePath: Bool) ->[CGPath]{
         let font = CTFontCreateWithName(self.font.fontName as CFString, self.font.pointSize, nil)
         let attributedString = self.attributedText!
-        
+        print("Font \(font)")
         let mutablePath = CGPathCreateMutable()
         CGPathAddRect(mutablePath, nil, self.bounds)
         let ctFramesetter = CTFramesetterCreateWithAttributedString(attributedString)
+        
         let ctFrame = CTFramesetterCreateFrame(ctFramesetter, CFRangeMake(0, attributedString.length), mutablePath,  nil)
+//        print("bounds \(CTFramesetterSuggestFrameSizeWithConstraints(ctFramesetter, CFRangeMake(0, attributedString.length), 0, 0, 0))")
         
         let fullPath = CGPathCreateMutable()
         var allLetterPaths = Array<CGPath>()
@@ -197,7 +199,7 @@ extension UILabel {
         
     }
     
-    func strokeTextLetterByLetter(width width:CGFloat = 0.5, delay:Double = 0.0, duration: Double, characterStrokeDuration:Double = 1.5, fade:Bool, fadeDuration: Double = 1.0, returnStuff:Bool = true) -> [CAShapeLayer]{
+    func strokeTextLetterByLetter(width width:CGFloat = 0.5, delay:Double = 0.0, duration: Double, characterStrokeDuration:Double = 1.5, fade:Bool, fadeDuration: Double = 1.0, returnStuff:Bool = true, strokeColor: UIColor = UIColor.blackColor()) -> [CAShapeLayer]{
         
         if delay != 0.0{
             self.alpha = 0.0
@@ -221,7 +223,7 @@ extension UILabel {
             singleLetterShape.frame = self.layer.frame
             singleLetterShape.bounds = self.layer.bounds
             singleLetterShape.path = allLetterPaths[index]
-            singleLetterShape.strokeColor = UIColor.blackColor().CGColor
+            singleLetterShape.strokeColor = strokeColor.CGColor
             singleLetterShape.geometryFlipped = true
             singleLetterShape.fillColor = UIColor.clearColor().CGColor
             singleLetterShape.lineWidth = width

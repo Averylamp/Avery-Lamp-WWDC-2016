@@ -37,7 +37,7 @@ class MyAppsTableViewController: UITableViewController, UIViewControllerTransiti
         myProjectsTitle.font = UIFont(name: "ADAM.CG PRO", size: 30)
         headerView.addSubview(myProjectsTitle)
         
-        let backButton = UIButton(frame: CGRectMake(20,20,25,25))
+        let backButton = UIButton(frame: CGRectMake(20,20,40,40))
         backButton.center = CGPointMake(backButton.center.x, myProjectsTitle.center.y)
         backButton.setImage(UIImage(named: "backArrow"), forState: .Normal)
         backButton.addTarget(self, action: #selector(MyAppsTableViewController.backButtonClicked), forControlEvents: .TouchUpInside)
