@@ -8,7 +8,7 @@
  "altitude":"500",
  "pitch":"10"
  },
- "DetailText":"My first line of code was written at Millburn High School in Computer Science 1, freshman year. I fell in love with coding and started coding in my free time, teaching myself what I know today. I continued with CS and Robotics courses all throughout High School, self teaching myself iOS development in 10th grade in free time. In the end of 10th grade, I published my first app as an English final to spread awareness on an issue of my choice. Besides that app, I was pretty inactive as a developer, until I went to my first Hackathon.\n\n",
+ "DetailText":"My first line of code was written at Millburn High School in Computer Science 1, freshman year. I fell in love with coding and started coding in my free time, teaching myself what I know today. I continued with CS courses all throughout High School, self teaching myself iOS development in 10th grade in free time. In the end of 10th grade, I published my first app as an English final to spread awareness on an issue of my choice. Besides that app, I was pretty inactive as a developer, until I went to my first Hackathon. Hackathons quickly changed my life and became my life.\n\n\n",
  "DetailTitle":"Millburn High School",
  "DetailSubtitle":"Millburn, NJ",
  "DetailImage":"Millburn-high"
@@ -36,7 +36,7 @@
  "altitude":"300",
  "pitch":"55"
  },
- "DetailText":"I loved PennApps so much, that in a little less than a month, I went to CodeDay in NYC. One of my PennApps partners, Sebastian Cain, was going and I brought a learning iOS developer, Ryan, from my school with me. We teamed up to make a music visualizer app named ViewZik (found in My Apps). At the end of 24 hours, I was exhausted, but we had a fully functioning music visualizer to show the judges. We ended up winning the Best Application Prize, which elated me as I knew I learning as a developer and my work was paying off.\n\n",
+ "DetailText":"I loved PennApps so much, that in a little less than a month, I went to CodeDay in NYC. One of my PennApps partners, Sebastian Cain, was going and I brought a learning iOS developer, Ryan, from my school with me. We teamed up to make a music visualizer app named ViewZik (My Apps). At the end of 24 hours, I was exhausted, but we had a fully functioning music visualizer to show the judges. We ended up winning the Best Application Prize, which elated me as I knew I learning as a developer and my work was paying off.\n\n",
  "DetailTitle":"CodeDay NYC",
  "DetailSubtitle":"February 2015",
  "DetailImage":"MITPicture"
@@ -50,9 +50,23 @@
  "altitude":"200",
  "pitch":"55"
  },
- "DetailText":"Fast forward two weeks and I was at another hackathon, HackBCA, the nations largest High School Hackathon at >500 participants. ",
- "DetailTitle":"Bergen County Academies",
- "DetailSubtitle":"Hack BCA II",
+ "DetailText":"Fast forward two weeks and I was at another hackathon, HackBCA II, the nations largest High School Hackathon at >500 participants. I formed a team with Sebastian, Ryan, and Josh, a new kid that Sebastian knew from a previous hackathon. We ended up making Smith (My Apps), an app that triggers actions through set vibration patterns. We placed second overall at HackBCA!! It was the second hackathon in a row where I won a prize. It just made me want to go to more hackathons!\n\n\n",
+ "DetailTitle":"Hack BCA II",
+ "DetailSubtitle":"March 2015",
+ "DetailImage":"MITPicture"
+ },
+ {
+ "xCoord":"40.729868",
+ "yCoord":"-73.990332",
+ "cam":{
+ "xCoord":"40.7253786",
+ "yCoord":"-73.992471",
+ "altitude":"300",
+ "pitch":"55"
+ },
+ "DetailText":"After HackBCA, the hackathon season was ending. We looked for other competitions, finding the annual \"Dream it. Code it. Win it.\" Competition hosted by the MIT Club of NYC, with the goal of using technology to solve problems. The four of us hackathon buddies, Sebastian, Josh, Ryan, and I decided to submit an app. We came up with Snappr (My Apps), an app that organizes photos based on a timed schedule. Throughout March we developed it, then submitted. We ended up being one of many \"Winners\".\n\n",
+ "DetailTitle":"CodeDay NYC",
+ "DetailSubtitle":"February 2015",
  "DetailImage":"MITPicture"
  },
  {

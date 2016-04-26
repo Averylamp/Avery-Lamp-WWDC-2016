@@ -58,6 +58,14 @@ class MyStoryViewController: UIViewController, MKMapViewDelegate {
         counterLabel.font = UIFont(name: "Panton-Light", size: 20)
         self.view.addSubview(counterLabel)
         counterLabel.text = "1/\(jsonData.count)"
+        
+        var swipeRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(AppExploreMoreViewController.handleSwipe(_:)))
+        swipeRecognizer.direction = UISwipeGestureRecognizerDirection.Left
+        self.view.addGestureRecognizer(swipeRecognizer)
+        swipeRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(AppExploreMoreViewController.handleSwipe(_:)))
+        swipeRecognizer.direction = UISwipeGestureRecognizerDirection.Right
+        self.view.addGestureRecognizer(swipeRecognizer)
+
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -288,6 +296,16 @@ class MyStoryViewController: UIViewController, MKMapViewDelegate {
             flyToLocation(nextLocation, finalPitchCamera: nil, flyoverAltitude: jsonData[currentPage]["flyoverAltitude"].doubleValue, finalAltitude: 80)
         }
         
+    }
+    
+    
+    func handleSwipe(gesture:UISwipeGestureRecognizer){
+        if(gesture.direction == UISwipeGestureRecognizerDirection.Left){
+            rightButtonClicked(UIView())
+        }
+        if(gesture.direction == UISwipeGestureRecognizerDirection.Right){
+            leftButtonClicked(UIView())
+        }
     }
     
     @IBAction func rightButtonClicked(sender: AnyObject) {
