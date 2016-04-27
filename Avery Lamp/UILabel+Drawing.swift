@@ -14,7 +14,6 @@ extension UILabel {
     func getPathOfText(onePath: Bool) ->[CGPath]{
         let font = CTFontCreateWithName(self.font.fontName as CFString, self.font.pointSize, nil)
         let attributedString = self.attributedText!
-        print("Font \(font)")
         let mutablePath = CGPathCreateMutable()
         CGPathAddRect(mutablePath, nil, self.bounds)
         let ctFramesetter = CTFramesetterCreateWithAttributedString(attributedString)

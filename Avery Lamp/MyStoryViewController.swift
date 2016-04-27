@@ -20,9 +20,9 @@ class MyStoryViewController: UIViewController, MKMapViewDelegate {
     
     @IBOutlet weak var detailImageView: UIImageView!
     @IBOutlet weak var rightButton: UIButton!
-    var rightButtonStrokeLayer: CAShapeLayer?
+    var rightButtonArrowLayer: CAShapeLayer?
     @IBOutlet weak var leftButton: UIButton!
-    var leftButtonStrokeLayer: CAShapeLayer?
+    var leftButtonArrowLayer: CAShapeLayer?
     var currentPage = 0
     
     let counterLabel = LTMorphingLabel()
@@ -53,7 +53,7 @@ class MyStoryViewController: UIViewController, MKMapViewDelegate {
         view.bringSubviewToFront(detailTextLabel)
         loadText(index: currentPage)
         counterLabel.frame = CGRectMake(0, self.view.frame.height - 35, self.view.frame.width, 30)
-        counterLabel.morphingDuration = 1.0
+        counterLabel.morphingDuration = 0.8
         counterLabel.textAlignment = .Center
         counterLabel.font = UIFont(name: "Panton-Light", size: 20)
         self.view.addSubview(counterLabel)
@@ -228,15 +228,27 @@ class MyStoryViewController: UIViewController, MKMapViewDelegate {
         arrowPath.addLineToPoint(CGPointMake(diameter * 3 / 4, diameter * 5 / 8))
         arrowPath.moveToPoint(CGPointMake(diameter / 2, diameter / 4))
         arrowPath.addLineToPoint(CGPointMake(diameter / 4, diameter * 5 / 8))
+        
+        
         CGPathAddPath(fullRightPath, nil, circlePathRight.CGPath)
-        CGPathAddPath(fullRightPath, nil, arrowPath.CGPath)
+//        CGPathAddPath(fullRightPath, nil, arrowPath.CGPath)
         CGPathAddPath(fullLeftPath, nil, circlePathLeft.CGPath)
-        CGPathAddPath(fullLeftPath, nil, arrowPath.CGPath)
+//        CGPathAddPath(fullLeftPath, nil, arrowPath.CGPath)
         
         let drawPath = CABasicAnimation(keyPath: "strokeEnd")
         drawPath.fromValue = 0.0
         drawPath.toValue = 1.0
         drawPath.duration = 2.0
+        let rightArrowShape = CAShapeLayer()
+        rightArrowShape.path = arrowPath.CGPath
+        rightArrowShape.fillColor = nil
+        rightArrowShape.lineWidth = 1.0
+        rightArrowShape.strokeColor = UIColor.blackColor().CGColor
+        let leftArrowShape = CAShapeLayer()
+        leftArrowShape.path = arrowPath.CGPath
+        leftArrowShape.fillColor = nil
+        leftArrowShape.lineWidth = 1.0
+        leftArrowShape.strokeColor = UIColor.blackColor().CGColor
         
         let rightShapeLayer = CAShapeLayer()
         rightShapeLayer.path = fullRightPath
@@ -250,14 +262,18 @@ class MyStoryViewController: UIViewController, MKMapViewDelegate {
         leftShapeLayer.strokeColor = UIColor.blackColor().CGColor
         rightButton.layer.addSublayer(rightShapeLayer)
         leftButton.layer.addSublayer(leftShapeLayer)
+        rightButton.layer.addSublayer(rightArrowShape)
+        leftButton.layer.addSublayer(leftArrowShape)
         
         rightButton.transform = CGAffineTransformMakeRotation(CGFloat(M_PI_2))
         leftButton.transform = CGAffineTransformMakeRotation(CGFloat(-M_PI_2))
         
         rightShapeLayer.addAnimation(drawPath, forKey: "path Animation")
         leftShapeLayer.addAnimation(drawPath, forKey: "Path Animation")
-        rightButtonStrokeLayer = rightShapeLayer
-        leftButtonStrokeLayer = leftShapeLayer
+        rightArrowShape.addAnimation(drawPath, forKey: "path Animation")
+        leftArrowShape.addAnimation(drawPath, forKey: "Path Animation")
+        rightButtonArrowLayer = rightArrowShape
+        leftButtonArrowLayer = leftArrowShape
     }
     
     func plusOnePath(right:Bool) -> CGPath{
@@ -313,7 +329,23 @@ class MyStoryViewController: UIViewController, MKMapViewDelegate {
             currentPage += 1
             animateMap()
             updateTextWithNewSlide()
+            
+            rightButtonArrowLayer?.removeAllAnimations()
+            rightButtonArrowLayer?.position = CGPointMake(0, 0)
+            CATransaction.begin()
+            CATransaction.setCompletionBlock({
+                self.rightButtonArrowLayer?.position = CGPointMake(0, 0)
+                CATransaction.begin()
+                self.rightButtonArrowLayer?.opacity = 1.0
+                CATransaction.commit()
+            })
+            CATransaction.setAnimationDuration(1.0)
+            
+            rightButtonArrowLayer?.position = CGPointMake(rightButtonArrowLayer!.position.x, rightButtonArrowLayer!.position.y - 20)
+            rightButtonArrowLayer?.opacity = 0.0
+            CATransaction.commit()
         }
+        
     }
     
     @IBAction func leftButtonClicked(sender: AnyObject) {
@@ -321,6 +353,21 @@ class MyStoryViewController: UIViewController, MKMapViewDelegate {
             currentPage -= 1
             animateMap()
             updateTextWithNewSlide()
+            
+            leftButtonArrowLayer?.removeAllAnimations()
+            leftButtonArrowLayer?.position = CGPointMake(0, 0)
+            CATransaction.begin()
+            CATransaction.setCompletionBlock({
+                self.leftButtonArrowLayer?.position = CGPointMake(0, 0)
+                CATransaction.begin()
+                self.leftButtonArrowLayer?.opacity = 1.0
+                CATransaction.commit()
+            })
+            CATransaction.setAnimationDuration(1.0)
+            
+            leftButtonArrowLayer?.position = CGPointMake(leftButtonArrowLayer!.position.x, leftButtonArrowLayer!.position.y - 20)
+            leftButtonArrowLayer?.opacity = 0.0
+            CATransaction.commit()
         }
     }
     

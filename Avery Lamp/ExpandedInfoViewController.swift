@@ -81,7 +81,7 @@ class ExpandedInfoViewController: UIViewController, UIScrollViewDelegate {
             textLabel.layer.opacity = 0.0
             page.layoutIfNeeded()
             if index == 0 {
-                textLabel.strokeTextLetterByLetter(width: 0.6, delay: 0.0, duration: textAnimationDuration, characterStrokeDuration: textAnimationDuration / 3, fade: true, returnStuff: false, strokeColor: UIColor.whiteColor())
+                textLabel.strokeTextLetterByLetter(width: 0.6, delay: 0.0, duration: textAnimationDuration, characterStrokeDuration: textAnimationDuration / 3, fade: true, returnStuff: false)
                 //                textLabel.strokeTextSimultaneously(width: 0.6, delay: 0.0, duration: textAnimationDuration, fade: true)
                 animationFired[0]  = true
             }

@@ -8,10 +8,24 @@
  "altitude":"500",
  "pitch":"10"
  },
- "DetailText":"My first line of code was written at Millburn High School in Computer Science 1, freshman year. I fell in love with coding and started coding in my free time, teaching myself what I know today. I continued with CS courses all throughout High School, self teaching myself iOS development in 10th grade in free time. In the end of 10th grade, I published my first app as an English final to spread awareness on an issue of my choice. Besides that app, I was pretty inactive as a developer, until I went to my first Hackathon. Hackathons quickly changed my life and became my life.\n\n\n",
+ "DetailText":"My first line of code was written my freshman year at Millburn High School in Computer Science 1. I fell in love with coding and started coding in my free time, which is how I learned what I know today. I continued with CS courses throughout high school, while I taught myself iOS development in my spare time. At the end of 10th grade, I published my first app as part of an English final to spread awareness on a topic of my choice. I was pretty inactive as a developer until I went to my first Hackathon. Hackathons quickly became a defining part of who I am.\n\n\n",
  "DetailTitle":"Millburn High School",
- "DetailSubtitle":"Millburn, NJ",
+ "DetailSubtitle":"Millburn, NJ 2012",
  "DetailImage":"Millburn-high"
+ },
+ {
+ "xCoord":"40.754737",
+ "yCoord":"-73.992218",
+ "cam":{
+ "xCoord":"40.754805",
+ "yCoord":"-73.990352",
+ "altitude":"120",
+ "pitch":"60"
+ },
+ "DetailText":"One of the ways I got experience developing iOS apps, was through an internship. Over the summer of 2014, I was a mobile developer intern in the tech department of U.S. Squash, the national governing non-profit company that organizes squash throughout the United States. Their tech department was very small and I was still a beginner at mobile development, so they set me on a small project building an iPad app to view their website. By the end of the summer, I finished the app, and they kept it as a prototype as it had some beginner mistakes.\n\n",
+ "DetailTitle":"U.S. Squash Headquarters",
+ "DetailSubtitle":"Summer 2014",
+ "DetailImage":"IsometricAtPennAppsXI"
  },
  {
  "xCoord":"39.951752",
@@ -22,7 +36,7 @@
  "altitude":"400",
  "pitch":"55"
  },
- "DetailText":"My first hackathon was at Penn Apps XI, a 1300+ person hackathon. I signed up knowledge of what a hackathon was and attended the event without having a team. At the event, I met three other great iOS devs and we collaborated in creating an app called MagicPen for 36 hours. It uses CLLocationManager's raw compass data to detects nearby magnets, interpolate their position, making a magnet into a stylus. It was the coolest project I ever worked on and inspired me to become a better iOS dev and work on my own projects.\n\n",
+ "DetailText":"My first hackathon was Penn Apps XI, a 1300+ person hackathon held by UPenn. I signed up withoug any knowledge of what a hackathon was, and I attended the event without a team. At the event, I met three other great iOS devs. We collaborated in creating an app called MagicPen. It uses CLLocationManager's raw compass data to detects a nearby magnet, derive its position, allowing the magnet to be used as a stylus. It was the coolest project I I had built and it inspired me to improve as an iOS dev and to work on my own projects.\n\n",
  "DetailTitle":"Penn Apps XI",
  "DetailSubtitle":"January 2015",
  "DetailImage":"IsometricAtPennAppsXI"
@@ -36,7 +50,7 @@
  "altitude":"300",
  "pitch":"55"
  },
- "DetailText":"I loved PennApps so much, that in a little less than a month, I went to CodeDay in NYC. One of my PennApps partners, Sebastian Cain, was going and I brought a learning iOS developer, Ryan, from my school with me. We teamed up to make a music visualizer app named ViewZik (My Apps). At the end of 24 hours, I was exhausted, but we had a fully functioning music visualizer to show the judges. We ended up winning the Best Application Prize, which elated me as I knew I learning as a developer and my work was paying off.\n\n",
+ "DetailText":"I loved PennApps so much that I went to CodeDay NYC less than a month later. One of my PennApps partners, Sebastian Cain, also went, and I brought a beginner iOS dev, Ryan Sullivan, from my school with me. We teamed up to make a music visualizer app named ViewZik (My Apps). At the end of 24 hours, I was exhausted, but we had a fully functioning music visualizer to present to the judges. We won the Best Application Prize, which elated me because I could see my growth as a developer and my work paid off.\n\n",
  "DetailTitle":"CodeDay NYC",
  "DetailSubtitle":"February 2015",
  "DetailImage":"MITPicture"
@@ -50,7 +64,7 @@
  "altitude":"200",
  "pitch":"55"
  },
- "DetailText":"Fast forward two weeks and I was at another hackathon, HackBCA II, the nations largest High School Hackathon at >500 participants. I formed a team with Sebastian, Ryan, and Josh, a new kid that Sebastian knew from a previous hackathon. We ended up making Smith (My Apps), an app that triggers actions through set vibration patterns. We placed second overall at HackBCA!! It was the second hackathon in a row where I won a prize. It just made me want to go to more hackathons!\n\n\n",
+ "DetailText":"Fast forward two weeks later and I was at another hackathon, HackBCA II, the nations largest High School Hackathon with over 500 participants. Sebastian, Ryan, and Josh, a new kid that Sebastian knew from a previous hackathon, teamed up. We ended up making Smith (My Apps), an app that triggers actions through set vibration patterns. We placed second overall at HackBCA!! This was the second hackathon in a row that I won a prize at. I could not wait to compete at more hackathons!\n\n\n",
  "DetailTitle":"Hack BCA II",
  "DetailSubtitle":"March 2015",
  "DetailImage":"MITPicture"
@@ -64,7 +78,7 @@
  "altitude":"300",
  "pitch":"55"
  },
- "DetailText":"After HackBCA, the hackathon season was ending. We looked for other competitions, finding the annual \"Dream it. Code it. Win it.\" Competition hosted by the MIT Club of NYC, with the goal of using technology to solve problems. The four of us hackathon buddies, Sebastian, Josh, Ryan, and I decided to submit an app. We came up with Snappr (My Apps), an app that organizes photos based on a timed schedule. Throughout March we developed it, then submitted. We ended up being one of many \"Winners\".\n\n",
+ "DetailText":"After HackBCA, the hackathon season was ending. We searched for other events and found the annual \"Dream it. Code it. Win it.\" Competition. The competition is hosted by the MIT Club of NYC and aims to use technology to solve problems. Sebastian, Ryan, Josh, and I, now hackathon buddies,  decided to submit an app. We came up with Snappr (My Apps), an app that organizes photos based on a timed schedule. Throughout March we developed it, then submitted. We were named as one of the many \"Winners\".\n\n",
  "DetailTitle":"CodeDay NYC",
  "DetailSubtitle":"February 2015",
  "DetailImage":"MITPicture"
