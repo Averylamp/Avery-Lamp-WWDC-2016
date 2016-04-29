@@ -22,10 +22,10 @@
  "altitude":"120",
  "pitch":"60"
  },
- "DetailText":"One of the ways I got experience developing iOS apps, was through an internship. Over the summer of 2014, I was a mobile developer intern in the tech department of U.S. Squash, the national governing non-profit company that organizes squash throughout the United States. Their tech department was very small and I was still a beginner at mobile development, so they set me on a small project building an iPad app to view their website. By the end of the summer, I finished the app, and they kept it as a prototype as it had some beginner mistakes.\n\n",
+ "DetailText":"One of the ways I got experience developing iOS apps, was through an internship. In the summer of 2014, I was a mobile dev intern in the tech department of U.S. Squash, the national governing non-profit company that organizes squash throughout the United States. The tech department was very small and I was a beginner at mobile development, so I was given a small project building an iPad app to view their website. By the end of the summer I finished the app and they kept it as a prototype.\n\n\n",
  "DetailTitle":"U.S. Squash Headquarters",
  "DetailSubtitle":"Summer 2014",
- "DetailImage":"IsometricAtPennAppsXI"
+ "DetailImage":"USSquashLogo"
  },
  {
  "xCoord":"39.951752",
@@ -36,7 +36,7 @@
  "altitude":"400",
  "pitch":"55"
  },
- "DetailText":"My first hackathon was Penn Apps XI, a 1300+ person hackathon held by UPenn. I signed up withoug any knowledge of what a hackathon was, and I attended the event without a team. At the event, I met three other great iOS devs. We collaborated in creating an app called MagicPen. It uses CLLocationManager's raw compass data to detects a nearby magnet, derive its position, allowing the magnet to be used as a stylus. It was the coolest project I I had built and it inspired me to improve as an iOS dev and to work on my own projects.\n\n",
+ "DetailText":"My first hackathon was Penn Apps XI, a 1300+ person hackathon held by UPenn. I signed up without any knowledge of what a hackathon was and I attended the event without a team. At the event, I met three other great iOS devs. We collaborated in creating an app called MagicPen. It uses CLLocationManager's raw compass data to detects a nearby magnet, derive its position, allowing the magnet to be used as a stylus. It was the coolest project I I had built and it inspired me to improve as an iOS dev and to work on my own projects.\n\n\n",
  "DetailTitle":"Penn Apps XI",
  "DetailSubtitle":"January 2015",
  "DetailImage":"IsometricAtPennAppsXI"
@@ -50,14 +50,14 @@
  "altitude":"300",
  "pitch":"55"
  },
- "DetailText":"I loved PennApps so much that I went to CodeDay NYC less than a month later. One of my PennApps partners, Sebastian Cain, also went, and I brought a beginner iOS dev, Ryan Sullivan, from my school with me. We teamed up to make a music visualizer app named ViewZik (My Apps). At the end of 24 hours, I was exhausted, but we had a fully functioning music visualizer to present to the judges. We won the Best Application Prize, which elated me because I could see my growth as a developer and my work paid off.\n\n",
+ "DetailText":"I loved PennApps so much that I went to CodeDay NYC less than a month later. One of my PennApps partners, Sebastian Cain, also went, and I brought a beginner iOS dev, Ryan Sullivan, from my school with me. We teamed up to make a music visualizer app named ViewZik (My Apps). At the end of 24 hours, I was exhausted, but we had a fully functioning music visualizer to present to the judges. We won the Best Application Prize, which elated me because I could see my growth as a developer and my work paid off.\n\n\n",
  "DetailTitle":"CodeDay NYC",
  "DetailSubtitle":"February 2015",
- "DetailImage":"MITPicture"
+ "DetailImage":"IsometricAtCodeDay"
  },
  {
- "xCoord":"40.902165",
- "yCoord":"-74.034143",
+ "xCoord":"40.902247",
+ "yCoord":"-74.034369",
  "cam":{
  "xCoord":"40.901054",
  "yCoord":"-74.037800",
@@ -67,7 +67,7 @@
  "DetailText":"Fast forward two weeks later and I was at another hackathon, HackBCA II, the nations largest High School Hackathon with over 500 participants. Sebastian, Ryan, and Josh, a new kid that Sebastian knew from a previous hackathon, teamed up. We ended up making Smith (My Apps), an app that triggers actions through set vibration patterns. We placed second overall at HackBCA!! This was the second hackathon in a row that I won a prize at. I could not wait to compete at more hackathons!\n\n\n",
  "DetailTitle":"Hack BCA II",
  "DetailSubtitle":"March 2015",
- "DetailImage":"MITPicture"
+ "DetailImage":"IsometricHackBCAStage"
  },
  {
  "xCoord":"40.729868",
@@ -78,9 +78,81 @@
  "altitude":"300",
  "pitch":"55"
  },
- "DetailText":"After HackBCA, the hackathon season was ending. We searched for other events and found the annual \"Dream it. Code it. Win it.\" Competition. The competition is hosted by the MIT Club of NYC and aims to use technology to solve problems. Sebastian, Ryan, Josh, and I, now hackathon buddies,  decided to submit an app. We came up with Snappr (My Apps), an app that organizes photos based on a timed schedule. Throughout March we developed it, then submitted. We were named as one of the many \"Winners\".\n\n",
- "DetailTitle":"CodeDay NYC",
- "DetailSubtitle":"February 2015",
+ "DetailText":"After HackBCA, the hackathon season was ending. We searched for other events and found the annual \"Dream it. Code it. Win it.\" Competition. The competition is hosted by the MIT Club of NYC and aims to use technology to solve problems. Sebastian, Ryan, Josh, and I, now hackathon buddies, decided to submit an app. We came up with Snappr (My Apps), an app that organizes photos based on a timed schedule. Throughout March we developed it, then submitted. We were named as one of the many \"Winners\".\n\n\n",
+ "DetailTitle":"Dream, Code, Win",
+ "DetailSubtitle":"April 2015",
+ "DetailImage":"MITPicture"
+ },
+ {
+ "xCoord":"40.736832",
+ "yCoord":"-74.330647",
+ "cam":{
+ "xCoord":"38.991636",
+ "yCoord":"-74.317981",
+ "altitude":"800000",
+ "pitch":"10"
+ },
+ "DetailText":"As the hackathon season ended, my hackathon team and I went into freelancing and created Isometric Studios. We started looking for jobs and built our website. I learned my web development from helping build isometric.co and building my personal website averylamp.me. Throughout 2015, I worked on freelance jobs either with the Isometric team or alone. My favorite job was solitary, Dribble Up. I built an iOS basketball tracking and analytics app with provided algorithms, learning computer vision in the process (http://dribbleup.com/).\n\n\n",
+ "DetailTitle":"Isometric Studios",
+ "DetailSubtitle":"isometric.co",
+ "DetailImage":"DribbleUpPromoPic"
+ },
+ {
+ "xCoord":"40.754737",
+ "yCoord":"-73.992218",
+ "cam":{
+ "xCoord":"40.754805",
+ "yCoord":"-73.990352",
+ "altitude":"120",
+ "pitch":"60"
+ },
+ "DetailText":"Summer 2015, I interned again at U.S. Squash. This time, I had enough experience to confidently tackle a large project. For the six weeks of my internship, I built a squash match scoring app for referees to use. At the time U.S. Squash was updating their website with live scoring capabilities; my scoring app enabled referees to update the scores live. The app was published and now it is used in every of the higher level sanctioned tournaments, which was amazing for me to see.\n\n\n",
+ "DetailTitle":"U.S. Squash Headquarters",
+ "DetailSubtitle":"Summer 2015",
+ "DetailImage":"USSquashScoringMain"
+ },
+ {
+ "xCoord":"39.901183",
+ "yCoord":"-75.171975",
+ "cam":{
+ "xCoord":"39.897289",
+ "yCoord":"-75.168142",
+ "altitude":"100",
+ "pitch":"75"
+ },
+ "flyoverAltitude":"100000",
+ "DetailText":"Soon enough, the hackathon season returned. PennApps XIII was larger than ever with 2,000 participants, the largest student hackathon in the world. I teamed up with students from Europe and CA. We built PocketLab (My Apps), a proof of concept app that uses computer vision (that I learned while freelancing) to diagnose and analyze blood samples. We won the Hottest Health Hack prize, a huge achievement! In under eight months, I went from my first hackathon to winning a prize at the largest student hackathon ever! (Jake, the CA student, soon got a full time job at Apple!)\n\n\n",
+ "DetailTitle":"PennApps XII",
+ "DetailSubtitle":"September 2015",
+ "DetailImage":"PennAppsXII"
+ },
+ {
+ "xCoord":"40.720737",
+ "yCoord":"-74.316513",
+ "cam":{
+ "xCoord":"40.721995",
+ "yCoord":"-74.316518",
+ "altitude":"500",
+ "pitch":"10"
+ },
+ "DetailText":"Summer 2015, a group of friends and I planned to bring a hackathon to Millburn. It was a huge task for a group of students, but Millburn's first hackathon, HackMHS turned out to be a spectacular success. On October 12, we ran HackMHS for 12 hours. We had over 100 hackers and plenty of food for everyone. We designed many workshops for the beginners that attended, including an iOS workshop I taught. The response from the community was so great that we started planning HackMHS II in the Spring.\n\n\n",
+ "DetailTitle":"HackMHS I",
+ "DetailSubtitle":"October 2015",
+ "DetailImage":"HackMHSPizza"
+ },
+ {
+ "xCoord":"42.359745",
+ "yCoord":"-71.092057",
+ "cam":{
+ "xCoord":"42.355182",
+ "yCoord":"-71.089168",
+ "altitude":"180",
+ "pitch":"75"
+ },
+ "flyoverAltitude":"100000",
+ "DetailText":"After HackMHS I, I took a break from hackathons to do college applications. I was accepted to MIT for early action!! I am incredibly excited for the computer science opportunities at MIT and I hope to major in Computer Science.\n\n",
+ "DetailTitle":"MIT",
+ "DetailSubtitle":"Class of 2020",
  "DetailImage":"MITPicture"
  },
  {
@@ -93,24 +165,38 @@
  "pitch":"75"
  },
  "flyoverAltitude":"10000000",
- "DetailText":"My first line of code was written at Millburn High School in Computer Science 1 freshman year. I fell in love with coding and started codind in my free time, teaching myself most of what I know today. I continued with CS and Robotics courses all throughout High School, self teaching myself iOS development in 10th grade in free time. I was pretty inactive as a developer, until I went to my first Hackathon. ",
- "DetailTitle":"Title Text",
- "DetailSubtitle":"SubtitleText",
- "DetailImage":"MITPicture"
+ "DetailText":"I returned to hackathons after I was accepted into MIT. I was one of the few high school students invited to TreeHacks, Stanford's annual hackathon. I teamed up with a friend from PennApps XII plus two others, and we set out building an app that builds apps with a combination of React-Native and Swift. It allows users to drag, drop, and edit properties of native UI elements as well as set up simple actions. We won the Facebook's Favorite Choice prize, and they sent me an Oculus! After the event I stayed in CA for a few days to visit my friend at his new job at Apple!!\n\n\n",
+ "DetailTitle":"TreeHacks",
+ "DetailSubtitle":"February 2016",
+ "DetailImage":"AveryAtApple"
  },
  {
- "xCoord":"39.901183",
- "yCoord":"-75.171975",
+ "xCoord":"40.902101",
+ "yCoord":"-74.033875",
  "cam":{
- "xCoord":"39.897289",
- "yCoord":"-75.168142",
- "altitude":"100",
+ "xCoord":"40.901054",
+ "yCoord":"-74.037800",
+ "altitude":"200",
+ "pitch":"55"
+ },
+ "DetailText":"Most recently, I went to HackBCA III with my younger brother. I helped him during the hackathon since just started to learn iOS development. The Isometric team and I built Reppin (My Apps), a computer vision rep counter. We placed Third overall and won the Best Mobile App prize, while my brother experienced his first hackathon. I hope to continue helping my brother grow as an iOS developer so he can follow in my footsteps and learn to love create like I do.\n\n\n",
+ "DetailTitle":"Hack BCA III",
+ "DetailSubtitle":"April 2016",
+ "DetailImage":"IsometricAtHackBCAIII"
+ },
+ {
+ "xCoord":"37.778020",
+ "yCoord":"-122.417330",
+ "cam":{
+ "xCoord":"37.780559",
+ "yCoord":"-122.417846",
+ "altitude":"80",
  "pitch":"75"
  },
- "flyoverAltitude":"100000",
- "DetailText":"Wells Fargo center ",
- "DetailTitle":"Title Text",
- "DetailSubtitle":"SubtitleText",
- "DetailImage":"MITPicture"
- }
+ "flyoverAltitude":"10000000",
+ "DetailText":"Hopefully the next step in my journey includes being invited to the WWDC 2016. I am extremely excited to hear about the new tech releases and updates. \n\n\n",
+ "DetailTitle":"WWDC 2016",
+ "DetailSubtitle":"June 2016",
+ "DetailImage":"WWDC16WallpaperTall"
+ },
  ]

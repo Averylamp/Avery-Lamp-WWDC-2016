@@ -267,8 +267,7 @@
 				BB10DD951C59E5FD0079C480 /* SplashViewController.swift */,
 				BB10DD351C59DF940079C480 /* Main.storyboard */,
 				BB34038A1C61E9D0004F53DF /* HomeViewController.swift */,
-				BBFFC4501C88AF2800A8B5C5 /* MyStoryViewController.swift */,
-				BBF47E901CCCB9FB006D3D3A /* StoryData.json */,
+				BB6599951CD32D610062D448 /* My Story */,
 				BBBBFAB51C97206900770E00 /* My Apps */,
 				BBF47E8D1CCCA42B006D3D3A /* My Info */,
 				BBB80A0F1CC2359A006088C6 /* UIColorExtension.swift */,
@@ -391,6 +390,15 @@
 				BBE54C771C9D5A4400EA9E7A /* SummitThin-SolidTwo.otf */,
 			);
 			name = "Summit Font";
+			sourceTree = "<group>";
+		};
+		BB6599951CD32D610062D448 /* My Story */ = {
+			isa = PBXGroup;
+			children = (
+				BBFFC4501C88AF2800A8B5C5 /* MyStoryViewController.swift */,
+				BBF47E901CCCB9FB006D3D3A /* StoryData.json */,
+			);
+			name = "My Story";
 			sourceTree = "<group>";
 		};
 		BBB57F901CC97E95005D6BF1 /* Maven Pro */ = {

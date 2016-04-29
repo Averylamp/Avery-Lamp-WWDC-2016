@@ -81,7 +81,7 @@ class ExpandedInfoViewController: UIViewController, UIScrollViewDelegate {
             textLabel.layer.opacity = 0.0
             page.layoutIfNeeded()
             if index == 0 {
-                textLabel.strokeTextLetterByLetter(width: 0.6, delay: 0.0, duration: textAnimationDuration, characterStrokeDuration: textAnimationDuration / 3, fade: true, returnStuff: false)
+                textLabel.strokeTextLetterByLetter(width: 0.6, delay: 0.0, duration: textAnimationDuration + 0.5, characterStrokeDuration: (textAnimationDuration + 0.5) / 3, fade: true, returnStuff: false)
                 //                textLabel.strokeTextSimultaneously(width: 0.6, delay: 0.0, duration: textAnimationDuration, fade: true)
                 animationFired[0]  = true
             }
@@ -97,7 +97,7 @@ class ExpandedInfoViewController: UIViewController, UIScrollViewDelegate {
         //        }
     }
     
-    var textAnimationDuration = 1.5
+    var textAnimationDuration = 1.2
     var animationFired = [Bool]()
     
     func scrollViewDidScroll(scrollView: UIScrollView) {

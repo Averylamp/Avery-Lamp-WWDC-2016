@@ -8,6 +8,23 @@
 
 import UIKit
 
+enum DGShortcutItemType: String {
+    case Introduction
+    case Home
+    case MyStory
+    case MyInfo
+    case MyApps
+    
+    init?(shortcutItem: UIApplicationShortcutItem) {
+        guard let last = shortcutItem.type.componentsSeparatedByString(".").last else { return nil }
+        self.init(rawValue: last)
+    }
+    
+    var type: String {
+        return NSBundle.mainBundle().bundleIdentifier! + ".\(self.rawValue)"
+    }
+}
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,8 +34,63 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-
+        
+        if let shortcutItem = launchOptions?[UIApplicationLaunchOptionsShortcutItemKey] as? UIApplicationShortcutItem {
+            handleShortcutItem(shortcutItem)
+        }
+        
         return true
+    }
+    func application(application: UIApplication, performActionForShortcutItem shortcutItem: UIApplicationShortcutItem, completionHandler: (Bool) -> Void) {
+        handleShortcutItem(shortcutItem)
+    }
+    
+    
+    
+    private func handleShortcutItem(shortcutItem:UIApplicationShortcutItem){
+        if let rootViewController = window?.rootViewController as? UINavigationController, let shortcutItemType = DGShortcutItemType(shortcutItem: shortcutItem) {
+            rootViewController.dismissViewControllerAnimated(false, completion: nil)
+//            let alertController = UIAlertController(title: "", message: "", preferredStyle: .Alert)
+            
+            switch shortcutItemType {
+            case .Introduction:
+                rootViewController.viewControllers = [SplashViewController()]
+//                alertController.message = "It's time to search"
+                break
+            case .Home:
+                rootViewController.pushViewController(HomeViewController(), animated: false)
+//                alertController.message = "Show me my favorites"
+                break
+            case .MyInfo:
+                rootViewController.pushViewController(HomeViewController(), animated: false)
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let myStoryTVC = storyboard.instantiateViewControllerWithIdentifier("MyInfoVC")
+                rootViewController.pushViewController(myStoryTVC, animated: false)
+//                alertController.message = "Show me my favorites"
+                break
+            case .MyStory:
+//                rootViewController.viewControllers = [HomeViewController(),MyStoryViewController()]
+                rootViewController.pushViewController(HomeViewController(), animated: false)
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let myStoryTVC = storyboard.instantiateViewControllerWithIdentifier("MyStoryVC")
+                rootViewController.pushViewController(myStoryTVC, animated: false)
+                
+//                rootViewController.pushViewController(MyStoryViewController(), animated: false)
+//                alertController.message = "Show me my favorites"
+                break
+            case .MyApps:
+                rootViewController.pushViewController(HomeViewController(), animated: false)
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let myStoryTVC = storyboard.instantiateViewControllerWithIdentifier("MyAppsVC")
+                rootViewController.pushViewController(myStoryTVC, animated: false)
+//                alertController.message = "Show me my favorites"
+                break
+            }
+            
+//            alertController.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+//            rootViewController.presentViewController(alertController, animated: true, completion: nil)
+        }
+
     }
 
     func applicationWillResignActive(application: UIApplication) {

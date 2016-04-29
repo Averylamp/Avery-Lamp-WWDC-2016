@@ -76,9 +76,9 @@
                                },
                                {
                                "style":"imageTextRatio",
-                               "ratio":"45",
+                               "ratio":"55",
                                "image":"PocketLabMainScreen",
-                               "detailText":"Pocketlab is a collection of tools for blood analysis built as a proof of concept. One of the main functions is image analysis with OpenCV performing hematocrit analysis and shape detection on blood smears. We aim to diagnose:  Anemia, Leukemia, Hereditary Elliptocytosis, Sickle Cell, Hemolytic Anemia."
+                               "detailText":"Pocketlab is a collection of tools for blood analysis built as a proof of concept. One of the main functions is image analysis with OpenCV, allowing the app to perform hematocrit analysis and shape detection on blood smears. We aim to diagnose: Anemia, Leukemia, Hereditary Elliptocytosis, Sickle Cell, Hemolytic Anemia."
                                },
                                {
                                "style":"imageTextRatio",
@@ -90,25 +90,25 @@
                                "style":"imageTextRatio",
                                "ratio":"50",
                                "image":"PocketLabHaematocritAnalysis",
-                               "detailText":"When a doctor has centrifuged blood, a hematocrit test can be performed to help form a diagnosis. We built in a computer vision algorithm to determine the percentage of different layers of blood in test tubes.  "
+                               "detailText":"When a doctor has centrifuged blood, a hematocrit test can be performed to help form a diagnosis. We built in a computer vision algorithm to determine the percentage of different layers of blood in test tubes. Different percentages of blood components is one tool doctors use to make a diagnosis. "
                                },
                                {
                                "style":"imageTextRatio",
                                "ratio":"70",
                                "image":"PocketLabHaematocritTest",
-                               "detailText":"The Hematocrit Analysis tool also does live image analysis. This is a sample we made for demos. It was not real blood (mustard & jelly), but it works."
+                               "detailText":"The Hematocrit Analysis tool also does live image analysis. This is a sample we made for demos. It was not real blood (mustard & jelly), but it proves that our algorithm works."
                                },
                                {
                                "style":"imageTextRatio",
                                "ratio":"40",
                                "image":"PocketLabDetailPicture",
-                               "detailText":"Using computer vision the app detects the cell shapes and  draws red and green highlights around cells. The ratio of normal to abnormal cells gives a good indication of a possible diagnosis. I had experience in openCV from a freelance job over the summer, so I programmed almost the entirety of the cell analysis tool. It was my greatest contribution to the project."
+                               "detailText":"Using computer vision the app detects the cell shapes and  draws red and green highlights around cells. The ratio of normal to abnormal cells, along with other factors like color and shape, give a good indication of a possible diagnosis. I had experience in openCV from a freelance job over the summer, so I programmed almost the entirety of the cell analysis tool. It was my greatest contribution to the project."
                                },
                                {
                                "style":"imageTextRatio",
-                               "ratio":"80",
+                               "ratio":"70",
                                "image":"PocketLabMicroscopySample",
-                               "detailText":"Here is a side by side comparison of samples"
+                               "detailText":"Here is a side by side comparison of samples. After the algorithm is run, cells are highlighted in green or red based on their shape."
                                },
                                ]
         },
@@ -132,7 +132,7 @@
                                    "style":"imageTextRatio",
                                    "ratio":"40",
                                    "image":"SmithDetailPicture",
-                                   "detailText":"Smith is a utility for productivity. Smith runs in the background listening for specific knocking patterns. The user can set a pattern to call their best friend, then the phone would listen for that pattern with the accelerometer. When the pattern is knocked, the phone will dial the number and call the best friend automatically."
+                                   "detailText":"Smith is a utility for productivity. Smith runs in the background listening for specific knocking patterns. The user can set custom patterns to do custom actions, like for example, call their best friend. When open, the app listens for patterns with the accelerometer. When the pattern is knocked, the phone will dial the number and call the best friend automatically."
                                },
                                {
                                    "style":"imageTextRatio",
@@ -163,27 +163,15 @@
             "expandedDetails":[
                                {
                                "style":"oneOneImageDetailText",
-                               "image":"SmithAppIcon",
-                               "detailText":"Smith was created at HackBCA, my second hackathon, in February of 2015.  It won overall 2nd place."
+                               "image":"TapAttackIcon",
+                               "detailText":"Tap Attack is a simple game I made in some free time I had over a school break. It is the second app I published, and it has been downloaded a couple hundred times. "
                                },
                                {
                                "style":"imageTextRatio",
-                               "ratio":"40",
-                               "image":"SmithDetailPicture",
-                               "detailText":"Smith is a utility for productivity. Smith runs in the background listening for specific knocking patterns. The user can set a pattern to call their best friend, then the phone would listen for that pattern with the accelerometer. When the pattern is knocked, the phone will dial the number and call the best friend automatically."
-                               },
-                               {
-                               "style":"imageTextRatio",
-                               "ratio":"60",
-                               "image":"SmithActionsPage",
-                               "detailText":"By swiping to the right from the main screen where the active recognition is on, an actions screen is brought up. It has a list of all of the actions the user created and a button that allows the user to add more actions."
-                               },
-                               {
-                               "style":"imageTextRatio",
-                               "ratio":"50",
-                               "image":"SmithCreateAction",
-                               "detailText":"To create an action, the user records a pattern. Smith supports many actions, such as running custom Workflows, playing playlists of music, calling, texting, receiving weather information, opening web pages, mail, maps, and Facetime."
-                               },
+                               "ratio":"55",
+                               "image":"TapAttackGameScreen",
+                               "detailText":"In the game, a player has to tap all green dots before they dissappear. As the game progresses, green dots appear and shrink faster while other elements are added. Red dots instantly end the game, yellow dots give extra points, and a X2 dots multiplies scores. The game is integrates Game Center with a leaderboard and achievements."
+                               }
                                ]
         },
         {
@@ -208,20 +196,8 @@
                                "style":"imageTextRatio",
                                "ratio":"40",
                                "image":"ViewZikDetailPicture",
-                               "detailText":"ViewZik is a music visualizer that includes a waveform and live music DJ'ing. It has four effects built into the app: looping, a phaser effect, a flanger effect, and a bass boost."
-                               },
-                               {
-                               "style":"imageTextRatio",
-                               "ratio":"60",
-                               "image":"SmithActionsPage",
-                               "detailText":"By swiping to the right from the main screen where the active recognition is on, an actions screen is brought up. It has a list of all of the actions the user created and a button that allows the user to add more actions."
-                               },
-                               {
-                               "style":"imageTextRatio",
-                               "ratio":"50",
-                               "image":"SmithCreateAction",
-                               "detailText":"To create an action, the user records a pattern. Smith supports many actions, such as running custom Workflows, playing playlists of music, calling, texting, receiving weather information, opening web pages, mail, maps, and Facetime."
-                               },
+                               "detailText":"ViewZik is a music visualizer that includes a waveform and live music DJ'ing. It has four effects built into the app: looping, a phaser effect, a flanger effect, and a bass boost. To activate each effect, a corner is touched. The effect modifies both the music and the waveform. Check out the live demo above."
+                               }
                                ]
         },
         {

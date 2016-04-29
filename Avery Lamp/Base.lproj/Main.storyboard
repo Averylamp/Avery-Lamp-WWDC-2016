@@ -81,7 +81,7 @@
                                 </connections>
                             </button>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="5bg-TX-y2G">
-                                <rect key="frame" x="45" y="80" width="510" height="250"/>
+                                <rect key="frame" x="37.5" y="60" width="525" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="Ro4-ol-cEm"/>
                                 </constraints>
@@ -92,15 +92,12 @@
                                 </userDefinedRuntimeAttributes>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="net-Nt-ha8">
-                                <rect key="frame" x="45" y="350" width="510" height="200"/>
+                                <rect key="frame" x="37.5" y="330" width="525" height="220"/>
                                 <string key="text">Lorem ipsum dolor sit amet, eu mucius definiebas disputationi mel. Quis fabulas omnesque eam te, et vis ceteros nominati sententiae. Ut everti praesent explicari vix, id per quot ceteros maiestatis, at probatus consequuntur usu. Sit in amet mucius, tale nulla eu vim. Eirmod pertinacia ut cum. Nec in vocent perfecto, no suas nemore vix.  Duo eu suas propriae. Est ex dolore facete, torquatos accommodare conclusionemque ius at. Lucilius legendos facilisis qui et, sed populo persequeris ut, adhuc nostrum cu his.</string>
-                                <fontDescription key="fontDescription" name="MavenProLight100-Regular" family="Maven Pro Light" pointSize="18"/>
+                                <fontDescription key="fontDescription" name="MavenProLight100-Regular" family="Maven Pro Light" pointSize="20"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="egh-pj-pbw">
-                                <rect key="frame" x="45" y="350" width="510" height="200"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SNW-0T-nsg">
                                 <rect key="frame" x="550" y="560" width="30" height="30"/>
                                 <constraints>
@@ -129,6 +126,9 @@
                                     <action selector="leftButtonClicked:" destination="mc5-K4-UwW" eventType="touchUpInside" id="YTb-i0-Ik2"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="egh-pj-pbw">
+                                <rect key="frame" x="37" y="330" width="525" height="220"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -136,11 +136,11 @@
                             <constraint firstItem="Wz7-sS-u6n" firstAttribute="top" secondItem="GSf-Om-naI" secondAttribute="bottom" constant="10" id="E8D-Fo-oC8"/>
                             <constraint firstItem="Wz7-sS-u6n" firstAttribute="top" secondItem="net-Nt-ha8" secondAttribute="bottom" constant="50" id="HQa-cP-9Hw"/>
                             <constraint firstItem="Wz7-sS-u6n" firstAttribute="top" secondItem="SNW-0T-nsg" secondAttribute="bottom" constant="10" id="Ix1-I5-pj2"/>
-                            <constraint firstItem="5bg-TX-y2G" firstAttribute="top" secondItem="mtW-dU-32C" secondAttribute="bottom" constant="20" id="Qvc-cP-HqT"/>
+                            <constraint firstItem="5bg-TX-y2G" firstAttribute="top" secondItem="mtW-dU-32C" secondAttribute="bottom" id="Qvc-cP-HqT"/>
                             <constraint firstItem="5bg-TX-y2G" firstAttribute="centerX" secondItem="zIa-ga-G3z" secondAttribute="centerX" id="SJ5-yu-q0s"/>
                             <constraint firstItem="mtW-dU-32C" firstAttribute="top" secondItem="zIa-ga-G3z" secondAttribute="topMargin" constant="10" id="UHJ-yP-lLP"/>
                             <constraint firstItem="net-Nt-ha8" firstAttribute="top" secondItem="5bg-TX-y2G" secondAttribute="bottom" constant="20" id="UKz-oK-EGq"/>
-                            <constraint firstItem="5bg-TX-y2G" firstAttribute="width" secondItem="zIa-ga-G3z" secondAttribute="width" multiplier="0.85" id="Vbb-4Y-5wz"/>
+                            <constraint firstItem="5bg-TX-y2G" firstAttribute="width" secondItem="zIa-ga-G3z" secondAttribute="width" multiplier="0.875" id="Vbb-4Y-5wz"/>
                             <constraint firstItem="egh-pj-pbw" firstAttribute="height" secondItem="net-Nt-ha8" secondAttribute="height" id="Xqj-jK-WLa"/>
                             <constraint firstItem="Puy-VA-Ycj" firstAttribute="leading" secondItem="zIa-ga-G3z" secondAttribute="leadingMargin" constant="10" id="bII-EI-gXo"/>
                             <constraint firstItem="egh-pj-pbw" firstAttribute="centerX" secondItem="net-Nt-ha8" secondAttribute="centerX" id="cXx-xy-hQ5"/>
@@ -149,7 +149,7 @@
                             <constraint firstItem="mtW-dU-32C" firstAttribute="centerX" secondItem="zIa-ga-G3z" secondAttribute="centerX" id="kdJ-wK-A4f"/>
                             <constraint firstItem="GSf-Om-naI" firstAttribute="leading" secondItem="zIa-ga-G3z" secondAttribute="leadingMargin" id="orG-rr-wEN"/>
                             <constraint firstItem="SNW-0T-nsg" firstAttribute="trailing" secondItem="zIa-ga-G3z" secondAttribute="trailingMargin" id="sMK-va-oMY"/>
-                            <constraint firstItem="net-Nt-ha8" firstAttribute="width" secondItem="zIa-ga-G3z" secondAttribute="width" multiplier="0.85" id="urJ-lv-MGH"/>
+                            <constraint firstItem="net-Nt-ha8" firstAttribute="width" secondItem="zIa-ga-G3z" secondAttribute="width" multiplier="0.875" id="urJ-lv-MGH"/>
                             <constraint firstItem="net-Nt-ha8" firstAttribute="centerX" secondItem="zIa-ga-G3z" secondAttribute="centerX" id="wkd-rN-fp2"/>
                             <constraint firstItem="mtW-dU-32C" firstAttribute="width" secondItem="zIa-ga-G3z" secondAttribute="width" id="zzL-js-Odo"/>
                         </constraints>
@@ -165,7 +165,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y7g-XH-jQB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2233" y="-349"/>
+            <point key="canvasLocation" x="2233" y="-357"/>
         </scene>
         <!--Splash View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -216,12 +216,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="mc5-K4-UwW" kind="relationship" relationship="rootViewController" id="NpA-wB-QkQ"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="LHQ-DM-0aa"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D3p-Qt-VlN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="317" y="332"/>
+            <point key="canvasLocation" x="325" y="332"/>
         </scene>
         <!--My Apps Table View Controller-->
         <scene sceneID="fcd-dt-PRG">
@@ -286,7 +286,7 @@
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="55" id="BTf-1W-gt4"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" name="Panton-Light" family="Panton" pointSize="14"/>
+                                                            <fontDescription key="fontDescription" name="Panton-Light" family="Panton" pointSize="16"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -546,16 +546,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="Nze-9u-vTg"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Panton-Regular" family="Panton" pointSize="14"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smith analyzes vibration patterns to trigger custom actions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="6iX-ly-Chn">
-                                                    <rect key="frame" x="125" y="83" width="433" height="60"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="60" id="1vz-4J-qhF"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="Panton-Light" family="Panton" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="Panton-Regular" family="Panton" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -565,6 +556,15 @@
                                                         <constraint firstAttribute="height" constant="30" id="kja-zi-80E"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="ADAM.CGPRO" family="ADAM.CG PRO" pointSize="20"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smith analyzes vibration patterns to trigger custom actions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="6iX-ly-Chn">
+                                                    <rect key="frame" x="125" y="83" width="433" height="60"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="1vz-4J-qhF"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Panton-Light" family="Panton" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -711,7 +711,7 @@
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="55" id="4oC-0H-BLv"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" name="Panton-Light" family="Panton" pointSize="14"/>
+                                                            <fontDescription key="fontDescription" name="Panton-Light" family="Panton" pointSize="16"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -925,7 +925,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="zj4-o7-jVm"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Panton-Regular" family="Panton" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="Panton-Regular" family="Panton" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -950,7 +950,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="60" id="Xgx-Xb-3XN"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="Panton-Light" family="Panton" pointSize="14"/>
+                                                    <fontDescription key="fontDescription" name="Panton-Light" family="Panton" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>

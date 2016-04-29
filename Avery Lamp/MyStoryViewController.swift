@@ -24,6 +24,7 @@ class MyStoryViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet weak var leftButton: UIButton!
     var leftButtonArrowLayer: CAShapeLayer?
     var currentPage = 0
+    var pageChangeEnabled = false
     
     let counterLabel = LTMorphingLabel()
     
@@ -65,7 +66,105 @@ class MyStoryViewController: UIViewController, MKMapViewDelegate {
         swipeRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(AppExploreMoreViewController.handleSwipe(_:)))
         swipeRecognizer.direction = UISwipeGestureRecognizerDirection.Right
         self.view.addGestureRecognizer(swipeRecognizer)
-
+        let firstOpen = NSUserDefaults.standardUserDefaults().valueForKey("FirstStoryOpen") as? Bool
+        if firstOpen == nil{
+            print("First Open")
+            instructionsPopup()
+            NSUserDefaults.standardUserDefaults().setValue(false, forKey: "FirstStoryOpen")
+        }else if firstOpen == false{
+            pageChangeEnabled = true
+            print("Not first open")
+        }
+        setupLineOverlay()
+    }
+    var introView: UIView?
+    
+    func instructionsPopup() {
+        let popupView = UIView(frame: CGRectMake(0,0,self.view.frame.width - 100, 400))
+        popupView.layer.masksToBounds = true
+        introView = popupView
+        popupView.layer.cornerRadius = 20
+        popupView.backgroundColor = UIColor(white: 0.95, alpha: 1.0)
+        popupView.alpha = 0.0
+        self.view.addSubview(popupView)
+        popupView.center = CGPointMake(self.view.center.x, self.view.center.y + 80)
+        UIView.animateWithDuration(0.5, delay: 1.5, options: .CurveEaseOut, animations: {
+            popupView.center = self.view.center
+            popupView.alpha = 1.0
+            }, completion: nil)
+        
+        let helloThereLabel = UILabel(frame: CGRectMake(0,0,popupView.frame.width,50))
+        helloThereLabel.text = "Hello There"
+        helloThereLabel.font = UIFont(name: "Panton-Semibold", size: 30)
+        helloThereLabel.textAlignment = .Center
+        popupView.addSubview(helloThereLabel)
+        helloThereLabel.strokeTextAnimated(width: 0.8, delay: 2.0, duration: 1.0, fade: true)
+        
+        let welcomeToStoryLabel = UILabel(frame: CGRectMake(0,55,popupView.frame.width, 30))
+        welcomeToStoryLabel.text = "Welcome to My Story"
+        welcomeToStoryLabel.font = UIFont(name: "Panton-Regular", size: 20)
+        welcomeToStoryLabel.textAlignment = .Center
+        popupView.addSubview(welcomeToStoryLabel)
+        welcomeToStoryLabel.strokeTextSimultaneously(width: 0.6, delay: 2.5, duration: 1.0, fade: true, returnStuff: false)
+        
+        let consiseStatement = UILabel(frame: CGRectMake(20, 80, popupView.frame.width - 40, 150))
+        consiseStatement.numberOfLines = 0
+        consiseStatement.lineBreakMode = .ByWordWrapping
+        consiseStatement.text = "I will try to explain my story in as few words as possible, but quite frankly a lot has happened in the past year."
+        consiseStatement.font = UIFont(name: "Panton-Regular", size: 20)
+        popupView.addSubview(consiseStatement)
+        consiseStatement.strokeTextLetterByLetter(width: 0.6, delay: 3.5, duration: 3.0, characterStrokeDuration: 1.0, fade: true, fadeDuration: 0.5, returnStuff: false)
+        let morphingStatement = LTMorphingLabel(frame: CGRectMake(20,210,popupView.frame.width - 40, 60))
+        morphingStatement.text = "By a lot, I mean..."
+        morphingStatement.textAlignment = .Center
+        morphingStatement.font = UIFont(name: "Panton-Regular", size: 20)
+        popupView.addSubview(morphingStatement)
+        morphingStatement.morphingEffect = .Fall
+        morphingStatement.strokeTextLetterByLetter(width: 0.6, delay: 6.0, duration: 1.0, characterStrokeDuration: 0.5, fade: true, fadeDuration: 0.3, returnStuff: false)
+        delay(8.0) {
+            morphingStatement.frame = CGRectMake(20, 210, popupView.frame.width - 40, 60)
+            morphingStatement.text = "I mean a tremendous amount"
+        }
+        delay(9.5) {
+            morphingStatement.text = "Like 2 Internships"
+        }
+        delay(11.0) {
+            morphingStatement.text = "10 Hackathons"
+        }
+        delay(12.5) {
+            morphingStatement.text = "4 Years of Fun"
+        }
+        delay(14.0) {
+            morphingStatement.text = "With Much More to Come"
+        }
+        
+        let forceTouchLabel = UILabel(frame: CGRectMake(20, 270, popupView.frame.width - 40, 80))
+        forceTouchLabel.numberOfLines = 0
+        forceTouchLabel.lineBreakMode = .ByWordWrapping
+        forceTouchLabel.text = "To see a picture for each location, force touch the text.\n"
+        forceTouchLabel.font = UIFont(name: "Panton-Thin", size: 18)
+        popupView.addSubview(forceTouchLabel)
+        forceTouchLabel.strokeTextSimultaneously(width: 0.6, delay: 15.5, duration: 1.0, fade: false, returnStuff: false)
+        
+        let continueButton = UIButton(frame: CGRectMake(0,popupView.frame.height,popupView.frame.width, 60))
+        continueButton.setTitle("Got it, tell me your story.", forState: .Normal)
+        continueButton.backgroundColor = UIColor(rgba: "#3eba5e")
+        popupView.addSubview(continueButton)
+        continueButton.addTarget(self, action: #selector(MyStoryViewController.dismissIntro), forControlEvents: .TouchUpInside)
+        UIView.animateWithDuration(1.0, delay: 17.0, options: .CurveEaseOut, animations: {
+            continueButton.center = CGPointMake(continueButton.center.x, continueButton.center.y - 60)
+            }, completion: nil)
+        
+    }
+    
+    func dismissIntro() {
+        pageChangeEnabled = true
+        UIView.animateWithDuration(1.0, animations: { 
+            self.introView?.center = CGPointMake(self.introView!.center.x, self.introView!.center.y - 80)
+            self.introView?.alpha = 0.0
+            }) { (finished) in
+                self.introView?.removeFromSuperview()
+        }
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -121,7 +220,7 @@ class MyStoryViewController: UIViewController, MKMapViewDelegate {
                 let data = try NSData(contentsOfURL: NSURL(fileURLWithPath: path), options: NSDataReadingOptions.DataReadingMappedIfSafe)
                 jsonData = JSON(data: data)
                 if jsonData != JSON.null {
-                    print("jsonData:\(jsonData)")
+//                    print("jsonData:\(jsonData)")
                 } else {
                     print("could not get json")
                 }
@@ -165,7 +264,7 @@ class MyStoryViewController: UIViewController, MKMapViewDelegate {
         
         CATransaction.commit()
         counterLabel.text = "\(currentPage + 1)/\(jsonData.count)"
-        
+        detailImageView.alpha = 0.0
         detailImageView.image = UIImage(named: jsonData[currentPage]["DetailImage"].string!)
         
     }
@@ -325,6 +424,9 @@ class MyStoryViewController: UIViewController, MKMapViewDelegate {
     }
     
     @IBAction func rightButtonClicked(sender: AnyObject) {
+        if pageChangeEnabled == false{
+            return
+        }
         if currentPage < jsonData.count - 1{
             currentPage += 1
             animateMap()
@@ -349,6 +451,9 @@ class MyStoryViewController: UIViewController, MKMapViewDelegate {
     }
     
     @IBAction func leftButtonClicked(sender: AnyObject) {
+        if pageChangeEnabled == false{
+            return
+        }
         if currentPage > 0{
             currentPage -= 1
             animateMap()
@@ -370,6 +475,30 @@ class MyStoryViewController: UIViewController, MKMapViewDelegate {
             CATransaction.commit()
         }
     }
+    
+    func setupLineOverlay() {
+        return
+        var coordinates = [CLLocationCoordinate2D]()
+        for index in 0..<jsonData.count {
+            let coordinate = CLLocationCoordinate2DMake(jsonData[index]["xCoord"].doubleValue, jsonData[index]["yCoord"].doubleValue)
+            coordinates.append(coordinate)
+        }
+        routeLine = MKPolyline(coordinates: &coordinates, count: coordinates.count)
+        mapView.addOverlay(routeLine!)
+    }
+
+    var routeLine: MKPolyline? = nil
+    var routeLineView:MKPolylineView? = nil
+    
+    func mapView(mapView: MKMapView, rendererForOverlay overlay: MKOverlay) -> MKOverlayRenderer {
+        let polylineRenderer = MKPolylineRenderer(polyline: routeLine!)
+        polylineRenderer.strokeColor = UIColor(rgba: "#3495f6")
+        polylineRenderer.lineWidth = 1
+        polylineRenderer.alpha = 0.6
+        
+        return polylineRenderer
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

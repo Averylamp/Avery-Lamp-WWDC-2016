@@ -16,7 +16,7 @@ class SplashViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.backgroundColor = UIColor.whiteColor()
         //Background Blur effects
         let bg = UIImageView(frame: CGRectMake(0, 0, self.view.frame.width, self.view.frame.height))
         bg.image = UIImage(named: "NewYorkBackground")

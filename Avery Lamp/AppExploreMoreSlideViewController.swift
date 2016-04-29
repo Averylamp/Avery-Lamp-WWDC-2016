@@ -35,7 +35,7 @@ class AppExploreMoreSlideViewController: UIViewController {
             textLabel.translatesAutoresizingMaskIntoConstraints = false
             self.view.addSubview(textLabel)
             textLabel.text = slideData!["detailText"].string
-            textLabel.font = UIFont(name: "Panton-Thin", size: 16)
+            textLabel.font = UIFont(name: "Panton-Thin", size: 20)
             textLabel.textAlignment = .Left
             textLabel.minimumScaleFactor = 0.5
             textLabel.adjustsFontSizeToFitWidth = true
