@@ -11,12 +11,12 @@
             "longDescription":"Reppin is a hands free rep counter that uses computer vision to count reps and voice them to you.  It also provides workout analytics to improve your workout.",
             "theme":"light",
             "extraInfoLink":"http://devpost.com/software/reppin",
-            "extraInfoType":"Devpost",
+            "extraInfoType":"Devpost and Demo",
             "expandedDetails":[
                                {
                                "style":"oneOneImageDetailText",
                                "image":"ReppinAppIcon",
-                               "detailText":"PocketLab was created at PennApps XII in September of 2015.  It won the Hottest Health Hack Prize form PennApps sponsor Epic."
+                               "detailText":"Reppin was created at HackBCA III in April 2016 by the Isometric Team (Me, Sebastian, Josh, Ryan). It won third place overall and the Best Mobile App prize."
                                },
                                {
                                "style":"imageTextRatio",
@@ -26,34 +26,22 @@
                                },
                                {
                                "style":"imageTextRatio",
-                               "ratio":"60",
-                               "image":"PocketLabCentrifuge",
-                               "detailText":"As PocketLab was a proof of concept, we built a pocket centrifuge which uses the accelerometer to detect circular motion and tell the user to speed or slow down to get a desired centrifugal force."
-                               },
-                               {
-                               "style":"imageTextRatio",
-                               "ratio":"50",
-                               "image":"PocketLabHaematocritAnalysis",
-                               "detailText":"When a doctor has centrifuged blood, a hematocrit test can be performed to help form a diagnosis. We built in a computer vision algorithm to determine the percentage of different layers of blood in test tubes.  "
-                               },
-                               {
-                               "style":"imageTextRatio",
                                "ratio":"70",
-                               "image":"PocketLabHaematocritTest",
-                               "detailText":"The Hematocrit Analysis tool also does live image analysis. This is a sample we made for demos. It was not real blood (mustard & jelly), but it works."
+                               "image":"ReppinSetup",
+                               "detailText":"After a workout is selected, the app is set up by the user. The app takes in the hues of the users shirt, storing that information for tracking. "
                                },
                                {
                                "style":"imageTextRatio",
-                               "ratio":"40",
-                               "image":"PocketLabDetailPicture",
-                               "detailText":"Using computer vision the app detects the cell shapes and  draws red and green highlights around cells. The ratio of normal to abnormal cells gives a good indication of a possible diagnosis. I had experience in openCV from a freelance job over the summer, so I programmed almost the entirety of the cell analysis tool. It was my greatest contribution to the project."
+                               "ratio":"65",
+                               "image":"ReppinPushups",
+                               "detailText":"After the user hits start, the shirt is tracked to detect motion and count reps. I made the entirety of the computer vision part of the app using OpenCV. The rep counter is surprisingly accurate and with each rep, audible feedback is given."
                                },
                                {
                                "style":"imageTextRatio",
-                               "ratio":"80",
-                               "image":"PocketLabMicroscopySample",
-                               "detailText":"Here is a side by side comparison of samples"
-                               },
+                               "ratio":"55",
+                               "image":"ReppinAnalytics",
+                               "detailText":"After a workout, data that was stored during the workout is displayed with line and bar graphs. The goal of adding the graphs at the end was to motivate the users to improve their fitness and see how they progress over time. With a rep counter, you can also get rep duration and consistency, which is not available in most fitness apps."
+                               }
                                ]
         },
         {
@@ -122,6 +110,8 @@
             "appDetailImage":"SmithDetailPicture",
             "longDescription":"Smith was created as a productivity tool for those that sit at desks.  The user sets specific actions, which can be triggered by knocking specific patterns into the desk that the phone rests on.",
             "theme":"light",
+            "extraInfoLink":"http://devpost.com/software/smith-o8hao",
+            "extraInfoType":"Devpost",
             "expandedDetails":[
                                 {
                                     "style":"oneOneImageDetailText",
@@ -213,26 +203,32 @@
             "expandedDetails":[
                                {
                                "style":"oneOneImageDetailText",
-                               "image":"SmithAppIcon",
-                               "detailText":"Smith was created at HackBCA, my second hackathon, in February of 2015.  It won overall 2nd place."
+                               "image":"SnapprAppIcon",
+                               "detailText":"Snapper was created for submission to the \"Dream it. Code it. Win it.\", competition, in April of 2015. The app was made as a solution to photo organization. It was named one of the many winners."
                                },
                                {
                                "style":"imageTextRatio",
                                "ratio":"40",
-                               "image":"SmithDetailPicture",
-                               "detailText":"Smith is a utility for productivity. Smith runs in the background listening for specific knocking patterns. The user can set a pattern to call their best friend, then the phone would listen for that pattern with the accelerometer. When the pattern is knocked, the phone will dial the number and call the best friend automatically."
-                               },
-                               {
-                               "style":"imageTextRatio",
-                               "ratio":"60",
-                               "image":"SmithActionsPage",
-                               "detailText":"By swiping to the right from the main screen where the active recognition is on, an actions screen is brought up. It has a list of all of the actions the user created and a button that allows the user to add more actions."
+                               "image":"SnapprMainScreen",
+                               "detailText":"Snappr was Isometric's solution to photo organization for students. Many students take pictures of class materials to lighten their load and digitally store notes, homework, ect. In the Camera Roll, these photos become cluttered with many other things. Snappr automatically organizes photos, videos, or even audio recordings into folders."
                                },
                                {
                                "style":"imageTextRatio",
                                "ratio":"50",
-                               "image":"SmithCreateAction",
-                               "detailText":"To create an action, the user records a pattern. Smith supports many actions, such as running custom Workflows, playing playlists of music, calling, texting, receiving weather information, opening web pages, mail, maps, and Facetime."
+                               "image":"SnapprSchedules",
+                               "detailText":"To organize photos, Snappr has a time bases schedule system. A user is asked to set up their schedule of classes for each day, including their time period. The app will then take any media created, such as photos, videos, and audio recordings, and add them to the folder of the class they were generated in. I built the algorithm to determine where to store photos, and used Core Data."
+                               },
+                               {
+                               "style":"imageTextRatio",
+                               "ratio":"60",
+                               "image":"SnapprInputScreen",
+                               "detailText":"Here is a the imput screen we made, capable of taking photos, video, and audio. We also were planning on adding an annotation feature to the audio section, but didn't get around to it."
+                               },
+                               {
+                               "style":"imageTextRatio",
+                               "ratio":"70",
+                               "image":"SnapprCollection",
+                               "detailText":"The images are stored in the classes that they were taken in. A user can revisit what they took, and edit the location if needed."
                                },
                                ]
         }

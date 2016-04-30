@@ -25,6 +25,7 @@ class MyStoryViewController: UIViewController, MKMapViewDelegate {
     var leftButtonArrowLayer: CAShapeLayer?
     var currentPage = 0
     var pageChangeEnabled = false
+    var firstAnimation = true
     
     let counterLabel = LTMorphingLabel()
     
@@ -37,7 +38,6 @@ class MyStoryViewController: UIViewController, MKMapViewDelegate {
         mapView.mapType = MKMapType.HybridFlyover
         mapView.pitchEnabled = true
         mapView.showsCompass = false
-        animateMap()
         let xCoord = jsonData[0]["xCoord"].doubleValue
         let yCoord = jsonData[0]["yCoord"].doubleValue
         let region = MKCoordinateRegionMake(CLLocationCoordinate2DMake(xCoord, yCoord), MKCoordinateSpanMake(0.002, 0.002))
@@ -45,6 +45,9 @@ class MyStoryViewController: UIViewController, MKMapViewDelegate {
         mapView.setRegion(region, animated: true)
 
         addAnnotations()
+        animateMap()
+        firstAnimation = false
+        
         drawButtons()
         detailImageView.contentMode = .ScaleAspectFit
         detailTextLabel.numberOfLines = 0
@@ -151,7 +154,7 @@ class MyStoryViewController: UIViewController, MKMapViewDelegate {
         continueButton.backgroundColor = UIColor(rgba: "#3eba5e")
         popupView.addSubview(continueButton)
         continueButton.addTarget(self, action: #selector(MyStoryViewController.dismissIntro), forControlEvents: .TouchUpInside)
-        UIView.animateWithDuration(1.0, delay: 17.0, options: .CurveEaseOut, animations: {
+        UIView.animateWithDuration(1.0, delay: 18.0, options: .CurveEaseOut, animations: {
             continueButton.center = CGPointMake(continueButton.center.x, continueButton.center.y - 60)
             }, completion: nil)
         
@@ -173,10 +176,11 @@ class MyStoryViewController: UIViewController, MKMapViewDelegate {
     var camerasArray = [MKMapCamera]()
     
     
-    func flyToLocation (location: CLLocationCoordinate2D, finalPitchCamera: MKMapCamera? = nil, flyoverAltitude:Double = 100, finalAltitude: Double = 100){
+    func flyToLocation (location: CLLocationCoordinate2D, finalPitchCamera: MKMapCamera? = nil, flyoverAltitude:Double = 50, finalAltitude: Double = 100){
         let startCoord = self.mapView.camera.centerCoordinate
         let eyeCoord = CLLocationCoordinate2DMake(location.latitude, location.longitude)
 //        let upCam = MKMapCamera(lookingAtCenterCoordinate: startCoord, fromEyeCoordinate: startCoord, eyeAltitude: flyoverAltitude)
+        print("Flyover Altitude \(flyoverAltitude)")
         let turnCam = MKMapCamera(lookingAtCenterCoordinate: location, fromEyeCoordinate: startCoord, eyeAltitude: flyoverAltitude)
 //        let inCam = MKMapCamera(lookingAtCenterCoordinate: location, fromEyeCoordinate: eyeCoord, eyeAltitude: finalAltitude)
         if finalPitchCamera != nil{
@@ -204,13 +208,17 @@ class MyStoryViewController: UIViewController, MKMapViewDelegate {
        goToNextCamera()
     }
     
+    var annotationPins = [MKPointAnnotation]()
+    
     func addAnnotations(){
+        annotationPins = [MKPointAnnotation]()
         for index in 0..<jsonData.count{
             let pointAnnotation = MKPointAnnotation()
             pointAnnotation.coordinate = CLLocationCoordinate2DMake(jsonData[index]["xCoord"].doubleValue, jsonData[index]["yCoord"].doubleValue)
             pointAnnotation.title = jsonData[index]["DetailTitle"].string
             pointAnnotation.subtitle = jsonData[index]["DetailSubtitle"].string
             mapView.addAnnotation(pointAnnotation)
+            annotationPins.append(pointAnnotation)
         }
     }
     
@@ -401,14 +409,32 @@ class MyStoryViewController: UIViewController, MKMapViewDelegate {
     }
     
     func animateMap(){
+        print("pin count - \(annotationPins.count), map count \(self.mapView.annotations.count)")
+        for i in 0..<mapView.annotations.count{
+            self.mapView.deselectAnnotation(annotationPins[i], animated: true)
+        }
+        self.mapView.selectAnnotation(annotationPins[currentPage], animated: true)
+        if firstAnimation == true{
+            return
+        }
+        
         let nextLocation = CLLocationCoordinate2DMake(jsonData[currentPage]["xCoord"].doubleValue,jsonData[currentPage]["yCoord"].doubleValue )
         if jsonData[currentPage]["cam"] != nil {
             let camData = jsonData[currentPage]["cam"]
             let pitchCam = MKMapCamera(lookingAtCenterCoordinate: nextLocation, fromEyeCoordinate: CLLocationCoordinate2DMake(camData["xCoord"].doubleValue, camData["yCoord"].doubleValue), eyeAltitude: camData["altitude"].doubleValue)
             pitchCam.pitch = CGFloat(camData["pitch"].doubleValue)
-            flyToLocation(nextLocation, finalPitchCamera: pitchCam , flyoverAltitude: jsonData[currentPage]["flyoverAltitude"].doubleValue, finalAltitude: camData["altitude"].doubleValue)
+            var flyAltitude = jsonData[currentPage]["flyoverAltitude"].doubleValue
+            if flyAltitude == 0{
+                flyAltitude = 50
+            }
+//            print("Fly Altitude\(flyAltitude)")
+            flyToLocation(nextLocation, finalPitchCamera: pitchCam , flyoverAltitude: flyAltitude, finalAltitude: camData["altitude"].doubleValue)
         }else{
-            flyToLocation(nextLocation, finalPitchCamera: nil, flyoverAltitude: jsonData[currentPage]["flyoverAltitude"].doubleValue, finalAltitude: 80)
+            var flyAltitude = jsonData[currentPage]["flyoverAltitude"].doubleValue
+            if flyAltitude == 0{
+                flyAltitude = 1000.0
+            }
+            flyToLocation(nextLocation, finalPitchCamera: nil, flyoverAltitude: flyAltitude , finalAltitude: 80)
         }
         
     }

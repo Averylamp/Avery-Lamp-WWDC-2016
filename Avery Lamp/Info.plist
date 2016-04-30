@@ -10,7 +10,7 @@
 			<key>UIApplicationShortcutItemSubtitle</key>
 			<string></string>
 			<key>UIApplicationShortcutItemTitle</key>
-			<string>Introduction Page</string>
+			<string>Introduction</string>
 			<key>UIApplicationShortcutItemType</key>
 			<string>$(PRODUCT_BUNDLE_IDENTIFIER).Introduction</string>
 			<key>UIApplicationShortcutItemUserInfo</key>

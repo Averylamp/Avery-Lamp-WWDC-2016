@@ -62,7 +62,7 @@ class HomeViewController: UIViewController {
         //My Story
         let topIconsHeightOffset = height / 3 + 60 + 20
         let detailFontSize = CGFloat(25)
-        createLineCircle(0, duration: circleDrawDuration, fadeDelay: circleDrawDelay, location: CGPointMake(width / 2 , height / 3) , size:120, left: true)
+        myStoryCircle =  createLineCircle(0, duration: circleDrawDuration, fadeDelay: circleDrawDelay, location: CGPointMake(width / 2 , height / 3) , size:120, left: true)
         let storyLabel = UILabel(frame: CGRectMake(0,0, width / 2, 30))
         storyLabel.center = CGPointMake(width / 2 , topIconsHeightOffset)
         storyLabel.text = "My Story"
@@ -83,7 +83,7 @@ class HomeViewController: UIViewController {
         let bottomIconsHeightOffset = height * 2 / 3 + 60 + 20
         
         //My Info
-        createLineCircle(0, duration: circleDrawDuration, fadeDelay: circleDrawDelay, location: CGPointMake(width / 4 , height * 2 / 3) , size:120, left: true)
+        myInfoCircle = createLineCircle(0, duration: circleDrawDuration, fadeDelay: circleDrawDelay, location: CGPointMake(width / 4 , height * 2 / 3) , size:120, left: true)
         let infoLabel = UILabel(frame: CGRectMake(0,0, width / 2, 30))
         infoLabel.center = CGPointMake(width / 4 , bottomIconsHeightOffset)
         infoLabel.text = "My Info"
@@ -101,7 +101,7 @@ class HomeViewController: UIViewController {
         self.view.addSubview(myInfoButton)
         
         // My Apps
-        createLineCircle(0, duration: circleDrawDuration, fadeDelay: circleDrawDelay, location: CGPointMake(width * 3 / 4 , height * 2 / 3) , size:120, left: false)
+        myAppsCircle =  createLineCircle(0, duration: circleDrawDuration, fadeDelay: circleDrawDelay, location: CGPointMake(width * 3 / 4 , height * 2 / 3) , size:120, left: false)
         let appsLabel = UILabel(frame: CGRectMake(0,0, width / 2, 30))
         appsLabel.center = CGPointMake(width * 3 / 4 , bottomIconsHeightOffset)
         appsLabel.text = "My Apps"
@@ -125,6 +125,135 @@ class HomeViewController: UIViewController {
         label.textAlignment = NSTextAlignment.Center
         self.view.addSubview(label)
         label.strokeTextAnimated(width: 1.0, duration: 2, fade: true)
+        
+        print("Bounds Circle \(CGPathGetBoundingBox(myAppsCircle?.path))")
+        drawIcons()
+    }
+    
+    func drawIcons() {
+        //Info Icon
+        let infoIconpath = UIBezierPath(roundedRect: CGRectMake(0, 0, 60, 75), cornerRadius: 3)
+        infoIconpath.moveToPoint(CGPointMake(10,10))
+        infoIconpath.addLineToPoint(CGPointMake(20, 10))
+        infoIconpath.moveToPoint(CGPointMake(17.5,17))
+        infoIconpath.addLineToPoint(CGPointMake(50, 17))
+        infoIconpath.moveToPoint(CGPointMake(10,24))
+        infoIconpath.addLineToPoint(CGPointMake(50, 24))
+        infoIconpath.moveToPoint(CGPointMake(10,31))
+        infoIconpath.addLineToPoint(CGPointMake(50, 31))
+        infoIconpath.moveToPoint(CGPointMake(10,38))
+        infoIconpath.addLineToPoint(CGPointMake(50, 38))
+        infoIconpath.moveToPoint(CGPointMake(10,45))
+        infoIconpath.addLineToPoint(CGPointMake(50, 45))
+        infoIconpath.moveToPoint(CGPointMake(10,52))
+        infoIconpath.addLineToPoint(CGPointMake(50, 52))
+        infoIconpath.moveToPoint(CGPointMake(40,66))
+        infoIconpath.addLineToPoint(CGPointMake(50, 66))
+        
+        let infoShape = CAShapeLayer()
+        infoShape.path = infoIconpath.CGPath
+        infoShape.strokeColor = UIColor.blackColor().CGColor
+        infoShape.lineWidth = 1.0
+        infoShape.fillColor = nil
+        var pointOffset = CGPathGetBoundingBox(myInfoCircle!.path).origin
+        infoShape.position = CGPointMake(pointOffset.x + 30, pointOffset.y + 23)
+        myInfoCircle?.addSublayer(infoShape)
+        
+        //My Apps Icon
+        let appsIconPath = UIBezierPath(roundedRect: CGRectMake(0, 0, 75, 75), cornerRadius: 17)
+        appsIconPath.moveToPoint(CGPointMake(20.5, 12.0))
+        appsIconPath.addArcWithCenter(CGPointMake(20.5, 24.5), radius: 12.5, startAngle: CGFloat(M_PI * 3 / 2), endAngle: CGFloat(M_PI * 3 / 2 + 2 * M_PI), clockwise: true)
+        appsIconPath.moveToPoint(CGPointMake(57, 7))
+        appsIconPath.addLineToPoint(CGPointMake(72, 32))
+        appsIconPath.addLineToPoint(CGPointMake(42, 32))
+        appsIconPath.addLineToPoint(CGPointMake(57, 7))
+        appsIconPath.moveToPoint(CGPointMake(20.5, 42))
+        appsIconPath.addLineToPoint(CGPointMake(32.5, 50.6))
+        appsIconPath.addLineToPoint(CGPointMake(27.9, 64.6))
+        appsIconPath.addLineToPoint(CGPointMake(13.1, 64.61))
+        appsIconPath.addLineToPoint(CGPointMake(8.61, 50.6))
+        appsIconPath.addLineToPoint(CGPointMake(20.5, 42))
+        appsIconPath.moveToPoint(CGPointMake(27, 27))
+        appsIconPath.addLineToPoint(CGPointMake(57, 27))
+        appsIconPath.addLineToPoint(CGPointMake(57, 57))
+        appsIconPath.addLineToPoint(CGPointMake(27, 57))
+        appsIconPath.addLineToPoint(CGPointMake(27, 27))
+        
+        let appsShape = CAShapeLayer()
+        appsShape.path = appsIconPath.CGPath
+        appsShape.strokeColor = UIColor.blackColor().CGColor
+        appsShape.lineWidth = 1.0
+        appsShape.fillColor = nil
+        pointOffset = CGPathGetBoundingBox(myAppsCircle!.path).origin
+        appsShape.position = CGPointMake(pointOffset.x + 23, pointOffset.y + 23)
+        myAppsCircle?.addSublayer(appsShape)
+        
+        //My Story Icon
+        let storyPath = UIBezierPath()
+        
+        storyPath.moveToPoint(CGPointMake(20,64.9))
+        let storyPathPoints = [CGPointMake(20,64.9), CGPointMake(47.36, 80.12), CGPointMake(82.3, 39.9), CGPointMake(102.2, 51.02)]
+        
+        for index in 1..<storyPathPoints.count{
+            let p2 = storyPathPoints[index]
+            let p1 = storyPathPoints[index - 1]
+            let midpoint = midpointOfPoints(p1, secondPoint: p2)
+            storyPath.addQuadCurveToPoint(midpoint, controlPoint: controlPointForPoints(midpoint, p2: p1))
+            storyPath.addQuadCurveToPoint(p2, controlPoint: controlPointForPoints(midpoint, p2: p2))
+        }
+        for index in 0..<storyPathPoints.count {
+            let currentLoc = storyPathPoints[index]
+            storyPath.moveToPoint(CGPointMake(currentLoc.x, currentLoc.y - 3))
+            storyPath.addArcWithCenter(currentLoc, radius: 3, startAngle: CGFloat(M_PI * 3 / 2), endAngle: CGFloat(M_PI * 3 / 2 + 2 * M_PI), clockwise: true)
+            let pointArr = [CGPointMake(currentLoc.x, currentLoc.y - 5), CGPointMake(currentLoc.x - 4, currentLoc.y - 15), CGPointMake(currentLoc.x, currentLoc.y - 23), CGPointMake(currentLoc.x + 4, currentLoc.y - 15), CGPointMake(currentLoc.x, currentLoc.y - 5)]
+            storyPath.moveToPoint(pointArr[0])
+            for index in 1..<pointArr.count{
+                let p1 = pointArr[index]
+                storyPath.addLineToPoint(p1)
+            }
+        }
+        
+        let storyShape = CAShapeLayer()
+        storyShape.path = storyPath.CGPath
+        storyShape.strokeColor = UIColor.blackColor().CGColor
+        storyShape.lineWidth = 1.0
+        storyShape.fillColor = nil
+        pointOffset = CGPathGetBoundingBox(myStoryCircle!.path).origin
+        storyShape.position = pointOffset
+        myStoryCircle?.addSublayer(storyShape)
+        
+        
+        infoShape.lineWidth = 0.0
+        appsShape.lineWidth = 0.0
+        storyShape.lineWidth = 0.0
+        let strokeAnimation = CABasicAnimation(keyPath: "strokeEnd")
+        strokeAnimation.fromValue = NSNumber(float: 0.0)
+        strokeAnimation.toValue = NSNumber(float: 1.0)
+        strokeAnimation.duration = 3.0
+        delay(1.5) {
+            infoShape.lineWidth = 1.0
+            appsShape.lineWidth = 1.0
+            storyShape.lineWidth = 1.0
+            
+            infoShape.addAnimation(strokeAnimation, forKey: "Stroke Animation")
+            appsShape.addAnimation(strokeAnimation, forKey: "Stroke Animation")
+            storyShape.addAnimation(strokeAnimation, forKey: "Stroke Animation")
+        }
+    }
+    
+    private func midpointOfPoints(firstPoint: CGPoint, secondPoint:CGPoint)->CGPoint{
+        return CGPointMake((firstPoint.x + secondPoint.x) / 2, (firstPoint.y + secondPoint.y) / 2)
+    }
+    
+    private func controlPointForPoints(p1: CGPoint, p2: CGPoint)-> CGPoint{
+        var controlPoint = midpointOfPoints(p1, secondPoint: p2)
+        let diffy = abs((p2.y - controlPoint.y))
+        if p1.y < p2.y {
+            controlPoint.y += diffy
+        }else if p1.y > p2.y{
+            controlPoint.y  -= diffy
+        }
+        return controlPoint
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -134,9 +263,12 @@ class HomeViewController: UIViewController {
             startAnimation()
         }
     }
+    var myStoryCircle: CAShapeLayer?
+    var myInfoCircle: CAShapeLayer?
+    var myAppsCircle: CAShapeLayer?
     
     //Drawing the circle from the side
-    func createLineCircle(delayt: Double, duration: Double, fadeDelay:Double, location: CGPoint, size: CGFloat, left: Bool){
+    func createLineCircle(delayt: Double, duration: Double, fadeDelay:Double, location: CGPoint, size: CGFloat, left: Bool)->CAShapeLayer{
         let line = CAShapeLayer()
         line.position = CGPointMake(0, 0)
         line.lineWidth = 0
@@ -197,6 +329,7 @@ class HomeViewController: UIViewController {
                 })
             })
         }
+        return circle
     }
     
     //Animation for background color flow

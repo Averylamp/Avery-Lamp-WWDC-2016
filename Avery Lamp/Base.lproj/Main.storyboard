@@ -216,7 +216,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="LHQ-DM-0aa"/>
+                        <segue destination="dmY-kj-iYw" kind="relationship" relationship="rootViewController" id="SsJ-Aa-3cW"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D3p-Qt-VlN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -281,21 +281,21 @@
                                                                 <constraint firstAttribute="height" constant="1" id="HNs-Bp-tCf"/>
                                                             </constraints>
                                                         </view>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Smith analyzes vibration patterns to trigger custom actions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="feM-5M-wuy">
-                                                            <rect key="frame" x="28" y="90" width="511" height="55"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="height" constant="55" id="BTf-1W-gt4"/>
-                                                            </constraints>
-                                                            <fontDescription key="fontDescription" name="Panton-Light" family="Panton" pointSize="16"/>
-                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Control your phone without touching it" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="8Co-Q8-67N">
                                                             <rect key="frame" x="28" y="50" width="511" height="40"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="vqJ-8S-kjY"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="Panton-Regular" family="Panton" pointSize="18"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Smith analyzes vibration patterns to trigger custom actions" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="feM-5M-wuy">
+                                                            <rect key="frame" x="28" y="87" width="511" height="55"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="55" id="BTf-1W-gt4"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="Panton-Light" family="Panton" pointSize="16"/>
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -446,9 +446,9 @@
                                                     <rect key="frame" x="0.0" y="565" width="568" height="65"/>
                                                     <subviews>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JX1-jn-l6u">
-                                                            <rect key="frame" x="159" y="10" width="250" height="45"/>
+                                                            <rect key="frame" x="28.5" y="0.0" width="511" height="65"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="45" id="lOt-B7-yxb"/>
+                                                                <constraint firstAttribute="height" constant="65" id="lOt-B7-yxb"/>
                                                                 <constraint firstAttribute="width" constant="250" id="wyt-tw-7UE"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="Panton-SemiBold" family="Panton" pointSize="20"/>
@@ -460,6 +460,11 @@
                                                                     <integer key="value" value="10"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
+                                                            <variation key="default">
+                                                                <mask key="constraints">
+                                                                    <exclude reference="wyt-tw-7UE"/>
+                                                                </mask>
+                                                            </variation>
                                                         </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -467,6 +472,7 @@
                                                         <constraint firstAttribute="height" constant="65" id="LOC-BT-ecI"/>
                                                         <constraint firstItem="JX1-jn-l6u" firstAttribute="centerX" secondItem="M91-yu-HY7" secondAttribute="centerX" id="QlF-16-o2a"/>
                                                         <constraint firstItem="JX1-jn-l6u" firstAttribute="centerY" secondItem="M91-yu-HY7" secondAttribute="centerY" id="XhE-GV-f6N"/>
+                                                        <constraint firstItem="JX1-jn-l6u" firstAttribute="width" secondItem="M91-yu-HY7" secondAttribute="width" multiplier="0.9" id="gVp-Xw-PfK"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
@@ -1270,17 +1276,6 @@
                                     <constraint firstAttribute="height" constant="20" id="qRw-K7-FLO"/>
                                 </constraints>
                             </pageControl>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uF-Ef-coZ">
-                                <rect key="frame" x="240" y="165" width="120" height="20"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="20" id="4ik-g9-mfW"/>
-                                    <constraint firstAttribute="width" constant="120" id="y7q-aS-GvY"/>
-                                </constraints>
-                                <state key="normal" title="Link for more info"/>
-                                <connections>
-                                    <action selector="moreInfoLinkClicked:" destination="vBf-dA-3HV" eventType="touchUpInside" id="NpL-pN-Zdc"/>
-                                </connections>
-                            </button>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nHs-90-xha">
                                 <rect key="frame" x="30" y="185" width="540" height="395"/>
                                 <userDefinedRuntimeAttributes>
@@ -1293,8 +1288,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ekg-Wb-oTu">
-                                <rect key="frame" x="20" y="39.5" width="40" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ekg-Wb-oTu">
+                                <rect key="frame" x="20" y="39" width="40" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="Qfn-Tk-Shv"/>
                                     <constraint firstAttribute="height" constant="40" id="a0n-CC-zfA"/>
@@ -1302,6 +1297,22 @@
                                 <state key="normal" title="Back" image="backArrow"/>
                                 <connections>
                                     <action selector="backButtonClicked:" destination="vBf-dA-3HV" eventType="touchUpInside" id="vJO-Zn-H4d"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5uF-Ef-coZ">
+                                <rect key="frame" x="0.0" y="165" width="600" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="4ik-g9-mfW"/>
+                                    <constraint firstAttribute="width" constant="120" id="y7q-aS-GvY"/>
+                                </constraints>
+                                <state key="normal" title="Link for more info"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="y7q-aS-GvY"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="moreInfoLinkClicked:" destination="vBf-dA-3HV" eventType="touchUpInside" id="NpL-pN-Zdc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1322,6 +1333,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="FRG-0N-2xK" secondAttribute="trailing" constant="10" id="Qwn-Nu-lAC"/>
                             <constraint firstAttribute="trailingMargin" secondItem="h7s-jL-gph" secondAttribute="trailing" constant="10" id="RMr-E2-Afv"/>
                             <constraint firstItem="5uF-Ef-coZ" firstAttribute="top" secondItem="nHs-90-xha" secondAttribute="top" id="Xy6-ML-GsZ"/>
+                            <constraint firstItem="5uF-Ef-coZ" firstAttribute="width" secondItem="CrD-Yl-z7f" secondAttribute="width" id="Y2X-bf-ibA"/>
                             <constraint firstItem="Ekg-Wb-oTu" firstAttribute="top" secondItem="ITj-Fu-8rc" secondAttribute="bottom" constant="10" id="ZAh-rj-Bqa"/>
                             <constraint firstItem="Ekg-Wb-oTu" firstAttribute="leading" secondItem="CrD-Yl-z7f" secondAttribute="leadingMargin" id="bC8-Yf-HDU"/>
                             <constraint firstItem="OYm-dl-RBt" firstAttribute="top" secondItem="Y4f-dp-b7Q" secondAttribute="bottom" id="dHf-vw-Htw"/>
