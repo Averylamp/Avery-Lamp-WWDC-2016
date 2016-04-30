@@ -192,7 +192,18 @@ class HomeViewController: UIViewController {
         let storyPath = UIBezierPath()
         
         storyPath.moveToPoint(CGPointMake(20,64.9))
-        let storyPathPoints = [CGPointMake(20,64.9), CGPointMake(47.36, 80.12), CGPointMake(82.3, 39.9), CGPointMake(102.2, 51.02)]
+        let storyPathPoints = [CGPointMake(20,64.9), CGPointMake(43.36, 80.12), CGPointMake(64.83, 50.01), CGPointMake(82.3, 65.9), CGPointMake(102.2, 51.02)]
+        
+        let p2 = storyPathPoints[0]
+        storyPath.moveToPoint(CGPointMake(p2.x, p2.y - 3))
+        storyPath.addArcWithCenter(p2, radius: 3, startAngle: CGFloat(M_PI * 3 / 2), endAngle: CGFloat(M_PI * 3 / 2 + 2 * M_PI), clockwise: true)
+        let pointArr = [CGPointMake(p2.x, p2.y - 5), CGPointMake(p2.x - 4, p2.y - 15), CGPointMake(p2.x, p2.y - 23), CGPointMake(p2.x + 4, p2.y - 15), CGPointMake(p2.x, p2.y - 5)]
+        storyPath.moveToPoint(pointArr[0])
+        for index in 1..<pointArr.count{
+            let p1 = pointArr[index]
+            storyPath.addLineToPoint(p1)
+        }
+        storyPath.moveToPoint(p2)
         
         for index in 1..<storyPathPoints.count{
             let p2 = storyPathPoints[index]
@@ -200,19 +211,17 @@ class HomeViewController: UIViewController {
             let midpoint = midpointOfPoints(p1, secondPoint: p2)
             storyPath.addQuadCurveToPoint(midpoint, controlPoint: controlPointForPoints(midpoint, p2: p1))
             storyPath.addQuadCurveToPoint(p2, controlPoint: controlPointForPoints(midpoint, p2: p2))
-        }
-        for index in 0..<storyPathPoints.count {
-            let currentLoc = storyPathPoints[index]
-            storyPath.moveToPoint(CGPointMake(currentLoc.x, currentLoc.y - 3))
-            storyPath.addArcWithCenter(currentLoc, radius: 3, startAngle: CGFloat(M_PI * 3 / 2), endAngle: CGFloat(M_PI * 3 / 2 + 2 * M_PI), clockwise: true)
-            let pointArr = [CGPointMake(currentLoc.x, currentLoc.y - 5), CGPointMake(currentLoc.x - 4, currentLoc.y - 15), CGPointMake(currentLoc.x, currentLoc.y - 23), CGPointMake(currentLoc.x + 4, currentLoc.y - 15), CGPointMake(currentLoc.x, currentLoc.y - 5)]
+            storyPath.moveToPoint(CGPointMake(p2.x, p2.y - 3))
+            storyPath.addArcWithCenter(p2, radius: 3, startAngle: CGFloat(M_PI * 3 / 2), endAngle: CGFloat(M_PI * 3 / 2 + 2 * M_PI), clockwise: true)
+            let pointArr = [CGPointMake(p2.x, p2.y - 5), CGPointMake(p2.x - 4, p2.y - 15), CGPointMake(p2.x, p2.y - 23), CGPointMake(p2.x + 4, p2.y - 15), CGPointMake(p2.x, p2.y - 5)]
             storyPath.moveToPoint(pointArr[0])
             for index in 1..<pointArr.count{
                 let p1 = pointArr[index]
                 storyPath.addLineToPoint(p1)
             }
+            storyPath.moveToPoint(p2)
         }
-        
+
         let storyShape = CAShapeLayer()
         storyShape.path = storyPath.CGPath
         storyShape.strokeColor = UIColor.blackColor().CGColor
@@ -229,7 +238,7 @@ class HomeViewController: UIViewController {
         let strokeAnimation = CABasicAnimation(keyPath: "strokeEnd")
         strokeAnimation.fromValue = NSNumber(float: 0.0)
         strokeAnimation.toValue = NSNumber(float: 1.0)
-        strokeAnimation.duration = 3.0
+        strokeAnimation.duration = 46.0
         delay(1.5) {
             infoShape.lineWidth = 1.0
             appsShape.lineWidth = 1.0
