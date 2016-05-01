@@ -136,13 +136,30 @@ class HomeViewController: UIViewController {
         label.strokeTextAnimated(width: 1.0, duration: 2, fade: true)
         
         let hopeLabel = UILabel(frame: CGRectMake(0, self.view.frame.height - 60, self.view.frame.width, 60))
+//        let attributedString = NSMutableAttributedString(string: "Hope to see you at WWDC 2016!")
+//        attributedString.addAttributes([NSFontAttributeName : UIFont(name: "Lato-Thin", size: 22)!], range: NSMakeRange(0, attributedString.length - 10))
+//        attributedString.addAttributes([NSFontAttributeName : UIFont(name: "Lato-Regular", size: 24)!], range: NSMakeRange(attributedString.length - 10,4))
+//        hopeLabel.attributedText = attributedString
         hopeLabel.text = "Hope to see you at WWDC 2016!"
         hopeLabel.textAlignment = .Center
-        hopeLabel.font = UIFont(name: "Lato-Thin", size: 24)
+        hopeLabel.font = UIFont(name: "Lato-Hairline", size: 24)
+//        hopeLabel.font = UIFont(name: "Menlo-Regular", size: 22)
+        hopeLabel.layer.opacity = 0.0
         self.view.addSubview(hopeLabel)
-        hopeLabel.strokeTextSimultaneously(width: 0.6, delay: 4.0, duration: 3.0, fade: false, returnStuff: false)
+        delay(4.0) { 
+            let charArray = hopeLabel.strokeTextSimultaneously(width: 0.9, delay: 0.0, duration: 3.0, fade: false, returnStuff: true)
+//            charArray.forEach{ $0.shadowColor = UIColor.blackColor().CGColor
+//                $0.shadowRadius = 10
+//                $0.shadowOpacity = 0.7
+//            }
+            charArray[(charArray.count - 10)...(charArray.count - 1)].forEach { $0.lineWidth = 2.0 }
+            charArray[(charArray.count - 5)...(charArray.count - 1)].forEach { $0.strokeColor = UIColor(rgba: "#00ada2").CGColor }
+            charArray[charArray.count - 7].strokeColor = UIColor(rgba: "#dd3a36").CGColor
+            charArray[charArray.count - 8].strokeColor = UIColor(rgba: "#d18e5d").CGColor
+            charArray[charArray.count - 9].strokeColor = UIColor(rgba: "#b7379b").CGColor
+            charArray[charArray.count - 10].strokeColor = UIColor(rgba: "#93c56d").CGColor
+        }
         
-        print("Bounds Circle \(CGPathGetBoundingBox(myAppsCircle?.path))")
         
         
         
@@ -451,16 +468,13 @@ class HomeViewController: UIViewController {
         let location = touch.locationInView(self.view)
         if touch.force >= touch.maximumPossibleForce * 0.8 && displayingDetailForButtons == false{
             if CGRectContainsPoint(myStoryButton.frame, location){
-                print("force touch story")
                 displayDetailForceTouch("Want to know what I've been up to for the past four years?", type: 0)
                 displayingDetailForButtons = true
             }else if CGRectContainsPoint(myInfoButton.frame, location){
-                print("force touch info")
                 displayDetailForceTouch("Want some extra info?  Contact Info, Education, Hobbies, and more.", type: 1)
                 displayingDetailForButtons = true
             }else if CGRectContainsPoint(myAppsButton.frame, location){
                 displayDetailForceTouch("Want to see the apps I've made? See the projects I take pride in.", type: 2)
-                print("force touch apps")
                 displayingDetailForButtons = true
             }
         }
@@ -505,6 +519,19 @@ class HomeViewController: UIViewController {
         popUpView.addSubview(dismissButton)
 
         
+        openButton.alpha = 0.0
+        dismissButton.alpha = 0.0
+        openButton.center = CGPointMake(openButton.center.x, openButton.center.y + 50)
+        dismissButton.center = CGPointMake(dismissButton.center.x, dismissButton.center.y + 50)
+        
+        UIView.animateWithDuration(0.5, delay: 1.0, options: .CurveEaseOut, animations: {
+            openButton.alpha = 1.0
+            openButton.center = CGPointMake(openButton.center.x, openButton.center.y - 50)
+            }, completion: nil)
+        UIView.animateWithDuration(0.5, delay: 1.25, options: .CurveEaseOut, animations: {
+            dismissButton.alpha = 1.0
+            dismissButton.center = CGPointMake(dismissButton.center.x, dismissButton.center.y - 50)
+            }, completion: nil)
     }
     
     func openFromDetailForceTouch(view:UIView){

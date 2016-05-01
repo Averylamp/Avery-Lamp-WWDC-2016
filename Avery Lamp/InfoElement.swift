@@ -30,7 +30,6 @@ class InfoElement: UIView {
     func createLayout(left left: Bool){
         self.sideLeft = left
         let finalHeight = self.frame.width * ratioToFit
-//        print("Final Height - \(finalHeight)  \nCurrent Height -\(self.frame.height)")
         
         if  finalHeight > self.frame.height {
             print("ENCLOSING VIEW OF INFO ELEMENT TOO SMALL")
@@ -40,15 +39,9 @@ class InfoElement: UIView {
 //        self.addSubview(backgroundImage)
         setInfo()
         createAutolayout(left)
-        
-        buttonLabel.addTarget(self, action: #selector(InfoElement.buttonClicked), forControlEvents: .TouchUpInside)
 
     }
 
-    func buttonClicked() {
-        print("Button Clicked")
-    }
-    
     private func setInfo(){
         buttonLabel.backgroundColor = UIColor(rgba: viewData["HighlightColor"].string! + "CC")
 //        buttonLabel.setImage(getImageWithColor(UIColor(rgba: viewData["HighlightColor"].string!)), forState: .Normal)

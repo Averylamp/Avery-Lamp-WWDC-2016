@@ -305,7 +305,6 @@ class MyStoryViewController: UIViewController, MKMapViewDelegate {
     var maxRadius:CGFloat = 200.0
     var transitioningBetweenSlides = false
     func animateLabelWithTouch(touch:UITouch, location: CGPoint, ended: Bool = false){
-        //        print("Location \(locationInText) Force - \(touch.force)")
         if transitioningBetweenSlides == false{
             labelStrokes.forEach {
 //                $0.removeAllAnimations()
@@ -409,7 +408,6 @@ class MyStoryViewController: UIViewController, MKMapViewDelegate {
     }
     
     func animateMap(){
-        print("pin count - \(annotationPins.count), map count \(self.mapView.annotations.count)")
         for i in 0..<mapView.annotations.count{
             self.mapView.deselectAnnotation(annotationPins[i], animated: true)
         }
@@ -427,7 +425,6 @@ class MyStoryViewController: UIViewController, MKMapViewDelegate {
             if flyAltitude == 0{
                 flyAltitude = 50
             }
-//            print("Fly Altitude\(flyAltitude)")
             flyToLocation(nextLocation, finalPitchCamera: pitchCam , flyoverAltitude: flyAltitude, finalAltitude: camData["altitude"].doubleValue)
         }else{
             var flyAltitude = jsonData[currentPage]["flyoverAltitude"].doubleValue

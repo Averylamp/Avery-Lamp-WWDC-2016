@@ -38,7 +38,6 @@ class ExpandedInfoViewController: UIViewController, UIScrollViewDelegate {
         self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.width * CGFloat(viewData!["ExtraInfoSlides"].count), self.scrollView.frame.height)
         pageControl.numberOfPages = viewData!["ExtraInfoSlides"].count
         
-        //        print("view data \(viewData)")
         backButton.alpha = 0.0
         view.bringSubviewToFront(backButton)
         UIView.animateWithDuration(1.0) {
@@ -88,13 +87,6 @@ class ExpandedInfoViewController: UIViewController, UIScrollViewDelegate {
             
         }
         
-        
-        
-        
-        //        delay(2.0) {
-        //            print("DISMISSING VC")
-        ////            self.dismissViewControllerAnimated(true, completion: nil)
-        //        }
     }
     
     var textAnimationDuration = 1.2

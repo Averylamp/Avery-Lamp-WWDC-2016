@@ -48,8 +48,6 @@ class AppExploreMoreViewController: UIViewController {
         swipeRecognizer = UISwipeGestureRecognizer(target: self, action: #selector(AppExploreMoreViewController.handleSwipe(_:)))
         swipeRecognizer.direction = UISwipeGestureRecognizerDirection.Right
         self.scrollView.addGestureRecognizer(swipeRecognizer)
-
-//        print("More Info Data \(exploreMoreInfo)")
         
         // Do any additional setup after loading the view.
     }
@@ -57,12 +55,10 @@ class AppExploreMoreViewController: UIViewController {
     func handleSwipe(gesture:UISwipeGestureRecognizer){
         let currentPage = Int(scrollView.contentOffset.x / scrollView.frame.size.width)
         var indexOfDestination = currentPage
-        print("Current Page \(currentPage)")
         let scrollDuration = 0.4
         var animationFired = false
         
         if(gesture.direction == UISwipeGestureRecognizerDirection.Left){
-            print("Right")
             if currentPage < slideViewControllers.count - 1{
                 indexOfDestination += 1
                 animationFired = true
@@ -72,7 +68,6 @@ class AppExploreMoreViewController: UIViewController {
             }
     }
         if(gesture.direction == UISwipeGestureRecognizerDirection.Right){
-            print("Left")
             if currentPage > 0{
                 animationFired = true
                 indexOfDestination -= 1
@@ -122,12 +117,10 @@ class AppExploreMoreViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         slideViewControllers.forEach{ $0.setupAnimatableLayers() }
-        //        print("More Info Data TAKE 2 \(exploreMoreInfo)")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     @IBAction func backButtonClicked(sender: AnyObject) {

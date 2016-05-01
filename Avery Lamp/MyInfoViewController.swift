@@ -23,7 +23,6 @@ class MyInfoViewController: UIViewController,UIScrollViewDelegate, UIViewControl
         super.viewDidLoad()
         self.view.backgroundColor = UIColor(red: 0.463, green: 0.486, blue: 0.549, alpha: 1.00)
         setupJSON()
-//        print(jsonData["InfoSections"].count)
         let numberOfPages = Int(ceil(Double(jsonData["InfoSections"].count) / 2.0))
         var numberOfSections = jsonData["InfoSections"].count
         pageControl.numberOfPages = numberOfPages
@@ -117,7 +116,6 @@ class MyInfoViewController: UIViewController,UIScrollViewDelegate, UIViewControl
     }
     
     func expandInfoSectionClicked(button: UIButton){
-        print("Expand Info Clicked")
         let clickedInfoElement = scrollView.viewWithTag(button.tag + 1000) as! InfoElement
         indexOfClickedElement = button.tag
         infoTransitionAnimator.infoSectionToExpand = clickedInfoElement

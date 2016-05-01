@@ -182,8 +182,6 @@ class MyAppsTableViewController: UITableViewController, UIViewControllerTransiti
                 controller.scrollView.pagingEnabled = true
                 controller.scrollView.contentSize = CGSizeMake(controller.scrollView.frame.width * CGFloat(expandingInfo!.count), controller.scrollView.frame.height)
                 
-                print(controller.scrollView.frame)
-                print(controller.scrollView.contentSize)
                 var lastSlide: UIView?
                 for index in 0..<expandingInfo!.count {
                     if expandingInfo![index]["style"].string != ""{
@@ -205,9 +203,7 @@ class MyAppsTableViewController: UITableViewController, UIViewControllerTransiti
                             controller.scrollView.addConstraint(NSLayoutConstraint(item: slide, attribute: .Left, relatedBy: .Equal, toItem: lastSlide, attribute: .Right, multiplier: 1.0, constant: 0))
                         }
                         slide.layoutIfNeeded()
-                        print(slide.frame)
                         slideViewController.slideData = expandingInfo![index]
-                        print("Item \(index) =  \(expandingInfo![index])")
                         slideViewController.createViewsWithLayouts()
                         lastSlide = slide
                         

@@ -38,13 +38,9 @@ class InfoTransition: NSObject, UIViewControllerAnimatedTransitioning {
         if transitionMode == .Present && infoSectionToExpand != nil {//MARK: Presenting animations
             let initialVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)?.childViewControllers.last as? MyInfoViewController
             let centerOfInfoSection = infoSectionToExpand?.superview!.convertPoint(infoSectionToExpand!.center, toView: originalView)
-            print("Center found \(centerOfInfoSection)")
             
             allDissappearingViews = [UIView]()
             allDissappearingViews.appendContentsOf(initialVC!.view.subviews)
-            
-            print("Dissappearing Views count \(originalView?.subviews.count)")
-          
             
             let presentingViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey) as? ExpandedInfoViewController
             let presentingView = transitionContext.viewForKey(UITransitionContextToViewKey)!

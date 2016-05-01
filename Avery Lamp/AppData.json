@@ -11,7 +11,7 @@
             "longDescription":"Reppin is a hands free rep counter that uses computer vision to count reps and voice them to you.  It also provides workout analytics to improve your workout.",
             "theme":"light",
             "extraInfoLink":"http://devpost.com/software/reppin",
-            "extraInfoType":"Devpost and Demo",
+            "extraInfoType":"Devpost and Demo Video",
             "expandedDetails":[
                                {
                                "style":"oneOneImageDetailText",
@@ -55,7 +55,7 @@
             "longDescription":"PocketLab is a collection of tools for blood analysis using the iPhone, made as a proof of concept.  It performs a variety of tests using computer vision, including haematocrit and blood cell shape analysis.",
             "theme":"light",
             "extraInfoLink":"http://devpost.com/software/pocketlab-a-field-blood-diagnosis-tool",
-            "extraInfoType":"Devpost",
+            "extraInfoType":"Devpost and Demo Video",
             "expandedDetails":[
                                {
                                "style":"oneOneImageDetailText",
