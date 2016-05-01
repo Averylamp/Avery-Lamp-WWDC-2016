@@ -35,7 +35,7 @@
                                        "SectionSubtitle":"Massachusetts Institute of Technology"
                                        },
                                        {
-                                       "DetailText":"I will graduate from Millburn High School this June with high honors.  I challenged myself in a variety classes; some of my favorites were Advanced Robotics, AP Computer Science, and AP Physics B & C.  As a Math/Science guy, I almost died in AP English Language and Composition, but persevered.",
+                                       "DetailText":"I will graduate from Millburn High School this June with high honors.  I challenged myself in a variety classes; some of my favorites were Advanced Robotics, AP Computer Science, AP Physics B & C, and AP English Language and Composition.",
                                        "DetailImage":"Millburn-high",
                                        "FlavorText":"Class of 2016",
                                        "FlavorSubtext":"Graduating this June!",
@@ -60,7 +60,7 @@
                                        "DetailText":"When I went to my first hackathon, I met a few nearby iOS developers in high school. Together we decided to form Isometric Studios, a team to work on freelance projects and attend hackathons. To date I worked on four different jobs with apps in categories ranging from video editing to object tracking to informative apps.",
                                        "DetailImage":"IsometricLogo",
                                        "FlavorText":"iOS Freelancer",
-                                       "FlavorSubtext":"Isometric Studios\nisometric.co",
+                                       "FlavorSubtext":"Isometric Studios\nisometricapps.com",
                                        "SectionSubtitle":"Jobs"
                                        },
                                        {
@@ -130,7 +130,7 @@
                     "ExtraInfoSlides":[
                                        {
                                        "DetailText":"AP Scholar With Distinction\nMerck Physics Test - 7th in NJ\nSt. Anselm - College Book Award\nUSA Biology Olympiad - Semifinalist\nUSA Computing Olympiad - Silver",
-                                       "DetailImage":"MITPicture",
+                                       "DetailImage":"HackBCAPrize",
                                        "FlavorText":"",
                                        "FlavorSubtext":"\"There is only one thing that makes a dream impossible to achieve: the fear of failure - Paulo Coelho\"",
                                        "SectionSubtitle":"Academic Awards"

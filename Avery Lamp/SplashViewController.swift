@@ -204,7 +204,7 @@ class SplashViewController: UIViewController {
                 for h in 0...self.horzPics - 1 {
                     
 //                    print("h - \(h)  v - \(v) tag - \(imgViews[v][h].tag - 1000)")
-                    self.rippleFade2(self.imgViews[v][h], delays: Double(self.imgViews[v][h].tag - 1000) * 0.08)
+                    self.rippleFade2(self.imgViews[v][h], delays: Double(self.imgViews[v][h].tag - 1000) * 0.07)
                     if self.imgViews[v][h].tag - 1000 > max{
                         max = self.imgViews[v][h].tag - 1000
                     }

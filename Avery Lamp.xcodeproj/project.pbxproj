@@ -20,6 +20,7 @@
 		BB1D2FB91CA3C067002F6050 /* AppData.json in Resources */ = {isa = PBXBuildFile; fileRef = BB1D2FB81CA3C067002F6050 /* AppData.json */; };
 		BB1D2FBB1CA3C267002F6050 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1D2FBA1CA3C267002F6050 /* SwiftyJSON.swift */; };
 		BB34038B1C61E9D0004F53DF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34038A1C61E9D0004F53DF /* HomeViewController.swift */; };
+		BB4ABDC01CD5D48600221126 /* ForceTouchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4ABDBF1CD5D48600221126 /* ForceTouchButton.swift */; };
 		BB80F4311CC342B400585A75 /* InfoTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB80F4301CC342B400585A75 /* InfoTransition.swift */; };
 		BBA8B33F1CA7AD7000E45BE2 /* ExpandingTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA8B33E1CA7AD7000E45BE2 /* ExpandingTransition.swift */; };
 		BBA8B3411CA7B8D900E45BE2 /* AppExploreMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA8B3401CA7B8D900E45BE2 /* AppExploreMoreViewController.swift */; };
@@ -101,6 +102,7 @@
 		BB1D2FB81CA3C067002F6050 /* AppData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AppData.json; sourceTree = "<group>"; };
 		BB1D2FBA1CA3C267002F6050 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		BB34038A1C61E9D0004F53DF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BB4ABDBF1CD5D48600221126 /* ForceTouchButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForceTouchButton.swift; sourceTree = "<group>"; };
 		BB80F4301CC342B400585A75 /* InfoTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTransition.swift; sourceTree = "<group>"; };
 		BBA8B33E1CA7AD7000E45BE2 /* ExpandingTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandingTransition.swift; sourceTree = "<group>"; };
 		BBA8B3401CA7B8D900E45BE2 /* AppExploreMoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppExploreMoreViewController.swift; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 				BB10DD951C59E5FD0079C480 /* SplashViewController.swift */,
 				BB10DD351C59DF940079C480 /* Main.storyboard */,
 				BB34038A1C61E9D0004F53DF /* HomeViewController.swift */,
+				BB4ABDBF1CD5D48600221126 /* ForceTouchButton.swift */,
 				BB6599951CD32D610062D448 /* My Story */,
 				BBBBFAB51C97206900770E00 /* My Apps */,
 				BBF47E8D1CCCA42B006D3D3A /* My Info */,
@@ -686,6 +689,7 @@
 				BBFFC4551C88AF7E00A8B5C5 /* MyInfoViewController.swift in Sources */,
 				BBB80A101CC2359A006088C6 /* UIColorExtension.swift in Sources */,
 				BBA8B3411CA7B8D900E45BE2 /* AppExploreMoreViewController.swift in Sources */,
+				BB4ABDC01CD5D48600221126 /* ForceTouchButton.swift in Sources */,
 				BB34038B1C61E9D0004F53DF /* HomeViewController.swift in Sources */,
 				BBD95A761CBAFCCD0038904D /* UILabel+Drawing.swift in Sources */,
 				BB80F4311CC342B400585A75 /* InfoTransition.swift in Sources */,

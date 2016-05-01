@@ -81,7 +81,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             case .MyApps:
                 rootViewController.pushViewController(HomeViewController(), animated: false)
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                let myStoryTVC = storyboard.instantiateViewControllerWithIdentifier("MyAppsVC")
+                let myStoryTVC = storyboard.instantiateViewControllerWithIdentifier("MyAppsTVC")
                 rootViewController.pushViewController(myStoryTVC, animated: false)
 //                alertController.message = "Show me my favorites"
                 break

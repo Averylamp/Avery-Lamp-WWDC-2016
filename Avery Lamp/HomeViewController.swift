@@ -29,6 +29,10 @@ class HomeViewController: UIViewController {
     var bgScroll:UIImageView?
     var bgScroll2:UIImageView?
     
+    var myStoryButton: ForceTouchButton! = nil
+    var myInfoButton: ForceTouchButton! = nil
+    var myAppsButton: ForceTouchButton! = nil
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.whiteColor()
@@ -40,11 +44,13 @@ class HomeViewController: UIViewController {
         bgScroll?.alpha = 0
         bgScroll?.contentMode = UIViewContentMode.ScaleAspectFill
         bgScroll?.image = UIImage(named: "bg")
+        bgScroll?.userInteractionEnabled = false
         self.view.addSubview(bgScroll!)
         
         bgScroll2 = UIImageView(frame: CGRectMake(0, 0, width, height * 3))
         bgScroll2?.alpha = 0
         bgScroll2?.contentMode = UIViewContentMode.ScaleAspectFill
+        bgScroll2?.userInteractionEnabled = false
         self.view.addSubview(bgScroll2!)
         
         //Initial fade in
@@ -71,7 +77,8 @@ class HomeViewController: UIViewController {
         storyLabel.strokeTextSimultaneously(width: 0.4, delay: labelDrawDelay, duration: labelDrawDuration, fade: true)
         self.view.addSubview(storyLabel)
         
-        let myStoryButton = UIButton(frame: CGRectMake(0,0,120,120))
+        myStoryButton = ForceTouchButton(frame: CGRectMake(0,0,120,120))
+        myStoryButton.homeController = self
         myStoryButton.center = CGPointMake(width / 2, height / 3)
         myStoryButton.layer.cornerRadius = 60
         myStoryButton.addTarget(self, action: #selector(HomeViewController.goToMyStory), forControlEvents: UIControlEvents.TouchUpInside)
@@ -92,7 +99,8 @@ class HomeViewController: UIViewController {
         infoLabel.strokeTextSimultaneously(width: 0.4, delay: labelDrawDelay, duration: labelDrawDuration, fade: true)
         self.view.addSubview(infoLabel)
         
-        let myInfoButton = UIButton(frame: CGRectMake(0,0,120,120))
+        myInfoButton = ForceTouchButton(frame: CGRectMake(0,0,120,120))
+        myInfoButton.homeController = self
         myInfoButton.center = CGPointMake(width / 4, height * 2 / 3)
         myInfoButton.layer.cornerRadius = 60
         myInfoButton.addTarget(self, action: #selector(HomeViewController.goToMyInfo), forControlEvents: UIControlEvents.TouchUpInside)
@@ -110,7 +118,8 @@ class HomeViewController: UIViewController {
         appsLabel.strokeTextSimultaneously(width: 0.4, delay: labelDrawDelay, duration: labelDrawDuration, fade: true)
         self.view.addSubview(appsLabel)
         
-        let myAppsButton = UIButton(frame: CGRectMake(0,0,120,120))
+        myAppsButton = ForceTouchButton(frame: CGRectMake(0,0,120,120))
+        myAppsButton.homeController  = self
         myAppsButton.center = CGPointMake(width * 3 / 4, height * 2 / 3)
         myAppsButton.layer.cornerRadius = 60
         myAppsButton.addTarget(self, action: #selector(HomeViewController.goToMyApps), forControlEvents: UIControlEvents.TouchUpInside)
@@ -126,7 +135,17 @@ class HomeViewController: UIViewController {
         self.view.addSubview(label)
         label.strokeTextAnimated(width: 1.0, duration: 2, fade: true)
         
+        let hopeLabel = UILabel(frame: CGRectMake(0, self.view.frame.height - 60, self.view.frame.width, 60))
+        hopeLabel.text = "Hope to see you at WWDC 2016!"
+        hopeLabel.textAlignment = .Center
+        hopeLabel.font = UIFont(name: "Lato-Thin", size: 24)
+        self.view.addSubview(hopeLabel)
+        hopeLabel.strokeTextSimultaneously(width: 0.6, delay: 4.0, duration: 3.0, fade: false, returnStuff: false)
+        
         print("Bounds Circle \(CGPathGetBoundingBox(myAppsCircle?.path))")
+        
+        
+        
         drawIcons()
     }
     
@@ -238,7 +257,7 @@ class HomeViewController: UIViewController {
         let strokeAnimation = CABasicAnimation(keyPath: "strokeEnd")
         strokeAnimation.fromValue = NSNumber(float: 0.0)
         strokeAnimation.toValue = NSNumber(float: 1.0)
-        strokeAnimation.duration = 46.0
+        strokeAnimation.duration = 5.0
         delay(1.5) {
             infoShape.lineWidth = 1.0
             appsShape.lineWidth = 1.0
@@ -426,10 +445,102 @@ class HomeViewController: UIViewController {
             dispatch_get_main_queue(), closure)
     }
     
+    var displayingDetailForButtons = false
     
+    func forceTouchDetected(touch:UITouch, button:ForceTouchButton){
+        let location = touch.locationInView(self.view)
+        if touch.force >= touch.maximumPossibleForce * 0.8 && displayingDetailForButtons == false{
+            if CGRectContainsPoint(myStoryButton.frame, location){
+                print("force touch story")
+                displayDetailForceTouch("Want to know what I've been up to for the past four years?", type: 0)
+                displayingDetailForButtons = true
+            }else if CGRectContainsPoint(myInfoButton.frame, location){
+                print("force touch info")
+                displayDetailForceTouch("Want some extra info?  Contact Info, Education, Hobbies, and more.", type: 1)
+                displayingDetailForButtons = true
+            }else if CGRectContainsPoint(myAppsButton.frame, location){
+                displayDetailForceTouch("Want to see the apps I've made? See the projects I take pride in.", type: 2)
+                print("force touch apps")
+                displayingDetailForButtons = true
+            }
+        }
+        
+        
+    }
+    
+    func displayDetailForceTouch(text:String, type: Int){
+        let popUpView = UIView(frame: CGRectMake(0,0,self.view.frame.width * 0.7, 250))
+        popUpView.layer.cornerRadius = 10
+        popUpView.layer.masksToBounds = true
+        popUpView.center = CGPointMake(self.view.center.x, self.view.center.y + 40)
+        popUpView.backgroundColor = UIColor.whiteColor()
+        popUpView.alpha = 0.0
+        self.view.addSubview(popUpView)
+        UIView.animateWithDuration(0.5) { 
+            popUpView.center = self.view.center
+            popUpView.alpha = 1.0
+        }
+        
+        let textLabel = UILabel(frame: CGRectMake(25,0,popUpView.frame.width - 50, 150))
+        textLabel.text = text
+        textLabel.font = UIFont(name: "Panton-Thin", size: 20)
+        textLabel.numberOfLines = 0
+        textLabel.lineBreakMode = .ByWordWrapping
+        popUpView.addSubview(textLabel)
+        textLabel.strokeTextLetterByLetter(width: 0.6, delay: 0.0, duration: 1.5, characterStrokeDuration: 0.5, fade: false, returnStuff: false)
+        
+        let openButton = UIButton(frame: CGRectMake(0,150,popUpView.frame.width, 50))
+        openButton.setTitle("Check it out", forState: .Normal)
+        openButton.backgroundColor = UIColor(rgba: "#1aada5")
+        openButton.tag = type
+        openButton.addTarget(self, action: #selector(HomeViewController.openFromDetailForceTouch(_:)), forControlEvents: .TouchUpInside)
+        
+        
+        popUpView.addSubview(openButton)
+        
+        let dismissButton = UIButton(frame: CGRectMake(0,200,popUpView.frame.width, 50))
+        dismissButton.setTitle("Maybe Later", forState: .Normal)
+        dismissButton.backgroundColor = UIColor(rgba: "#da3e41")
+        dismissButton.addTarget(self, action: #selector(HomeViewController.dismissDetailForceTouch(_:notAnimated:)), forControlEvents: .TouchUpInside)
+        popUpView.addSubview(dismissButton)
+
+        
+    }
+    
+    func openFromDetailForceTouch(view:UIView){
+        switch view.tag {
+        case 0:
+            dismissDetailForceTouch(view,notAnimated: true)
+            self.goToMyStory()
+        case 1:
+            dismissDetailForceTouch(view,notAnimated: true)
+            self.goToMyInfo()
+        case 2:
+            dismissDetailForceTouch(view,notAnimated: true)
+            self.goToMyApps()
+        default:
+            print("Something went wrong :( ")
+        }
+    }
+    
+    func dismissDetailForceTouch(view:UIView, notAnimated:Bool = false){
+        self.displayingDetailForButtons = false
+        UIView.animateWithDuration(0.5, animations: {
+            if notAnimated == false{
+                view.superview?.center = CGPointMake((view.superview?.center.x)!, (view.superview?.center.y)! - 60)
+            }
+            view.superview?.alpha = 0.0
+            }) { (finished) in
+                view.superview?.removeFromSuperview()
+        }
+        
+    }
     
     // MARK: - Navigation
     func goToMyStory(){
+        if displayingDetailForButtons == true{
+            return
+        }
         self.animationFlag = .Stop
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let myStoryTVC = storyboard.instantiateViewControllerWithIdentifier("MyStoryVC")
@@ -437,6 +548,9 @@ class HomeViewController: UIViewController {
     }
     
     func goToMyInfo(){
+        if displayingDetailForButtons == true{
+            return
+        }
         self.animationFlag = .Stop
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let myInfoTVC = storyboard.instantiateViewControllerWithIdentifier("MyInfoVC")
@@ -445,6 +559,9 @@ class HomeViewController: UIViewController {
     }
     
     func goToMyApps(){
+        if displayingDetailForButtons == true{
+            return
+        }
         self.animationFlag = .Stop
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let myAppsTVC = storyboard.instantiateViewControllerWithIdentifier("MyAppsTVC")

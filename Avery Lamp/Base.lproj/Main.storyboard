@@ -178,7 +178,18 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NewYorkBackground" translatesAutoresizingMaskIntoConstraints="NO" id="SCI-kZ-wYm">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SCI-kZ-wYm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OT2-F9-27f"/>
+                            <constraint firstItem="SCI-kZ-wYm" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Uoa-fH-P4e"/>
+                            <constraint firstItem="SCI-kZ-wYm" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="da2-ai-301"/>
+                            <constraint firstItem="SCI-kZ-wYm" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="qHx-KW-6qg"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="QKz-Wx-veB"/>
                 </viewController>
@@ -216,7 +227,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="dmY-kj-iYw" kind="relationship" relationship="rootViewController" id="SsJ-Aa-3cW"/>
+                        <segue destination="dmY-kj-iYw" kind="relationship" relationship="rootViewController" id="7vC-qw-Z9Y"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D3p-Qt-VlN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1052,7 +1063,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SFO-Cx-2pr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2233" y="384"/>
+            <point key="canvasLocation" x="2367" y="332"/>
         </scene>
         <!--My Info View Controller-->
         <scene sceneID="HId-TG-7pp">
@@ -1412,6 +1423,7 @@
     </scenes>
     <resources>
         <image name="MITPicture" width="1080" height="671"/>
+        <image name="NewYorkBackground" width="960" height="720"/>
         <image name="SmithAppIcon" width="200" height="200"/>
         <image name="SmithDetailPicture" width="400" height="268"/>
         <image name="backArrow" width="280" height="280"/>
