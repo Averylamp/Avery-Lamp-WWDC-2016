@@ -1,0 +1,8 @@
+
+App Thinning Size Report for All Variants of Avery Lamp
+
+Variant: Avery Lamp-iPhone 6s Plus.ipa
+Supported devices: iPhone 6s Plus
+App + On Demand Resources size: 31.1 MB compressed, 39 MB uncompressed
+App size: 31.1 MB compressed, 39 MB uncompressed
+On Demand Resources size: Zero KB compressed, Zero KB uncompressed
