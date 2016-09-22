@@ -270,7 +270,7 @@ class SplashViewController: UIViewController {
     }
     
     func croppedImage(image: UIImage, cropRect: CGRect) -> UIImage {
-        let imageRef = CGImageCreateWithImageInRect(image.CGImage, cropRect)
+        let imageRef = CGImageCreateWithImageInRect(image.CGImage!, cropRect)
         return UIImage(CGImage: imageRef!)
     }
     

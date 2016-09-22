@@ -51,12 +51,12 @@ class ExpandingTransition: NSObject, UIViewControllerAnimatedTransitioning {
             expandingObject?.center = startPoint
             expandingObject?.transform = CGAffineTransformMakeScale(0.001, 0.001)
             expandingObject?.backgroundColor = transitionColor
-            originalView!.addSubview(expandingObject!)
+            originalView.addSubview(expandingObject!)
             
             presentingView.center = startPoint
             presentingView.transform = CGAffineTransformMakeScale(0.001, 0.001)
             presentingView.alpha = 0
-            originalView?.addSubview(presentingView)
+            originalView.addSubview(presentingView)
             UIView.animateWithDuration(duration, animations: { 
                 self.expandingObject?.transform = CGAffineTransformIdentity
                 presentingView.transform = CGAffineTransformIdentity

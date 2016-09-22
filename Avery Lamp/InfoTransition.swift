@@ -44,8 +44,8 @@ class InfoTransition: NSObject, UIViewControllerAnimatedTransitioning {
             
             let presentingViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey) as? ExpandedInfoViewController
             let presentingView = transitionContext.viewForKey(UITransitionContextToViewKey)!
-            presentingView.backgroundColor = originalView?.backgroundColor
-            originalView?.addSubview(presentingView)
+            presentingView.backgroundColor = originalView.backgroundColor
+            originalView.addSubview(presentingView)
             
             animationInfoSection = InfoElement(frame: infoSectionToExpand!.frame)
             animationInfoSection.viewData = infoSectionToExpand?.viewData

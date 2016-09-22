@@ -48,9 +48,9 @@ extension UILabel {
                     var transformation = CGAffineTransformMakeTranslation(position.x, position.y + CGFloat(lineOrigins[lineIndex].y))
                     
                     let tempPath = CGPathCreateMutable()
-                    CGPathAddPath(tempPath, &transformation, pathOfLetter)
+                    CGPathAddPath(tempPath, &transformation, pathOfLetter!)
                     allLetterPaths.append(tempPath)
-                    CGPathAddPath(fullPath, &transformation, pathOfLetter)
+                    CGPathAddPath(fullPath, &transformation, pathOfLetter!)
                 }
                 
             }

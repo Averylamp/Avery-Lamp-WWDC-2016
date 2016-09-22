@@ -191,7 +191,7 @@ class HomeViewController: UIViewController {
         infoShape.strokeColor = UIColor.blackColor().CGColor
         infoShape.lineWidth = 1.0
         infoShape.fillColor = nil
-        var pointOffset = CGPathGetBoundingBox(myInfoCircle!.path).origin
+        var pointOffset = CGPathGetBoundingBox(myInfoCircle!.path!).origin
         infoShape.position = CGPointMake(pointOffset.x + 30, pointOffset.y + 23)
         myInfoCircle?.addSublayer(infoShape)
         
@@ -220,7 +220,7 @@ class HomeViewController: UIViewController {
         appsShape.strokeColor = UIColor.blackColor().CGColor
         appsShape.lineWidth = 1.0
         appsShape.fillColor = nil
-        pointOffset = CGPathGetBoundingBox(myAppsCircle!.path).origin
+        pointOffset = CGPathGetBoundingBox(myAppsCircle!.path!).origin
         appsShape.position = CGPointMake(pointOffset.x + 23, pointOffset.y + 23)
         myAppsCircle?.addSublayer(appsShape)
         
@@ -263,7 +263,7 @@ class HomeViewController: UIViewController {
         storyShape.strokeColor = UIColor.blackColor().CGColor
         storyShape.lineWidth = 1.0
         storyShape.fillColor = nil
-        pointOffset = CGPathGetBoundingBox(myStoryCircle!.path).origin
+        pointOffset = CGPathGetBoundingBox(myStoryCircle!.path!).origin
         storyShape.position = pointOffset
         myStoryCircle?.addSublayer(storyShape)
         
@@ -335,7 +335,7 @@ class HomeViewController: UIViewController {
         }else {
             circlePath = UIBezierPath(roundedRect: CGRectMake(location.x - size / 2,location.y - size / 2, size, size), cornerRadius: size).bezierPathByReversingPath().CGPath
         }
-        CGPathAddPath(path, nil, circlePath)
+        CGPathAddPath(path, nil, circlePath!)
         line.path  = path
         
         let circle = CAShapeLayer()
@@ -450,7 +450,7 @@ class HomeViewController: UIViewController {
         layer.renderInContext(UIGraphicsGetCurrentContext()!)
         let outputImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
-        return outputImage
+        return outputImage!
     }
     
     func delay(delay:Double, closure:()->()) {
