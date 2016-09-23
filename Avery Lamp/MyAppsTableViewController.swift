@@ -25,22 +25,22 @@ class MyAppsTableViewController: UITableViewController, UIViewControllerTransiti
         for _ in 0...rowNumber {
             cellHeights.append(closedCellHeight)
         }
-        let screenHeight = UIScreen.mainScreen().bounds.height
+        let screenHeight = UIScreen.main.bounds.height
         
-        let headerView = UIView(frame: CGRectMake(0,0,self.view.frame.width, 60))
+        let headerView = UIView(frame: CGRect(x: 0,y: 0,width: self.view.frame.width, height: 60))
         headerView.backgroundColor = tableView.backgroundColor
         tableView.tableHeaderView = headerView
         
-        let myProjectsTitle = UILabel(frame: CGRectMake(0,20,self.view.frame.width, 40))
+        let myProjectsTitle = UILabel(frame: CGRect(x: 0,y: 20,width: self.view.frame.width, height: 40))
         myProjectsTitle.text = "My Projects"
-        myProjectsTitle.textAlignment = .Center
+        myProjectsTitle.textAlignment = .center
         myProjectsTitle.font = UIFont(name: "ADAM.CG PRO", size: 30)
         headerView.addSubview(myProjectsTitle)
         
-        let backButton = UIButton(frame: CGRectMake(20,20,40,40))
-        backButton.center = CGPointMake(backButton.center.x, myProjectsTitle.center.y)
-        backButton.setImage(UIImage(named: "backArrow"), forState: .Normal)
-        backButton.addTarget(self, action: #selector(MyAppsTableViewController.backButtonClicked), forControlEvents: .TouchUpInside)
+        let backButton = UIButton(frame: CGRect(x: 20,y: 20,width: 40,height: 40))
+        backButton.center = CGPoint(x: backButton.center.x, y: myProjectsTitle.center.y)
+        backButton.setImage(UIImage(named: "backArrow"), for: UIControlState())
+        backButton.addTarget(self, action: #selector(MyAppsTableViewController.backButtonClicked), for: .touchUpInside)
         headerView.addSubview(backButton)
         
         if screenHeight > 630 {
@@ -52,7 +52,7 @@ class MyAppsTableViewController: UITableViewController, UIViewControllerTransiti
         }
         setupJSON()
         rowNumber = jsonData["Apps"].count
-        tableView.separatorStyle = .None
+        tableView.separatorStyle = .none
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -61,9 +61,9 @@ class MyAppsTableViewController: UITableViewController, UIViewControllerTransiti
     }
     
     func setupJSON(){
-        if let path = NSBundle.mainBundle().pathForResource("AppData", ofType: "json"){
+        if let path = Bundle.main.path(forResource: "AppData", ofType: "json"){
             do {
-                let data = try NSData(contentsOfURL: NSURL(fileURLWithPath: path), options: NSDataReadingOptions.DataReadingMappedIfSafe)
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: Data.ReadingOptions.mappedIfSafe)
                 jsonData = JSON(data: data)
                 if jsonData != JSON.null {
 //                    print("jsonData:\(jsonData["Apps"])")
@@ -85,41 +85,41 @@ class MyAppsTableViewController: UITableViewController, UIViewControllerTransiti
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return rowNumber
     }
     
-    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return cellHeights[indexPath.row]
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return cellHeights[(indexPath as NSIndexPath).row]
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let cell = tableView.cellForRowAtIndexPath(indexPath) as! AppCell
-        if cellHeights[indexPath.row] == closedCellHeight {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! AppCell
+        if cellHeights[(indexPath as NSIndexPath).row] == closedCellHeight {
             cell.openAnimation(true)
-            cellHeights[indexPath.row] = openedCellHeight
+            cellHeights[(indexPath as NSIndexPath).row] = openedCellHeight
         }else{
             cell.closeAnimation(true)
-            cellHeights[indexPath.row] = closedCellHeight
+            cellHeights[(indexPath as NSIndexPath).row] = closedCellHeight
         }
         
-        UIView.animateWithDuration(1.0, delay: 0, options: .CurveEaseOut, animations: { 
+        UIView.animate(withDuration: 1.0, delay: 0, options: .curveEaseOut, animations: { 
             tableView.beginUpdates()
             tableView.endUpdates()
-            tableView.scrollToRowAtIndexPath(indexPath, atScrollPosition: UITableViewScrollPosition.Top, animated: true)
+            tableView.scrollToRow(at: indexPath, at: UITableViewScrollPosition.top, animated: true)
             }, completion: nil)
     }
     
-    override func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if cell is AppCell{
             let appCell = cell as! AppCell
-            if cellHeights[indexPath.row] == closedCellHeight {
+            if cellHeights[(indexPath as NSIndexPath).row] == closedCellHeight {
                 appCell.closeAnimation(false)
             }else{
                 appCell.openAnimation(false)
@@ -127,39 +127,39 @@ class MyAppsTableViewController: UITableViewController, UIViewControllerTransiti
         }
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellType, forIndexPath: indexPath) as! AppCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellType, for: indexPath) as! AppCell
         if cell.titleLabels != nil{
-            cell.titleLabels.forEach { $0.text = jsonData["Apps"][indexPath.row]["title"].string!}
-            cell.taglineLabels.forEach { $0.text = jsonData["Apps"][indexPath.row]["tagline"].string!}
-            cell.shortDescriptionLabels.forEach { $0.text = jsonData["Apps"][indexPath.row]["shortDescription"].string!}
-            cell.appIcons.forEach{ $0.image = UIImage(named: jsonData["Apps"][indexPath.row]["appIconImage"].string!)}
-            cell.highlightViews.forEach{ $0.backgroundColor = UIColor(rgba:jsonData["Apps"][indexPath.row]["highlightColor"].string! )}
-            cell.mediumDescriptionLabels.forEach{ $0.text = jsonData["Apps"][indexPath.row]["mediumDescription"].string! }
-            cell.longDescriptionLabels.forEach{ $0.text = jsonData["Apps"][indexPath.row]["longDescription"].string! }
+            cell.titleLabels.forEach { $0.text = jsonData["Apps"][(indexPath as NSIndexPath).row]["title"].string!}
+            cell.taglineLabels.forEach { $0.text = jsonData["Apps"][(indexPath as NSIndexPath).row]["tagline"].string!}
+            cell.shortDescriptionLabels.forEach { $0.text = jsonData["Apps"][(indexPath as NSIndexPath).row]["shortDescription"].string!}
+            cell.appIcons.forEach{ $0.image = UIImage(named: jsonData["Apps"][(indexPath as NSIndexPath).row]["appIconImage"].string!)}
+            cell.highlightViews.forEach{ $0.backgroundColor = UIColor(rgba:jsonData["Apps"][(indexPath as NSIndexPath).row]["highlightColor"].string! )}
+            cell.mediumDescriptionLabels.forEach{ $0.text = jsonData["Apps"][(indexPath as NSIndexPath).row]["mediumDescription"].string! }
+            cell.longDescriptionLabels.forEach{ $0.text = jsonData["Apps"][(indexPath as NSIndexPath).row]["longDescription"].string! }
             if cell.detailPictures != nil {
-                cell.detailPictures.forEach{ $0.image = UIImage(named: jsonData["Apps"][indexPath.row]["appDetailImage"].string!)}
+                cell.detailPictures.forEach{ $0.image = UIImage(named: jsonData["Apps"][(indexPath as NSIndexPath).row]["appDetailImage"].string!)}
             }
             
             cell.exploreMoreButtons.forEach{
-                $0.tag = indexPath.row
-                $0.addTarget(self, action: #selector(MyAppsTableViewController.exploreMoreButtonClicked(_:)), forControlEvents: UIControlEvents.TouchUpInside) }
+                $0.tag = (indexPath as NSIndexPath).row
+                $0.addTarget(self, action: #selector(MyAppsTableViewController.exploreMoreButtonClicked(_:)), for: UIControlEvents.touchUpInside) }
             
         }
         return cell
     }
     
-    func exploreMoreButtonClicked(button: UIButton){
+    func exploreMoreButtonClicked(_ button: UIButton){
         exploreMoreButtonClicked = button
 
-        self.performSegueWithIdentifier("exploreMoreSegue", sender: self)
+        self.performSegue(withIdentifier: "exploreMoreSegue", sender: self)
         
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if let controller = segue.destinationViewController as? AppExploreMoreViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let controller = segue.destination as? AppExploreMoreViewController {
             controller.transitioningDelegate = self
-            controller.modalPresentationStyle = .Custom
+            controller.modalPresentationStyle = .custom
             controller.view.backgroundColor = exploreMoreButtonClicked?.backgroundColor
             controller.view.layoutIfNeeded()
             controller.scrollView.layoutIfNeeded()
@@ -168,19 +168,19 @@ class MyAppsTableViewController: UITableViewController, UIViewControllerTransiti
             controller.taglineLabel.text = jsonData["Apps"][(exploreMoreButtonClicked?.tag)!]["tagline"].string
             controller.shortDescriptionLabel.text = jsonData["Apps"][(exploreMoreButtonClicked?.tag)!]["shortDescription"].string
             if jsonData["Apps"][(exploreMoreButtonClicked?.tag)!]["extraInfoLink"].string != nil {
-                controller.moreInfoButton.setTitle("Link for \(jsonData["Apps"][(exploreMoreButtonClicked?.tag)!]["extraInfoType"].string!)", forState: .Normal)
+                controller.moreInfoButton.setTitle("Link for \(jsonData["Apps"][(exploreMoreButtonClicked?.tag)!]["extraInfoType"].string!)", for: UIControlState())
             }else{
                 controller.moreInfoButton.alpha = 0.0
             }
             
             if jsonData["Apps"][(exploreMoreButtonClicked?.tag)!]["theme"].string == "light"{
-                controller.themeLabels.forEach{ $0.textColor = UIColor.blackColor()}
+                controller.themeLabels.forEach{ $0.textColor = UIColor.black}
             }else{
-                controller.themeLabels.forEach{ $0.textColor = UIColor.whiteColor()}
+                controller.themeLabels.forEach{ $0.textColor = UIColor.white}
             }
             if let expandingInfo:JSON? = jsonData["Apps"][(exploreMoreButtonClicked?.tag)!]["expandedDetails"] {
-                controller.scrollView.pagingEnabled = true
-                controller.scrollView.contentSize = CGSizeMake(controller.scrollView.frame.width * CGFloat(expandingInfo!.count), controller.scrollView.frame.height)
+                controller.scrollView.isPagingEnabled = true
+                controller.scrollView.contentSize = CGSize(width: controller.scrollView.frame.width * CGFloat(expandingInfo!.count), height: controller.scrollView.frame.height)
                 
                 var lastSlide: UIView?
                 for index in 0..<expandingInfo!.count {
@@ -194,13 +194,13 @@ class MyAppsTableViewController: UITableViewController, UIViewControllerTransiti
                         slide.translatesAutoresizingMaskIntoConstraints = false
                         
                         controller.scrollView.addSubview(slide)
-                        controller.scrollView.addConstraint(NSLayoutConstraint(item: slide, attribute: .Height, relatedBy: .Equal, toItem: controller.scrollView, attribute: .Height, multiplier: 1.0, constant: 0))
-                        controller.scrollView.addConstraint(NSLayoutConstraint(item: slide, attribute: .Width, relatedBy: .Equal, toItem: controller.scrollView, attribute: .Width, multiplier: 1.0, constant: 0))
-                        controller.scrollView.addConstraint(NSLayoutConstraint(item: slide, attribute: .CenterY, relatedBy: .Equal, toItem: controller.scrollView, attribute: .CenterY, multiplier: 1.0, constant: 0))
+                        controller.scrollView.addConstraint(NSLayoutConstraint(item: slide, attribute: .height, relatedBy: .equal, toItem: controller.scrollView, attribute: .height, multiplier: 1.0, constant: 0))
+                        controller.scrollView.addConstraint(NSLayoutConstraint(item: slide, attribute: .width, relatedBy: .equal, toItem: controller.scrollView, attribute: .width, multiplier: 1.0, constant: 0))
+                        controller.scrollView.addConstraint(NSLayoutConstraint(item: slide, attribute: .centerY, relatedBy: .equal, toItem: controller.scrollView, attribute: .centerY, multiplier: 1.0, constant: 0))
                         if index == 0 {
-                            controller.scrollView.addConstraint(NSLayoutConstraint(item: slide, attribute: .Left, relatedBy: .Equal, toItem: controller.scrollView, attribute: .Left, multiplier: 1.0, constant: 0))
+                            controller.scrollView.addConstraint(NSLayoutConstraint(item: slide, attribute: .left, relatedBy: .equal, toItem: controller.scrollView, attribute: .left, multiplier: 1.0, constant: 0))
                         }else{
-                            controller.scrollView.addConstraint(NSLayoutConstraint(item: slide, attribute: .Left, relatedBy: .Equal, toItem: lastSlide, attribute: .Right, multiplier: 1.0, constant: 0))
+                            controller.scrollView.addConstraint(NSLayoutConstraint(item: slide, attribute: .left, relatedBy: .equal, toItem: lastSlide, attribute: .right, multiplier: 1.0, constant: 0))
                         }
                         slide.layoutIfNeeded()
                         slideViewController.slideData = expandingInfo![index]
@@ -221,27 +221,27 @@ class MyAppsTableViewController: UITableViewController, UIViewControllerTransiti
     var exploreMoreButtonClicked:UIButton?
     
     // MARK: UIViewControllerTransitioningDelegate
-    func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        expandingTransition.transitionMode = .Present
-        let pointInVC = exploreMoreButtonClicked!.convertPoint(exploreMoreButtonClicked!.center, toView: nil)
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        expandingTransition.transitionMode = .present
+        let pointInVC = exploreMoreButtonClicked!.convert(exploreMoreButtonClicked!.center, to: nil)
 //            self.view.convertPoint(exploreMoreButtonClicked!.center, fromView: exploreMoreButtonClicked)
-        expandingTransition.startPoint = CGPointMake(self.view.frame.width / 2, pointInVC.y)
+        expandingTransition.startPoint = CGPoint(x: self.view.frame.width / 2, y: pointInVC.y)
 //        print("Transition Center : \(pointInVC)\nBounds of View \(self.view.bounds)\nBounds of Center \(exploreMoreButtonClicked?.bounds)")
         expandingTransition.transitionColor = exploreMoreButtonClicked!.backgroundColor!
         return expandingTransition
     }
     
-    func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        expandingTransition.transitionMode = .Dismiss
-        let pointInVC = exploreMoreButtonClicked!.convertPoint(exploreMoreButtonClicked!.center, toView: nil)
-        expandingTransition.startPoint = CGPointMake(self.view.frame.width / 2, pointInVC.y)
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        expandingTransition.transitionMode = .dismiss
+        let pointInVC = exploreMoreButtonClicked!.convert(exploreMoreButtonClicked!.center, to: nil)
+        expandingTransition.startPoint = CGPoint(x: self.view.frame.width / 2, y: pointInVC.y)
         expandingTransition.transitionColor = exploreMoreButtonClicked!.backgroundColor!
         return expandingTransition
 
     }
     
     func backButtonClicked() {
-        self.navigationController?.popViewControllerAnimated(true)
+        self.navigationController?.popViewController(animated: true)
         
     }
     

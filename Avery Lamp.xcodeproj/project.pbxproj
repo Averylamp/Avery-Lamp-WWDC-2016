@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6CBF241C3997DEBD09B9C2A6 /* Pods_Avery_Lamp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CD44400C263257F7CEADFC4 /* Pods_Avery_Lamp.framework */; };
 		BB10DD321C59DF940079C480 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB10DD311C59DF940079C480 /* AppDelegate.swift */; };
 		BB10DD341C59DF940079C480 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB10DD331C59DF940079C480 /* ViewController.swift */; };
 		BB10DD371C59DF940079C480 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB10DD351C59DF940079C480 /* Main.storyboard */; };
@@ -18,9 +19,27 @@
 		BB1D2FB51CA394EC002F6050 /* MyAppsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1D2FB41CA394EC002F6050 /* MyAppsTableViewController.swift */; };
 		BB1D2FB71CA39504002F6050 /* AppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1D2FB61CA39504002F6050 /* AppCell.swift */; };
 		BB1D2FB91CA3C067002F6050 /* AppData.json in Resources */ = {isa = PBXBuildFile; fileRef = BB1D2FB81CA3C067002F6050 /* AppData.json */; };
-		BB1D2FBB1CA3C267002F6050 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1D2FBA1CA3C267002F6050 /* SwiftyJSON.swift */; };
 		BB34038B1C61E9D0004F53DF /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB34038A1C61E9D0004F53DF /* HomeViewController.swift */; };
 		BB4ABDC01CD5D48600221126 /* ForceTouchButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4ABDBF1CD5D48600221126 /* ForceTouchButton.swift */; };
+		BB7292C01D95C41500F3E8E6 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7292BF1D95C41500F3E8E6 /* SwiftyJSON.swift */; };
+		BB7292D61D95D68900F3E8E6 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB7292C21D95D68900F3E8E6 /* Info.plist */; };
+		BB7292D71D95D68900F3E8E6 /* LTCharacterDiffResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7292C31D95D68900F3E8E6 /* LTCharacterDiffResult.swift */; };
+		BB7292D81D95D68900F3E8E6 /* LTCharacterLimbo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7292C41D95D68900F3E8E6 /* LTCharacterLimbo.swift */; };
+		BB7292D91D95D68900F3E8E6 /* LTEasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7292C51D95D68900F3E8E6 /* LTEasing.swift */; };
+		BB7292DA1D95D68900F3E8E6 /* LTEmitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7292C61D95D68900F3E8E6 /* LTEmitterView.swift */; };
+		BB7292DB1D95D68900F3E8E6 /* LTMorphingEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7292C71D95D68900F3E8E6 /* LTMorphingEffect.swift */; };
+		BB7292DC1D95D68900F3E8E6 /* LTMorphingLabel+Anvil.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7292C81D95D68900F3E8E6 /* LTMorphingLabel+Anvil.swift */; };
+		BB7292DD1D95D68900F3E8E6 /* LTMorphingLabel+Burn.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7292C91D95D68900F3E8E6 /* LTMorphingLabel+Burn.swift */; };
+		BB7292DE1D95D68900F3E8E6 /* LTMorphingLabel+Evaporate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7292CA1D95D68900F3E8E6 /* LTMorphingLabel+Evaporate.swift */; };
+		BB7292DF1D95D68900F3E8E6 /* LTMorphingLabel+Fall.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7292CB1D95D68900F3E8E6 /* LTMorphingLabel+Fall.swift */; };
+		BB7292E01D95D68900F3E8E6 /* LTMorphingLabel+Pixelate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7292CC1D95D68900F3E8E6 /* LTMorphingLabel+Pixelate.swift */; };
+		BB7292E11D95D68900F3E8E6 /* LTMorphingLabel+Sparkle.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7292CD1D95D68900F3E8E6 /* LTMorphingLabel+Sparkle.swift */; };
+		BB7292E21D95D68900F3E8E6 /* LTMorphingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7292CF1D95D68900F3E8E6 /* LTMorphingLabel.swift */; };
+		BB7292E31D95D68900F3E8E6 /* LTStringDiffResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB7292D01D95D68900F3E8E6 /* LTStringDiffResult.swift */; };
+		BB7292E41D95D68900F3E8E6 /* Fire.png in Resources */ = {isa = PBXBuildFile; fileRef = BB7292D21D95D68900F3E8E6 /* Fire.png */; };
+		BB7292E51D95D68900F3E8E6 /* Fragment.png in Resources */ = {isa = PBXBuildFile; fileRef = BB7292D31D95D68900F3E8E6 /* Fragment.png */; };
+		BB7292E61D95D68900F3E8E6 /* Smoke.png in Resources */ = {isa = PBXBuildFile; fileRef = BB7292D41D95D68900F3E8E6 /* Smoke.png */; };
+		BB7292E71D95D68900F3E8E6 /* Sparkle.png in Resources */ = {isa = PBXBuildFile; fileRef = BB7292D51D95D68900F3E8E6 /* Sparkle.png */; };
 		BB80F4311CC342B400585A75 /* InfoTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB80F4301CC342B400585A75 /* InfoTransition.swift */; };
 		BBA8B33F1CA7AD7000E45BE2 /* ExpandingTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA8B33E1CA7AD7000E45BE2 /* ExpandingTransition.swift */; };
 		BBA8B3411CA7B8D900E45BE2 /* AppExploreMoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBA8B3401CA7B8D900E45BE2 /* AppExploreMoreViewController.swift */; };
@@ -59,7 +78,6 @@
 		BBF4C4AC1CC41A33004BB567 /* ExpandedInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF4C4AB1CC41A33004BB567 /* ExpandedInfoViewController.swift */; };
 		BBFFC4511C88AF2800A8B5C5 /* MyStoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFFC4501C88AF2800A8B5C5 /* MyStoryViewController.swift */; };
 		BBFFC4551C88AF7E00A8B5C5 /* MyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFFC4541C88AF7E00A8B5C5 /* MyInfoViewController.swift */; };
-		FD28E1FA33D009710E4BE6F8 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85EB57D2745956D1EC5A9497 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,7 +98,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5AF141CD9D659FD64A7BC9D9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		0CD44400C263257F7CEADFC4 /* Pods_Avery_Lamp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Avery_Lamp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		14EE2BB6E92773C1055423F4 /* Pods-Avery Lamp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Avery Lamp.release.xcconfig"; path = "Pods/Target Support Files/Pods-Avery Lamp/Pods-Avery Lamp.release.xcconfig"; sourceTree = "<group>"; };
+		638F03252AE658FE69BD19ED /* Pods-Avery Lamp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Avery Lamp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Avery Lamp/Pods-Avery Lamp.debug.xcconfig"; sourceTree = "<group>"; };
 		85EB57D2745956D1EC5A9497 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB10DD2E1C59DF940079C480 /* Avery Lamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Avery Lamp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB10DD311C59DF940079C480 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,9 +120,28 @@
 		BB1D2FB41CA394EC002F6050 /* MyAppsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAppsTableViewController.swift; sourceTree = "<group>"; };
 		BB1D2FB61CA39504002F6050 /* AppCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCell.swift; sourceTree = "<group>"; };
 		BB1D2FB81CA3C067002F6050 /* AppData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AppData.json; sourceTree = "<group>"; };
-		BB1D2FBA1CA3C267002F6050 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		BB34038A1C61E9D0004F53DF /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BB4ABDBF1CD5D48600221126 /* ForceTouchButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForceTouchButton.swift; sourceTree = "<group>"; };
+		BB7292BF1D95C41500F3E8E6 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		BB7292C21D95D68900F3E8E6 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB7292C31D95D68900F3E8E6 /* LTCharacterDiffResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTCharacterDiffResult.swift; sourceTree = "<group>"; };
+		BB7292C41D95D68900F3E8E6 /* LTCharacterLimbo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTCharacterLimbo.swift; sourceTree = "<group>"; };
+		BB7292C51D95D68900F3E8E6 /* LTEasing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTEasing.swift; sourceTree = "<group>"; };
+		BB7292C61D95D68900F3E8E6 /* LTEmitterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTEmitterView.swift; sourceTree = "<group>"; };
+		BB7292C71D95D68900F3E8E6 /* LTMorphingEffect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTMorphingEffect.swift; sourceTree = "<group>"; };
+		BB7292C81D95D68900F3E8E6 /* LTMorphingLabel+Anvil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LTMorphingLabel+Anvil.swift"; sourceTree = "<group>"; };
+		BB7292C91D95D68900F3E8E6 /* LTMorphingLabel+Burn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LTMorphingLabel+Burn.swift"; sourceTree = "<group>"; };
+		BB7292CA1D95D68900F3E8E6 /* LTMorphingLabel+Evaporate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LTMorphingLabel+Evaporate.swift"; sourceTree = "<group>"; };
+		BB7292CB1D95D68900F3E8E6 /* LTMorphingLabel+Fall.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LTMorphingLabel+Fall.swift"; sourceTree = "<group>"; };
+		BB7292CC1D95D68900F3E8E6 /* LTMorphingLabel+Pixelate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LTMorphingLabel+Pixelate.swift"; sourceTree = "<group>"; };
+		BB7292CD1D95D68900F3E8E6 /* LTMorphingLabel+Sparkle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "LTMorphingLabel+Sparkle.swift"; sourceTree = "<group>"; };
+		BB7292CE1D95D68900F3E8E6 /* LTMorphingLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LTMorphingLabel.h; sourceTree = "<group>"; };
+		BB7292CF1D95D68900F3E8E6 /* LTMorphingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTMorphingLabel.swift; sourceTree = "<group>"; };
+		BB7292D01D95D68900F3E8E6 /* LTStringDiffResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LTStringDiffResult.swift; sourceTree = "<group>"; };
+		BB7292D21D95D68900F3E8E6 /* Fire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fire.png; sourceTree = "<group>"; };
+		BB7292D31D95D68900F3E8E6 /* Fragment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fragment.png; sourceTree = "<group>"; };
+		BB7292D41D95D68900F3E8E6 /* Smoke.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Smoke.png; sourceTree = "<group>"; };
+		BB7292D51D95D68900F3E8E6 /* Sparkle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sparkle.png; sourceTree = "<group>"; };
 		BB80F4301CC342B400585A75 /* InfoTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoTransition.swift; sourceTree = "<group>"; };
 		BBA8B33E1CA7AD7000E45BE2 /* ExpandingTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandingTransition.swift; sourceTree = "<group>"; };
 		BBA8B3401CA7B8D900E45BE2 /* AppExploreMoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppExploreMoreViewController.swift; sourceTree = "<group>"; };
@@ -191,7 +230,6 @@
 		BBF4C4AB1CC41A33004BB567 /* ExpandedInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandedInfoViewController.swift; sourceTree = "<group>"; };
 		BBFFC4501C88AF2800A8B5C5 /* MyStoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyStoryViewController.swift; sourceTree = "<group>"; };
 		BBFFC4541C88AF7E00A8B5C5 /* MyInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyInfoViewController.swift; sourceTree = "<group>"; };
-		BDD472C5AB65D9D3A8B2AD0D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -200,7 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBF47E8F1CCCAA82006D3D3A /* MapKit.framework in Frameworks */,
-				FD28E1FA33D009710E4BE6F8 /* Pods.framework in Frameworks */,
+				6CBF241C3997DEBD09B9C2A6 /* Pods_Avery_Lamp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,17 +264,9 @@
 			children = (
 				BBF47E8E1CCCAA82006D3D3A /* MapKit.framework */,
 				85EB57D2745956D1EC5A9497 /* Pods.framework */,
+				0CD44400C263257F7CEADFC4 /* Pods_Avery_Lamp.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		B5E0BD0B412707B32C9E1144 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				5AF141CD9D659FD64A7BC9D9 /* Pods.debug.xcconfig */,
-				BDD472C5AB65D9D3A8B2AD0D /* Pods.release.xcconfig */,
-			);
-			name = Pods;
 			sourceTree = "<group>";
 		};
 		BB10DD251C59DF940079C480 = {
@@ -246,8 +276,8 @@
 				BB10DD451C59DF940079C480 /* Avery LampTests */,
 				BB10DD501C59DF940079C480 /* Avery LampUITests */,
 				BB10DD2F1C59DF940079C480 /* Products */,
-				B5E0BD0B412707B32C9E1144 /* Pods */,
 				189F8D80997FDECC53280483 /* Frameworks */,
+				F2A5E1AD412D89C5EB69A084 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -264,6 +294,7 @@
 		BB10DD301C59DF940079C480 /* Avery Lamp */ = {
 			isa = PBXGroup;
 			children = (
+				BB7292C11D95D68900F3E8E6 /* LTMorphingLabel */,
 				BB10DD311C59DF940079C480 /* AppDelegate.swift */,
 				BB10DD331C59DF940079C480 /* ViewController.swift */,
 				BB10DD951C59E5FD0079C480 /* SplashViewController.swift */,
@@ -272,6 +303,7 @@
 				BB4ABDBF1CD5D48600221126 /* ForceTouchButton.swift */,
 				BB6599951CD32D610062D448 /* My Story */,
 				BBBBFAB51C97206900770E00 /* My Apps */,
+				BB7292BF1D95C41500F3E8E6 /* SwiftyJSON.swift */,
 				BBF47E8D1CCCA42B006D3D3A /* My Info */,
 				BBB80A0F1CC2359A006088C6 /* UIColorExtension.swift */,
 				BB10DD991C59EB760079C480 /* Fancy Graphic Helpers */,
@@ -404,6 +436,40 @@
 			name = "My Story";
 			sourceTree = "<group>";
 		};
+		BB7292C11D95D68900F3E8E6 /* LTMorphingLabel */ = {
+			isa = PBXGroup;
+			children = (
+				BB7292C21D95D68900F3E8E6 /* Info.plist */,
+				BB7292C31D95D68900F3E8E6 /* LTCharacterDiffResult.swift */,
+				BB7292C41D95D68900F3E8E6 /* LTCharacterLimbo.swift */,
+				BB7292C51D95D68900F3E8E6 /* LTEasing.swift */,
+				BB7292C61D95D68900F3E8E6 /* LTEmitterView.swift */,
+				BB7292C71D95D68900F3E8E6 /* LTMorphingEffect.swift */,
+				BB7292C81D95D68900F3E8E6 /* LTMorphingLabel+Anvil.swift */,
+				BB7292C91D95D68900F3E8E6 /* LTMorphingLabel+Burn.swift */,
+				BB7292CA1D95D68900F3E8E6 /* LTMorphingLabel+Evaporate.swift */,
+				BB7292CB1D95D68900F3E8E6 /* LTMorphingLabel+Fall.swift */,
+				BB7292CC1D95D68900F3E8E6 /* LTMorphingLabel+Pixelate.swift */,
+				BB7292CD1D95D68900F3E8E6 /* LTMorphingLabel+Sparkle.swift */,
+				BB7292CE1D95D68900F3E8E6 /* LTMorphingLabel.h */,
+				BB7292CF1D95D68900F3E8E6 /* LTMorphingLabel.swift */,
+				BB7292D01D95D68900F3E8E6 /* LTStringDiffResult.swift */,
+				BB7292D11D95D68900F3E8E6 /* Particles */,
+			);
+			path = LTMorphingLabel;
+			sourceTree = "<group>";
+		};
+		BB7292D11D95D68900F3E8E6 /* Particles */ = {
+			isa = PBXGroup;
+			children = (
+				BB7292D21D95D68900F3E8E6 /* Fire.png */,
+				BB7292D31D95D68900F3E8E6 /* Fragment.png */,
+				BB7292D41D95D68900F3E8E6 /* Smoke.png */,
+				BB7292D51D95D68900F3E8E6 /* Sparkle.png */,
+			);
+			path = Particles;
+			sourceTree = "<group>";
+		};
 		BBB57F901CC97E95005D6BF1 /* Maven Pro */ = {
 			isa = PBXGroup;
 			children = (
@@ -437,7 +503,6 @@
 				BBD885C91CBF3E8200C50F16 /* FullAppsTableViewController.swift */,
 				BBD885CB1CBF494C00C50F16 /* moreDetailsImageTextView.swift */,
 				BBD885CD1CBF49BB00C50F16 /* moreDetailsImageTextView.xib */,
-				BB1D2FBA1CA3C267002F6050 /* SwiftyJSON.swift */,
 				BB1D2FB81CA3C067002F6050 /* AppData.json */,
 				BBD885CF1CBF5CC700C50F16 /* AppExploreMoreSlideViewController.swift */,
 				BB1D2FB41CA394EC002F6050 /* MyAppsTableViewController.swift */,
@@ -460,6 +525,15 @@
 			name = "My Info";
 			sourceTree = "<group>";
 		};
+		F2A5E1AD412D89C5EB69A084 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				638F03252AE658FE69BD19ED /* Pods-Avery Lamp.debug.xcconfig */,
+				14EE2BB6E92773C1055423F4 /* Pods-Avery Lamp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -467,12 +541,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BB10DD561C59DF940079C480 /* Build configuration list for PBXNativeTarget "Avery Lamp" */;
 			buildPhases = (
-				A3CDA42725D77DE7450855FB /* Check Pods Manifest.lock */,
+				14E1228DB9E1DB1D7414CB29 /* [CP] Check Pods Manifest.lock */,
 				BB10DD2A1C59DF940079C480 /* Sources */,
 				BB10DD2B1C59DF940079C480 /* Frameworks */,
 				BB10DD2C1C59DF940079C480 /* Resources */,
-				D10BAC99769EC4AE8AE3EBA1 /* Embed Pods Frameworks */,
-				F020150E59D5307269793F9C /* Copy Pods Resources */,
+				FE0027BAF9AAA34D0BEEDF22 /* [CP] Embed Pods Frameworks */,
+				BB090068E5E4E407F6985722 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -532,6 +606,7 @@
 					BB10DD2D1C59DF940079C480 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = 9XWYL3K4YT;
+						LastSwiftMigration = 0800;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
 								enabled = 1;
@@ -540,10 +615,12 @@
 					};
 					BB10DD411C59DF940079C480 = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
 						TestTargetID = BB10DD2D1C59DF940079C480;
 					};
 					BB10DD4C1C59DF940079C480 = {
 						CreatedOnToolsVersion = 7.2;
+						LastSwiftMigration = 0800;
 						TestTargetID = BB10DD2D1C59DF940079C480;
 					};
 				};
@@ -575,12 +652,15 @@
 			files = (
 				BBB80A461CC24EEB006088C6 /* Lato-Heavy.ttf in Resources */,
 				BBE54C7B1C9D5B0D00EA9E7A /* Panton-Bold.otf in Resources */,
+				BB7292E61D95D68900F3E8E6 /* Smoke.png in Resources */,
 				BBB57F8E1CC97E90005D6BF1 /* MavenProLight-200.otf in Resources */,
 				BBB80A451CC24EEB006088C6 /* Lato-Hairline.ttf in Resources */,
 				BBB57F8F1CC97E90005D6BF1 /* MavenProLight-300.otf in Resources */,
 				BBB80A481CC24EEB006088C6 /* Lato-Medium.ttf in Resources */,
 				BB10DD3C1C59DF940079C480 /* LaunchScreen.storyboard in Resources */,
+				BB7292E71D95D68900F3E8E6 /* Sparkle.png in Resources */,
 				BBE54C7E1C9D5B0D00EA9E7A /* Panton-Heavy.otf in Resources */,
+				BB7292D61D95D68900F3E8E6 /* Info.plist in Resources */,
 				BB10DD391C59DF940079C480 /* Assets.xcassets in Resources */,
 				BBB80A471CC24EEB006088C6 /* Lato-Light.ttf in Resources */,
 				BBE54C7A1C9D5B0D00EA9E7A /* Panton-Black.otf in Resources */,
@@ -591,7 +671,9 @@
 				BBE54C811C9D5B0D00EA9E7A /* Panton-SemiBold.otf in Resources */,
 				BBE54C7D1C9D5B0D00EA9E7A /* Panton-ExtraLight.otf in Resources */,
 				BBE54C791C9D5AF600EA9E7A /* ADAM.CG PRO.otf in Resources */,
+				BB7292E51D95D68900F3E8E6 /* Fragment.png in Resources */,
 				BBD885CE1CBF49BB00C50F16 /* moreDetailsImageTextView.xib in Resources */,
+				BB7292E41D95D68900F3E8E6 /* Fire.png in Resources */,
 				BBB80A4A1CC24EEB006088C6 /* Lato-Semibold.ttf in Resources */,
 				BBB57F8D1CC97E90005D6BF1 /* MavenProLight-100.otf in Resources */,
 				BBB80A0E1CC23567006088C6 /* InfoData.json in Resources */,
@@ -622,14 +704,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		A3CDA42725D77DE7450855FB /* Check Pods Manifest.lock */ = {
+		14E1228DB9E1DB1D7414CB29 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -637,34 +719,34 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		D10BAC99769EC4AE8AE3EBA1 /* Embed Pods Frameworks */ = {
+		BB090068E5E4E407F6985722 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Avery Lamp/Pods-Avery Lamp-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F020150E59D5307269793F9C /* Copy Pods Resources */ = {
+		FE0027BAF9AAA34D0BEEDF22 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Avery Lamp/Pods-Avery Lamp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -674,25 +756,38 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB7292DB1D95D68900F3E8E6 /* LTMorphingEffect.swift in Sources */,
+				BB7292DD1D95D68900F3E8E6 /* LTMorphingLabel+Burn.swift in Sources */,
 				BBD885CA1CBF3E8200C50F16 /* FullAppsTableViewController.swift in Sources */,
+				BB7292D91D95D68900F3E8E6 /* LTEasing.swift in Sources */,
 				BB1D2FB51CA394EC002F6050 /* MyAppsTableViewController.swift in Sources */,
 				BBF4C4AC1CC41A33004BB567 /* ExpandedInfoViewController.swift in Sources */,
-				BB1D2FBB1CA3C267002F6050 /* SwiftyJSON.swift in Sources */,
+				BB7292DF1D95D68900F3E8E6 /* LTMorphingLabel+Fall.swift in Sources */,
+				BB7292DC1D95D68900F3E8E6 /* LTMorphingLabel+Anvil.swift in Sources */,
+				BB7292C01D95C41500F3E8E6 /* SwiftyJSON.swift in Sources */,
 				BB10DD341C59DF940079C480 /* ViewController.swift in Sources */,
 				BBB80A121CC2428D006088C6 /* InfoElement.swift in Sources */,
 				BBD885D01CBF5CC700C50F16 /* AppExploreMoreSlideViewController.swift in Sources */,
 				BBFFC4511C88AF2800A8B5C5 /* MyStoryViewController.swift in Sources */,
 				BB1D2FB71CA39504002F6050 /* AppCell.swift in Sources */,
+				BB7292D71D95D68900F3E8E6 /* LTCharacterDiffResult.swift in Sources */,
+				BB7292E11D95D68900F3E8E6 /* LTMorphingLabel+Sparkle.swift in Sources */,
+				BB7292DA1D95D68900F3E8E6 /* LTEmitterView.swift in Sources */,
+				BB7292E31D95D68900F3E8E6 /* LTStringDiffResult.swift in Sources */,
 				BB10DD321C59DF940079C480 /* AppDelegate.swift in Sources */,
+				BB7292D81D95D68900F3E8E6 /* LTCharacterLimbo.swift in Sources */,
 				BB10DD961C59E5FD0079C480 /* SplashViewController.swift in Sources */,
+				BB7292E21D95D68900F3E8E6 /* LTMorphingLabel.swift in Sources */,
 				BBA8B33F1CA7AD7000E45BE2 /* ExpandingTransition.swift in Sources */,
 				BBFFC4551C88AF7E00A8B5C5 /* MyInfoViewController.swift in Sources */,
+				BB7292DE1D95D68900F3E8E6 /* LTMorphingLabel+Evaporate.swift in Sources */,
 				BBB80A101CC2359A006088C6 /* UIColorExtension.swift in Sources */,
 				BBA8B3411CA7B8D900E45BE2 /* AppExploreMoreViewController.swift in Sources */,
 				BB4ABDC01CD5D48600221126 /* ForceTouchButton.swift in Sources */,
 				BB34038B1C61E9D0004F53DF /* HomeViewController.swift in Sources */,
 				BBD95A761CBAFCCD0038904D /* UILabel+Drawing.swift in Sources */,
 				BB80F4311CC342B400585A75 /* InfoTransition.swift in Sources */,
+				BB7292E01D95D68900F3E8E6 /* LTMorphingLabel+Pixelate.swift in Sources */,
 				BBD885CC1CBF494C00C50F16 /* moreDetailsImageTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -831,35 +926,37 @@
 		};
 		BB10DD571C59DF940079C480 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5AF141CD9D659FD64A7BC9D9 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 638F03252AE658FE69BD19ED /* Pods-Avery Lamp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				INFOPLIST_FILE = "Avery Lamp/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Isometric.Avery-Lamp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Avery Lamp/Avery Lamp-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		BB10DD581C59DF940079C480 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BDD472C5AB65D9D3A8B2AD0D /* Pods.release.xcconfig */;
+			baseConfigurationReference = 14EE2BB6E92773C1055423F4 /* Pods-Avery Lamp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "Avery Lamp/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Isometric.Avery-Lamp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Avery Lamp/Avery Lamp-Bridging-Header.h";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -871,6 +968,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Isometric.Avery-LampTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Avery Lamp.app/Avery Lamp";
 			};
 			name = Debug;
@@ -883,6 +981,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Isometric.Avery-LampTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Avery Lamp.app/Avery Lamp";
 			};
 			name = Release;
@@ -894,6 +993,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Isometric.Avery-LampUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "Avery Lamp";
 				USES_XCTRUNNER = YES;
 			};
@@ -906,6 +1006,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.Isometric.Avery-LampUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "Avery Lamp";
 				USES_XCTRUNNER = YES;
 			};

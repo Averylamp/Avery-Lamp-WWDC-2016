@@ -7,368 +7,260 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04913062FB19F572704D1F80F24D0F1E /* Fragment.png in Resources */ = {isa = PBXBuildFile; fileRef = 985837977E0DABBC9A89F733ADC8DBFC /* Fragment.png */; };
-		09655714894296138E974CBC74484E5C /* LTMorphingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928768537C3C13F8C94CB4BCFCE4870A /* LTMorphingLabel.swift */; };
-		0B0B16FE44CBECB512D2FC308055C7BB /* LTMorphingLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F0F0E4AFA6A9A8FCFE519C9E8C1F8FA8 /* LTMorphingLabel-dummy.m */; };
-		0B6F4E65EE9E42C85A60E9C726560363 /* Shimmer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 094330281A70802724016EABBF453B44 /* Shimmer-dummy.m */; };
-		10DA04EC085D11D23E0E3F0DBABE5114 /* LTMorphingLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 62BB74455EE45AB4F7407A7EF68504A2 /* LTMorphingLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1CF8DFA896A6618005B677B8793DBF0E /* Fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 02948C50969FFF49F0BF6FE1377958BE /* Fire.png */; };
-		28A5472159BB7731BA4E758C3B3D61DA /* FBShimmering.h in Headers */ = {isa = PBXBuildFile; fileRef = BD7D7B634EC656841874FEFC3BAB107B /* FBShimmering.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		29D0744BD04A7B92FD82549D383CF8C5 /* FBShimmeringLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 2219EF72C4945CD14A0A6A0AFD95873E /* FBShimmeringLayer.m */; };
-		35D1068A16F7B860DBF2FF11F7E88197 /* LTMorphingEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AEE4EDE42F1491CB8038E7B9193ECDB /* LTMorphingEffect.swift */; };
-		401A7DAFE42E4A8D8B065ABB2B5028D1 /* LTMorphingLabel+Sparkle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92DB137176C3BDFF7F5079AE5738347 /* LTMorphingLabel+Sparkle.swift */; };
-		4C4606AE9C0AA8C8AA2CF9DBD9957676 /* Shimmer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7274B931813E693A5F6CAC06AD164FE7 /* Shimmer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		573B13ABBF79FA6ABDACA8F14750D83F /* Sparkle.png in Resources */ = {isa = PBXBuildFile; fileRef = DA5831F2CBF34476F94D500740EF73DE /* Sparkle.png */; };
-		5BDA745A593B75DD0D7C035B0291D37B /* FBShimmeringView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5C033EC37024F07578711962E0517B /* FBShimmeringView.m */; };
-		5CF83FB2E49B3342A3C09B02E8F474D5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E642B1A057ADA2ABEF90BE2417F349C1 /* QuartzCore.framework */; };
-		62821F4D42C187B437988C64DBA6E0C8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9DE615671731BF3AEFB3CB1F984FA8F /* UIKit.framework */; };
-		74DEC2D3601595D8C6850C8FB7173158 /* LTCharacterLimbo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE50B73B3C4046CAB38CCC0A546694A /* LTCharacterLimbo.swift */; };
-		82CCC01A0501720443407C7842A2F8EE /* LTMorphingLabel+Evaporate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A343ACD4B2B0491AFC4EC6199FB821BE /* LTMorphingLabel+Evaporate.swift */; };
-		87A5677A6AE8315FC08C7AFDA06C5E85 /* LTMorphingLabel+Anvil.swift in Sources */ = {isa = PBXBuildFile; fileRef = D592B1D3C72357CA3C94AA4B63826BDD /* LTMorphingLabel+Anvil.swift */; };
-		8E4D8B3B31273ACFD3A625B04581B7DD /* FBShimmeringView.h in Headers */ = {isa = PBXBuildFile; fileRef = D019DE7FF8C2F1B2EA25B1F0C449E7BF /* FBShimmeringView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8E79CB4052B4F991D6313A1CF4E4AF9C /* FBShimmeringLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 502F01353E1442D28B8B96FB01C98CDF /* FBShimmeringLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		94C184FAE53AE7FE2DAAF71250C88399 /* LTEmitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57303020C59389E374863EF2993168D8 /* LTEmitterView.swift */; };
-		9CD2F676F12CF59997D469DC44040977 /* LTEasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658B69FCBC6B05FAF55E9B5F8595364A /* LTEasing.swift */; };
-		BA25E1C4EFB2B53764E95238C01FC541 /* LTMorphingLabel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E53F9E74514F3A6EE8B87360B0651BDE /* LTMorphingLabel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BDDF106D2ED568781045A177B8B02860 /* Pods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BCC458FDD5F692BBB2BFC64BB5701FC /* Pods-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CB1B897F5047C38E36B302B66F2D0BD8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91413329813FA6FE5A78842159E69621 /* Foundation.framework */; };
-		CD06F547FB191B202E5925C89A07F9B4 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 894E5DA93A9F359521A89826BE6DA777 /* Pods-dummy.m */; };
-		CFC6568F9625CFEDE89544D5E106EE56 /* LTMorphingLabel+Fall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D86BB18C133FC02CCC342E28959F247 /* LTMorphingLabel+Fall.swift */; };
-		D36A14430B80927B1E7FBF2F15EF7092 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91413329813FA6FE5A78842159E69621 /* Foundation.framework */; };
-		D40D84C336EB60A2349DA835277B3BB6 /* LTMorphingLabel+Burn.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7FEE0DCA3C2A126963864D65837A6DF /* LTMorphingLabel+Burn.swift */; };
-		D4BEFE9697D2C98014CEA515831D78EC /* NSString+LTMorphingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B85601E9FC5BA2289687128D7CAE0B /* NSString+LTMorphingLabel.swift */; };
-		D7AF1C498BACC7A8145392B6E3AC91FB /* LTMorphingLabel+Pixelate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCA4783FAB6FF658E63DA3396B251D84 /* LTMorphingLabel+Pixelate.swift */; };
-		E64E0DA42FF43A0CE84FC8E07BA9C2F4 /* Smoke.png in Resources */ = {isa = PBXBuildFile; fileRef = 6ABA8347E41A26E4F18A6470090CE5BA /* Smoke.png */; };
-		F0F119C05F6408B9E0F8064AA86D77C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91413329813FA6FE5A78842159E69621 /* Foundation.framework */; };
+		2BF220BC2087B7BFAD0F41C43956D8EE /* FBShimmeringView.m in Sources */ = {isa = PBXBuildFile; fileRef = E793A2D34A09FBF4EC6EAF2DFC2CA84B /* FBShimmeringView.m */; };
+		2CD64A1A4DDCBACDC60407AB992DC70A /* FBShimmeringLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 72E426EBDBE95831738D724F06E08FFC /* FBShimmeringLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3621786DAA825036939D7E343977D917 /* Shimmer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CB81493E45E3F52A4C8027F648FDBFC8 /* Shimmer-dummy.m */; };
+		375A821613F2954590FD2570558727D0 /* Shimmer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 173CF2ADCBC760586288F3F821BAE5E6 /* Shimmer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4F08F47C59EB719E4C050DACFF2BB97E /* Pods-Avery Lamp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 12547402FEE7FD68398B0520377FA855 /* Pods-Avery Lamp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6FB45EF32F3DA8A6D62B388A51738686 /* FBShimmering.h in Headers */ = {isa = PBXBuildFile; fileRef = C33C18D0D5D2C8FC2C130D3EF6AA5013 /* FBShimmering.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77561DB56DDB37AA862ABF370EA666C3 /* FBShimmeringLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D68928C01FB030DFA2DC57F7C13754A /* FBShimmeringLayer.m */; };
+		B33DE09E00893F619FD50D12711D77C5 /* Pods-Avery Lamp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CA04C563EF7D14A8546F1B64F1AD3256 /* Pods-Avery Lamp-dummy.m */; };
+		BF7A4FFB2A6EA061F22306C8960377B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		C70D52D78DD4B83E33B406BF7F74B595 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		F284BB7AC7FA6B63C47AA9F93F4FF543 /* FBShimmeringView.h in Headers */ = {isa = PBXBuildFile; fileRef = 804892DA76F191AEACD00563BBA799EA /* FBShimmeringView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3B2552AC08DE33CE4BA27878138ED14C /* PBXContainerItemProxy */ = {
+		05447790CADABCFF1794E53984AD62A2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 660A9D196B0A1A92888F5E156FCC7BA4;
+			remoteGlobalIDString = 0BB65292242ABA7CC49CEBE18399342D;
 			remoteInfo = Shimmer;
-		};
-		621FCDB5AEF396FAB8E60E59E45DBC44 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 0DCBD6C869DCC15AF62D43471CB4592C;
-			remoteInfo = LTMorphingLabel;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01F5CF1542A52A55355BDA9D5F43D506 /* Shimmer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Shimmer.xcconfig; sourceTree = "<group>"; };
-		02948C50969FFF49F0BF6FE1377958BE /* Fire.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Fire.png; path = LTMorphingLabel/Particles/Fire.png; sourceTree = "<group>"; };
-		094330281A70802724016EABBF453B44 /* Shimmer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Shimmer-dummy.m"; sourceTree = "<group>"; };
-		20F560A2E8138E601AA95DBBFB9784E2 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2219EF72C4945CD14A0A6A0AFD95873E /* FBShimmeringLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBShimmeringLayer.m; path = FBShimmering/FBShimmeringLayer.m; sourceTree = "<group>"; };
-		2BCC458FDD5F692BBB2BFC64BB5701FC /* Pods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-umbrella.h"; sourceTree = "<group>"; };
-		364D1608088F56C46D8E0E05973F4CE6 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		41B85601E9FC5BA2289687128D7CAE0B /* NSString+LTMorphingLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSString+LTMorphingLabel.swift"; path = "LTMorphingLabel/NSString+LTMorphingLabel.swift"; sourceTree = "<group>"; };
-		502F01353E1442D28B8B96FB01C98CDF /* FBShimmeringLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBShimmeringLayer.h; path = FBShimmering/FBShimmeringLayer.h; sourceTree = "<group>"; };
-		52B9ECD9DB148DF44F2B83EEBE5FB22F /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		57303020C59389E374863EF2993168D8 /* LTEmitterView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LTEmitterView.swift; path = LTMorphingLabel/LTEmitterView.swift; sourceTree = "<group>"; };
-		5AEE4EDE42F1491CB8038E7B9193ECDB /* LTMorphingEffect.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LTMorphingEffect.swift; path = LTMorphingLabel/LTMorphingEffect.swift; sourceTree = "<group>"; };
-		5D86BB18C133FC02CCC342E28959F247 /* LTMorphingLabel+Fall.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LTMorphingLabel+Fall.swift"; path = "LTMorphingLabel/LTMorphingLabel+Fall.swift"; sourceTree = "<group>"; };
-		62BB74455EE45AB4F7407A7EF68504A2 /* LTMorphingLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LTMorphingLabel.h; path = LTMorphingLabel/LTMorphingLabel.h; sourceTree = "<group>"; };
-		658B69FCBC6B05FAF55E9B5F8595364A /* LTEasing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LTEasing.swift; path = LTMorphingLabel/LTEasing.swift; sourceTree = "<group>"; };
-		6ABA8347E41A26E4F18A6470090CE5BA /* Smoke.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Smoke.png; path = LTMorphingLabel/Particles/Smoke.png; sourceTree = "<group>"; };
-		7274B931813E693A5F6CAC06AD164FE7 /* Shimmer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Shimmer-umbrella.h"; sourceTree = "<group>"; };
-		79A9DEDC89FE8336BF5FEDAAF75BF7FC /* Pods.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pods.modulemap; sourceTree = "<group>"; };
-		7F5C033EC37024F07578711962E0517B /* FBShimmeringView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBShimmeringView.m; path = FBShimmering/FBShimmeringView.m; sourceTree = "<group>"; };
-		87B213035BAC5F75386F62D3C75D2342 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
-		894E5DA93A9F359521A89826BE6DA777 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
-		91413329813FA6FE5A78842159E69621 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		928768537C3C13F8C94CB4BCFCE4870A /* LTMorphingLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LTMorphingLabel.swift; path = LTMorphingLabel/LTMorphingLabel.swift; sourceTree = "<group>"; };
-		977577C045EDA9D9D1F46E2598D19FC7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
-		985837977E0DABBC9A89F733ADC8DBFC /* Fragment.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Fragment.png; path = LTMorphingLabel/Particles/Fragment.png; sourceTree = "<group>"; };
-		9FD4C1D7B87902C3B977A20B78CC5908 /* LTMorphingLabel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = LTMorphingLabel.modulemap; sourceTree = "<group>"; };
-		A343ACD4B2B0491AFC4EC6199FB821BE /* LTMorphingLabel+Evaporate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LTMorphingLabel+Evaporate.swift"; path = "LTMorphingLabel/LTMorphingLabel+Evaporate.swift"; sourceTree = "<group>"; };
-		A92DB137176C3BDFF7F5079AE5738347 /* LTMorphingLabel+Sparkle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LTMorphingLabel+Sparkle.swift"; path = "LTMorphingLabel/LTMorphingLabel+Sparkle.swift"; sourceTree = "<group>"; };
-		B8A087ADB52C873B14C09D4DA9B29555 /* Shimmer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Shimmer-prefix.pch"; sourceTree = "<group>"; };
-		B9912E1D5F9D564FCAC4D8CEFC10783E /* LTMorphingLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LTMorphingLabel.xcconfig; sourceTree = "<group>"; };
-		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BD7D7B634EC656841874FEFC3BAB107B /* FBShimmering.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBShimmering.h; path = FBShimmering/FBShimmering.h; sourceTree = "<group>"; };
-		CBC0F7C552B739C909B650A0F42F7F38 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		CCA4783FAB6FF658E63DA3396B251D84 /* LTMorphingLabel+Pixelate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LTMorphingLabel+Pixelate.swift"; path = "LTMorphingLabel/LTMorphingLabel+Pixelate.swift"; sourceTree = "<group>"; };
-		D019DE7FF8C2F1B2EA25B1F0C449E7BF /* FBShimmeringView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBShimmeringView.h; path = FBShimmering/FBShimmeringView.h; sourceTree = "<group>"; };
-		D0405803033A2A777B8E4DFA0C1800ED /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D592B1D3C72357CA3C94AA4B63826BDD /* LTMorphingLabel+Anvil.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LTMorphingLabel+Anvil.swift"; path = "LTMorphingLabel/LTMorphingLabel+Anvil.swift"; sourceTree = "<group>"; };
-		D9DE615671731BF3AEFB3CB1F984FA8F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		DA312349A49333542E6F4B36B329960E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
-		DA5831F2CBF34476F94D500740EF73DE /* Sparkle.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Sparkle.png; path = LTMorphingLabel/Particles/Sparkle.png; sourceTree = "<group>"; };
-		E53F9E74514F3A6EE8B87360B0651BDE /* LTMorphingLabel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LTMorphingLabel-umbrella.h"; sourceTree = "<group>"; };
-		E5BA70BAC7104EE721B5BB2216B872FE /* LTMorphingLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LTMorphingLabel-prefix.pch"; sourceTree = "<group>"; };
-		E642B1A057ADA2ABEF90BE2417F349C1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		E7F21354943D9F42A70697D5A5EF72E9 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
-		E8446514FBAD26C0E18F24A5715AEF67 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EBE50B73B3C4046CAB38CCC0A546694A /* LTCharacterLimbo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LTCharacterLimbo.swift; path = LTMorphingLabel/LTCharacterLimbo.swift; sourceTree = "<group>"; };
-		F0F0E4AFA6A9A8FCFE519C9E8C1F8FA8 /* LTMorphingLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LTMorphingLabel-dummy.m"; sourceTree = "<group>"; };
-		F4BDE0FA68D6E431B031A4F1F6B2F8B7 /* LTMorphingLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LTMorphingLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F7FEE0DCA3C2A126963864D65837A6DF /* LTMorphingLabel+Burn.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LTMorphingLabel+Burn.swift"; path = "LTMorphingLabel/LTMorphingLabel+Burn.swift"; sourceTree = "<group>"; };
-		F8C4938E6C1705EF4A1482F24A4CA441 /* Shimmer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Shimmer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FF95A699AA3C9B4DA8FBC190C2EFAA62 /* Shimmer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Shimmer.modulemap; sourceTree = "<group>"; };
+		0039082E4307B745F2A1D776721A8D11 /* Crashlytics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Crashlytics.h; path = iOS/Crashlytics.framework/Headers/Crashlytics.h; sourceTree = "<group>"; };
+		00FDFD06869C566B3F6E16F1E1F0CE3E /* Pods-Avery Lamp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Avery Lamp.debug.xcconfig"; sourceTree = "<group>"; };
+		12547402FEE7FD68398B0520377FA855 /* Pods-Avery Lamp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Avery Lamp-umbrella.h"; sourceTree = "<group>"; };
+		173CF2ADCBC760586288F3F821BAE5E6 /* Shimmer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Shimmer-umbrella.h"; sourceTree = "<group>"; };
+		18BD29B6472F25CCE89EC8FA33517070 /* Pods-Avery Lamp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Avery Lamp.release.xcconfig"; sourceTree = "<group>"; };
+		31E11D493C8ED2CA6D911CE38AF8D2E1 /* Shimmer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Shimmer.modulemap; sourceTree = "<group>"; };
+		39E0879FBF1BFF9FDA586B42C7C67A58 /* ANSCompatibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ANSCompatibility.h; path = iOS/Crashlytics.framework/Headers/ANSCompatibility.h; sourceTree = "<group>"; };
+		447B164058074CDF907A71340E833CB1 /* Pods-Avery Lamp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Avery Lamp-acknowledgements.plist"; sourceTree = "<group>"; };
+		47A425DBD3B34EE22E62680CB8D97D79 /* Pods-Avery Lamp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Avery Lamp.modulemap"; sourceTree = "<group>"; };
+		58D2C1499C9125701532D61F79CEAA91 /* Shimmer-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Shimmer-prefix.pch"; sourceTree = "<group>"; };
+		5C7658CA1141ABAA89CD47B43A51AC01 /* Pods-Avery Lamp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Avery Lamp-acknowledgements.markdown"; sourceTree = "<group>"; };
+		68D5FE2D3F8BF6090DF9E6B84CCAD735 /* FABAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FABAttributes.h; path = iOS/Fabric.framework/Headers/FABAttributes.h; sourceTree = "<group>"; };
+		6A12A4473E522E4164E89C4CA16C0896 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = iOS/Crashlytics.framework; sourceTree = "<group>"; };
+		72E426EBDBE95831738D724F06E08FFC /* FBShimmeringLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBShimmeringLayer.h; path = FBShimmering/FBShimmeringLayer.h; sourceTree = "<group>"; };
+		804892DA76F191AEACD00563BBA799EA /* FBShimmeringView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBShimmeringView.h; path = FBShimmering/FBShimmeringView.h; sourceTree = "<group>"; };
+		84D1F04C7B995B3A82EDE526086E0974 /* Pods-Avery Lamp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Avery Lamp-frameworks.sh"; sourceTree = "<group>"; };
+		88A4C1EFF82313197D5A0DB704055478 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		94DC52F074737BF9E9CEB060432893D5 /* Answers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Answers.h; path = iOS/Crashlytics.framework/Headers/Answers.h; sourceTree = "<group>"; };
+		980EDDBD3FFD673C2FEEEA9AEB119ACC /* Pods-Avery Lamp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Avery Lamp-resources.sh"; sourceTree = "<group>"; };
+		9D68928C01FB030DFA2DC57F7C13754A /* FBShimmeringLayer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBShimmeringLayer.m; path = FBShimmering/FBShimmeringLayer.m; sourceTree = "<group>"; };
+		A451B163898BD92794BAC295BABC80FF /* CLSReport.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSReport.h; path = iOS/Crashlytics.framework/Headers/CLSReport.h; sourceTree = "<group>"; };
+		A67E9DD2B6F45DE81D207754F7C7DC84 /* Shimmer.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Shimmer.xcconfig; sourceTree = "<group>"; };
+		AA0070E16C619BC811B6D64F638D5E17 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = iOS/Fabric.framework; sourceTree = "<group>"; };
+		C33C18D0D5D2C8FC2C130D3EF6AA5013 /* FBShimmering.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBShimmering.h; path = FBShimmering/FBShimmering.h; sourceTree = "<group>"; };
+		C8FF805CD00B9FB35F1EB613ABE6193D /* CLSStackFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSStackFrame.h; path = iOS/Crashlytics.framework/Headers/CLSStackFrame.h; sourceTree = "<group>"; };
+		CA04C563EF7D14A8546F1B64F1AD3256 /* Pods-Avery Lamp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Avery Lamp-dummy.m"; sourceTree = "<group>"; };
+		CB81493E45E3F52A4C8027F648FDBFC8 /* Shimmer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Shimmer-dummy.m"; sourceTree = "<group>"; };
+		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		CEECABED7DEEFEB2E4C2D0A32B906F6B /* CLSLogging.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSLogging.h; path = iOS/Crashlytics.framework/Headers/CLSLogging.h; sourceTree = "<group>"; };
+		CF6F58816183C507D5563B94BD0A6CC6 /* Pods_Avery_Lamp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Avery_Lamp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D1CF3F5D291E7B9908BC37A5AB5FF7A0 /* Fabric.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Fabric.h; path = iOS/Fabric.framework/Headers/Fabric.h; sourceTree = "<group>"; };
+		DFDADABB81C01BECA9BEBA9AC65D8C18 /* Shimmer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Shimmer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E793A2D34A09FBF4EC6EAF2DFC2CA84B /* FBShimmeringView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBShimmeringView.m; path = FBShimmering/FBShimmeringView.m; sourceTree = "<group>"; };
+		F4C98D1A2D8DC8227DA957B1F4FB9280 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5B61998E69E5B07937C009E4B3401B1 /* CLSAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CLSAttributes.h; path = iOS/Crashlytics.framework/Headers/CLSAttributes.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0E4EA1B394794C6A87EC7CD3AFB870DF /* Frameworks */ = {
+		364DF42951327694C183FDC426437072 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F0F119C05F6408B9E0F8064AA86D77C0 /* Foundation.framework in Frameworks */,
-				5CF83FB2E49B3342A3C09B02E8F474D5 /* QuartzCore.framework in Frameworks */,
-				62821F4D42C187B437988C64DBA6E0C8 /* UIKit.framework in Frameworks */,
+				C70D52D78DD4B83E33B406BF7F74B595 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9DCAC56D0607D410E25EB77D22236EA0 /* Frameworks */ = {
+		5AAD53D031BE3ED1B763A4545D9BF0DA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D36A14430B80927B1E7FBF2F15EF7092 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C00F9BA1B0FF87EF02EBADEA702734FE /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CB1B897F5047C38E36B302B66F2D0BD8 /* Foundation.framework in Frameworks */,
+				BF7A4FFB2A6EA061F22306C8960377B9 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0276B5EF591517BF34BB3A0B32A17455 /* Pods */ = {
+		0C63EBB0552DF56528ADED5F520126D5 /* Fabric */ = {
 			isa = PBXGroup;
 			children = (
-				AA1919F22435629DF7DC30D7B361AB75 /* LTMorphingLabel */,
-				CC6DC55BE9FAE8F97584E9D600E44695 /* Shimmer */,
+				68D5FE2D3F8BF6090DF9E6B84CCAD735 /* FABAttributes.h */,
+				D1CF3F5D291E7B9908BC37A5AB5FF7A0 /* Fabric.h */,
+				2A35E4F646EDAFF380D81D3EC04A3C89 /* Frameworks */,
 			);
-			name = Pods;
+			path = Fabric;
 			sourceTree = "<group>";
 		};
-		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
+		1D90B9BADB77F290F071E6D769E36948 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DA23025FEDA7F7FE2AACB2532BD80D14 /* iOS */,
+				6A12A4473E522E4164E89C4CA16C0896 /* Crashlytics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		411AB7053ABF89FDF91917E356F8FA6D /* Support Files */ = {
+		2A35E4F646EDAFF380D81D3EC04A3C89 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				20F560A2E8138E601AA95DBBFB9784E2 /* Info.plist */,
-				9FD4C1D7B87902C3B977A20B78CC5908 /* LTMorphingLabel.modulemap */,
-				B9912E1D5F9D564FCAC4D8CEFC10783E /* LTMorphingLabel.xcconfig */,
-				F0F0E4AFA6A9A8FCFE519C9E8C1F8FA8 /* LTMorphingLabel-dummy.m */,
-				E5BA70BAC7104EE721B5BB2216B872FE /* LTMorphingLabel-prefix.pch */,
-				E53F9E74514F3A6EE8B87360B0651BDE /* LTMorphingLabel-umbrella.h */,
+				AA0070E16C619BC811B6D64F638D5E17 /* Fabric.framework */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/LTMorphingLabel";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6E43E87D74E6E7F1741FC15DDC98FB3F /* Resources */ = {
+		3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				02948C50969FFF49F0BF6FE1377958BE /* Fire.png */,
-				985837977E0DABBC9A89F733ADC8DBFC /* Fragment.png */,
-				6ABA8347E41A26E4F18A6470090CE5BA /* Smoke.png */,
-				DA5831F2CBF34476F94D500740EF73DE /* Sparkle.png */,
+				CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */,
 			);
-			name = Resources;
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		75D98FF52E597A11900E131B6C4E1ADA /* Pods */ = {
+		52A44FD9571BC715D0CF08D8274D1285 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E8446514FBAD26C0E18F24A5715AEF67 /* Info.plist */,
-				79A9DEDC89FE8336BF5FEDAAF75BF7FC /* Pods.modulemap */,
-				D0405803033A2A777B8E4DFA0C1800ED /* Pods-acknowledgements.markdown */,
-				87B213035BAC5F75386F62D3C75D2342 /* Pods-acknowledgements.plist */,
-				894E5DA93A9F359521A89826BE6DA777 /* Pods-dummy.m */,
-				E7F21354943D9F42A70697D5A5EF72E9 /* Pods-frameworks.sh */,
-				CBC0F7C552B739C909B650A0F42F7F38 /* Pods-resources.sh */,
-				2BCC458FDD5F692BBB2BFC64BB5701FC /* Pods-umbrella.h */,
-				977577C045EDA9D9D1F46E2598D19FC7 /* Pods.debug.xcconfig */,
-				DA312349A49333542E6F4B36B329960E /* Pods.release.xcconfig */,
+				CF6F58816183C507D5563B94BD0A6CC6 /* Pods_Avery_Lamp.framework */,
+				DFDADABB81C01BECA9BEBA9AC65D8C18 /* Shimmer.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		52D58E90A7688606C071B85258A37666 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				530F2F5744699C4D2DD1644525C52EC5 /* Crashlytics */,
+				0C63EBB0552DF56528ADED5F520126D5 /* Fabric */,
+				6184E1685642BB957F9E5671328FD643 /* Shimmer */,
 			);
 			name = Pods;
-			path = "Target Support Files/Pods";
+			sourceTree = "<group>";
+		};
+		530F2F5744699C4D2DD1644525C52EC5 /* Crashlytics */ = {
+			isa = PBXGroup;
+			children = (
+				39E0879FBF1BFF9FDA586B42C7C67A58 /* ANSCompatibility.h */,
+				94DC52F074737BF9E9CEB060432893D5 /* Answers.h */,
+				F5B61998E69E5B07937C009E4B3401B1 /* CLSAttributes.h */,
+				CEECABED7DEEFEB2E4C2D0A32B906F6B /* CLSLogging.h */,
+				A451B163898BD92794BAC295BABC80FF /* CLSReport.h */,
+				C8FF805CD00B9FB35F1EB613ABE6193D /* CLSStackFrame.h */,
+				0039082E4307B745F2A1D776721A8D11 /* Crashlytics.h */,
+				1D90B9BADB77F290F071E6D769E36948 /* Frameworks */,
+			);
+			path = Crashlytics;
+			sourceTree = "<group>";
+		};
+		6184E1685642BB957F9E5671328FD643 /* Shimmer */ = {
+			isa = PBXGroup;
+			children = (
+				C33C18D0D5D2C8FC2C130D3EF6AA5013 /* FBShimmering.h */,
+				72E426EBDBE95831738D724F06E08FFC /* FBShimmeringLayer.h */,
+				9D68928C01FB030DFA2DC57F7C13754A /* FBShimmeringLayer.m */,
+				804892DA76F191AEACD00563BBA799EA /* FBShimmeringView.h */,
+				E793A2D34A09FBF4EC6EAF2DFC2CA84B /* FBShimmeringView.m */,
+				9C811D02DE74E143B00F8961376EA91E /* Support Files */,
+			);
+			path = Shimmer;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
-				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
-				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
-				0276B5EF591517BF34BB3A0B32A17455 /* Pods */,
-				D52EA3FDC3F809DB8F4AF8F64783BA79 /* Products */,
-				B7B80995527643776607AFFA75B91E24 /* Targets Support Files */,
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				52D58E90A7688606C071B85258A37666 /* Pods */,
+				52A44FD9571BC715D0CF08D8274D1285 /* Products */,
+				9077DC29197F8186B6C83BD6705F2048 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		90AE7B5FF1AD8FB52F97B21DA13808AB /* Support Files */ = {
+		9077DC29197F8186B6C83BD6705F2048 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				364D1608088F56C46D8E0E05973F4CE6 /* Info.plist */,
-				FF95A699AA3C9B4DA8FBC190C2EFAA62 /* Shimmer.modulemap */,
-				01F5CF1542A52A55355BDA9D5F43D506 /* Shimmer.xcconfig */,
-				094330281A70802724016EABBF453B44 /* Shimmer-dummy.m */,
-				B8A087ADB52C873B14C09D4DA9B29555 /* Shimmer-prefix.pch */,
-				7274B931813E693A5F6CAC06AD164FE7 /* Shimmer-umbrella.h */,
+				B29498D0CFBFB54E57C48153D93A1B7B /* Pods-Avery Lamp */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		9C811D02DE74E143B00F8961376EA91E /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				88A4C1EFF82313197D5A0DB704055478 /* Info.plist */,
+				31E11D493C8ED2CA6D911CE38AF8D2E1 /* Shimmer.modulemap */,
+				A67E9DD2B6F45DE81D207754F7C7DC84 /* Shimmer.xcconfig */,
+				CB81493E45E3F52A4C8027F648FDBFC8 /* Shimmer-dummy.m */,
+				58D2C1499C9125701532D61F79CEAA91 /* Shimmer-prefix.pch */,
+				173CF2ADCBC760586288F3F821BAE5E6 /* Shimmer-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Shimmer";
 			sourceTree = "<group>";
 		};
-		AA1919F22435629DF7DC30D7B361AB75 /* LTMorphingLabel */ = {
+		B29498D0CFBFB54E57C48153D93A1B7B /* Pods-Avery Lamp */ = {
 			isa = PBXGroup;
 			children = (
-				EBE50B73B3C4046CAB38CCC0A546694A /* LTCharacterLimbo.swift */,
-				658B69FCBC6B05FAF55E9B5F8595364A /* LTEasing.swift */,
-				57303020C59389E374863EF2993168D8 /* LTEmitterView.swift */,
-				5AEE4EDE42F1491CB8038E7B9193ECDB /* LTMorphingEffect.swift */,
-				62BB74455EE45AB4F7407A7EF68504A2 /* LTMorphingLabel.h */,
-				928768537C3C13F8C94CB4BCFCE4870A /* LTMorphingLabel.swift */,
-				D592B1D3C72357CA3C94AA4B63826BDD /* LTMorphingLabel+Anvil.swift */,
-				F7FEE0DCA3C2A126963864D65837A6DF /* LTMorphingLabel+Burn.swift */,
-				A343ACD4B2B0491AFC4EC6199FB821BE /* LTMorphingLabel+Evaporate.swift */,
-				5D86BB18C133FC02CCC342E28959F247 /* LTMorphingLabel+Fall.swift */,
-				CCA4783FAB6FF658E63DA3396B251D84 /* LTMorphingLabel+Pixelate.swift */,
-				A92DB137176C3BDFF7F5079AE5738347 /* LTMorphingLabel+Sparkle.swift */,
-				41B85601E9FC5BA2289687128D7CAE0B /* NSString+LTMorphingLabel.swift */,
-				6E43E87D74E6E7F1741FC15DDC98FB3F /* Resources */,
-				411AB7053ABF89FDF91917E356F8FA6D /* Support Files */,
+				F4C98D1A2D8DC8227DA957B1F4FB9280 /* Info.plist */,
+				47A425DBD3B34EE22E62680CB8D97D79 /* Pods-Avery Lamp.modulemap */,
+				5C7658CA1141ABAA89CD47B43A51AC01 /* Pods-Avery Lamp-acknowledgements.markdown */,
+				447B164058074CDF907A71340E833CB1 /* Pods-Avery Lamp-acknowledgements.plist */,
+				CA04C563EF7D14A8546F1B64F1AD3256 /* Pods-Avery Lamp-dummy.m */,
+				84D1F04C7B995B3A82EDE526086E0974 /* Pods-Avery Lamp-frameworks.sh */,
+				980EDDBD3FFD673C2FEEEA9AEB119ACC /* Pods-Avery Lamp-resources.sh */,
+				12547402FEE7FD68398B0520377FA855 /* Pods-Avery Lamp-umbrella.h */,
+				00FDFD06869C566B3F6E16F1E1F0CE3E /* Pods-Avery Lamp.debug.xcconfig */,
+				18BD29B6472F25CCE89EC8FA33517070 /* Pods-Avery Lamp.release.xcconfig */,
 			);
-			path = LTMorphingLabel;
+			name = "Pods-Avery Lamp";
+			path = "Target Support Files/Pods-Avery Lamp";
 			sourceTree = "<group>";
 		};
-		B7B80995527643776607AFFA75B91E24 /* Targets Support Files */ = {
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				75D98FF52E597A11900E131B6C4E1ADA /* Pods */,
+				3DCAB2B7CDE207B3958B6CB957FCC758 /* iOS */,
 			);
-			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		CC6DC55BE9FAE8F97584E9D600E44695 /* Shimmer */ = {
-			isa = PBXGroup;
-			children = (
-				BD7D7B634EC656841874FEFC3BAB107B /* FBShimmering.h */,
-				502F01353E1442D28B8B96FB01C98CDF /* FBShimmeringLayer.h */,
-				2219EF72C4945CD14A0A6A0AFD95873E /* FBShimmeringLayer.m */,
-				D019DE7FF8C2F1B2EA25B1F0C449E7BF /* FBShimmeringView.h */,
-				7F5C033EC37024F07578711962E0517B /* FBShimmeringView.m */,
-				90AE7B5FF1AD8FB52F97B21DA13808AB /* Support Files */,
-			);
-			path = Shimmer;
-			sourceTree = "<group>";
-		};
-		D52EA3FDC3F809DB8F4AF8F64783BA79 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F4BDE0FA68D6E431B031A4F1F6B2F8B7 /* LTMorphingLabel.framework */,
-				52B9ECD9DB148DF44F2B83EEBE5FB22F /* Pods.framework */,
-				F8C4938E6C1705EF4A1482F24A4CA441 /* Shimmer.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		DA23025FEDA7F7FE2AACB2532BD80D14 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				91413329813FA6FE5A78842159E69621 /* Foundation.framework */,
-				E642B1A057ADA2ABEF90BE2417F349C1 /* QuartzCore.framework */,
-				D9DE615671731BF3AEFB3CB1F984FA8F /* UIKit.framework */,
-			);
-			name = iOS;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		B5D1926C75235190BA2B9B1C7E872D15 /* Headers */ = {
+		2644E2500F8565E78A9E7000B80716A1 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BA25E1C4EFB2B53764E95238C01FC541 /* LTMorphingLabel-umbrella.h in Headers */,
-				10DA04EC085D11D23E0E3F0DBABE5114 /* LTMorphingLabel.h in Headers */,
+				6FB45EF32F3DA8A6D62B388A51738686 /* FBShimmering.h in Headers */,
+				2CD64A1A4DDCBACDC60407AB992DC70A /* FBShimmeringLayer.h in Headers */,
+				F284BB7AC7FA6B63C47AA9F93F4FF543 /* FBShimmeringView.h in Headers */,
+				375A821613F2954590FD2570558727D0 /* Shimmer-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C18C50FEEB346F46536215CB077138C8 /* Headers */ = {
+		F79A8CA503B3F4C136430057A3BCFAFC /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDDF106D2ED568781045A177B8B02860 /* Pods-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F767265487CE3632814E7951822F34A3 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				28A5472159BB7731BA4E758C3B3D61DA /* FBShimmering.h in Headers */,
-				8E79CB4052B4F991D6313A1CF4E4AF9C /* FBShimmeringLayer.h in Headers */,
-				8E4D8B3B31273ACFD3A625B04581B7DD /* FBShimmeringView.h in Headers */,
-				4C4606AE9C0AA8C8AA2CF9DBD9957676 /* Shimmer-umbrella.h in Headers */,
+				4F08F47C59EB719E4C050DACFF2BB97E /* Pods-Avery Lamp-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0DCBD6C869DCC15AF62D43471CB4592C /* LTMorphingLabel */ = {
+		0BB65292242ABA7CC49CEBE18399342D /* Shimmer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BD6BFD0F561BD7DC1612C7BF97AAE6BC /* Build configuration list for PBXNativeTarget "LTMorphingLabel" */;
+			buildConfigurationList = 56E27AFF91FAC951D84EF5A6162FFF72 /* Build configuration list for PBXNativeTarget "Shimmer" */;
 			buildPhases = (
-				EC8FE24E635DC3E29FDF20CFAD47AE8F /* Sources */,
-				0E4EA1B394794C6A87EC7CD3AFB870DF /* Frameworks */,
-				B5D1926C75235190BA2B9B1C7E872D15 /* Headers */,
-				F9DBA014C64C012FFED946DB4F6F8A87 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = LTMorphingLabel;
-			productName = LTMorphingLabel;
-			productReference = F4BDE0FA68D6E431B031A4F1F6B2F8B7 /* LTMorphingLabel.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		63D2B1299B4BEA62D25497E8C384A29E /* Pods */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 76F9741DC5DC2D32607291E763F59919 /* Build configuration list for PBXNativeTarget "Pods" */;
-			buildPhases = (
-				D7AA4658155D9E9A0A79E98782B71578 /* Sources */,
-				9DCAC56D0607D410E25EB77D22236EA0 /* Frameworks */,
-				C18C50FEEB346F46536215CB077138C8 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				908CD7053B403CE47312CC4CFA0E64EB /* PBXTargetDependency */,
-				DB65D06647FA491C635449164C190068 /* PBXTargetDependency */,
-			);
-			name = Pods;
-			productName = Pods;
-			productReference = 52B9ECD9DB148DF44F2B83EEBE5FB22F /* Pods.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		660A9D196B0A1A92888F5E156FCC7BA4 /* Shimmer */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 5A42D6E9439051870B6C90AA11E13F9F /* Build configuration list for PBXNativeTarget "Shimmer" */;
-			buildPhases = (
-				7FB4C54A0E9D65A06FDA9D2C0E5E6D48 /* Sources */,
-				C00F9BA1B0FF87EF02EBADEA702734FE /* Frameworks */,
-				F767265487CE3632814E7951822F34A3 /* Headers */,
+				25671360E6BD4881ED834D3A747B3BB5 /* Sources */,
+				5AAD53D031BE3ED1B763A4545D9BF0DA /* Frameworks */,
+				2644E2500F8565E78A9E7000B80716A1 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -376,7 +268,25 @@
 			);
 			name = Shimmer;
 			productName = Shimmer;
-			productReference = F8C4938E6C1705EF4A1482F24A4CA441 /* Shimmer.framework */;
+			productReference = DFDADABB81C01BECA9BEBA9AC65D8C18 /* Shimmer.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A2A00E91BAE551097F76E993393299AF /* Pods-Avery Lamp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1453A9263CEB5FB9C8564C64491884D6 /* Build configuration list for PBXNativeTarget "Pods-Avery Lamp" */;
+			buildPhases = (
+				1559D046515441B334822D893DA30094 /* Sources */,
+				364DF42951327694C183FDC426437072 /* Frameworks */,
+				F79A8CA503B3F4C136430057A3BCFAFC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1C2608498A3F10B560BF338A4471560F /* PBXTargetDependency */,
+			);
+			name = "Pods-Avery Lamp";
+			productName = "Pods-Avery Lamp";
+			productReference = CF6F58816183C507D5563B94BD0A6CC6 /* Pods_Avery_Lamp.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -385,7 +295,7 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0700;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
@@ -396,264 +306,52 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = D52EA3FDC3F809DB8F4AF8F64783BA79 /* Products */;
+			productRefGroup = 52A44FD9571BC715D0CF08D8274D1285 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0DCBD6C869DCC15AF62D43471CB4592C /* LTMorphingLabel */,
-				63D2B1299B4BEA62D25497E8C384A29E /* Pods */,
-				660A9D196B0A1A92888F5E156FCC7BA4 /* Shimmer */,
+				A2A00E91BAE551097F76E993393299AF /* Pods-Avery Lamp */,
+				0BB65292242ABA7CC49CEBE18399342D /* Shimmer */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		F9DBA014C64C012FFED946DB4F6F8A87 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1CF8DFA896A6618005B677B8793DBF0E /* Fire.png in Resources */,
-				04913062FB19F572704D1F80F24D0F1E /* Fragment.png in Resources */,
-				E64E0DA42FF43A0CE84FC8E07BA9C2F4 /* Smoke.png in Resources */,
-				573B13ABBF79FA6ABDACA8F14750D83F /* Sparkle.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		7FB4C54A0E9D65A06FDA9D2C0E5E6D48 /* Sources */ = {
+		1559D046515441B334822D893DA30094 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				29D0744BD04A7B92FD82549D383CF8C5 /* FBShimmeringLayer.m in Sources */,
-				5BDA745A593B75DD0D7C035B0291D37B /* FBShimmeringView.m in Sources */,
-				0B6F4E65EE9E42C85A60E9C726560363 /* Shimmer-dummy.m in Sources */,
+				B33DE09E00893F619FD50D12711D77C5 /* Pods-Avery Lamp-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D7AA4658155D9E9A0A79E98782B71578 /* Sources */ = {
+		25671360E6BD4881ED834D3A747B3BB5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD06F547FB191B202E5925C89A07F9B4 /* Pods-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EC8FE24E635DC3E29FDF20CFAD47AE8F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				74DEC2D3601595D8C6850C8FB7173158 /* LTCharacterLimbo.swift in Sources */,
-				9CD2F676F12CF59997D469DC44040977 /* LTEasing.swift in Sources */,
-				94C184FAE53AE7FE2DAAF71250C88399 /* LTEmitterView.swift in Sources */,
-				35D1068A16F7B860DBF2FF11F7E88197 /* LTMorphingEffect.swift in Sources */,
-				87A5677A6AE8315FC08C7AFDA06C5E85 /* LTMorphingLabel+Anvil.swift in Sources */,
-				D40D84C336EB60A2349DA835277B3BB6 /* LTMorphingLabel+Burn.swift in Sources */,
-				82CCC01A0501720443407C7842A2F8EE /* LTMorphingLabel+Evaporate.swift in Sources */,
-				CFC6568F9625CFEDE89544D5E106EE56 /* LTMorphingLabel+Fall.swift in Sources */,
-				D7AF1C498BACC7A8145392B6E3AC91FB /* LTMorphingLabel+Pixelate.swift in Sources */,
-				401A7DAFE42E4A8D8B065ABB2B5028D1 /* LTMorphingLabel+Sparkle.swift in Sources */,
-				0B0B16FE44CBECB512D2FC308055C7BB /* LTMorphingLabel-dummy.m in Sources */,
-				09655714894296138E974CBC74484E5C /* LTMorphingLabel.swift in Sources */,
-				D4BEFE9697D2C98014CEA515831D78EC /* NSString+LTMorphingLabel.swift in Sources */,
+				77561DB56DDB37AA862ABF370EA666C3 /* FBShimmeringLayer.m in Sources */,
+				2BF220BC2087B7BFAD0F41C43956D8EE /* FBShimmeringView.m in Sources */,
+				3621786DAA825036939D7E343977D917 /* Shimmer-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		908CD7053B403CE47312CC4CFA0E64EB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = LTMorphingLabel;
-			target = 0DCBD6C869DCC15AF62D43471CB4592C /* LTMorphingLabel */;
-			targetProxy = 621FCDB5AEF396FAB8E60E59E45DBC44 /* PBXContainerItemProxy */;
-		};
-		DB65D06647FA491C635449164C190068 /* PBXTargetDependency */ = {
+		1C2608498A3F10B560BF338A4471560F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Shimmer;
-			target = 660A9D196B0A1A92888F5E156FCC7BA4 /* Shimmer */;
-			targetProxy = 3B2552AC08DE33CE4BA27878138ED14C /* PBXContainerItemProxy */;
+			target = 0BB65292242ABA7CC49CEBE18399342D /* Shimmer */;
+			targetProxy = 05447790CADABCFF1794E53984AD62A2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		037E0BCA103CE28F7AFE7434E37616E1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B9912E1D5F9D564FCAC4D8CEFC10783E /* LTMorphingLabel.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/LTMorphingLabel/LTMorphingLabel-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/LTMorphingLabel/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/LTMorphingLabel/LTMorphingLabel.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = LTMorphingLabel;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 2.3;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		3B635776215E1CE1DF68BCD34C0FEABB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 977577C045EDA9D9D1F46E2598D19FC7 /* Pods.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		6B6699FE65F44FB4E6C2AC584D1174F2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 01F5CF1542A52A55355BDA9D5F43D506 /* Shimmer.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Shimmer/Shimmer-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Shimmer/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Shimmer/Shimmer.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Shimmer;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		7413F4B3CE1C90DA76B0F1BC395431D6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = DA312349A49333542E6F4B36B329960E /* Pods.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		869D45F49F4A364146CE4ED2EF9A86C9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B9912E1D5F9D564FCAC4D8CEFC10783E /* LTMorphingLabel.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/LTMorphingLabel/LTMorphingLabel-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/LTMorphingLabel/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/LTMorphingLabel/LTMorphingLabel.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = LTMorphingLabel;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 2.3;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		94F20B6D2B3FE1EB8DE6BC21D316376E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 01F5CF1542A52A55355BDA9D5F43D506 /* Shimmer.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Shimmer/Shimmer-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Shimmer/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Shimmer/Shimmer.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = Shimmer;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		C074F63C9EE7CB4D8C618390A32CEC35 /* Debug */ = {
+		034014829C1E4434983CF3A690C12017 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -668,10 +366,12 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
 					"DEBUG=1",
 					"$(inherited)",
 				);
@@ -682,17 +382,142 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				ONLY_ACTIVE_ARCH = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		E43846B588E1892F3093F3B7082B6DFB /* Release */ = {
+		0CF63255AEFF96CFCAC224DEFA84481A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00FDFD06869C566B3F6E16F1E1F0CE3E /* Pods-Avery Lamp.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Avery Lamp/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Avery Lamp/Pods-Avery Lamp.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Avery_Lamp;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		83F5748359237B9C9F0F41CB2C4CFB48 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A67E9DD2B6F45DE81D207754F7C7DC84 /* Shimmer.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Shimmer/Shimmer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Shimmer/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Shimmer/Shimmer.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Shimmer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9258DE54020A369E1402B96640EE8997 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A67E9DD2B6F45DE81D207754F7C7DC84 /* Shimmer.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Shimmer/Shimmer-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Shimmer/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Shimmer/Shimmer.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Shimmer;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		96781616F0E489FB784E7152DBBF79BE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18BD29B6472F25CCE89EC8FA33517070 /* Pods-Avery Lamp.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Avery Lamp/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Avery Lamp/Pods-Avery Lamp.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Avery_Lamp;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C7E474A03CAE21F1CB6046E7344C59BD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -709,14 +534,17 @@
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 				VALIDATE_PRODUCT = YES;
@@ -726,38 +554,29 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1453A9263CEB5FB9C8564C64491884D6 /* Build configuration list for PBXNativeTarget "Pods-Avery Lamp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0CF63255AEFF96CFCAC224DEFA84481A /* Debug */,
+				96781616F0E489FB784E7152DBBF79BE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C074F63C9EE7CB4D8C618390A32CEC35 /* Debug */,
-				E43846B588E1892F3093F3B7082B6DFB /* Release */,
+				034014829C1E4434983CF3A690C12017 /* Debug */,
+				C7E474A03CAE21F1CB6046E7344C59BD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5A42D6E9439051870B6C90AA11E13F9F /* Build configuration list for PBXNativeTarget "Shimmer" */ = {
+		56E27AFF91FAC951D84EF5A6162FFF72 /* Build configuration list for PBXNativeTarget "Shimmer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				94F20B6D2B3FE1EB8DE6BC21D316376E /* Debug */,
-				6B6699FE65F44FB4E6C2AC584D1174F2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		76F9741DC5DC2D32607291E763F59919 /* Build configuration list for PBXNativeTarget "Pods" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3B635776215E1CE1DF68BCD34C0FEABB /* Debug */,
-				7413F4B3CE1C90DA76B0F1BC395431D6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BD6BFD0F561BD7DC1612C7BF97AAE6BC /* Build configuration list for PBXNativeTarget "LTMorphingLabel" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				037E0BCA103CE28F7AFE7434E37616E1 /* Debug */,
-				869D45F49F4A364146CE4ED2EF9A86C9 /* Release */,
+				83F5748359237B9C9F0F41CB2C4CFB48 /* Debug */,
+				9258DE54020A369E1402B96640EE8997 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

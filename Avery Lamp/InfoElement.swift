@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import LTMorphingLabel
+//import LTMorphingLabel
 
 class InfoElement: UIView {
 
@@ -27,7 +27,7 @@ class InfoElement: UIView {
     var sectionTitle: UILabel! = nil
     var sectionSubtitle: UILabel! = nil
     
-    func createLayout(left left: Bool){
+    func createLayout(_ left: Bool){
         self.sideLeft = left
         let finalHeight = self.frame.width * ratioToFit
         
@@ -42,50 +42,50 @@ class InfoElement: UIView {
 
     }
 
-    private func setInfo(){
+    fileprivate func setInfo(){
         buttonLabel.backgroundColor = UIColor(rgba: viewData["HighlightColor"].string! + "CC")
 //        buttonLabel.setImage(getImageWithColor(UIColor(rgba: viewData["HighlightColor"].string!)), forState: .Normal)
 //        buttonLabel.alpha = 0.7
         
         sectionTitle = UILabel()
         sectionTitle.text = viewData["SectionTitle"].string
-        sectionTitle.textAlignment = .Left
+        sectionTitle.textAlignment = .left
         let font = UIFont(name: "Lato-Semibold", size: 26)
         sectionTitle.font = font
         sectionTitle.adjustsFontSizeToFitWidth = true
         sectionTitle.minimumScaleFactor = 0.8
         sectionTitle.numberOfLines = 2
-        sectionTitle.textColor = UIColor.whiteColor()
+        sectionTitle.textColor = UIColor.white
         buttonLabel.addSubview(sectionTitle)
         sectionTitle.translatesAutoresizingMaskIntoConstraints = false
         
         let leftIndent:CGFloat = 0.1
         
         
-        buttonLabel.addConstraint(NSLayoutConstraint(item: sectionTitle, attribute: .Top, relatedBy: .Equal, toItem: buttonLabel, attribute: .Bottom, multiplier: 0.25, constant: 0))
-        buttonLabel.addConstraint(NSLayoutConstraint(item: sectionTitle, attribute: .Height, relatedBy: .Equal, toItem: buttonLabel, attribute: .Height, multiplier: 0.3, constant: 0))
-        buttonLabel.addConstraint(NSLayoutConstraint(item: sectionTitle, attribute: .Left, relatedBy: .Equal, toItem: buttonLabel, attribute: .Right, multiplier: leftIndent, constant: 0))
-        buttonLabel.addConstraint(NSLayoutConstraint(item: sectionTitle, attribute: .Width, relatedBy: .Equal, toItem: buttonLabel, attribute: .Width, multiplier: 1 - leftIndent - 0.1, constant: 0))
+        buttonLabel.addConstraint(NSLayoutConstraint(item: sectionTitle, attribute: .top, relatedBy: .equal, toItem: buttonLabel, attribute: .bottom, multiplier: 0.25, constant: 0))
+        buttonLabel.addConstraint(NSLayoutConstraint(item: sectionTitle, attribute: .height, relatedBy: .equal, toItem: buttonLabel, attribute: .height, multiplier: 0.3, constant: 0))
+        buttonLabel.addConstraint(NSLayoutConstraint(item: sectionTitle, attribute: .left, relatedBy: .equal, toItem: buttonLabel, attribute: .right, multiplier: leftIndent, constant: 0))
+        buttonLabel.addConstraint(NSLayoutConstraint(item: sectionTitle, attribute: .width, relatedBy: .equal, toItem: buttonLabel, attribute: .width, multiplier: 1 - leftIndent - 0.1, constant: 0))
 
         sectionSubtitle = UILabel()
         sectionSubtitle.text = viewData["SectionSubtitle"].string
-        sectionSubtitle.textAlignment = .Left
+        sectionSubtitle.textAlignment = .left
         sectionSubtitle.font = UIFont(name: "Lato-Regular", size: 16)
         sectionSubtitle.adjustsFontSizeToFitWidth = true
         sectionSubtitle.minimumScaleFactor = 0.5
         sectionSubtitle.numberOfLines = 0
-        sectionSubtitle.lineBreakMode = .ByWordWrapping
-        sectionSubtitle.textColor = UIColor.whiteColor()
+        sectionSubtitle.lineBreakMode = .byWordWrapping
+        sectionSubtitle.textColor = UIColor.white
         buttonLabel.addSubview(sectionSubtitle)
         sectionSubtitle.translatesAutoresizingMaskIntoConstraints = false
         
-        buttonLabel.addConstraint(NSLayoutConstraint(item: sectionSubtitle, attribute: .Top, relatedBy: .Equal, toItem: buttonLabel, attribute: .Bottom, multiplier: 0.5, constant: 0))
-        buttonLabel.addConstraint(NSLayoutConstraint(item: sectionSubtitle, attribute: .Height, relatedBy: .Equal, toItem: buttonLabel, attribute: .Height, multiplier: 0.35, constant: 0))
-        buttonLabel.addConstraint(NSLayoutConstraint(item: sectionSubtitle, attribute: .Left, relatedBy: .Equal, toItem: buttonLabel, attribute: .Right, multiplier: leftIndent, constant: 0))
-        buttonLabel.addConstraint(NSLayoutConstraint(item: sectionSubtitle, attribute: .Width, relatedBy: .Equal, toItem: buttonLabel, attribute: .Width, multiplier: 1.0 - leftIndent - 0.05, constant: 0))
+        buttonLabel.addConstraint(NSLayoutConstraint(item: sectionSubtitle, attribute: .top, relatedBy: .equal, toItem: buttonLabel, attribute: .bottom, multiplier: 0.5, constant: 0))
+        buttonLabel.addConstraint(NSLayoutConstraint(item: sectionSubtitle, attribute: .height, relatedBy: .equal, toItem: buttonLabel, attribute: .height, multiplier: 0.35, constant: 0))
+        buttonLabel.addConstraint(NSLayoutConstraint(item: sectionSubtitle, attribute: .left, relatedBy: .equal, toItem: buttonLabel, attribute: .right, multiplier: leftIndent, constant: 0))
+        buttonLabel.addConstraint(NSLayoutConstraint(item: sectionSubtitle, attribute: .width, relatedBy: .equal, toItem: buttonLabel, attribute: .width, multiplier: 1.0 - leftIndent - 0.05, constant: 0))
         
         backgroundImage.image = UIImage(named:  viewData["BackgroundImage"].string!)
-        backgroundImage.contentMode = .ScaleAspectFill
+        backgroundImage.contentMode = .scaleAspectFill
         backgroundImage.clipsToBounds = true
         
         
@@ -93,44 +93,44 @@ class InfoElement: UIView {
     
     var ratioToFit:CGFloat = 0.65
     
-    private func createAutolayout(left: Bool){
+    fileprivate func createAutolayout(_ left: Bool){
         self.addSubview(backgroundImage)
         self.addSubview(buttonLabel)
         buttonLabel.translatesAutoresizingMaskIntoConstraints = false
         backgroundImage.translatesAutoresizingMaskIntoConstraints = false
         
-        buttonLabel.layer.shadowOffset = CGSizeMake(0, 15)
-        buttonLabel.layer.shadowColor = UIColor.blackColor().CGColor
+        buttonLabel.layer.shadowOffset = CGSize(width: 0, height: 15)
+        buttonLabel.layer.shadowColor = UIColor.black.cgColor
         buttonLabel.layer.shadowRadius = 20
         buttonLabel.layer.shadowOpacity = 0.5
         
-        backgroundImage.layer.shadowOffset = CGSizeMake(0, 15)
-        backgroundImage.layer.shadowColor = UIColor.blackColor().CGColor
+        backgroundImage.layer.shadowOffset = CGSize(width: 0, height: 15)
+        backgroundImage.layer.shadowColor = UIColor.black.cgColor
         backgroundImage.layer.shadowRadius = 10
         backgroundImage.layer.shadowOpacity = 0.6
         backgroundImage.layer.cornerRadius = 5
         
-        self.addConstraint(NSLayoutConstraint(item: backgroundImage, attribute: .Width, relatedBy: .Equal, toItem: self, attribute: .Width, multiplier: 1.0, constant: 0))
-        self.addConstraint(NSLayoutConstraint(item: backgroundImage, attribute: .Height, relatedBy: .Equal, toItem: buttonLabel, attribute: .Height, multiplier: 0.85, constant: 1.0))
-        self.addConstraint(NSLayoutConstraint(item: backgroundImage, attribute: .CenterX, relatedBy: .Equal, toItem: self, attribute: .CenterX, multiplier: 1.0, constant: 0))
-        self.addConstraint(NSLayoutConstraint(item: backgroundImage, attribute: .CenterY, relatedBy: .Equal, toItem: self, attribute: .CenterY, multiplier: 1.0, constant: 0))
+        self.addConstraint(NSLayoutConstraint(item: backgroundImage, attribute: .width, relatedBy: .equal, toItem: self, attribute: .width, multiplier: 1.0, constant: 0))
+        self.addConstraint(NSLayoutConstraint(item: backgroundImage, attribute: .height, relatedBy: .equal, toItem: buttonLabel, attribute: .height, multiplier: 0.85, constant: 1.0))
+        self.addConstraint(NSLayoutConstraint(item: backgroundImage, attribute: .centerX, relatedBy: .equal, toItem: self, attribute: .centerX, multiplier: 1.0, constant: 0))
+        self.addConstraint(NSLayoutConstraint(item: backgroundImage, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1.0, constant: 0))
         
-        self.addConstraint(NSLayoutConstraint(item: buttonLabel, attribute: .Width, relatedBy: .Equal, toItem: buttonLabel, attribute: .Height, multiplier: 1.0, constant: 0))
-        self.addConstraint(NSLayoutConstraint(item: buttonLabel, attribute: .Width, relatedBy: .Equal, toItem: self, attribute: .Width, multiplier: ratioToFit, constant: 0))
-        self.addConstraint(NSLayoutConstraint(item: buttonLabel, attribute: .CenterY, relatedBy: .Equal, toItem: self, attribute: .CenterY, multiplier: 1.0, constant: 0))
+        self.addConstraint(NSLayoutConstraint(item: buttonLabel, attribute: .width, relatedBy: .equal, toItem: buttonLabel, attribute: .height, multiplier: 1.0, constant: 0))
+        self.addConstraint(NSLayoutConstraint(item: buttonLabel, attribute: .width, relatedBy: .equal, toItem: self, attribute: .width, multiplier: ratioToFit, constant: 0))
+        self.addConstraint(NSLayoutConstraint(item: buttonLabel, attribute: .centerY, relatedBy: .equal, toItem: self, attribute: .centerY, multiplier: 1.0, constant: 0))
         
         if left{
-            self.addConstraint(NSLayoutConstraint(item: buttonLabel, attribute: .Left, relatedBy: .Equal, toItem: self, attribute: .Left, multiplier: 1.0, constant: 0))
+            self.addConstraint(NSLayoutConstraint(item: buttonLabel, attribute: .left, relatedBy: .equal, toItem: self, attribute: .left, multiplier: 1.0, constant: 0))
         }else{
-            self.addConstraint(NSLayoutConstraint(item: buttonLabel, attribute: .Right, relatedBy: .Equal, toItem: self, attribute: .Right, multiplier: 1.0, constant: 0))
+            self.addConstraint(NSLayoutConstraint(item: buttonLabel, attribute: .right, relatedBy: .equal, toItem: self, attribute: .right, multiplier: 1.0, constant: 0))
         }
         
         
         
     }
     
-    func getImageWithColor(color: UIColor) -> UIImage {
-        let rect = CGRectMake(0, 0, 100, 100)
+    func getImageWithColor(_ color: UIColor) -> UIImage {
+        let rect = CGRect(x: 0, y: 0, width: 100, height: 100)
         UIGraphicsBeginImageContextWithOptions(rect.size, false, 0)
         color.setFill()
         UIRectFill(rect)

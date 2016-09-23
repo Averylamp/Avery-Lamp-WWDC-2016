@@ -4,12 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>LTMorphingLabel.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods.xcscheme</key>
+		<key>Pods-Avery Lamp.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -22,17 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0DCBD6C869DCC15AF62D43471CB4592C</key>
+		<key>0BB65292242ABA7CC49CEBE18399342D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>63D2B1299B4BEA62D25497E8C384A29E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>660A9D196B0A1A92888F5E156FCC7BA4</key>
+		<key>A2A00E91BAE551097F76E993393299AF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

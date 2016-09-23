@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import LTMorphingLabel
+//import LTMorphingLabel
 
 class ViewController: UIViewController {
 
@@ -19,9 +19,9 @@ class ViewController: UIViewController {
     
     
     func setupJSON(){
-        if let path = NSBundle.mainBundle().pathForResource("InfoData", ofType: "json"){
+        if let path = Bundle.main.path(forResource: "InfoData", ofType: "json"){
             do {
-                let data = try NSData(contentsOfURL: NSURL(fileURLWithPath: path), options: NSDataReadingOptions.DataReadingMappedIfSafe)
+                let data = try Data(contentsOf: URL(fileURLWithPath: path), options: Data.ReadingOptions.mappedIfSafe)
                 jsonData = JSON(data: data)
                 if jsonData != JSON.null {
                     //                    print("jsonData:\(jsonData["Apps"])")
@@ -69,10 +69,10 @@ class ViewController: UIViewController {
 //        self.view.addSubview(secondLabel)
 //        allLetters =  secondLabel.strokeTextSimultaneously(width: 0.5,delay: 0.0, duration: 4.0, fade: true)
         
-        let thirdLabel = LTMorphingLabel(frame: CGRectMake(20,200,self.view.frame.width - 40, 200))
+        let thirdLabel = LTMorphingLabel(frame: CGRect(x: 20,y: 200,width: self.view.frame.width - 40, height: 200))
         thirdLabel.text = "     Lorem ipsum dolor sit amet, ad sea populo pericula iracundia, mei ut convenire iudicabit. Cu audire vocibus liberavisse mel, tota sanctus ne pro. Probo tractatos laboramus an his. Usu ne brute mundi, invidunt eleifend reprimique ut usu.  \n     Wisi verterem mandamus eos te, ei vix natum elaboraret. Vim at docendi gloriatur accommodare, vel solum alienum eu. Consul iisque suavitate eum cu, cu eius impedit eam. Atqui doctus feugait mei cu, per quod inermis cu."
         thirdLabel.numberOfLines = 0
-        thirdLabel.lineBreakMode = .ByWordWrapping
+        thirdLabel.lineBreakMode = .byWordWrapping
         thirdLabel.font = UIFont(name: "Panton-Regular", size: 16)
 //        thirdLabel.textAlignment = .Center
         self.view.addSubview(thirdLabel)
@@ -91,16 +91,12 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func delay(delay:Double, closure:()->()) {
-        dispatch_after(
-            dispatch_time(
-                DISPATCH_TIME_NOW,
-                Int64(delay * Double(NSEC_PER_SEC))
-            ),
-            dispatch_get_main_queue(), closure)
+    func delay(_ delay:Double, closure:@escaping ()->()) {
+        DispatchQueue.main.asyncAfter(
+            deadline: DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: closure)
     }
 
-    @IBAction func sliderForStrokeEnds(sender: AnyObject) {
+    @IBAction func sliderForStrokeEnds(_ sender: AnyObject) {
 //        if allLetters != nil {
 //            allLetters?.forEach({ (shape :CAShapeLayer) in
 //                shape.strokeEnd = CGFloat((sender as! UISlider).value)

@@ -11,11 +11,11 @@ import UIKit
 class ExpandingTransition: NSObject, UIViewControllerAnimatedTransitioning {
     
     enum ExpandingTransitionMode: Int {
-        case Present, Dismiss
+        case present, dismiss
     }
 
     
-    var startPoint = CGPointZero {
+    var startPoint = CGPoint.zero {
         didSet{
             if let buttonObject = expandingObject {
                 buttonObject.center = startPoint
@@ -25,20 +25,20 @@ class ExpandingTransition: NSObject, UIViewControllerAnimatedTransitioning {
     
     var duration = 0.5
     
-    var transitionMode: ExpandingTransitionMode = .Present
+    var transitionMode: ExpandingTransitionMode = .present
     
     var expandingObject: UIView?
-    var transitionColor: UIColor = .whiteColor()
+    var transitionColor: UIColor = UIColor.white
     
-    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
+    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return duration
     }
     
-    func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
-        let originalView = transitionContext.containerView()
+    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+        let originalView = transitionContext.containerView
         
-        if transitionMode == .Present {
-            let presentingView = transitionContext.viewForKey(UITransitionContextToViewKey)!
+        if transitionMode == .present {
+            let presentingView = transitionContext.view(forKey: UITransitionContextViewKey.to)!
             let originalCenter = presentingView.center
             let originalSize = presentingView.frame.size
             
@@ -46,20 +46,20 @@ class ExpandingTransition: NSObject, UIViewControllerAnimatedTransitioning {
             let maxY = max(startPoint.y, originalSize.height -  startPoint.y)
             let fullHeight = sqrt(maxX * maxX + maxY * maxY) * 2
             
-            expandingObject = UIView(frame: CGRect(origin: CGPointZero, size: CGSizeMake(fullHeight, fullHeight)))
+            expandingObject = UIView(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: fullHeight, height: fullHeight)))
             expandingObject?.layer.cornerRadius = expandingObject!.frame.size.height / 2
             expandingObject?.center = startPoint
-            expandingObject?.transform = CGAffineTransformMakeScale(0.001, 0.001)
+            expandingObject?.transform = CGAffineTransform(scaleX: 0.001, y: 0.001)
             expandingObject?.backgroundColor = transitionColor
             originalView.addSubview(expandingObject!)
             
             presentingView.center = startPoint
-            presentingView.transform = CGAffineTransformMakeScale(0.001, 0.001)
+            presentingView.transform = CGAffineTransform(scaleX: 0.001, y: 0.001)
             presentingView.alpha = 0
             originalView.addSubview(presentingView)
-            UIView.animateWithDuration(duration, animations: { 
-                self.expandingObject?.transform = CGAffineTransformIdentity
-                presentingView.transform = CGAffineTransformIdentity
+            UIView.animate(withDuration: duration, animations: { 
+                self.expandingObject?.transform = CGAffineTransform.identity
+                presentingView.transform = CGAffineTransform.identity
                 presentingView.alpha = 1.0
                 presentingView.center = originalCenter
                 }, completion: { (_) in
@@ -67,7 +67,7 @@ class ExpandingTransition: NSObject, UIViewControllerAnimatedTransitioning {
             })
             
         }else{
-            let disappearingViewController = transitionContext.viewForKey(UITransitionContextFromViewKey)!
+            let disappearingViewController = transitionContext.view(forKey: UITransitionContextViewKey.from)!
             let originalCenter = disappearingViewController.center
             let originalSize = disappearingViewController.frame.size
             
@@ -78,14 +78,14 @@ class ExpandingTransition: NSObject, UIViewControllerAnimatedTransitioning {
                 let maxY = max(startPoint.y, originalSize.height -  startPoint.y)
                 let farthestCorner = sqrt(maxX * maxX + maxY * maxY) * 2
 
-                expandingObject.frame = CGRect(origin: CGPointZero, size: CGSizeMake(farthestCorner, farthestCorner))
+                expandingObject.frame = CGRect(origin: CGPoint.zero, size: CGSize(width: farthestCorner, height: farthestCorner))
                 expandingObject.center = self.startPoint
                 expandingObject.layer.cornerRadius = expandingObject.frame.size.height / 2
             }
             
-            UIView.animateWithDuration(duration, animations: { 
-                self.expandingObject?.transform = CGAffineTransformMakeScale(0.001, 0.001)
-                disappearingViewController.transform = CGAffineTransformMakeScale(0.001, 0.001)
+            UIView.animate(withDuration: duration, animations: { 
+                self.expandingObject?.transform = CGAffineTransform(scaleX: 0.001, y: 0.001)
+                disappearingViewController.transform = CGAffineTransform(scaleX: 0.001, y: 0.001)
                 disappearingViewController.center = self.startPoint
                 disappearingViewController.alpha = 0.0
                 

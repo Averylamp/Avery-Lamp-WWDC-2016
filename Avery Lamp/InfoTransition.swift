@@ -7,21 +7,21 @@
 //
 
 import UIKit
-import LTMorphingLabel
+//import LTMorphingLabel
 
 class InfoTransition: NSObject, UIViewControllerAnimatedTransitioning {
     
     enum InfoTransitionMode:Int{
-        case Present, Dismiss
+        case present, dismiss
     }
     
     var duration = 0.7
     
-    var transitionMode: InfoTransitionMode = .Present
+    var transitionMode: InfoTransitionMode = .present
     
     var allDissappearingViews = [UIView]()
     
-    func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
+    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return duration
     }
     
@@ -32,18 +32,18 @@ class InfoTransition: NSObject, UIViewControllerAnimatedTransitioning {
     var animationInfoSectionConstraintsToReturnTo: [NSLayoutConstraint]?
     var infoSectionFrameToReturnTo: CGRect?
     
-    func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
-        let originalView = transitionContext.containerView()
+    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+        let originalView = transitionContext.containerView
         
-        if transitionMode == .Present && infoSectionToExpand != nil {//MARK: Presenting animations
-            let initialVC = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)?.childViewControllers.last as? MyInfoViewController
-            let centerOfInfoSection = infoSectionToExpand?.superview!.convertPoint(infoSectionToExpand!.center, toView: originalView)
+        if transitionMode == .present && infoSectionToExpand != nil {//MARK: Presenting animations
+            let initialVC = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from)?.childViewControllers.last as? MyInfoViewController
+            let centerOfInfoSection = infoSectionToExpand?.superview!.convert(infoSectionToExpand!.center, to: originalView)
             
             allDissappearingViews = [UIView]()
-            allDissappearingViews.appendContentsOf(initialVC!.view.subviews)
+            allDissappearingViews.append(contentsOf: initialVC!.view.subviews)
             
-            let presentingViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey) as? ExpandedInfoViewController
-            let presentingView = transitionContext.viewForKey(UITransitionContextToViewKey)!
+            let presentingViewController = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.to) as? ExpandedInfoViewController
+            let presentingView = transitionContext.view(forKey: UITransitionContextViewKey.to)!
             presentingView.backgroundColor = originalView.backgroundColor
             originalView.addSubview(presentingView)
             
@@ -51,7 +51,7 @@ class InfoTransition: NSObject, UIViewControllerAnimatedTransitioning {
             animationInfoSection.viewData = infoSectionToExpand?.viewData
             animationInfoSection.center = centerOfInfoSection!
             presentingView.addSubview(animationInfoSection)
-            animationInfoSection.createLayout(left: infoSectionToExpand!.sideLeft)
+            animationInfoSection.createLayout(infoSectionToExpand!.sideLeft)
             infoSectionToExpand?.alpha = 0.0
             
             
@@ -67,13 +67,13 @@ class InfoTransition: NSObject, UIViewControllerAnimatedTransitioning {
             
             let detailInfoView = UIView()
             animationInfoSection.detailInfoView = detailInfoView
-            detailInfoView.backgroundColor = UIColor.whiteColor()
+            detailInfoView.backgroundColor = UIColor.white
             detailInfoView.translatesAutoresizingMaskIntoConstraints = false
             animationInfoSection.addSubview(detailInfoView)
-            animationInfoSection.addConstraint(NSLayoutConstraint(item: detailInfoView, attribute: .Height, relatedBy: .Equal, toItem: animationInfoSection.buttonLabel, attribute: .Height, multiplier: 1.0, constant: 0))
-            animationInfoSection.addConstraint(NSLayoutConstraint(item: detailInfoView, attribute: .Left, relatedBy: .Equal, toItem: animationInfoSection.buttonLabel, attribute: .Right, multiplier: 1.0, constant: 0.0))
-            animationInfoSection.addConstraint(NSLayoutConstraint(item: detailInfoView, attribute: .CenterY, relatedBy: .Equal, toItem: animationInfoSection.buttonLabel, attribute: .CenterY, multiplier: 1.0, constant: 0.0))
-            let widthConstraint = NSLayoutConstraint(item: detailInfoView, attribute: .Width, relatedBy: .Equal, toItem: animationInfoSection.buttonLabel, attribute:.Width , multiplier: 0.0, constant: 0.0)
+            animationInfoSection.addConstraint(NSLayoutConstraint(item: detailInfoView, attribute: .height, relatedBy: .equal, toItem: animationInfoSection.buttonLabel, attribute: .height, multiplier: 1.0, constant: 0))
+            animationInfoSection.addConstraint(NSLayoutConstraint(item: detailInfoView, attribute: .left, relatedBy: .equal, toItem: animationInfoSection.buttonLabel, attribute: .right, multiplier: 1.0, constant: 0.0))
+            animationInfoSection.addConstraint(NSLayoutConstraint(item: detailInfoView, attribute: .centerY, relatedBy: .equal, toItem: animationInfoSection.buttonLabel, attribute: .centerY, multiplier: 1.0, constant: 0.0))
+            let widthConstraint = NSLayoutConstraint(item: detailInfoView, attribute: .width, relatedBy: .equal, toItem: animationInfoSection.buttonLabel, attribute:.width , multiplier: 0.0, constant: 0.0)
             animationInfoSection.addConstraint(widthConstraint)
             detailInfoView.layoutIfNeeded()
        
@@ -85,21 +85,21 @@ class InfoTransition: NSObject, UIViewControllerAnimatedTransitioning {
             presentingViewController?.infoElement = animationInfoSection
             detailInfoLabel.translatesAutoresizingMaskIntoConstraints = false
             detailInfoView.addSubview(detailInfoLabel)
-            detailInfoView.addConstraint(NSLayoutConstraint(item: detailInfoLabel, attribute: .Width, relatedBy: .Equal, toItem: detailInfoView, attribute: .Width, multiplier: 0.9, constant: 0.0))
-            detailInfoView.addConstraint(NSLayoutConstraint(item: detailInfoLabel, attribute: .Height, relatedBy: .Equal, toItem: detailInfoView, attribute: .Height, multiplier: 0.9, constant: 0.0))
-            detailInfoView.addConstraint(NSLayoutConstraint(item: detailInfoLabel, attribute: .CenterX, relatedBy: .Equal, toItem: detailInfoView, attribute: .CenterX, multiplier: 1.0, constant: 0.0))
-            let yDisplacementConstraint =  NSLayoutConstraint(item: detailInfoLabel, attribute: .CenterY, relatedBy: .Equal, toItem: detailInfoView, attribute: .CenterY, multiplier: 1.0, constant: 20.0)
+            detailInfoView.addConstraint(NSLayoutConstraint(item: detailInfoLabel, attribute: .width, relatedBy: .equal, toItem: detailInfoView, attribute: .width, multiplier: 0.9, constant: 0.0))
+            detailInfoView.addConstraint(NSLayoutConstraint(item: detailInfoLabel, attribute: .height, relatedBy: .equal, toItem: detailInfoView, attribute: .height, multiplier: 0.9, constant: 0.0))
+            detailInfoView.addConstraint(NSLayoutConstraint(item: detailInfoLabel, attribute: .centerX, relatedBy: .equal, toItem: detailInfoView, attribute: .centerX, multiplier: 1.0, constant: 0.0))
+            let yDisplacementConstraint =  NSLayoutConstraint(item: detailInfoLabel, attribute: .centerY, relatedBy: .equal, toItem: detailInfoView, attribute: .centerY, multiplier: 1.0, constant: 20.0)
             detailInfoLabel.alpha = 0.0
             detailInfoLabel.numberOfLines = 0
-            detailInfoLabel.lineBreakMode = .ByWordWrapping
-            detailInfoLabel.textAlignment = .Center
+            detailInfoLabel.lineBreakMode = .byWordWrapping
+            detailInfoLabel.textAlignment = .center
             detailInfoLabel.font = UIFont(name: "Lato-Regular", size: 18)
             detailInfoLabel.text = "Class of 2020"
             detailInfoView.addConstraint(yDisplacementConstraint)
             
             presentingViewController?.scrollView.alpha = 0.0
             
-            UIView.animateWithDuration(duration, animations: {
+            UIView.animate(withDuration: duration, animations: {
                 presentingViewController?.scrollView.alpha = 1.0
                 self.animationInfoSection.buttonLabel.layer.shadowOpacity = 0.0
                 
@@ -111,21 +111,21 @@ class InfoTransition: NSObject, UIViewControllerAnimatedTransitioning {
                 //NEEDS TO PROBABLY BE CHANGED
                 self.animationInfoSection.frame = presentingView.frame
                 
-                presentingView.addConstraint(NSLayoutConstraint(item: backgroundImage, attribute: .Width, relatedBy: .Equal, toItem: presentingView, attribute: .Width, multiplier: 1.0, constant: 0))
-                presentingView.addConstraint(NSLayoutConstraint(item: backgroundImage, attribute: .Top, relatedBy: .Equal, toItem: presentingView, attribute: .Top, multiplier: 1.0, constant: 0))
-                presentingView.addConstraint(NSLayoutConstraint(item: backgroundImage, attribute: .CenterX, relatedBy: .Equal, toItem: presentingView, attribute: .CenterX, multiplier: 1.0, constant: 0))
-                presentingView.addConstraint(NSLayoutConstraint(item: backgroundImage, attribute: .Height, relatedBy: .Equal, toItem: presentingView, attribute: .Height, multiplier: 0.35, constant: 0))
+                presentingView.addConstraint(NSLayoutConstraint(item: backgroundImage, attribute: .width, relatedBy: .equal, toItem: presentingView, attribute: .width, multiplier: 1.0, constant: 0))
+                presentingView.addConstraint(NSLayoutConstraint(item: backgroundImage, attribute: .top, relatedBy: .equal, toItem: presentingView, attribute: .top, multiplier: 1.0, constant: 0))
+                presentingView.addConstraint(NSLayoutConstraint(item: backgroundImage, attribute: .centerX, relatedBy: .equal, toItem: presentingView, attribute: .centerX, multiplier: 1.0, constant: 0))
+                presentingView.addConstraint(NSLayoutConstraint(item: backgroundImage, attribute: .height, relatedBy: .equal, toItem: presentingView, attribute: .height, multiplier: 0.35, constant: 0))
                 
-                presentingView.addConstraint(NSLayoutConstraint(item: buttonLabel, attribute: .Width, relatedBy: .Equal, toItem: presentingView, attribute: .Width, multiplier: 0.5, constant: 0.0))
-                presentingView.addConstraint(NSLayoutConstraint(item: buttonLabel, attribute: .Left, relatedBy: .Equal, toItem: presentingView, attribute: .Left, multiplier: 1.0, constant: 0.0))
-                presentingView.addConstraint(NSLayoutConstraint(item: buttonLabel, attribute: .Top, relatedBy: .Equal, toItem: backgroundImage, attribute: .Bottom, multiplier: 1.0, constant: 0.0))
-                presentingView.addConstraint(NSLayoutConstraint(item: buttonLabel, attribute: .Width, relatedBy: .Equal, toItem: buttonLabel, attribute: .Height, multiplier: 1.0, constant: 0.0))
+                presentingView.addConstraint(NSLayoutConstraint(item: buttonLabel, attribute: .width, relatedBy: .equal, toItem: presentingView, attribute: .width, multiplier: 0.5, constant: 0.0))
+                presentingView.addConstraint(NSLayoutConstraint(item: buttonLabel, attribute: .left, relatedBy: .equal, toItem: presentingView, attribute: .left, multiplier: 1.0, constant: 0.0))
+                presentingView.addConstraint(NSLayoutConstraint(item: buttonLabel, attribute: .top, relatedBy: .equal, toItem: backgroundImage, attribute: .bottom, multiplier: 1.0, constant: 0.0))
+                presentingView.addConstraint(NSLayoutConstraint(item: buttonLabel, attribute: .width, relatedBy: .equal, toItem: buttonLabel, attribute: .height, multiplier: 1.0, constant: 0.0))
                 
                 
-                presentingView.addConstraint(NSLayoutConstraint(item: detailInfoView, attribute: .Height, relatedBy: .Equal, toItem: buttonLabel, attribute: .Height, multiplier: 1.0, constant: 0))
-                presentingView.addConstraint(NSLayoutConstraint(item: detailInfoView, attribute: .Left, relatedBy: .Equal, toItem: buttonLabel, attribute: .Right, multiplier: 1.0, constant: 0.0))
-                presentingView.addConstraint(NSLayoutConstraint(item: detailInfoView, attribute: .CenterY, relatedBy: .Equal, toItem: buttonLabel, attribute: .CenterY, multiplier: 1.0, constant: 0.0))
-                presentingView.addConstraint(NSLayoutConstraint(item: detailInfoView, attribute: .Width, relatedBy: .Equal, toItem: presentingView, attribute: .Width, multiplier: 0.5, constant: 0.0))
+                presentingView.addConstraint(NSLayoutConstraint(item: detailInfoView, attribute: .height, relatedBy: .equal, toItem: buttonLabel, attribute: .height, multiplier: 1.0, constant: 0))
+                presentingView.addConstraint(NSLayoutConstraint(item: detailInfoView, attribute: .left, relatedBy: .equal, toItem: buttonLabel, attribute: .right, multiplier: 1.0, constant: 0.0))
+                presentingView.addConstraint(NSLayoutConstraint(item: detailInfoView, attribute: .centerY, relatedBy: .equal, toItem: buttonLabel, attribute: .centerY, multiplier: 1.0, constant: 0.0))
+                presentingView.addConstraint(NSLayoutConstraint(item: detailInfoView, attribute: .width, relatedBy: .equal, toItem: presentingView, attribute: .width, multiplier: 0.5, constant: 0.0))
                 
                 presentingView.layoutIfNeeded()
                 
@@ -135,17 +135,17 @@ class InfoTransition: NSObject, UIViewControllerAnimatedTransitioning {
                     transitionContext.completeTransition(true)
             } )
             
-            UIView.animateWithDuration(0.3, delay: duration, options: .CurveEaseInOut, animations: { 
+            UIView.animate(withDuration: 0.3, delay: duration, options: UIViewAnimationOptions(), animations: { 
                 detailInfoView.removeConstraint(yDisplacementConstraint)
-                detailInfoView.addConstraint(NSLayoutConstraint(item: detailInfoLabel, attribute: .CenterY, relatedBy: .Equal, toItem: detailInfoView, attribute: .CenterY, multiplier: 1.0, constant: 0.0))
+                detailInfoView.addConstraint(NSLayoutConstraint(item: detailInfoLabel, attribute: .centerY, relatedBy: .equal, toItem: detailInfoView, attribute: .centerY, multiplier: 1.0, constant: 0.0))
                 detailInfoLabel.alpha = 1.0
                 detailInfoView.layoutIfNeeded()
                 }, completion: nil)
             
             
             allDissappearingViews.forEach({ (view) in
-                UIView.animateWithDuration(duration / 2, animations: {
-                    view.center = CGPointMake(view.center.x, view.center.y  - 20)
+                UIView.animate(withDuration: duration / 2, animations: {
+                    view.center = CGPoint(x: view.center.x, y: view.center.y  - 20)
                     view.alpha = 0.0
                 })
             })
@@ -154,16 +154,16 @@ class InfoTransition: NSObject, UIViewControllerAnimatedTransitioning {
             
         }else  { //MARK: Dismissing animations
             allDissappearingViews.forEach({ (view) in
-                UIView.animateWithDuration(duration / 2, animations: {
-                    view.center = CGPointMake(view.center.x, view.center.y  + 20)
+                UIView.animate(withDuration: duration / 2, animations: {
+                    view.center = CGPoint(x: view.center.x, y: view.center.y  + 20)
                     view.alpha = 1.0
                 })
             })
-            let presentingViewController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey) as? ExpandedInfoViewController
-            let presentingView = transitionContext.viewForKey(UITransitionContextFromViewKey)!
+            let presentingViewController = transitionContext.viewController(forKey: UITransitionContextViewControllerKey.from) as? ExpandedInfoViewController
+            let presentingView = transitionContext.view(forKey: UITransitionContextViewKey.from)!
 
             
-            UIView.animateWithDuration(duration / 3, animations: {
+            UIView.animate(withDuration: duration / 3, animations: {
                 presentingViewController?.pageControl.alpha = 0.0
                 presentingViewController?.scrollView.alpha = 0.0
                 presentingViewController?.backButton.alpha = 0.0
@@ -171,7 +171,7 @@ class InfoTransition: NSObject, UIViewControllerAnimatedTransitioning {
             
             self.animationInfoSection.layoutIfNeeded()
 //            print("presenting view cons - \(presentingView.constraints.count)\nanimationv cons - \(self.animationInfoSection.constraints.count)\nto replace anv view cons - \(animationInfoSectionConstraintsToReturnTo?.count), button -  \(buttonLabelConstraintsToReturnTo?.count), image - \(backgroundImageConstraintsToReturnTo?.count)")
-            UIView.animateWithDuration(duration, animations: {
+            UIView.animate(withDuration: duration, animations: {
                 self.animationInfoSection.frame = self.infoSectionFrameToReturnTo!
                 presentingView.removeConstraints(presentingView.constraints)
 //                self.animationInfoSection.removeConstraints(self.animationInfoSection.constraints)

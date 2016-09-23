@@ -8,7 +8,27 @@
 
 import UIKit
 import Shimmer
-import LTMorphingLabel
+//import LTMorphingLabel
+fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l < r
+  case (nil, _?):
+    return true
+  default:
+    return false
+  }
+}
+
+fileprivate func >= <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+  switch (lhs, rhs) {
+  case let (l?, r?):
+    return l >= r
+  default:
+    return !(lhs < rhs)
+  }
+}
+
 
 class SplashViewController: UIViewController {
 
@@ -16,122 +36,122 @@ class SplashViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.whiteColor()
+        view.backgroundColor = UIColor.white
         //Background Blur effects
-        let bg = UIImageView(frame: CGRectMake(0, 0, self.view.frame.width, self.view.frame.height))
+        let bg = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
         bg.image = UIImage(named: "NewYorkBackground")
-        bg.contentMode = UIViewContentMode.ScaleAspectFill
+        bg.contentMode = UIViewContentMode.scaleAspectFill
         self.view.addSubview(bg)
         bg.alpha = 0.0
         
-        let bg2 = UIImageView(frame: CGRectMake(0, 0, self.view.frame.width, self.view.frame.height))
+        let bg2 = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height))
         
         bg2.image = UIImage(named: "NewYorkBackground3")
-        bg2.contentMode = UIViewContentMode.ScaleAspectFill
+        bg2.contentMode = UIViewContentMode.scaleAspectFill
         self.view.addSubview(bg2)
         bg2.alpha = 0.0
         
-        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.Light)
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = bg2.bounds
         blurEffectView.alpha = 0.0
         self.view.addSubview(blurEffectView)
         
-        UIView.animateWithDuration(0.7, animations: { () -> Void in
+        UIView.animate(withDuration: 0.7, animations: { () -> Void in
             bg.alpha = 1.0
-            }) { (finished) -> Void in
-                UIView.animateWithDuration(4, animations: { () -> Void in
+            }, completion: { (finished) -> Void in
+                UIView.animate(withDuration: 4, animations: { () -> Void in
                     bg2.alpha = 1.0
                     blurEffectView.alpha = 1.0
                     bg.alpha = 1.0
                 })
-        }
+        }) 
         
         //Label Drawing
-        let welcomeLabel  = UILabel(frame: CGRectMake(0,self.view.frame.height / 12 ,self.view.frame.width, 100))
+        let welcomeLabel  = UILabel(frame: CGRect(x: 0,y: self.view.frame.height / 12 ,width: self.view.frame.width, height: 100))
         welcomeLabel.text = "Hello"
         welcomeLabel.font = UIFont(name: "Panton-Light", size: 30)
         self.view.addSubview(welcomeLabel)
 //        welcomeLabel.drawOutlineAnimatedWithLineWidth(0.5, withDuration: 2, fadeToLabel: true)
-        welcomeLabel.strokeTextAnimated(width: 0.7, delay: 0.0, duration: 1, fade: false)
+        welcomeLabel.strokeTextAnimated(0.7, delay: 0.0, duration: 1, fade: false)
         delay(1.0) {
-            UIView.animateWithDuration(1.0, animations: {
+            UIView.animate(withDuration: 1.0, animations: {
                 welcomeLabel.layer.opacity = 1.0
             })
         }
         
         
-        let myNameLabel  = UILabel(frame: CGRectMake(0,self.view.frame.height * 1 / 2 ,self.view.frame.width, 40))
+        let myNameLabel  = UILabel(frame: CGRect(x: 0,y: self.view.frame.height * 1 / 2 ,width: self.view.frame.width, height: 40))
         myNameLabel.text = "My name is Avery Lamp"
         myNameLabel.font = UIFont(name: "Panton-Light", size: 20)
         self.view.addSubview(myNameLabel)
 
-        myNameLabel.strokeTextAnimated(width: 0.6, delay: 1.0, duration: 1.5, fade: false)
+        myNameLabel.strokeTextAnimated(0.6, delay: 1.0, duration: 1.5, fade: false)
         delay(2.5) { 
-            UIView.animateWithDuration(1.0, animations: { 
+            UIView.animate(withDuration: 1.0, animations: { 
                 myNameLabel.layer.opacity = 1.0
             })
         }
         
-        let thankYouLabel1 = UILabel(frame: CGRectMake(0,0, self.view.frame.width, 30))
+        let thankYouLabel1 = UILabel(frame: CGRect(x: 0,y: 0, width: self.view.frame.width, height: 30))
         thankYouLabel1.text = "Thank you for reviewing my app!"
-        thankYouLabel1.center = CGPointMake(myNameLabel.center.x , myNameLabel.center.y + 50)
-        thankYouLabel1.textAlignment = .Center
+        thankYouLabel1.center = CGPoint(x: myNameLabel.center.x , y: myNameLabel.center.y + 50)
+        thankYouLabel1.textAlignment = .center
         thankYouLabel1.font = UIFont(name: "Panton-Light", size: 16)
         self.view.addSubview(thankYouLabel1)
-        thankYouLabel1.strokeTextLetterByLetter(width: 0.6, delay: 3.5, duration: 2.0, characterStrokeDuration: 1.0, fade: false, fadeDuration: 1.0, returnStuff: false)
+        thankYouLabel1.strokeTextLetterByLetter(0.6, delay: 3.5, duration: 2.0, characterStrokeDuration: 1.0, fade: false, fadeDuration: 1.0, returnStuff: false)
 //        thankYouLabel1.strokeTextSimultaneously(width: 0.6, delay: 3.5, duration: 2.0, fade: false)
       
-        let thankYouLabel2 = UILabel(frame: CGRectMake(0,0, self.view.frame.width, 50))
+        let thankYouLabel2 = UILabel(frame: CGRect(x: 0,y: 0, width: self.view.frame.width, height: 50))
         thankYouLabel2.text = "I hope you enjoy it!"
-        thankYouLabel2.center = CGPointMake(myNameLabel.center.x , myNameLabel.center.y + 80)
-        thankYouLabel2.textAlignment = .Center
+        thankYouLabel2.center = CGPoint(x: myNameLabel.center.x , y: myNameLabel.center.y + 80)
+        thankYouLabel2.textAlignment = .center
         thankYouLabel2.font = UIFont(name: "Panton-Light", size: 16)
         self.view.addSubview(thankYouLabel2)
 //        thankYouLabel2.strokeTextSimultaneously(width: 0.6, delay: 5.0, duration: 2.0, fade: false)
-        thankYouLabel2.strokeTextLetterByLetter(width: 0.6, delay: 4.5, duration: 2.0, characterStrokeDuration: 0.5, fade: false, fadeDuration: 1.0, returnStuff: false)
+        thankYouLabel2.strokeTextLetterByLetter(0.6, delay: 4.5, duration: 2.0, characterStrokeDuration: 0.5, fade: false, fadeDuration: 1.0, returnStuff: false)
         
         
         //Picture
         let picSize = myNameLabel.frame.origin.y - welcomeLabel.frame.origin.y - welcomeLabel.frame.height - 50
-        let proPic = UIImageView(frame: CGRectMake(0, 0, picSize, picSize))
+        let proPic = UIImageView(frame: CGRect(x: 0, y: 0, width: picSize, height: picSize))
         proPic.image = UIImage(named: "Headshot2")
-        proPic.center = CGPointMake(self.view.center.x, welcomeLabel.frame.origin.y + welcomeLabel.frame.height + picSize / 2 + 25)
+        proPic.center = CGPoint(x: self.view.center.x, y: welcomeLabel.frame.origin.y + welcomeLabel.frame.height + picSize / 2 + 25)
         proPic.layer.cornerRadius = picSize / 2
         proPic.layer.masksToBounds = true
         proPic.alpha = 0.0
         self.view.addSubview(proPic)
         
         let circle = CAShapeLayer()
-        circle.path = UIBezierPath(roundedRect: CGRectMake(0,0, picSize, picSize), cornerRadius: picSize).CGPath
-        circle.position = CGPointMake(0, 0)
+        circle.path = UIBezierPath(roundedRect: CGRect(x: 0,y: 0, width: picSize, height: picSize), cornerRadius: picSize).cgPath
+        circle.position = CGPoint(x: 0, y: 0)
         circle.lineWidth = 0
-        circle.fillColor = UIColor.clearColor().CGColor
-        circle.strokeColor = UIColor.whiteColor().CGColor
+        circle.fillColor = UIColor.clear.cgColor
+        circle.strokeColor = UIColor.white.cgColor
         proPic.layer.addSublayer(circle)
         
         let drawAnimation = CABasicAnimation(keyPath: "strokeEnd")
         drawAnimation.duration = 3
         drawAnimation.repeatCount = 1
-        drawAnimation.fromValue = NSNumber(float: 0.0)
-        drawAnimation.toValue = NSNumber(float: 1.0)
+        drawAnimation.fromValue = NSNumber(value: 0.0 as Float)
+        drawAnimation.toValue = NSNumber(value: 1.0 as Float)
         drawAnimation.timingFunction =  CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn)
         
         delay(2.5) { () -> () in
             circle.lineWidth = 3
-            circle.addAnimation(drawAnimation, forKey: "drawCircleAnimation")
+            circle.add(drawAnimation, forKey: "drawCircleAnimation")
             self.delay(2.0, closure: { () -> () in
                 self.continuable = true
             })
         }
         
-        UIView.animateWithDuration(2.5, delay: 1.0, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
+        UIView.animate(withDuration: 2.5, delay: 1.0, options: UIViewAnimationOptions.curveEaseIn, animations: { () -> Void in
             proPic.alpha = 1.0
             }) { (finished) -> Void in}
        
         //Shimmering Continue
-        let shimmerView = FBShimmeringView(frame: CGRectMake(0,self.view.frame.height * 5 / 6,self.view.frame.width, 60))
-        shimmerView.center = CGPointMake(self.view.center.x, self.view.frame.height * 5 / 6)
+        let shimmerView = FBShimmeringView(frame: CGRect(x: 0,y: self.view.frame.height * 5 / 6,width: self.view.frame.width, height: 60))
+        shimmerView.center = CGPoint(x: self.view.center.x, y: self.view.frame.height * 5 / 6)
         shimmerView.alpha = 1.0
         shimmerView.shimmeringSpeed = 100
         shimmerView.shimmeringPauseDuration = 0.1
@@ -139,13 +159,13 @@ class SplashViewController: UIViewController {
         self.view.addSubview(shimmerView)
         let continueLabel = LTMorphingLabel(frame: shimmerView.frame)
         continueLabel.text = "Tap"
-        continueLabel.morphingEffect = .Fall
+        continueLabel.morphingEffect = .fall
         continueLabel.morphingDuration = 1.8
         continueLabel.font = UIFont(name: "Panton-Regular", size: 24)
-        continueLabel.textColor = UIColor.whiteColor()
-        continueLabel.textAlignment = NSTextAlignment.Center
+        continueLabel.textColor = UIColor.white
+        continueLabel.textAlignment = NSTextAlignment.center
         shimmerView.contentView = continueLabel
-        shimmerView.shimmering = true
+        shimmerView.isShimmering = true
         continueLabel.alpha = 0.0
         delay(4.0) {
             shimmerView.addSubview(continueLabel)
@@ -158,43 +178,39 @@ class SplashViewController: UIViewController {
         
     }
     
-    func delay(delay:Double, closure:()->()) {
-        dispatch_after(
-            dispatch_time(
-                DISPATCH_TIME_NOW,
-                Int64(delay * Double(NSEC_PER_SEC))
-            ),
-            dispatch_get_main_queue(), closure)
+    func delay(_ delay:Double, closure:@escaping ()->()) {
+        DispatchQueue.main.asyncAfter(
+            deadline: DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC), execute: closure)
     }
 
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if continuable {
             continuable = false
             //calculate
             
             populateImages()
-            let location = touches.first?.locationInView(self.view)
+            let location = touches.first?.location(in: self.view)
             let h = Int((location?.x)! / imageSize)
             let v = Int((location?.y)! / imageSize)
             
         
             //Touch Circle
-            let touchFeedback = UIView(frame: CGRectMake(0,0,50,50))
-            touchFeedback.backgroundColor = UIColor.whiteColor()
+            let touchFeedback = UIView(frame: CGRect(x: 0,y: 0,width: 50,height: 50))
+            touchFeedback.backgroundColor = UIColor.white
             touchFeedback.layer.cornerRadius = 25
             touchFeedback.center = location!
             touchFeedback.alpha = 0.4
             self.view.addSubview(touchFeedback)
-            UIView.animateWithDuration(0.5 , animations: {
-                touchFeedback.transform = CGAffineTransformMakeScale(2, 2)
+            UIView.animate(withDuration: 0.5 , animations: {
+                touchFeedback.transform = CGAffineTransform(scaleX: 2, y: 2)
                 }, completion: { (finished) in
-                    UIView.animateWithDuration(0.1, animations: { 
+                    UIView.animate(withDuration: 0.1, animations: { 
                         touchFeedback.alpha = 0.0
                         }, completion: nil)
             })
             
-            let queue = dispatch_queue_create("flood", nil)
-            dispatch_async(queue, {
+            let queue = DispatchQueue(label: "flood", attributes: [])
+            queue.async(execute: {
                 self.rippleTransitionSetup(self.imgViews, h: h, v: v, iteration: 0)
             
             
@@ -228,9 +244,9 @@ class SplashViewController: UIViewController {
     func populateImages(){
         
         let size = self.view.frame.size
-        UIGraphicsBeginImageContextWithOptions(size, false, UIScreen.mainScreen().scale)
-        let rec = CGRectMake(0, 0, size.width, size.height)
-        self.view.drawViewHierarchyInRect(rec, afterScreenUpdates: true)
+        UIGraphicsBeginImageContextWithOptions(size, false, UIScreen.main.scale)
+        let rec = CGRect(x: 0, y: 0, width: size.width, height: size.height)
+        self.view.drawHierarchy(in: rec, afterScreenUpdates: true)
         fullImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
@@ -241,14 +257,14 @@ class SplashViewController: UIViewController {
         images = Array<Array<UIImage>>()
         imgViews = Array<Array<UIImageView>>()
         for _ in 0...vertPics - 1 {
-            images.append(Array(count: horzPics, repeatedValue: UIImage()))
-            imgViews.append(Array(count: horzPics, repeatedValue: UIImageView()))
+            images.append(Array(repeating: UIImage(), count: horzPics))
+            imgViews.append(Array(repeating: UIImageView(), count: horzPics))
         }
         
         //Add cropped images to 2d arrays
         for v in 0...vertPics - 1 {
             for h in 0...horzPics - 1 {
-                images[v][h] = croppedImage(fullImage!, cropRect: CGRectMake(CGFloat(h) * imageSize * UIScreen.mainScreen().scale,CGFloat(v) * imageSize * UIScreen.mainScreen().scale,imageSize * UIScreen.mainScreen().scale,imageSize * UIScreen.mainScreen().scale))
+                images[v][h] = croppedImage(fullImage!, cropRect: CGRect(x: CGFloat(h) * imageSize * UIScreen.main.scale,y: CGFloat(v) * imageSize * UIScreen.main.scale,width: imageSize * UIScreen.main.scale,height: imageSize * UIScreen.main.scale))
                 
             }
         }
@@ -258,7 +274,7 @@ class SplashViewController: UIViewController {
         view.layer.sublayers?.forEach{ $0.removeFromSuperlayer() }
         for v in 0...vertPics - 1 {
             for h in 0...horzPics - 1 {
-                let imgView = UIImageView(frame: CGRectMake(CGFloat(h) * imageSize, CGFloat(v) * imageSize , images[v][h].size.width / UIScreen.mainScreen().scale, images[v][h].size.height / UIScreen.mainScreen().scale))
+                let imgView = UIImageView(frame: CGRect(x: CGFloat(h) * imageSize, y: CGFloat(v) * imageSize , width: images[v][h].size.width / UIScreen.main.scale, height: images[v][h].size.height / UIScreen.main.scale))
                 //Add all subviews
                 self.view.addSubview(imgView)
                 imgView.image = images[v][h]
@@ -269,12 +285,12 @@ class SplashViewController: UIViewController {
         
     }
     
-    func croppedImage(image: UIImage, cropRect: CGRect) -> UIImage {
-        let imageRef = CGImageCreateWithImageInRect(image.CGImage!, cropRect)
-        return UIImage(CGImage: imageRef!)
+    func croppedImage(_ image: UIImage, cropRect: CGRect) -> UIImage {
+        let imageRef = image.cgImage!.cropping(to: cropRect)
+        return UIImage(cgImage: imageRef!)
     }
     
-    func rippleTransitionSetup(images: [[UIImageView]], h: Int, v: Int, iteration:Int){
+    func rippleTransitionSetup(_ images: [[UIImageView]], h: Int, v: Int, iteration:Int){
         //Recursive flood and add numbers to tag
         if (h < 0 || h >= images.first?.count || v < 0 || v >= images.count){
             return
@@ -296,22 +312,22 @@ class SplashViewController: UIViewController {
     }
     
     //Flood animations
-    func rippleFade(image : UIImageView, delays : Double) {
+    func rippleFade(_ image : UIImageView, delays : Double) {
 
         delay(delays) { () -> () in
-            UIView.animateWithDuration(1.0, animations: { () -> Void in
+            UIView.animate(withDuration: 1.0, animations: { () -> Void in
                 image.alpha = 0.0
             })
         }
     }
     //Square flood animation
-    func rippleFade2(image : UIImageView, delays : Double) {
+    func rippleFade2(_ image : UIImageView, delays : Double) {
         delay(delays) { () -> () in
             
-            UIView.animateWithDuration(1.0, animations: { () -> Void in
-                image.transform = CGAffineTransformMakeScale(0.15, 0.15)
+            UIView.animate(withDuration: 1.0, animations: { () -> Void in
+                image.transform = CGAffineTransform(scaleX: 0.15, y: 0.15)
                 }, completion: { (finished) -> Void in
-                    UIView.animateWithDuration(0.8, animations: { () -> Void in
+                    UIView.animate(withDuration: 0.8, animations: { () -> Void in
                         image.alpha = 0.0
                     })
             })
