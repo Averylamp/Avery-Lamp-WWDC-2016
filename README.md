@@ -36,7 +36,7 @@ The box transition animation was one of my favorite animations that I created fo
 
 ### Logo Drawing/ Force Touch/ Home Page Color
 
-![alt tag](https://raw.githubusercontent.com/Averylamp/Avery-Lamp-WWDC-2016/master/AnimationGifs/HomneAnimation.gif)
+![alt tag](https://raw.githubusercontent.com/Averylamp/Avery-Lamp-WWDC-2016/master/AnimationGifs/HomeAnimation.gif)
 
 After the Info page fades out into the regular home page, I wanted to have a smooth transition to show the user where they could explore next.  I created a couple icons in Sketch, then converted them into code through a lot of manipulations of CGPaths.  All of the icons are drawn with frame math.  It was a painstakingly long process to convert from mockup to live animation, but in the end it came out well.  To display more information about each icon, a user can force click on the icon and a small info blurb appears.  
 
