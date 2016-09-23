@@ -3,7 +3,7 @@
 
 ### _This app was made to demonstrate some of my development skills, projects,l and story behind me as an iOS Developer for the WWDC Scholarship_
 ##### Unfortunately, I was not awarded a scholarship, because my submission was faulty and was not submitted with the correct account
-[_See the app in action_](https://www.youtube.com/watch?v=zIekBuRtOuA)
+[_See the full app in action_](https://youtu.be/zIekBuRtOuA?list=PLyC3kmCiJ2x31ZLjuB7RogEvyamrkSOo9)
 
 ### How it was built
 
@@ -14,7 +14,9 @@ This app was optimized for an iPhone 6s Plus with Force Touch
 
 ## Animations
 
-## Intro/Home Page
+## Intro/Home Page  
+
+[_See full video from this point_] (https://youtu.be/zIekBuRtOuA?t=8s)
 
 ### Intro animation
 
@@ -42,6 +44,8 @@ A less noticable part of this page is the seething color-changing gradient backg
 
 ## My Story Page
 
+[_See full video from this point_] (https://youtu.be/zIekBuRtOuA?t=44s)
+
 ### Map Flyovers
 
 ![alt tag](https://raw.githubusercontent.com/Averylamp/Avery-Lamp-WWDC-2016/master/AnimationGifs/MapFlyoverDemonstration.gif)
@@ -56,8 +60,36 @@ Along with the map flyovers, I wanted to be able to add in caption images.  Beca
 
 ## My Info Page
 
+[_See full video from this point_] (https://youtu.be/zIekBuRtOuA?t=2m59s)
+
 ### Info Element Transition
 
 ![alt tag](https://raw.githubusercontent.com/Averylamp/Avery-Lamp-WWDC-2016/master/AnimationGifs/ContactInfoAnimation.gif)
 
-For my contact info, I decided it was best to put my life into sections with detail slides.  I decided on a design
+For my contact info, I decided it was best to put my life into sections with detail slides.  I decided on a design inspired from [Dribbble](https://dribbble.com/shots/2311820-Exploring).  In order to implement this animation from ViewController to DetailViewController I developed a custom AnimatedTransitioning class.  The elements in the scroll view are all positioned with Autolayout and constraints, which made the animation particularly difficult to pull off.  In order to do the transition animation, I ended up storing the info element constraints, giving it new constraints, then restoring the info element's constraints to its original.  (Note: After conversion to Swift 3, this animation appears to be slightly broken (I'll try to fix it soon))  
+
+### Info Element Detail Transitions
+
+![alt tag](https://raw.githubusercontent.com/Averylamp/Avery-Lamp-WWDC-2016/master/AnimationGifs/TransitionFromInfoItemToItem.gif)
+
+I tried to make the transition from detail text, to detail text smooth, with fading and redrawing of text elements. 
+
+## My Apps Page
+
+[_See full video from this point_] (https://youtu.be/zIekBuRtOuA?t=3m50s)
+
+### Expand App Transition
+
+![alt tag](https://raw.githubusercontent.com/Averylamp/Avery-Lamp-WWDC-2016/master/AnimationGifs/ExpandAppInfoAnimation.gif)
+
+In order to keep the list of apps that I've made short, I decided to expand items on click.  This was one of the more fun animations to make, with each detail section expanding to show more detail information on the app.  I actually created two versions of this animation, one for the iPhone 5 screen size and another for the iphone 6/6+ screen size.  Later I decided to optimize the whole app for the iPhone 6+ Screen size.  
+
+### Bubble Transision Animation
+
+![alt tag](https://raw.githubusercontent.com/Averylamp/Avery-Lamp-WWDC-2016/master/AnimationGifs/BubbleAnimationTransition.gif)
+
+After an app detail was displayed, the user can click on the app to get even more information.  I accomplished this transition with a bubble that expands from the center of the button, with the detail elements on that new page.  The new page has detail items to scroll through, and a link to an external website (Devpost/Youtube) for an extended video/writeup.  
+
+
+
+
