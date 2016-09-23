@@ -60,4 +60,4 @@ Along with the map flyovers, I wanted to be able to add in caption images.  Beca
 
 ![alt tag](https://raw.githubusercontent.com/Averylamp/Avery-Lamp-WWDC-2016/master/AnimationGifs/ContactInfoAnimation.gif)
 
-
+For my contact info, I decided it was best to put my life into sections with detail slides.  I decided on a design
