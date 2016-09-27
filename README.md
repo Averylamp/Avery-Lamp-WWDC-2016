@@ -1,7 +1,7 @@
 # Avery Lamp's Portfolio App
 ==============================================
 
-### _This app was made to demonstrate some of my development skills, projects,l and story behind me as an iOS Developer for the WWDC Scholarship_
+### _This app was made to demonstrate some of my development skills, projects, and the story behind me as an iOS Developer for the WWDC Scholarship_
 ##### Unfortunately, I was not awarded a scholarship, because my submission was faulty and was not submitted with the correct account
 [_See the full app in action_](https://youtu.be/zIekBuRtOuA?list=PLyC3kmCiJ2x31ZLjuB7RogEvyamrkSOo9)
 
